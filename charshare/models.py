@@ -92,3 +92,170 @@ class CharacterAttributes(models.Model):
     class Meta:
         verbose_name = 'Character Attribute'
 
+
+# Link Models
+
+#SUBRACE
+
+class SubraceToSkillProficiencies(models.Model):
+    subrace = models.ForeignKey(SubRaceContentTable, on_delete=models.CASCADE, related_name="SkillprofsSubrace")
+    skill_proficiency_granted = models.ForeignKey(SkillsContentTable, on_delete=models.CASCADE, related_name="SubraceSkillGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subrace.name} - {self.skill_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Subrace Granted Skill'
+
+
+class SubraceLanguages(models.Model):
+    subrace = models.ForeignKey(SubRaceContentTable, on_delete=models.CASCADE, related_name="LanguagesSubrace")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="SubraceLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subrace.name} - {self.language_granted.name}'
+    
+    class Meta:
+        verbose_name = 'Subrace Granted Language'
+
+
+class SubraceSpells(models.Model):
+    subrace = models.ForeignKey(SubRaceContentTable, on_delete=models.CASCADE, related_name="SpellsSubrace")
+    spells_granted = models.ForeignKey(SpellsContentTable, on_delete=models.CASCADE, related_name="SubraceSpellsGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subrace.name} - {self.spells_granted.name}'
+    
+    class Meta:
+        verbose_name = 'Subrace Granted Spell'
+
+class SubraceTools(models.Model):
+    subrace = models.ForeignKey(SubRaceContentTable, on_delete=models.CASCADE, related_name="ToolsSubrace")
+    tool_proficiency_granted = models.ForeignKey(ToolContentTable, on_delete=models.CASCADE, related_name="SubraceToolProficiencyGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subrace.name} - {self.tool_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Subrace Granted Tool'
+
+
+# CLASS
+
+
+class ClassSkillProficiencies(models.Model):
+    character_class = models.ForeignKey(ClassContentTable, on_delete=models.CASCADE, related_name="SkillProfsClass")
+    skill_proficiency_granted = models.ForeignKey(SkillsContentTable, on_delete=models.CASCADE, related_name="ClassSkillGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.character_class.name} - {self.skill_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Class Granted Skill'
+
+
+class ClassLanguageProficiencies(models.Model):
+    character_class = models.ForeignKey(ClassContentTable, on_delete=models.CASCADE, related_name="LanguagesClass")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="ClassLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.character_class.name} - {self.language_granted.name}'
+
+    class Meta:
+        verbose_name = 'Class Granted Language'
+
+
+class ClassSpellsGranted(models.Model):
+    character_class = models.ForeignKey(ClassContentTable, on_delete=models.CASCADE, related_name="SpellsClass")
+    spells_granted = models.ForeignKey(SpellsContentTable, on_delete=models.CASCADE, related_name="ClassSpellsGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.character_class.name} - {self.spells_granted.name}'
+
+    class Meta:
+        verbose_name = 'Class Granted Spell'
+
+
+
+# SUBCLASSES
+
+class SubclassSkillProficiencies(models.Model):
+    subclass = models.ForeignKey(SubClassContentTable, on_delete=models.CASCADE, related_name="SkillprofsSubclass")
+    skill_proficiency_granted = models.ForeignKey(SkillsContentTable, on_delete=models.CASCADE, related_name="SubclassSkillGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subclass.name} - {self.skill_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Subclass Granted Skill'
+
+
+class SubclassLanguageProficiencies(models.Model):
+    subclass = models.ForeignKey(SubClassContentTable, on_delete=models.CASCADE, related_name="LanguagesSubclass")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="SubclassLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subclass.name} - {self.language_granted.name}'
+
+    class Meta:
+        verbose_name = 'Subclass Granted Language'
+
+
+class SubclassSpellsGranted(models.Model):
+    subclass = models.ForeignKey(SubClassContentTable, on_delete=models.CASCADE, related_name="SpellsSubclass")
+    spells_granted = models.ForeignKey(SpellsContentTable, on_delete=models.CASCADE, related_name="SubclassSpellsGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subclass.name} - {self.spells_granted.name}'
+
+    class Meta:
+        verbose_name = 'Subclass Granted Spell'
+
+
+# BACKGROUND
+
+class BackgroundSkillProficiencies(models.Model):
+    background = models.ForeignKey(BackgroundContentTable, on_delete=models.CASCADE, related_name="SkillprofsBackground")
+    skill_proficiency_granted = models.ForeignKey(SkillsContentTable, on_delete=models.CASCADE, related_name="backgroundSkillGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.background.name} - {self.skill_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Background Granted Skill'
+
+
+
+class BackgroundToolProficiencies(models.Model):
+    background = models.ForeignKey(BackgroundContentTable, on_delete=models.CASCADE, related_name="ToolsBackground")
+    tool_proficiency_granted = models.ForeignKey(ToolContentTable, on_delete=models.CASCADE, related_name="BackgroundToolProficiencyGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.background.name} - {self.tool_proficiency_granted.name}'
+
+    class Meta:
+        verbose_name = 'Background Granted Tool'
+
+
+class BackgroundLanguageProficiencies(models.Model):
+    background = models.ForeignKey(BackgroundContentTable, on_delete=models.CASCADE, related_name="LanguagesBackground")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="BackgroundLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.background.name} - {self.language_granted.name}'
+
+    class Meta:
+        verbose_name = 'Background Granted Language'
+
+
+# CHARACTER 
+
+class CharacterLanguages(models.Model):
+    character = models.ForeignKey(CharacterDetails, on_delete=models.CASCADE, related_name="LanguagesCharacter")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="CharacterLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.character.character_name} - {self.language_granted.name}'
+
+    class Meta:
+        verbose_name = 'Character Language'
