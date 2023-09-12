@@ -1,0 +1,56 @@
+[
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 1,
+    "fields": {
+      "name": "Strength",
+      "shortname": "STR",
+      "full_description": "Measures: Natural athleticism, bodily power"
+    }
+  },
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 2,
+    "fields": {
+      "name": "Dexterity",
+      "shortname": "DEX",
+      "full_description": "Measures: Physical agility, reflexes, balance, poise"
+    }
+  },
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 3,
+    "fields": {
+      "name": "Constitution",
+      "shortname": "CON",
+      "full_description": "Measures: Health, stamina, and vital force"
+    }
+  },
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 4,
+    "fields": {
+      "name": "Intelligence",
+      "shortname": "INT",
+      "full_description": "Measures: Mental acuity, information recall, analytical skill"
+    }
+  },
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 5,
+    "fields": {
+      "name": "Wisdom",
+      "shortname": "WIS",
+      "full_description": "Measures: Awareness, intuition, insight"
+    }
+  },
+  {
+    "model": "charmodels.attributecontenttable",
+    "pk": 6,
+    "fields": {
+      "name": "Charisma",
+      "shortname": "CHA",
+      "full_description": "Measures: Confidence, eloquence, leadership"
+    }
+  }
+]
