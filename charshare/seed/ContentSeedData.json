@@ -1,0 +1,106 @@
+[
+    {
+        "model": "charshare.attributecontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "Attribute not set",
+            "shortname": "NA",
+            "full_description": "No Attribute has been chosen. This could mean that your chosen skill or saving throw has no governing attribute or that the attribute you were seeking could not be found."
+        }
+    },
+    {
+        "model": "charshare.skillscontenttable",
+        "pk": 0,
+        "fields": {
+            "attribute": "0",
+            "name": "No Skill Selected",
+            "shortname": "NA",
+            "full_description": "Please select a Skill"
+        }
+    },
+    {
+        "model": "charshare.racecontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "Race not set",
+            "full_description": "Please select a Race"
+        }
+    },
+    {
+        "model": "charshare.subracecontenttable",
+        "pk": 0,
+        "fields": {
+            "race": "0",
+            "name": "No Subrace Selected",
+            "full_description": "Please select a Subrace"
+        }
+    },
+    {
+        "model": "charshare.spellscontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No Spell Selected",
+            "spell_level": "1",
+            "full_description": "Please select a Spell",
+            "spell_reqs": 0
+        }
+    },
+    {
+        "model": "charshare.classcontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No Class Selected",
+            "full_description": "Please select a Class"
+        }
+    },
+    {
+        "model": "charshare.subclasscontenttable",
+        "pk": 0,
+        "fields": {
+            "parent_class": 0,
+            "name": "No Subclass Selected",
+            "full_description": "Please select a Subclass"
+        }
+    },
+    {
+        "model": "charshare.languagecontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No language Selected",
+            "full_description": "Please select a language"
+        }
+    },
+    {
+        "model": "charshare.backgroundcontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No background Selected",
+            "full_description": "Please select a background",
+            "feature": "No Background Selected"
+        }
+    },
+    {
+        "model": "charshare.alignmentcontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No alignment Selected",
+            "full_description": "Please select a alignment"
+        }
+    },
+    {
+        "model": "charshare.toolcontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No tool Selected",
+            "full_description": "Please select a tool"
+        }
+    },
+    {
+        "model": "charshare.instrumentcontenttable",
+        "pk": 0,
+        "fields": {
+            "name": "No instrument Selected",
+            "full_description": "Please select an instrument"
+        }
+    }
+]
