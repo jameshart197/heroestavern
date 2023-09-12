@@ -1,0 +1,212 @@
+[
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Adufe",
+      "full_description": "A square percussion instrument consisting of leather stretched over both sides of a wooden frame, and a bell seated on each corner. The adufe can be muted for a softer tone by padding one side with your hand."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Bagpipes",
+      "full_description": "A reeded woodwind instrument consisting of several pipes connected to a bladder filled with air. The bladder itself would be made of various types of leather. More expensive bagpipes might have gold or silver inlays along the pipes and chanter (the pipe with holes which you cover to produce different notes.)"
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Drum",
+      "full_description": "A drum in the fantasy setting refers to any form of leather pulled over an open wooden barrel. The size of the barrel and tautness of the leather all greatly affect the pitch and sound of the drum, so a single musician may carry multiple to create a deeper harmony."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Dulcimer",
+      "full_description": "Dulcimers come in many shapes and sizes, but consist of a hollow wooden slab with strings running along the body, much like a guitar or violin. These strings however, are hit with small hammers to produce notes instead of being plucked. A musician would likely carry a uniquely shaped dulcimer to garner interest."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Erhu",
+      "full_description": "Two strings along the handle of what looks like a large mallet. The strings are struck with a bow much like a member of the viol family, but it creates a different sound and is more appropriate for a far-traveler."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Flute",
+      "full_description": "A very simple instrument consisting of a wooden, or sometimes metal, tube with holes that are covered to create sounds. Medieval flutes would look much more similar to a sideways recorder than they would to a modern flute which has a series of valves running along the body."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Glaur",
+      "full_description": "The glaur is a horn instrument unique to the Forgotten Realms. It is a valved instrument with a large curved horn, typically made from either silver, electrum, or brass."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Gemshorn",
+      "full_description": "This wind instrument is similar to an ocarina, but is made by hollowing out the horn of a goat or similar creature. It is said that the best Faerunian gemshorns are made from minotaur horns, but this has gone out of practice in recent years."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Gong/Wargong",
+      "full_description": "A large plate of metal which is hit with a mallet, typically covered in cloth. A wargong has little to no variation but is typically used with the express purpose of creating a beat to command troops in battle."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Harp",
+      "full_description": "A very large upright lyre which is played in a stand while the musician sits so that they can more easily strike all of the strings without struggling to hold the instrument in place."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Horn",
+      "full_description": "Horns are a wide range of instruments consisting of a brass tube with a bell shaped opening on one end and a smaller mouthpiece on the other. Typically speaking, the smaller the length of pipe is, the higher of a pitch the instrument will make. Depending on the technological state of your world, horns may even have valve-like openings which , when pressed, change the pitch of the instrument."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Hulusi",
+      "full_description": "Three bamboo pipes which pass into a hollowed out gourd. The center pipe has holes to change the pitch while the other pipes drone, or create a constant harmonizing pitch so long as air is being blown through the reeded mouthpiece."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Sinfonye",
+      "full_description": "This instrument has a hand-cranked wooden wheel which strikes strings as it turns. Along the side of this bulky instrument is a keyboard, which when pressed changes the tautness, and thus the pitch, of the strings."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Longhorn",
+      "full_description": "A lyrical flute common among civilized regions and elven communities across Faerun. They are difficult to make, but you can probably pick one up anywhere that there’s an artisan’s guild."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Lute",
+      "full_description": "A plucked string instrument with a deep hollow body made of wood. Typically lutes have an opening on the front for sound to come out of, but there are some enclosed lutes which create a more eerie and muffled sound."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Lyre",
+      "full_description": "Lyres have a U-shaped body with a connecting piece along the top of the U and several plucked strings running parallel to the sides. These range from very simple to extremely ornate and can have any number of strings, although a standard lyre is wooden with 7 strings."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Maracas",
+      "full_description": "Typically played with a pair, maracas are gourds, or hollowed wood in the shape of a gourd, filled with dried beans, rice, or pellets of some variety. These are shaken to produce a percussive beat."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Nyckelharpa",
+      "full_description": "This unique instrument is a fiddle played with bows and keys. Once you’ve gotten over the incredible learning curve, this instrument will make a gorgeous sound like nothing you’ve ever heard."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Pan Flute (Birdpipes, Syrinx, Shalm, Panpipes, Satyr Pipes)",
+      "full_description": "A series of wooden thin wooden tubes of various lengths joined together side by side. The result is what looks like a triangle with the shortest tube on one side and the longest at the other. The musician blows through the top, shifting to different tubes to produce different notes."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Sackbut",
+      "full_description": "The sackbut is a horn instrument which includes a U-shaped length of pipe that can slide back and forth to change the length of the instrument. It is a medieval version of what is now known as the trombone."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Santur",
+      "full_description": "A santur is an instrument with 72 strings that is played, often in a seated position, with small hammers."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Shawm",
+      "full_description": "A length of wood ending in a flared bell, much like a horn. Instead of a mouthpiece, the shawm has a reed which the musician vibrates to create pitches. Shawms can be of various sizes, with the smaller being the higher pitched, but all have a series of holes bored into them to create the different individual notes."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Songhorn",
+      "full_description": "A small reeded woodwind instrument, with a belled horn at the end. These cheap to produce recorders perform best in lower registers, great for rounding out an orchestra."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Tan Tan (Tambourine)",
+      "full_description": "A very flat drum with small metal discs inserted around the edge. These discs clap together as the handheld drum is hit to create a jingling sound along with the drum's bass sound."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Thelarr",
+      "full_description": "This simple wind instrument cut from a reed makes a sort of buzzing sound. It’s often used as a"
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Udu",
+      "full_description": "Essentially a clay water jug with an extra hole in it. The jug has a small amount of water sitting in the bottom, and is played by tapping or dragging one’s fingers along the outside."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Viol",
+      "full_description": "A six stringed instrument, the precursor of most stringed instruments like the violin, cello, etc. The strings, which line a hollow body, can be plucked or pressed against the body at different lengths along the neck, and have a string drawn against them to create a distinctly vibrato (vibrating) sound. Viols come in various sizes, which eventually become the specific instruments of the viol family"
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Whistle-Stick",
+      "full_description": "Very similar to a flute, this instrument is produced by the grung and creates different pitches when air is blown through it. Grung also tie a length of cord to the stick which they use to swing it over their heads, creating a unique sound as the air flows through it which can be used to communicate a variety of different messages."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Yarting",
+      "full_description": "This stringed instrument is very similar to a guitar, with a shorter, bowed neck. It’s commonly found in the Amn and Calimshan regions of Faerun."
+    }
+  },
+  {
+    "model": "charshare.instrumentcontenttable",
+    "fields": {
+      "name": "Zulkoon",
+      "full_description": "The zulkoon is similar to a large, yet still portable, bagpipe, while it sounds more like a pipe organ. Air is pumped to the bladder and through the pipes with a special foot pump,"
+    }
+  }
+]

@@ -1,6 +1,6 @@
 [
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 1,
     "fields": {
       "name": "Strength",
@@ -9,7 +9,7 @@
     }
   },
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 2,
     "fields": {
       "name": "Dexterity",
@@ -18,7 +18,7 @@
     }
   },
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 3,
     "fields": {
       "name": "Constitution",
@@ -27,7 +27,7 @@
     }
   },
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 4,
     "fields": {
       "name": "Intelligence",
@@ -36,7 +36,7 @@
     }
   },
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 5,
     "fields": {
       "name": "Wisdom",
@@ -45,7 +45,7 @@
     }
   },
   {
-    "model": "charmodels.attributecontenttable",
+    "model": "charshare.attributecontenttable",
     "pk": 6,
     "fields": {
       "name": "Charisma",

@@ -1,6 +1,6 @@
 [
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 1,
     "fields": {
       "attribute": 5,
@@ -10,7 +10,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 2,
     "fields": {
       "attribute": 8,
@@ -20,7 +20,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 3,
     "fields": {
       "attribute": 7,
@@ -30,7 +30,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 4,
     "fields": {
       "attribute": 4,
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 5,
     "fields": {
       "attribute": 9,
@@ -50,7 +50,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 6,
     "fields": {
       "attribute": 7,
@@ -60,7 +60,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 7,
     "fields": {
       "attribute": 8,
@@ -70,7 +70,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 8,
     "fields": {
       "attribute": 9,
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 9,
     "fields": {
       "attribute": 7,
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 10,
     "fields": {
       "attribute": 8,
@@ -100,7 +100,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 11,
     "fields": {
       "attribute": 7,
@@ -110,7 +110,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 12,
     "fields": {
       "attribute": 8,
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 13,
     "fields": {
       "attribute": 9,
@@ -130,7 +130,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 14,
     "fields": {
       "attribute": 9,
@@ -140,7 +140,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 15,
     "fields": {
       "attribute": 7,
@@ -150,7 +150,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 16,
     "fields": {
       "attribute": 5,
@@ -160,7 +160,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 17,
     "fields": {
       "attribute": 5,
@@ -170,7 +170,7 @@
     }
   },
   {
-    "model": "charmodels.skillscontenttable",
+    "model": "charshare.skillscontenttable",
     "pk": 18,
     "fields": {
       "attribute": 8,

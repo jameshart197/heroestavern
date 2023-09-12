@@ -1,0 +1,216 @@
+[
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Elvish",
+      "full_description": "You can speak Elvish, the native tongue of the Elves"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Common",
+      "full_description": "Most commonly spoken by Humans, most races can speak this"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Dwarvish",
+      "full_description": "Commonly spoken by Dwarves"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Giant",
+      "full_description": "Commonly spoken by Giants, Ogres, Firbolgs and Goliaths"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Gnommish",
+      "full_description": "Commonly spoken by Gnomes"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Goblin",
+      "full_description": "Commonly spoken by goblin and goblinkind (Bugbears, hobgoblins, etc)"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Halfling",
+      "full_description": "Commonly spoken by Halflings"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": { "name": "Orc", "full_description": "Commonly spoken by Orcs" }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Leonin",
+      "full_description": "Therosian script, usually spoken by Leonin"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Kraul",
+      "full_description": "Commonly spoken by Kraul"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Loxodon",
+      "full_description": "Commonly spoken by Loxodons"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Merfolk",
+      "full_description": "Commonly spoken by Merfolk and other sea creatures"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Minotaur",
+      "full_description": "Commonly spoken by Minotaurs"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Vedalken",
+      "full_description": "Commonly spoken by Vedalken"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Abyssal",
+      "full_description": "Commonly spoken by Demons and Fiends"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Aquan",
+      "full_description": "Commonly spoken by Water Elementals and various water creatures. Derivative of Primordial"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Ignan",
+      "full_description": "Commonly spoken by Fire Elementals and various fiery creatures. Derivative of Primordial"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Auran",
+      "full_description": "Commonly spoken by Air Elementals and various aerial creatures. Derivative of Primordial"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Terran",
+      "full_description": "Commonly spoken by Earth Elementals and various terrian creatures. Derivative of Primordial"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Primordial",
+      "full_description": "Commonly spoken by Elementals and folk who are closely related to the Elements such as Genasi"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Celestial",
+      "full_description": "Commonly spoken by Celestials, Angelic folk and Aasimaar"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Deep Speech",
+      "full_description": "Commonly spoken by Mind Flayers, Beholders and other Abberations"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Draconic",
+      "full_description": "Commonly spoken by Dragons, Dragonborn, Kobolds and other Dragonfolk"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Hadozee",
+      "full_description": "Commonly spoken by Hadozee. It cannot be written, only spoken."
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Infernal",
+      "full_description": "Commonly spoken by Devils and other denizens of the Nine Hells"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Kothian",
+      "full_description": "Commonly spoken by Minotaurs"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Sylvan",
+      "full_description": "Commonly spoken by feyfolk and other fey creatures"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Thri-Kreen",
+      "full_description": "Commonly spoken by Thri-Kreen and other insectoids. Cannot be written, only spoken"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Undercommon",
+      "full_description": "Used as a replacement for Common but in the Underdark"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Quori",
+      "full_description": "Commonly spoken by the Quori, Kalshtar and Inspired"
+    }
+  },
+  {
+    "model": "charshare.languagecontenttable",
+    "fields": {
+      "name": "Thieves' Cant",
+      "full_description": "A language made of symbols, shorthand, abbreviation and slang to communicate between thieves and other shady characters"
+    }
+  }
+]

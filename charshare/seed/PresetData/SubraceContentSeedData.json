@@ -1,6 +1,6 @@
 [
     {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Eladrin",
       "full_description": "Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another in the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons—affinities that affect the eladrin’s mood and appearance. An eladrin’s season can change, though some remain in one season forever. Choose your season or roll on the Eladrin Seasons table. Your Trance trait lets you change your season.  Like other elves, eladrin can live to be over 750 years old.",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Dark Elf (Drow)",
       "full_description": "As a drow, you are infused with the magic of the Underdark, an underground realm of wonders and horrors rarely seen on the surface above. You are at home in shadows and, thanks to your innate magic, learn to conjure forth both light and darkness. Your kin tend to have stark white hair and grayish skin of many hues.  The cult of the god Lolth, Queen of Spiders, has corrupted some of the oldest drow cities, especially in the worlds of Oerth and Toril. Eberron, Krynn, and other realms have escaped the cult’s influence—for now. Wherever the cult lurks, drow heroes stand on the front lines in the war against it, seeking to sunder Lolth’s web.",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "High Elf",
       "full_description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many of the worlds of D&D, there are two kinds of high elves. One type (which includes the gray elves and valley elves of Greyhawk, the Silvanesti of Dragonlance, and the sun elves of the Forgotten Realms) is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type (including the high elves of Greyhawk, the Qualinesti of Dragonlance, and the moon elves of the Forgotten Realms) are more common and more friendly, and often encountered among humans and other races.  The sun elves of Faerûn (also called gold elves or sunrise elves) have bronze skin and hair of copper, black, or golden blond. Their eyes are golden, silver, or black. Moon elves (also called silver elves or gray elves) are much paler, with alabaster skin sometimes tinged with blue. They often have hair of silver-white, black, or blue, but various shades of blond, brown, and red are not uncommon. Their eyes are blue or green and flecked with gold.",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Wood Elf",
       "full_description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerûn, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.  Wood elves’ skin tends to be copperish in hue, sometimes with traces of green. Their hair tends toward browns and blacks, but it is occasionally blond or copper-colored. Their eyes are green, brown, or hazel.",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 0,
       "name": "Pallid Elf",
       "full_description": "The pallid elves are a mystical and insightful people with skin as pale as the surface of Exandria’s largest moon. They emerged from the Pallid Grove this century and wander the world with childlike curiosity.",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Sea Elf",
       "full_description": "Sea elves fell in love with the wild beauty of the ocean in the earliest days of the multiverse. While other elves traveled from realm to realm, sea elves navigated the currents and explored the waters of many worlds. Today these elves can be found wherever oceans exist, as well as in the Elemental Plane of Water.  Like other elves, sea elves can live to be over 750 years old.",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Shadar-Kai",
       "full_description": "Shadar-kai are the elves of the Shadowfell, originally drawn to that dread realm by the Raven Queen. Over the centuries, some of them have continued to serve her, while others have ventured into the Material Plane to forge their own destinies.  Once shadar-kai were Fey like the rest of their elven kin; now they exist in a state between life and death, thanks to being transformed by the Shadowfell’s grim energy.  Shadar-kai have ashen skin tones, and while they’re in the Shadowfell, they also become wizened, reflecting the somber nature of that gloomy plane.  Like other elves, shadar-kai can live to be over 750 years old.",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 3,
       "name": "Astral Elf",
       "full_description": "Long ago, groups of elves ventured from the Feywild to the Astral Plane to be closer to their gods. Life in the Silver Void has imbued their souls with a spark of divine light. That light manifests as a starry gleam in an astral elf’s eyes.  Because nothing ages on the Astral Plane, astral elves who inhabit that plane can be very old, and their longevity gives them an unusual perspective on the passage of time. Some are prone to melancholy, while others might display an absence of feeling. Many look for creative ways to occupy themselves. Whether they choose to live in quiet contemplation or strike out to explore the reaches of the multiverse, astral elves tend to see things through the lens of time as having little or no meaning to them. Astral elves who don’t dwell on the Astral Plane can live to be more than 750 years old.",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",    "fields": {
+    "model": "charshare.subracecontenttable",    "fields": {
       "race": 4,
       "name": "Hill Dwarf",
       "full_description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 4,
       "name": "Mountain Dwarf",
@@ -81,7 +81,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 4,
       "name": "Duergar",
@@ -90,7 +90,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 5,
       "name": "Chromatic Dragonborn",
@@ -99,7 +99,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 5,
       "name": "Gem Dragonborn",
@@ -108,7 +108,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 0,
       "name": "Metallic Dragonborn",
@@ -117,7 +117,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 6,
       "name": "Forest Gnome",
@@ -126,7 +126,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 6,
       "name": "Rock Gnome",
@@ -135,7 +135,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 6,
       "name": "Deep Gnome (Svirfneblin)",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 7,
       "name": "Aquatic Half-Elf",
@@ -153,7 +153,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 7,
       "name": "Drow Half-Elf",
@@ -162,7 +162,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 7,
       "name": "Wood Half-Elf",
@@ -171,7 +171,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 7,
       "name": "High Half-Elf",
@@ -180,7 +180,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 8,
       "name": "Ghostwise Halfling",
@@ -189,7 +189,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 8,
       "name": "Lightfoot Halfling",
@@ -198,7 +198,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 8,
       "name": "Stout Halfling",
@@ -207,7 +207,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 8,
       "name": "Lotusden Halfling",
@@ -216,7 +216,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 9,
       "name": "Half-Orc",
@@ -225,7 +225,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 10,
       "name": "Human (Common)",
@@ -234,7 +234,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 10,
       "name": "Variant Human",
@@ -243,7 +243,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 11,
       "name": "Variant Tiefling",
@@ -252,7 +252,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 11,
       "name": "Tiefling (Common)",
@@ -261,7 +261,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 11,
       "name": "Feral Tiefling",
@@ -270,7 +270,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 12,
       "name": "Aarakocra",
@@ -279,7 +279,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 13,
       "name": "Aasimar (Standard)",
@@ -288,7 +288,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 13,
       "name": "Aasimar (Variant)",
@@ -297,7 +297,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 14,
       "name": "Air Genasi",
@@ -306,7 +306,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 14,
       "name": "Earth Genasi",
@@ -315,7 +315,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 14,
       "name": "Fire Genasi",
@@ -324,7 +324,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 14,
       "name": "Water Genasi",
@@ -333,7 +333,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 15,
       "name": "Bugbear",
@@ -342,7 +342,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 16,
       "name": "Centaur",
@@ -351,7 +351,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 17,
       "name": "Changeling",
@@ -360,7 +360,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 18,
       "name": "Fairy",
@@ -369,7 +369,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 19,
       "name": "Firbolg",
@@ -378,7 +378,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 20,
       "name": "Githyanki",
@@ -387,7 +387,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 21,
       "name": "Githzerai",
@@ -396,7 +396,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 22,
       "name": "Goblin",
@@ -405,7 +405,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 23,
       "name": "Goliath",
@@ -414,7 +414,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 24,
       "name": "Harengon",
@@ -423,7 +423,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 25,
       "name": "Hobgoblin",
@@ -432,7 +432,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 26,
       "name": "Kenku",
@@ -441,7 +441,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 27,
       "name": "Kobold",
@@ -450,7 +450,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 28,
       "name": "Lizardfolk",
@@ -459,7 +459,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 29,
       "name": "Minotaur",
@@ -468,7 +468,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 30,
       "name": "Orc",
@@ -477,7 +477,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 31,
       "name": "Satyr",
@@ -486,7 +486,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 32,
       "name": "Beasthide Shifter",
@@ -495,7 +495,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 32,
       "name": "Longtooth Shifter",
@@ -504,7 +504,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 32,
       "name": "Swiftstride",
@@ -513,7 +513,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 32,
       "name": "Wildhunt Shifter",
@@ -522,7 +522,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 33,
       "name": "Tabaxi",
@@ -531,7 +531,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 34,
       "name": "Tortle",
@@ -540,7 +540,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 35,
       "name": "Triton",
@@ -549,7 +549,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 36,
       "name": "Yuan-ti",
@@ -558,7 +558,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 37,
       "name": "Autognome",
@@ -567,7 +567,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 38,
       "name": "Giff",
@@ -576,7 +576,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 39,
       "name": "Hadozee",
@@ -585,7 +585,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 40,
       "name": "Plasmoid",
@@ -594,7 +594,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 41,
       "name": "Thri-Kreen",
@@ -603,7 +603,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 42,
       "name": "Owlin",
@@ -612,7 +612,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 43,
       "name": "Leonin",
@@ -621,7 +621,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 44,
       "name": "Kalashtar",
@@ -630,7 +630,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 45,
       "name": "Warforged",
@@ -639,7 +639,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 46,
       "name": "Loxodon",
@@ -648,7 +648,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 47,
       "name": "Simic Hybrid",
@@ -657,7 +657,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 48,
       "name": "Vedalken",
@@ -666,7 +666,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 49,
       "name": "Locathah",
@@ -675,7 +675,7 @@
     }
   },
   {
-    "model": "charmodels.subracecontenttable",
+    "model": "charshare.subracecontenttable",
     "fields": {
       "race": 50,
       "name": "Grung",

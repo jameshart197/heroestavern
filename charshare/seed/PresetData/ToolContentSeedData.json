@@ -1,0 +1,205 @@
+[
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Alchemy",
+      "full_description": "Alchemy equipment consists of: Two glass beakers, a metal tripod, a stirring rod, mortar, pestle, retort, alembic, calcinator, a pouch of common alchemical ingredients such as powdered iron and purified water, scales, a small knife for cutting herbs, two fine strainers, a filter and a pipette.  Alchemy can be used to create and brew potions. This can be done once during a long rest, or may be done actively throughout the day. Having an understanding of alchemy grants no knowledge of poisons beyond knowing what not to add to a potion. It does, however, include knowledge of how to prepare herbs and ingredients. Whilst a herbalist might be more of an expert in how to get the best of each individual ingredient, an alchemist would be competent enough to extract the relevant parts of a cutting of a plant.   Knowledge of Alchemy can also grant one the ability to discern the nature of a potion or identify a substance or chemical. It could also be used to weigh and measure liquids and herbs by sight, knowing which chemicals could potentially cause an explosion, and detecting certain elements (blood, alcohol, chemicals) by sight, smell or taste."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Brewer's Tools",
+      "full_description": "Brewer’s equipment consists of: a large glass jug, a filter, funnel, multiple miniature barrels, a smoking kit, a tripod, forceps, a siphon, purification kit (series of small filters and funnels) and several feet of tubing.  Brewing can be used to create intoxicants and other brews that can enhance the of affect ones’ senses. An excellent brewer would be able to make liquids that can cause numbness, anesthesia, unconsciousness, but also fortify one against pain, mental intrusion or grant temporary strength.   A competent brewer would also have knowledge of the grains and crops required for mixing alcohol and various other brews, be able to identify types of brews and crops by sight, be able to purify any water, understand weight and measurements in depth and identify the quality and origin of a drink."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Calligraphy",
+      "full_description": "Calligraphy equipment contains: Various fine quills, parchments, inks and colours, sanding blocks, moldable sealing waxes containing various standard stamps, envelopes, string and ribbon.   Calligraphy is the art of the pen, and would allow the creation of legal documents (official or forged), invitations, commemorative documents, embellishments for maps and books, pieces of written art, signs and written poetry. Calligraphers are also often scribes and will be learned in the art of creating full books or copying works.   An experienced calligrapher would also be able to discern the nature of a piece of writing, perhaps how old a text is, or its general area of origin. They will be able to match handwriting to a place they have seen it before, possibly identifying the author. They would also have an excellent grasp of language and be able to differentiate class by difference in writing style. They would understand fine papers and inks, and the making of papers, even being able to create paper from various sources. They may have advantage on understanding the details of legal documents, hidden symbols or texts, hidden messages, codes and ancient runes."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Carpenter's Tools",
+      "full_description": "Carpentry equipment contains: saws, hammers, nails, a square, a measurement stick, an adze, plane, chisel, various cutting and carving knives and tools and a small hatchet.   A carpenter can create objects from wood. A carpenter will normally have one of three specialities; structures, furniture or small works.   A specialist in structures can create shelter for a group from the barest of materials, can understand the structural integrity of a building (and how to compromise it), and can over time build or expand a building.  A specialist in furniture can create a piece for sale over the course of time. They can also create basic furniture very quickly from raw materials, providing a raised bed, chair, table or stool fairly quickly. They can also understand the value of furniture, and what class the owner would belong to. They may also be able to identify the maker of finer pieces and antiques, and the area of production for lesser pieces. A furniture maker would have advantage on discerning hidden buttons, draws or false bottoms in chests, draws and other furniture.   A small works carpenter is able to produce blowguns, arrows, musical instruments from wood, various tools for a poisoner to use such as darts and arrows with a slot for poison, and custom objects for various different circumstances. They may also be able to work with other artisans to produce handles and mechanisms for other tools. A small works carpenter will be able to identify master craftsmanship in a small wooden object and have a rudimentary understanding of structure and furniture."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Cartography",
+      "full_description": "Cartography tools include: a quill, ink, various parchments, a pair of compasses, a sextant, calipers and a ruler as well as various other measurement devices.   A skilled cartographer can create a map of a place they know well, or map a journey or area they have made or witnessed on that day. They can also make rough maps from descriptions and are able to make logical assumptions based on description as to the geography of an area.   A cartographer would have an advantage when it comes to reading maps, understanding a treasure map or coded map, discerning the legitimacy of a map, making an estimate on travel time from one place to another based on maps or knowing where to find information on landmarks and history. A cartographer will also have an excellent knowledge of the local geography and geography of anywhere they have studied, including land layout, mountain ranges, major settlements and bodies of water."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Cobbler's Tools",
+      "full_description": "Cobbler’s Tools consist of: a hammer, an awl, a shoe stand, knife, cutter, spare leather, thread and various prefabrications for shoes as well as measurement equipment for feet.   A cobbler may repair shoes and travellers’ boots at the end of a long day’s travel, reducing weariness the following day and allowing for more comfort and swifter travel. They may also enhance an existing pair of shoes or boots to make them more durable, resistant, contain a hidden compartment or alter their look.   An experienced cobbler will be able to understand the size and height of a person based on their footprints, understand someones’ social status and financial means based on their shoes, understand the source and nature of certain leathers and hides, and be able to make educated guesses on recent activity and profession of a person based on the state of their shoes, any dirt collected and which type of shoe the person wears."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Cook's Utensils",
+      "full_description": "Cook’s Utensils consist of: pots, pans, knives, forks, spoons, a ladle, spatula, strainer, tongs and a tripod.   Cook’s utensils allow for the creation of meals during times of rest, and of edible/consumable items that can fortify the soul. A hearty meal can bring Satisfaction, granting temporary hp. A well made breakfast can bring Warmth, granting temporary cold and disease resistance, and a well prepared soup can bring Wellness, restoring health to those who are sick, granting the effects of Restoration, or even curing poison or disease.  An expert chef would be able to gather natural ingredients from the wild, tell if plants and animals are sick or healthy, understand which parts of the wild are edible or not, and be able to prepare meals out of the barest of essentials. They may also be able to cater to their audience, impressing a noble with their knowledge of fine cheeses, or a troll with the smell of hearty meat!"
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Glassblowing Tools",
+      "full_description": "Glassblowing Tools include: A small marver, a blowpipe, blocks, tripods, tweezers, tongs, heatproof gloves, corks, engraving knives and sealant.   A glassblower can create glass vials designed to hold potions or other chemical concoctions that may not be held by normal vials. They can also create flasks and ammunition designed to explode upon impact but not within a backpack. They can also create additions to arrows or other ammunition designed to contain poisons and/or impact oils or other explosives or corrosives. They can also create items for sale that are beautiful and delicate, as well as useful things such as magnification glass and looking glass.   A glassblower will have an advantage when it comes to understanding others’ work, they are craftsmen, and fairly rare. They would also be able to understand how best to break any glass objects or panes."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Herbalism Kit",
+      "full_description": "A herbalism kit contains: various cutting and clipping equipment, scissors, vials, leather gloves and herb pouches.   A herbalist can prepare herbs for the purposes of alchemy, tea-making, poison making, brewing or adding to cookery. They understand best how to gather, prepare and store all herbs and plants. A herbalist may spend an hour or two in a day gathering ingredients from the local area, as well as doing so as part of his natural day should he wish.  A herbalist will have an advantage when it comes to locating herbs, identifying them, working out if a plant is edible or not, barter and trade prices on various herbs as well as things made from them, and may be able to ascertain the state of the wildlife in the area based on the plants."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Hunter/Gatherer's Tools",
+      "full_description": "A hunter/gatherer’s tools consist of: scalpels, knives, shears, scissors, pliers, hammers, calipers, tongs and hand drills. A hunter will usually have weapons for hunting animals, but these are unique to each hunter.   A hunter/gatherer can go out each night hunting for food, and bring back various ingredients depending on the lay of the land. They will be able to extract valuable parts from the corpses of animals and humanoids and know best how to store these parts. They may also be able to forage for other useful things such as firewood, deadwood, mushrooms, sap for glue, feathers for arrows, etc.   A hunter/gatherer will understand the wildlife of the area, and be able to know how best to navigate that land. They will be able to find their way through forests and swamps and other areas where it is easy to get lost, and they will be able to ascertain the state of the land and recent weather based on the behaviour of the wildlife inhabiting the area."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Jeweller's Tools",
+      "full_description": "A jeweller’s kit contains: A small saw, hammer, tweezers, files, pliers, magnifying glasses, viewing glass, clasps and buckles and polishing tools.   A jeweler may be able to make simplistic jewelery from basic objects such as leather and wooden beads. They may also be able to combine gems and metals to create jewelry that would hold an enchantment better, or be able to take apart a piece of jewelry that was previously enchanted. Their most valuable skill in the adventurer’s world, however, is combining two enchanted pieces of jewelry into one.   A jeweller will have advantage when it comes to understanding and identifying gems, especially when it comes to fakes. They will also be able to discern the value of a treasure hoard very quickly, and will be able to understand where an item may have been crafted based on craftsmanship and which gems are used. A jeweler may be able to tell someones’ class or wealth based on the type of jewelry they wear."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Leatherworking Tools",
+      "full_description": "Leatherworking tools consist of: A knife, mallet, edger, hole punch, threads, needles, a square, measuring tools and clamps.  A leatherworker has many specialities, but the most useful in the adventuring world are those that can enhance clothing and armor, and create bags,pouches and clothing. One of these leatherworkers may be able to enhance armor that is already made, create armor from scratch, add protection to simple clothing, or create bags and pouches for specific items or groups of items.   A leatherworker will have an advantage when trying to appraise the value of any leather items, remove an animal skin in tact, judge the quality of leatherwork or determine the origins of leather goods."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Mason's Tools",
+      "full_description": "Mason’s Tools consist of: Trowels, chisels, brushes, hammers, measuring tools, a square, sanding blocks and a hand-drill.   A mason can spend time whittling stone in the most simple of forms to create crude tools and weapons from rock, or to enhance simple stones into useable weapons. They can create bullets for slings, as well as other small useful stone items, They can also make quite elegant pieces over time such as statues or busts that may be worth good money.   A mason will have an advantage when understanding the structural integrity of a stone building, and how to compromise it. They will have an understanding of stone, quarries and their strengths and weaknesses. They will also be able to work out the age of a building, when and who created it, and have a knowledge of where different types of stone are located within the earth. They may also be able to find out the origin/purpose of a building based on its construction."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Painter's Supplies",
+      "full_description": "Painter’s supplies consist of: an easel, ink pens, canvas, brushes, paints, charcoal sticks and a palette.   A painter may spend time each evening painting that which they have seen during the day, or continuing a painting from a previous memory. They may also be able to create purely from the imagination. A good painter will be able to replicate unusual things they have seen as art for the purpose of showing it to someone, or they may be able to produce works of art to be sold down the line.   A painter will have an advantage when it comes to inspecting other works of art to determine their origin, meaning, cultural background, value, quality and finding any hidden messages or images within it. They will be able to spot an original amongst copies, remember the lore behind certain art and will have a cursory knowledge of gods, wars, legendary items, people and anything else that has featured prominently in the artwork of their region."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Poisoner's Tools",
+      "full_description": "Poisoner’s Tools consist of: Two glass beakers, a metal tripod, a stirring rod, mortar, pestle, retort, alembic, calcinator, a pouch of common alchemical ingredients such as powdered iron and purified water, scales, a small knife for cutting herbs, two fine strainers, a filter and a pipette.  A skilled poisoner will be able to concoct poisons from plants and various venoms and extract those venoms from certain animals. They will be able to refine these poisons to exacting measurements to achieve their goals. Whether it be creating a poison to render someone unconscious, to make them sick slowly, or to kill quietly and instantly, a poisoner will know exactly how to create these poisons.   A skilled poisoner will have an advantage when it comes to detecting poisons, disguising poisons within drinks, identifying poisons and how to counteract them, knowing where to find ingredients for certain poisons and purifying a previously poisoned drink."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Potter's Tools",
+      "full_description": "Potter’s Tools include: Needles, ribs, scrapers, a knife, wheels, calipers and engraving tools.   A potter can create simplistic items out of clay such as pots, jars or tankards. They may also be able to create containers for certain liquids that may break on impact that could either be thrown or attached to a piece of ammunition. They may also be able to make rudimentary tools and items for specific purposes.   A potter will have an advantage when it comes to understanding the history of pottery styles and techniques, identifying ceramic objects, including when they were created and their likely place of origin. They will be able to identify minor irregularities in items, reconstruct certain items, create items for sale, date, appraise and understand pottery pieces and identify the strength and quality of clay within the earth."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Smith's Tools",
+      "full_description": "Blacksmith’s tools consist of: hammers, tongs, chisels, charcoal, engraving tools, rags, whetstones and a small clamp.   If a blacksmith has access to something they can use as an anvil, extreme heat and good metal, they may create metal items for use, including, but not limited to, small simple weapons, larger weapons over time, tools, shields, armor and various other metal objects for specific circumstances. Even without an anvil and heat, they may be able to make adjustments or engravings on pieces of metal, armor or weapons.   A blacksmith will have an advantage when it comes to understanding the quality of a weapon or tool, repairing broken metal items, understanding anything made from metal including locks or traps, discerning the purpose of a tool based on the wear and damage the item has received or using metal tools to achieve a goal."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Tea Infusion Tools",
+      "full_description": "Tea Infusion tools consist of: a teapot, strainers, mortar and pestle, clippers, tweezers and cutting tools.   A tea specialist can brew exquisite teas from even basic herbs. These teas may bring comfort or warmth, but they may also be brewed to enhance the senses, provide protection from the elements or awaken one to new abilities. The art of the tea-maker is an ancient art that has been studied all over the globe, and those who follow this craft often guard their recipes very carefully.  A tea specialist will have an advantage when it comes to discerning what is in a hot drink, understanding herbs and plants that they encounter, understanding and adhering to proper tea cultures and as such will do well mingling with those of the upper nobility. They may also have a knowledge of certain religious practices that involve the preparing and pouring of teas. They will also have a rudimentary knowledge of other medicine that goes alongside medicinal and herbal remedies."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Tinker's Tools",
+      "full_description": "Tinker’s tools include: Hand tools, threads, needles, whetstones, clamps, calipers, tongs, measuring tools, scraps of cloth, glue and tweezers.   A tinkerer may be able to make unusual or interesting items from a wide variety of materials. They may be able to adapt the use of one item to turn it to another purpose, or create from scratch items for very specific purposes. Whilst they lack the in-depth experience with a specific material that a blacksmith or woodworker may have, they will have a rudimentary knowledge of working with a variety of materials to make their items. Tinkerer’s are most commonly also aware of how to imbue simple magics into items, and as such may be able to adapt or change enchantments upon items.   A tinkerer will have an advantage when it comes to understanding joints, gears, physics, astronomy, mathematics, the function of an invention and how to switch it on or off, or understanding how an enchantment was placed upon an item."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Weaver's Tools",
+      "full_description": "Weaver’s tools consist of: thread, needles, a small hand loom, cloth scraps, scissors and measuring tools.   A weaver may be able to weave baskets, small items of clothing or blankets and bedding. They may also be able to enhance already made items to increase their value, add a compartment or hidden pocket, or even increase the protection that clothing gives to their wearer. A weaver will always be far more effective with a full sized loom, but can make repairs and create small items upon the road.   A weaver will understand cloth objects such as robes and cloaks. They will have an advantage when it comes to investigating any cloth items, tapestries, clothing, upholstery or other woven items. They will be able to spot the wealth and class of a person based on the clothing that they are wearing, know where to ascertain silks, wool and cotton and where to sell these items, and have a good concept of which fashion would be appropriate for a certain occasion."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Woodworker's Tools",
+      "full_description": "Woodworker’s Tools consist of: saws, whittles, knives, hand drills, chisels, gouges, a small saw and various tongs and clamps.   A woodworker will be able to make small items from wood such as blowguns, arrows, musical instruments from wood, various tools for a poisoner to use such as darts and arrows with a slot for poison, and custom objects for various different circumstances. They will also be able to make more delicate carvings as art for sale, or engrave elegantly upon any wooden items to add to their value or add intricate details such as runes or words.   A woodworker will have an advantage when it comes to identifying trees, examining wooden objects, separating quality lumber and wooden items from inferior ones, understanding the crafting and style that went into the creation of a wooden object and investigating the purpose of a wooden object. They may also be able to identify the enchantment upon a wooden object based on the runes carved into it."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Thieves' Tools",
+      "full_description": "Perhaps the most common tools used by adventurers, thieves' tools are designed for picking locks and foiling traps. Proficiency with the tools also grants you a general knowledge of traps and locks.  Components. Thieves' tools include a small file, a set of lock picks, a small mirror mounted on a metal handle, a set of narrow-bladed scissors, and a pair of pliers.  History. Your knowledge of traps grants you insight when answering questions about locations that are renowned for their traps.  Investigation and Perception. You gain additional insight when looking for traps, because you have learned a variety of common signs that betray their presence.  Set a Trap. Just as you can disable traps, you can also set them. As part of a short rest, you can create a trap using items you have on hand. The total of your check becomes the DC for someone else's attempt to discover or disable the trap. The trap deals damage appropriate to the materials used in crafting it (such as poison or a weapon) or damage equal to half the total of your check, whichever the DM deems appropriate."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Navigator's Tools",
+      "full_description": "Proficiency with navigator's tools helps you determine a true course based on observing the stars. It also grants you insight into charts and maps while developing your sense of direction.  Components. Navigator's tools include a sextant, a compass, calipers, a ruler, parchment, ink, and a quill.  Survival. Knowledge of navigator's tools helps you avoid becoming lost and also grants you insight into the most likely location for roads and settlements.  Sighting. By taking careful measurements, you can determine your position on a nautical chart and the time of day."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Gaming Set",
+      "full_description": "Components. A gaming set has all the pieces needed to play a specific game or type of game, such as a complete deck of cards or a board and tokens.  History. Your mastery of a game includes knowledge of its history, as well as of important events it was connected to or prominent historical figures involved with it.  Insight. Playing games with someone is a good way to gain understanding of their personality, granting you a better ability to discern their lies from their truths and read their mood.  Sleight of Hand. Sleight of Hand is a useful skill for cheating at a game, as it allows you to swap pieces, palm cards, or alter a die roll. Alternatively, engrossing a target in a game by manipulating the components with dexterous movements is a great distraction for a pickpocketing attempt."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Land Vehicles",
+      "full_description": "Proficiency with land vehicles covers a wide range of options, from chariots and howdahs to wagons and carts. Proficiency with water vehicles covers anything that navigates waterways. Proficiency with vehicles grants the knowledge needed to handle vehicles of that type, along with knowledge of how to repair and maintain them.  In addition, a character proficient with water vehicles is knowledgeable about anything a professional sailor would be familiar with, such as information about the sea and islands, tying knots, and assessing weather and sea conditions.  Arcana. When you study a magic vehicle, this tool proficiency aids you in uncovering lore or determining how the vehicle operates.  Investigation, Perception. When you inspect a vehicle for clues or hidden information, your proficiency aids you in noticing things that others might miss.  Vehicle Handling. When piloting a vehicle, you can apply your proficiency bonus to the vehicle's AC and saving throws."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Water Vehicles",
+      "full_description": "Proficiency with land vehicles covers a wide range of options, from chariots and howdahs to wagons and carts. Proficiency with water vehicles covers anything that navigates waterways. Proficiency with vehicles grants the knowledge needed to handle vehicles of that type, along with knowledge of how to repair and maintain them.  In addition, a character proficient with water vehicles is knowledgeable about anything a professional sailor would be familiar with, such as information about the sea and islands, tying knots, and assessing weather and sea conditions.  Arcana. When you study a magic vehicle, this tool proficiency aids you in uncovering lore or determining how the vehicle operates.  Investigation, Perception. When you inspect a vehicle for clues or hidden information, your proficiency aids you in noticing things that others might miss.  Vehicle Handling. When piloting a vehicle, you can apply your proficiency bonus to the vehicle's AC and saving throws."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Disguise Kit",
+      "full_description": "The perfect tool for anyone who wants to engage in trickery, a disguise kit enables its owner to adopt a false identity.  Components. A disguise kit includes cosmetics, hair dye, small props, and a few pieces of clothing.  Deception. In certain cases, a disguise can improve your ability to weave convincing lies.  Intimidation. The right disguise can make you look more fearsome, whether you want to scare someone away by posing as a plague victim or intimidate a gang of thugs by taking the appearance of a bully.  Performance. A cunning disguise can enhance an audience's enjoyment of a performance, provided the disguise is properly designed to evoke the desired reaction.  Persuasion. Folk tend to trust a person in uniform. If you disguise yourself as an authority figure, your efforts to persuade others are often more effective.  Create Disguise. As part of a long rest, you can create a disguise. It takes you 1 minute to don such a disguise once you have created it. You can carry only one such disguise on you at a time without drawing undue attention, unless you have a Bag of Holding or a similar method to keep them hidden. Each disguise weighs 1 pound.  At other times, it takes 10 minutes to craft a disguise that involves moderate changes to your appearance, and 30 minutes for one that requires more extensive changes."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Forgery Kit",
+      "full_description": "A forgery kit is designed to duplicate documents and to make it easier to copy a person's seal or signature.  Components. A forgery kit includes several different types of ink, a variety of parchments and papers, several quills, seals and sealing wax, gold and silver leaf, and small tools to sculpt melted wax to mimic a seal.  Arcana. A forgery kit can be used in conjunction with the Arcana skill to determine if a magic item is real or fake.  Deception. A well-crafted forgery, such as papers proclaiming you to be a noble or a writ that grants you safe passage, can lend credence to a lie.  History. A forgery kit combined with your knowledge of history improves your ability to create fake historical documents or to tell if an old document is authentic.  Investigation. When you examine objects, proficiency with a forgery kit is useful for determining how an object was made and whether it is genuine.  Other Tools. Knowledge of other tools makes your forgeries that much more believable. For example, you could combine proficiency with a forgery kit and proficiency with cartographer's tools to make a fake map.  Quick Fake. As part of a short rest, you can produce a forged document no more than one page in length. As part of a long rest, you can produce a document that is up to four pages long. Your Intelligence check using a forgery kit determines the DC for someone else's Intelligence (Investigation) check to spot the fake."
+    }
+  },
+  {
+    "model": "charshare.toolcontenttable",
+    "fields": {
+      "name": "Musical Instrument",
+      "full_description": "If you have proficiency with a given musical instrument, you can add your proficiency bonus to any ability checks you make to play music with the instrument. A bard can use a musical instrument as a spellcasting focus, as described in chapter 10. Each type of musical instrument requires a separate proficiency."
+    }
+  }
+]
