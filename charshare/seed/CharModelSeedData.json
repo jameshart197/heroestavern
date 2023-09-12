@@ -1,0 +1,170 @@
+[
+    {
+        "model": "charshare.characterdetails",
+        "pk": 0,
+        "fields": {
+            "subrace": 0,
+            "alignment": 0,
+            "background": 0,
+            "character_name": "Default Character",
+            "inspiration": false,
+            "faith": "No faith entered",
+            "age": "No age entered",
+            "height": "No height entered",
+            "weight": "No weight entered",
+            "notes": "No notes entered",
+            "backstory": "No backstory entered",
+            "allies": "No allies entered",
+            "enemies": "No enemies entered",
+            "factions_and_orgs": "No factions or organizations entered",
+            "hit_points": 12,
+            "armor_class": 10
+        }
+    },
+    {
+        "model": "charshare.characterspells",
+        "pk": 0,
+        "fields": {
+            "character": 0,
+            "spell": 0
+        }
+    },
+    {
+        "model": "charshare.charactersavingthrows",
+        "pk": 0,
+        "fields": {
+            "character": 0,
+            "attribute": 0
+        }
+    },
+    {
+        "model": "charshare.characterskillproficiencies",
+        "pk": 0,
+        "fields": {
+            "character": 0,
+            "skill": 0,
+            "proficiency_level": 0
+        }
+    },
+    {
+        "model": "charshare.characterattributes",
+        "pk": 0,
+        "fields": {
+            "character": 0,
+            "attribute": 0,
+            "score": 10
+        }
+    },
+    {
+        "model": "charshare.subracetoskillproficiencies",
+        "pk": 0,
+        "fields": {
+            "subrace": 0,
+            "skill_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subracelanguages",
+        "pk": 0,
+        "fields": {
+            "subrace": 0,
+            "language_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subracespells",
+        "pk": 0,
+        "fields": {
+            "subrace": 0,
+            "spells_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subracetools",
+        "pk": 0,
+        "fields": {
+            "subrace": 0,
+            "tool_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.classskillproficiencies",
+        "pk": 0,
+        "fields": {
+            "character_class": 0,
+            "skill_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.classlanguageproficiencies",
+        "pk": 0,
+        "fields": {
+            "character_class": 0,
+            "language_granted": 0
+        }
+    },
+    {
+        "model": "charshare.classspellsgranted",
+        "pk": 0,
+        "fields": {
+            "character_class": 0,
+            "spells_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subclassskillproficiencies",
+        "pk": 0,
+        "fields": {
+            "subclass": 0,
+            "skill_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subclasslanguageproficiencies",
+        "pk": 0,
+        "fields": {
+            "subclass": 0,
+            "language_granted": 0
+        }
+    },
+    {
+        "model": "charshare.subclassspellsgranted",
+        "pk": 0,
+        "fields": {
+            "subclass": 0,
+            "spells_granted": 0
+        }
+    },
+    {
+        "model": "charshare.backgroundskillproficiencies",
+        "pk": 0,
+        "fields": {
+            "background": 0,
+            "skill_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.backgroundtoolproficiencies",
+        "pk": 0,
+        "fields": {
+            "background": 0,
+            "tool_proficiency_granted": 0
+        }
+    },
+    {
+        "model": "charshare.backgroundlanguageproficiencies",
+        "pk": 0,
+        "fields": {
+            "background": 0,
+            "language_granted": 0
+        }
+    },
+    {
+        "model": "charshare.characterlanguages",
+        "pk": 0,
+        "fields": {
+            "character": 0,
+            "language_granted": 0
+        }
+    }
+]
