@@ -16,3 +16,27 @@ class SkillsList(generics.ListAPIView):
     """
     serializer_class = serializers.SkillsSerializer
     queryset = models.SkillsContentTable.objects.all()
+
+
+class RaceList(generics.ListAPIView):
+    """
+    List base Races
+    """
+    serializer_class = serializers.RaceSerializer
+    queryset = models.RaceContentTable.objects.all()
+
+
+class SubRaceList(generics.ListAPIView):
+    """
+    List base SubRaces
+    """
+    serializer_class = serializers.SubRaceSerializer
+    queryset = models.SubRaceContentTable.objects.all()
+
+
+class SpellsList(generics.ListAPIView):
+    """
+    List base Spells
+    """
+    serializer_class = serializers.SpellsSerializer
+    queryset = models.SpellsContentTable.objects.all()

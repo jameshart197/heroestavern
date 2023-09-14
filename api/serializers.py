@@ -23,3 +23,37 @@ class SkillsSerializer(serializers.ModelSerializer):
         fields = [
             'attribute', 'name', 'shortname', 'full_description'
         ]
+
+
+class RaceSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the RaceContentTable model
+    """
+    class Meta:
+        model = models.RaceContentTable
+        fields = [
+            'name', 'full_description', 'features'
+        ]
+
+
+class SubRaceSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the SubRaceContentTable model
+    """
+    race = serializers.ReadOnlyField(source='race.name')
+    class Meta:
+        model = models.SubRaceContentTable
+        fields = [
+            'race', 'name', 'full_description', 'features'
+        ]
+
+
+class SpellsSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the SpellsContentTable model
+    """
+    class Meta:
+        model = models.SpellsContentTable
+        fields = [
+            'name', 'spell_level', 'full_description', 'spell_reqs'
+        ]
