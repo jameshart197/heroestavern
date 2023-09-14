@@ -40,3 +40,19 @@ class SpellsList(generics.ListAPIView):
     """
     serializer_class = serializers.SpellsSerializer
     queryset = models.SpellsContentTable.objects.all()
+
+
+class ClassList(generics.ListAPIView):
+    """
+    List base Classes
+    """
+    serializer_class = serializers.ClassSerializer
+    queryset = models.ClassContentTable.objects.all()
+
+
+class SubClassList(generics.ListAPIView):
+    """
+    List base Subclasses
+    """
+    serializer_class = serializers.SubclassSerializer
+    queryset = models.SubClassContentTable.objects.all()

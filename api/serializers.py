@@ -57,3 +57,28 @@ class SpellsSerializer(serializers.ModelSerializer):
         fields = [
             'name', 'spell_level', 'full_description', 'spell_reqs'
         ]
+
+    
+class ClassSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the ClassContentTable model
+    """
+    saving_throw_1 = serializers.ReadOnlyField(source='attribute.name')
+    saving_throw_2 = serializers.ReadOnlyField(source='attribute.name')
+    class Meta:
+        model = models.ClassContentTable
+        fields = [
+            'name', 'full_description', 'features', 'saving_throw_1', 'saving_throw_2'
+        ]
+
+
+class SubclassSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the SubclassContentTable model
+    """
+    parent_class = serializers.ReadOnlyField(source='class.name')
+    class Meta:
+        model = models.SubClassContentTable
+        fields = [
+            'parent_class', 'name', 'full_description', 'features'
+        ]
