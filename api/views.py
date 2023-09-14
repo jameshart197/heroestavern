@@ -56,3 +56,43 @@ class SubClassList(generics.ListAPIView):
     """
     serializer_class = serializers.SubclassSerializer
     queryset = models.SubClassContentTable.objects.all()
+
+
+class LanguageList(generics.ListAPIView):
+    """
+    List base Languages
+    """
+    serializer_class = serializers.LanguageSerializer
+    queryset = models.LanguageContentTable.objects.all()
+    
+
+class BackgroundList(generics.ListAPIView):
+    """
+    List base Backgrounds
+    """
+    serializer_class = serializers.BackgroundSerializer
+    queryset = models.BackgroundContentTable.objects.all()
+
+
+class AlignmentList(generics.ListAPIView):
+    """
+    List base Alignments
+    """
+    serializer_class = serializers.AlignmentSerializer
+    queryset = models.AlignmentContentTable.objects.all()
+
+
+class ToolList(generics.ListAPIView):
+    """
+    List base Tools
+    """
+    serializer_class = serializers.ToolSerializer
+    queryset = models.ToolContentTable.objects.all()
+
+
+class InstrumentList(generics.ListAPIView):
+    """
+    List base Instruments
+    """
+    serializer_class = serializers.InstrumentSerializer
+    queryset = models.InstrumentContentTable.objects.all()

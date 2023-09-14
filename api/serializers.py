@@ -82,3 +82,60 @@ class SubclassSerializer(serializers.ModelSerializer):
         fields = [
             'parent_class', 'name', 'full_description', 'features'
         ]
+
+
+class LanguageSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the LanguageContentTable model
+    """
+    class Meta:
+        model = models.LanguageContentTable
+        fields = [
+            'name', 'full_description'
+        ]
+
+
+class BackgroundSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the BackgroundContentTable model
+    """
+    skill_proficiency_1 = serializers.ReadOnlyField(source='skills.name')
+    skill_proficiency_2 = serializers.ReadOnlyField(source='skills.name')
+    class Meta:
+        model = models.BackgroundContentTable
+        fields = [
+            'name', 'full_description', 'feature', 'skill_proficiency_1', 'skill_proficiency_2'
+        ]
+
+
+class AlignmentSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the AlignmentContentTable model
+    """
+    class Meta:
+        model = models.AlignmentContentTable
+        fields = [
+            'name', 'full_description'
+        ]
+
+
+class ToolSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the ToolContentTable model
+    """
+    class Meta:
+        model = models.ToolContentTable
+        fields = [
+            'name', 'full_description'
+        ]
+
+
+class InstrumentSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the InstrumentContentTable model
+    """
+    class Meta:
+        model = models.InstrumentContentTable
+        fields = [
+            'name', 'full_description'
+        ]

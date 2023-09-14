@@ -10,4 +10,9 @@ urlpatterns = [
     path('spells/', views.SpellsList.as_view()),
     path('classes/', views.ClassList.as_view()),
     path('subclasses/', views.SubClassList.as_view()),
+    path('languages/', views.LanguageList.as_view()),
+    path('backgrounds/', views.BackgroundList.as_view()),
+    path('alignments/', views.AlignmentList.as_view()),
+    path('tools/', views.ToolList.as_view()),
+    path('instruments/', views.InstrumentList.as_view()),
 ]
