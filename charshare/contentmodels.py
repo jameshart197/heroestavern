@@ -29,7 +29,7 @@ class SkillsContentTable(models.Model):
 class RaceContentTable(models.Model):
     name = models.CharField(max_length=200)
     full_description = models.TextField()
-    features = models.TextField(default="I am blank")
+    features = models.TextField(default="No Features Entered")
 
     def __str__(self):
         return f'ID: {self.id} - {self.name}'
@@ -42,7 +42,7 @@ class SubRaceContentTable(models.Model):
     race = models.ForeignKey(RaceContentTable, on_delete=models.CASCADE, default=0, related_name="SubraceParentRace")
     name = models.CharField(max_length=200)
     full_description = models.TextField()
-    features = models.TextField(default="I am currently blank")
+    features = models.TextField(default="No Features Entered")
 
     def __str__(self):
         return f'ID: {self.id} - {self.name} {self.race}'
@@ -89,7 +89,7 @@ class SpellsContentTable(models.Model):
 class ClassContentTable(models.Model):
     name = models.CharField(max_length=200)
     full_description = models.TextField()
-    features = models.TextField(default="I am blank")
+    features = models.TextField(default="No Features Entered")
     saving_throw_1 = models.ForeignKey(AttributeContentTable, on_delete=models.CASCADE, default=0, related_name="SavingThrow1")
     saving_throw_2 = models.ForeignKey(AttributeContentTable, on_delete=models.CASCADE, default=0, related_name="SavingThrow2")
     def __str__(self):
@@ -103,7 +103,7 @@ class SubClassContentTable(models.Model):
     parent_class = models.ForeignKey(ClassContentTable, on_delete=models.CASCADE, default=0, related_name="SubclassParentClass")
     name = models.CharField(max_length=200)
     full_description = models.TextField()
-    features = models.TextField(default="I am blank right now")
+    features = models.TextField(default="No Features Entered")
 
     def __str__(self):
         return f'ID: {self.id} - {self.name}'
