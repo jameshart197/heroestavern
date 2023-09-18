@@ -63,8 +63,8 @@ class ClassSerializer(serializers.ModelSerializer):
     """
     Serializer for the ClassContentTable model
     """
-    saving_throw_1 = serializers.ReadOnlyField(source='attribute.name')
-    saving_throw_2 = serializers.ReadOnlyField(source='attribute.name')
+    saving_throw_1 = serializers.ReadOnlyField(source='saving_throw_1.name')
+    saving_throw_2 = serializers.ReadOnlyField(source='saving_throw_2.name')
     class Meta:
         model = models.ClassContentTable
         fields = [
@@ -76,7 +76,7 @@ class SubclassSerializer(serializers.ModelSerializer):
     """
     Serializer for the SubclassContentTable model
     """
-    parent_class = serializers.ReadOnlyField(source='class.name')
+    parent_class = serializers.ReadOnlyField(source='parent_class.name')
     class Meta:
         model = models.SubClassContentTable
         fields = [
@@ -99,8 +99,8 @@ class BackgroundSerializer(serializers.ModelSerializer):
     """
     Serializer for the BackgroundContentTable model
     """
-    skill_proficiency_1 = serializers.ReadOnlyField(source='skills.name')
-    skill_proficiency_2 = serializers.ReadOnlyField(source='skills.name')
+    skill_proficiency_1 = serializers.ReadOnlyField(source='skill_proficiency_1.name')
+    skill_proficiency_2 = serializers.ReadOnlyField(source='skill_proficiency_2.name')
     class Meta:
         model = models.BackgroundContentTable
         fields = [
