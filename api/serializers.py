@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from charshare import models
+from .models import CharacterDetailSerializer
 
 
 class AttributeSerializer(serializers.ModelSerializer):
@@ -146,7 +147,8 @@ class CharacterSerializer(serializers.ModelSerializer):
     Serializer for CharacterDetails model for individual character view
     """
     class Meta:
-        model = models.CharacterDetails
+        model = CharacterDetailSerializer
+        attributes = [1,2]
         fields = [
             'user', 
             'character_name',
@@ -164,5 +166,6 @@ class CharacterSerializer(serializers.ModelSerializer):
             'enemies',
             'factions_and_orgs',
             'hit_points',
-            'armor_class'
+            'armor_class',
+            'attributes'
         ]
