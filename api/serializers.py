@@ -139,3 +139,30 @@ class InstrumentSerializer(serializers.ModelSerializer):
         fields = [
             'name', 'full_description'
         ]
+
+
+class CharacterSerializer(serializers.ModelSerializer):
+    """
+    Serializer for CharacterDetails model for individual character view
+    """
+    class Meta:
+        model = models.CharacterDetails
+        fields = [
+            'user', 
+            'character_name',
+            'subrace',
+            'alignment',
+            'background',
+            'inspiration',
+            'faith',
+            'age',
+            'height',
+            'weight',
+            'notes',
+            'backstory',
+            'allies',
+            'enemies',
+            'factions_and_orgs',
+            'hit_points',
+            'armor_class'
+        ]

@@ -96,3 +96,11 @@ class InstrumentList(generics.ListAPIView):
     """
     serializer_class = serializers.InstrumentSerializer
     queryset = models.InstrumentContentTable.objects.all()
+
+
+class CharacterDetails(generics.RetrieveUpdateAPIView):
+    """
+    List all character details
+    """
+    serializer_class = serializers.CharacterSerializer
+    queryset = models.CharacterDetails.objects.all()
