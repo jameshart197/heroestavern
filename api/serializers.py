@@ -150,7 +150,6 @@ class CharacterAttributesSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CharacterAttributes
         fields = [
-            'character',
             'attribute',
             'score'
         ]
@@ -160,6 +159,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     """
     Serializer for CharacterDetails model for individual character view
     """
+    attributes = CharacterAttributesSerializer(read_only=False, many=True)
     class Meta:
         model = models.CharacterDetails
         fields = [
