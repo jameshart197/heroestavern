@@ -142,13 +142,26 @@ class InstrumentSerializer(serializers.ModelSerializer):
         ]
 
 
+class CharacterAttributesSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of attributes per character
+    """
+    attribute = serializers.ReadOnlyField(source='attribute.name')
+    class Meta:
+        model = models.CharacterAttributes
+        fields = [
+            'character',
+            'attribute',
+            'score'
+        ]
+
+
 class CharacterSerializer(serializers.ModelSerializer):
     """
     Serializer for CharacterDetails model for individual character view
     """
     class Meta:
-        model = CharacterDetailSerializer
-        attributes = [1,2]
+        model = models.CharacterDetails
         fields = [
             'user', 
             'character_name',

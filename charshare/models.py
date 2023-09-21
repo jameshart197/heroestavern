@@ -23,6 +23,7 @@ class CharacterDetails(models.Model):
     factions_and_orgs = models.TextField(blank=True)
     hit_points = models.IntegerField(default=12)
     armor_class = models.IntegerField(default=10)
+    attributes = models.ManyToManyField(AttributeContentTable, through='CharacterAttributes')
 
     def __str__(self):
         return f'ID: {self.id} - {self.character_name}'

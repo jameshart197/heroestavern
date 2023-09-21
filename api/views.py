@@ -1,6 +1,7 @@
-from rest_framework import generics
+from rest_framework import generics, views
 from charshare import models
 from api import serializers
+
 
 class AttributeList(generics.ListAPIView):
     """
@@ -98,9 +99,19 @@ class InstrumentList(generics.ListAPIView):
     queryset = models.InstrumentContentTable.objects.all()
 
 
-class CharacterDetails(generics.RetrieveUpdateAPIView):
+class CharacterAttributes(generics.ListAPIView):
+    """
+    List attributes by character
+    """
+    serializer_class = serializers.CharacterAttributesSerializer
+    queryset = models.CharacterAttributes.objects.all()
+
+
+class CharacterDetails(generics.RetrieveAPIView):
     """
     List all character details
     """
+    # def get(self, request, format=None, **kwargs):
+    #     CharacterDetails = 
     serializer_class = serializers.CharacterSerializer
     queryset = models.CharacterDetails.objects.all()
