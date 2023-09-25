@@ -160,6 +160,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     Serializer for CharacterDetails model for individual character view
     """
     attributes = CharacterAttributesSerializer(read_only=False, many=True)
+    user = serializers.ReadOnlyField(source='user.username')
     class Meta:
         model = models.CharacterDetails
         fields = [
@@ -182,3 +183,4 @@ class CharacterSerializer(serializers.ModelSerializer):
             'armor_class',
             'attributes'
         ]
+        depth=2
