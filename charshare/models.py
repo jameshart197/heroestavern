@@ -49,7 +49,7 @@ class CharacterLevels(models.Model):
     level = models.IntegerField(default=1)  # range limit 1-20
 
     def __str__(self):
-        return f'ID: {self.id} - {self.character.character_name} - {self.subclass.name} - {self.level}'
+        return f'ID: {self.id} - {self.character.character_name} - {self.char_class.name} - {self.level}'
     
     class Meta:
         verbose_name = 'Character Level'

@@ -1,6 +1,5 @@
 from rest_framework import serializers
 from charshare import models
-from .models import CharacterDetailSerializer
 
 
 class AttributeSerializer(serializers.ModelSerializer):
@@ -159,7 +158,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     """
     Serializer for CharacterDetails model for individual character view
     """
-    attributes = CharacterAttributesSerializer(read_only=False, many=True)
+    # attributes = CharacterAttributesSerializer(read_only=False, many=True)
     user = serializers.ReadOnlyField(source='user.username')
     class Meta:
         model = models.CharacterDetails
