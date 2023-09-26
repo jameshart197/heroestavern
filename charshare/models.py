@@ -24,6 +24,11 @@ class CharacterDetails(models.Model):
     hit_points = models.IntegerField(default=12)
     armor_class = models.IntegerField(default=10)
     attributes = models.ManyToManyField('CharacterAttributes')
+    levels = models.ManyToManyField('CharacterLevels')
+    skills = models.ManyToManyField('CharacterSkillProficiencies')
+    saving_throws = models.ManyToManyField('CharacterSavingThrows')
+    spells = models.ManyToManyField('CharacterSpells')
+    languages = models.ManyToManyField('CharacterLanguages')
 
     def __str__(self):
         return f'ID: {self.id} - {self.character_name}'
@@ -92,6 +97,17 @@ class CharacterAttributes(models.Model):
 
     class Meta:
         verbose_name = 'Character Attribute'
+
+
+class CharacterLanguages(models.Model):
+    character = models.ForeignKey(CharacterDetails, on_delete=models.CASCADE, related_name="LanguagesCharacter")
+    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="CharacterLanguageGranted")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.character.character_name} - {self.language_granted.name}'
+
+    class Meta:
+        verbose_name = 'Character Language'
 
 
 # Link Models
@@ -249,14 +265,5 @@ class BackgroundLanguageProficiencies(models.Model):
         verbose_name = 'Background Granted Language'
 
 
-# CHARACTER 
 
-class CharacterLanguages(models.Model):
-    character = models.ForeignKey(CharacterDetails, on_delete=models.CASCADE, related_name="LanguagesCharacter")
-    language_granted = models.ForeignKey(LanguageContentTable, on_delete=models.CASCADE, related_name="CharacterLanguageGranted")
 
-    def __str__(self):
-        return f'ID: {self.id} - {self.character.character_name} - {self.language_granted.name}'
-
-    class Meta:
-        verbose_name = 'Character Language'

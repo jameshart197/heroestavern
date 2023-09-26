@@ -154,6 +154,69 @@ class CharacterAttributesSerializer(serializers.ModelSerializer):
         ]
 
 
+class CharacterLevelsSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of levels per character
+    """
+    char_class = serializers.ReadOnlyField(source='char_class.name')
+    class Meta:
+        model = models.CharacterLevels
+        fields = [
+            'char_class',
+            'level'
+        ]
+
+
+class CharacterSkillsSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of skill proficiencies per character
+    """
+    skill = serializers.ReadOnlyField(source='skill.name')
+    class Meta:
+        model = models.CharacterSkillProficiencies
+        fields = [
+            'skill',
+            'proficiency_level'
+        ]
+
+
+class CharacterSavingThrowsSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of saving throws per character
+    """
+    saving_throw = serializers.ReadOnlyField(source='attribute.name')
+    class Meta:
+        model = models.CharacterSavingThrows
+        fields = [
+            'saving_throw'
+        ]
+
+
+class CharacterSpellsSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of spells per character
+    """
+    spell = serializers.ReadOnlyField(source='spell.name')
+    class Meta:
+        model = models.CharacterSpells
+        fields = [
+            'spell'
+        ]
+
+
+class CharacterLanguagesSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of languages per character
+    """
+    languages = serializers.ReadOnlyField(source='language_granted.name')
+    class Meta:
+        model = models.CharacterLanguages
+        fields = [
+            'languages'
+        ]
+
+
+
 class CharacterSerializer(serializers.ModelSerializer):
     """
     Serializer for CharacterDetails model for individual character view
@@ -180,6 +243,10 @@ class CharacterSerializer(serializers.ModelSerializer):
             'factions_and_orgs',
             'hit_points',
             'armor_class',
-            'attributes'
+            'attributes',
+            'levels',
+            'skills',
+            'saving_throws',
+            'spells'
         ]
         depth=2

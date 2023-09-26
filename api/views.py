@@ -107,6 +107,46 @@ class CharacterAttributes(generics.ListAPIView):
     queryset = models.CharacterAttributes.objects.all()
 
 
+class CharacterLevels(generics.ListAPIView):
+    """
+    List Levels by character
+    """
+    serializer_class = serializers.CharacterLevelsSerializer
+    queryset = models.CharacterLevels.objects.all()
+
+
+class CharacterSkills(generics.ListAPIView):
+    """
+    List Skills by character
+    """
+    serializer_class = serializers.CharacterSkillsSerializer
+    queryset = models.CharacterSkillProficiencies.objects.all()
+
+
+class CharacterSavingThrows(generics.ListAPIView):
+    """
+    List SavingThrows by character
+    """
+    serializer_class = serializers.CharacterSavingThrowsSerializer
+    queryset = models.CharacterSavingThrows.objects.all()
+
+
+class CharacterSpells(generics.ListAPIView):
+    """
+    List Spells by character
+    """
+    serializer_class = serializers.CharacterSpellsSerializer
+    queryset = models.CharacterSpells.objects.all()
+
+
+class CharacterLanguages(generics.ListAPIView):
+    """
+    List Languages by character
+    """
+    serializer_class = serializers.CharacterLanguagesSerializer
+    queryset = models.CharacterLanguages.objects.all()
+
+
 class CharacterDetails(generics.RetrieveAPIView):
     """
     List all character details

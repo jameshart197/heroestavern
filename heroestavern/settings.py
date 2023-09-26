@@ -37,7 +37,8 @@ SECRET_KEY = 'django-insecure-j#1oe^ps5cd9$x$upzw6)kym!^*a6@^1a0)_&ap=y(w2hv7b=@
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-jameshart19-heroestaver-phaga8fole7.ws-eu104.gitpod.io'
+    '8000-jameshart19-heroestaver-phaga8fole7.ws-eu104.gitpod.io',
+    '8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
 ]
 
 

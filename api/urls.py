@@ -16,6 +16,11 @@ urlpatterns = [
     path('tools/', views.ToolList.as_view()),
     path('instruments/', views.InstrumentList.as_view()),
     path('characters/<int:pk>/', views.CharacterDetails.as_view()),
-    path('characterattributes/', views.CharacterAttributes.as_view())
+    path('characterattributes/', views.CharacterAttributes.as_view()),
+    path('characterlevels/', views.CharacterLevels.as_view()),
+    path('characterskills/', views.CharacterSkills.as_view()),
+    path('charactersavingthrows/', views.CharacterSavingThrows.as_view()),
+    path('characterspells/', views.CharacterSpells.as_view()),
+    path('characterlanguages/', views.CharacterLanguages.as_view())
     # path('characters/', views.CharacterList.as_view()),
 ]
