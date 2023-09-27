@@ -216,6 +216,18 @@ class CharacterLanguagesSerializer(serializers.ModelSerializer):
         ]
 
 
+class CharacterSubclassSerializer(serializers.ModelSerializer):
+    """
+    Seralizer for list of Subclass per character
+    """
+    Subclass = serializers.ReadOnlyField(source='subclass.name')
+    class Meta:
+        model = models.CharacterSubclass
+        fields = [
+            'Subclass'
+        ]
+
+
 
 class CharacterSerializer(serializers.ModelSerializer):
     """
@@ -247,6 +259,8 @@ class CharacterSerializer(serializers.ModelSerializer):
             'levels',
             'skills',
             'saving_throws',
-            'spells'
+            'spells',
+            'languages',
+            'subclass'
         ]
         depth=2

@@ -23,12 +23,13 @@ class CharacterDetails(models.Model):
     factions_and_orgs = models.TextField(blank=True)
     hit_points = models.IntegerField(default=12)
     armor_class = models.IntegerField(default=10)
-    attributes = models.ManyToManyField('CharacterAttributes')
-    levels = models.ManyToManyField('CharacterLevels')
-    skills = models.ManyToManyField('CharacterSkillProficiencies')
-    saving_throws = models.ManyToManyField('CharacterSavingThrows')
-    spells = models.ManyToManyField('CharacterSpells')
-    languages = models.ManyToManyField('CharacterLanguages')
+    attributes = models.ManyToManyField('CharacterAttributes', blank=True)
+    levels = models.ManyToManyField('CharacterLevels', blank=True)
+    skills = models.ManyToManyField('CharacterSkillProficiencies', blank=True)
+    saving_throws = models.ManyToManyField('CharacterSavingThrows', blank=True)
+    spells = models.ManyToManyField('CharacterSpells', blank=True)
+    languages = models.ManyToManyField('CharacterLanguages', blank=True)
+    subclass = models.ManyToManyField('CharacterSubclass', blank=True)
 
     def __str__(self):
         return f'ID: {self.id} - {self.character_name}'
@@ -108,6 +109,17 @@ class CharacterLanguages(models.Model):
 
     class Meta:
         verbose_name = 'Character Language'
+
+
+class CharacterSubclass(models.Model):
+    character = models.ForeignKey(CharacterDetails, on_delete=models.CASCADE, related_name="SubclassCharacter")
+    subclass = models.ForeignKey(SubClassContentTable, on_delete=models.SET_DEFAULT, default=0, related_name="CharacterSubclass")
+
+    def __str__(self):
+        return f'ID: {self.id} - {self.subclass.name}'
+
+    class Meta:
+        verbose_name = 'Character Subclass'
 
 
 # Link Models

@@ -147,6 +147,14 @@ class CharacterLanguages(generics.ListAPIView):
     queryset = models.CharacterLanguages.objects.all()
 
 
+class CharacterSubclass(generics.ListAPIView):
+    """
+    List SubclassCharacterSubclass by character
+    """
+    serializer_class = serializers.CharacterSubclassSerializer
+    queryset = models.CharacterSubclass.objects.all()
+    
+
 class CharacterDetails(generics.RetrieveAPIView):
     """
     List all character details

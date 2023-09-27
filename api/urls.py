@@ -21,6 +21,6 @@ urlpatterns = [
     path('characterskills/', views.CharacterSkills.as_view()),
     path('charactersavingthrows/', views.CharacterSavingThrows.as_view()),
     path('characterspells/', views.CharacterSpells.as_view()),
-    path('characterlanguages/', views.CharacterLanguages.as_view())
-    # path('characters/', views.CharacterList.as_view()),
+    path('characterlanguages/', views.CharacterLanguages.as_view()),
+    path('charactersubclass/', views.CharacterSubclass.as_view())
 ]
