@@ -1,0 +1,671 @@
+{
+    "user": "superuser",
+    "character_name": "Jax Lightfingers",
+    "subrace": {
+        "id": 1,
+        "name": "Eladrin",
+        "full_description": "Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another in the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons—affinities that affect the eladrin’s mood and appearance. An eladrin’s season can change, though some remain in one season forever. Choose your season or roll on the Eladrin Seasons table. Your Trance trait lets you change your season.  Like other elves, eladrin can live to be over 750 years old.",
+        "features": "Placeholder for features",
+        "race": {
+            "id": 1,
+            "name": "Elf",
+            "full_description": "Elves are a magical people of otherworldly grace, living in the world but not entirely part of it. They live in places of ethereal beauty, in the midst of ancient forests or in silvery spires glittering with faerie light, where soft music drifts through the air and gentle fragrances waft on the breeze. Elves love nature and magic, art and artistry, music and poetry, and the good things of the world.",
+            "features": "Placeholder for features"
+        }
+    },
+    "alignment": {
+        "id": 2,
+        "name": "Lawful Good",
+        "full_description": "A lawful good character acts as a good person is expected or required to act. She combines a commitment to oppose evil with the discipline to fight relentlessly. She tells the truth, keeps her word, helps those in need, and speaks out against injustice."
+    },
+    "background": {
+        "id": 8,
+        "name": "Criminal / Spy",
+        "full_description": "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
+        "feature": "Criminal Contact You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.",
+        "skill_proficiency_1": {
+            "id": 5,
+            "name": "Deception",
+            "shortname": "DECE",
+            "full_description": "Your Deception check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast-talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie.",
+            "attribute": 6
+        },
+        "skill_proficiency_2": {
+            "id": 17,
+            "name": "Stealth",
+            "shortname": "STLT",
+            "full_description": "Make a Stealth check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.",
+            "attribute": 2
+        }
+    },
+    "inspiration": false,
+    "faith": "many different gods based on convenience",
+    "age": "38",
+    "height": "6'2",
+    "weight": "120",
+    "notes": "Likes Cheese",
+    "backstory": "Grew up in Neverwinter",
+    "allies": "Thieves Guild",
+    "enemies": "Goren Ivanisovic",
+    "factions_and_orgs": "Mockers",
+    "hit_points": 48,
+    "armor_class": 18,
+    "attributes": [
+        {
+            "id": 7,
+            "score": 15,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "attribute": {
+                "id": 1,
+                "name": "Strength",
+                "shortname": "STR",
+                "full_description": "Measures: Natural athleticism, bodily power"
+            }
+        }
+    ],
+    "levels": [
+        {
+            "id": 1,
+            "level": 7,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "char_class": {
+                "id": 9,
+                "name": "Rogue",
+                "full_description": "Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she disappears into the shadows as her fighter friend moves forward to kick the door open.  A human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When their target — a notorious slaver — passes the alleyway, the accomplice cries out, the slaver comes to investigate, and the assassin’s blade cuts his throat before he can make a sound.  Suppressing a giggle, a gnome waggles her fingers and magically lifts the key ring from the guard’s belt. In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to make their escape.  Rogues rely on skill, stealth, and their foes’ vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party.",
+                "features": "I am blank",
+                "saving_throw_1": 2,
+                "saving_throw_2": 4
+            }
+        }
+    ],
+    "skills": [
+        {
+            "id": 1,
+            "proficiency_level": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "skill": {
+                "id": 5,
+                "name": "Deception",
+                "shortname": "DECE",
+                "full_description": "Your Deception check determines whether you can convincingly hide the truth, either verbally or through your actions. This deception can encompass everything from misleading others through ambiguity to telling outright lies. Typical situations include trying to fast-talk a guard, con a merchant, earn money through gambling, pass yourself off in a disguise, dull someone's suspicions with false assurances, or maintain a straight face while telling a blatant lie.",
+                "attribute": 6
+            }
+        },
+        {
+            "id": 2,
+            "proficiency_level": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "skill": {
+                "id": 17,
+                "name": "Stealth",
+                "shortname": "STLT",
+                "full_description": "Make a Stealth check when you attempt to conceal yourself from enemies, slink past guards, slip away without being noticed, or sneak up on someone without being seen or heard.",
+                "attribute": 2
+            }
+        },
+        {
+            "id": 3,
+            "proficiency_level": 0,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "skill": {
+                "id": 14,
+                "name": "Persuasion",
+                "shortname": "PRSU",
+                "full_description": "When you attempt to influence someone or a group of people with tact, social graces, or good nature, the GM might ask you to make a Charisma (Persuasion check. Typically, you use persuasion when acting in good faith, to foster friendships, make cordial requests, or exhibit proper etiquette. Examples of persuading others include convincing a chamberlain to let your party see the king, negotiating peace between warring tribes, or inspiring a crowd of townsfolk.",
+                "attribute": 6
+            }
+        }
+    ],
+    "saving_throws": [
+        {
+            "id": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "attribute": {
+                "id": 4,
+                "name": "Intelligence",
+                "shortname": "INT",
+                "full_description": "Measures: Mental acuity, information recall, analytical skill"
+            }
+        },
+        {
+            "id": 2,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "attribute": {
+                "id": 2,
+                "name": "Dexterity",
+                "shortname": "DEX",
+                "full_description": "Measures: Physical agility, reflexes, balance, poise"
+            }
+        }
+    ],
+    "spells": [
+        {
+            "id": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "spell": {
+                "id": 0,
+                "name": "No Spell Selected",
+                "spell_level": 1,
+                "full_description": "Please select a Spell",
+                "spell_reqs": 0
+            }
+        }
+    ],
+    "languages": [
+        {
+            "id": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "language_granted": {
+                "id": 2,
+                "name": "Common",
+                "full_description": "Most commonly spoken by Humans, most races can speak this"
+            }
+        },
+        {
+            "id": 2,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "language_granted": {
+                "id": 29,
+                "name": "Undercommon",
+                "full_description": "Used as a replacement for Common but in the Underdark"
+            }
+        }
+    ],
+    "subclass": [
+        {
+            "id": 1,
+            "character": {
+                "id": 1,
+                "character_name": "Jax Lightfingers",
+                "inspiration": false,
+                "faith": "many different gods based on convenience",
+                "age": "38",
+                "height": "6'2",
+                "weight": "120",
+                "notes": "Likes Cheese",
+                "backstory": "Grew up in Neverwinter",
+                "allies": "Thieves Guild",
+                "enemies": "Goren Ivanisovic",
+                "factions_and_orgs": "Mockers",
+                "hit_points": 48,
+                "armor_class": 18,
+                "user": 1,
+                "subrace": 1,
+                "alignment": 2,
+                "background": 8,
+                "attributes": [
+                    7
+                ],
+                "levels": [
+                    1
+                ],
+                "skills": [
+                    1,
+                    2,
+                    3
+                ],
+                "saving_throws": [
+                    1,
+                    2
+                ],
+                "spells": [
+                    1
+                ],
+                "languages": [
+                    1,
+                    2
+                ],
+                "subclass": [
+                    1
+                ]
+            },
+            "subclass": {
+                "id": 79,
+                "name": "Arcane Trickster",
+                "full_description": "Some rogues enhance their fine-honed skills of stealth and agility with magic, learning tricks of enchantment and illusion. These rogues include pickpockets and burglars, but also pranksters, mischief-makers, and a significant number of adventurers.",
+                "features": "I am blank right now",
+                "parent_class": 9
+            }
+        }
+    ]
+}

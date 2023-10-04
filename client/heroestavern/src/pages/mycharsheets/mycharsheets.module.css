@@ -30,6 +30,13 @@
 .Centrepanel {
     border: 1px solid orange;
     padding: 1em;
+    margin: 0;
+}
+
+.Centrepanel li {
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr ;
+    gap: .5em;
 }
 
 .Rightpanel {
