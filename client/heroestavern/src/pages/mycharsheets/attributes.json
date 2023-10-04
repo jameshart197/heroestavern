@@ -1,0 +1,37 @@
+[
+    {
+        "name": "Attribute not set",
+        "shortname": "NA",
+        "full_description": "No Attribute has been chosen. This could mean that your chosen skill or saving throw has no governing attribute or that the attribute you were seeking could not be found."
+    },
+    {
+        "name": "Strength",
+        "shortname": "STR",
+        "full_description": "Measures: Natural athleticism, bodily power"
+    },
+    {
+        "name": "Dexterity",
+        "shortname": "DEX",
+        "full_description": "Measures: Physical agility, reflexes, balance, poise"
+    },
+    {
+        "name": "Constitution",
+        "shortname": "CON",
+        "full_description": "Measures: Health, stamina, and vital force"
+    },
+    {
+        "name": "Intelligence",
+        "shortname": "INT",
+        "full_description": "Measures: Mental acuity, information recall, analytical skill"
+    },
+    {
+        "name": "Wisdom",
+        "shortname": "WIS",
+        "full_description": "Measures: Awareness, intuition, insight"
+    },
+    {
+        "name": "Charisma",
+        "shortname": "CHA",
+        "full_description": "Measures: Confidence, eloquence, leadership"
+    }
+]

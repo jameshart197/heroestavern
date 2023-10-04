@@ -53,6 +53,7 @@
     background-color: black;
     color: white;
     display: inline;
+    text-align: center;
 }
 
 .Description {
@@ -85,4 +86,20 @@
 .Selector > li {
     padding: 1em;
     border: solid 1px black;
+}
+
+.SavingThrows li {
+    display: grid;
+    grid-template-columns: 1fr .2fr 1fr 1fr;
+    gap: .5em;
+}
+
+.Passives {
+    width: 50%;
+}
+
+.Passives li {
+    display: grid;
+    grid-template-columns: 3fr .5fr;
+    justify-content: center;
 }

@@ -2,8 +2,10 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./mycharsheets.module.css";
 import SkillRow from "../../components/skillrow/skillrow";
-import Character from "./mycharsheets.json"
-import Skills from "./skills.json"
+import Character from "./mycharsheets.json";
+import Skills from "./skills.json";
+import Attributes from "./attributes.json";
+import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
 
 const MyCharSheets = () => {
   return (
@@ -30,29 +32,22 @@ const MyCharSheets = () => {
         <div className={styles.Leftpanel}>
           <div>
             <h3>Saving Throws</h3>
-            <ul>
-              <li>
-                STR: <div className={styles.Scorebox}>-2</div>
-              </li>
-              <li>
-                DEX: <div className={styles.Scorebox}>+7</div>
-              </li>
-              <li>
-                CON: <div className={styles.Scorebox}>-1</div>
-              </li>
-              <li>
-                INT: <div className={styles.Scorebox}>+3</div>
-              </li>
-              <li>
-                WIS: <div className={styles.Scorebox}>+2</div>
-              </li>
-              <li>
-                CHA: <div className={styles.Scorebox}>+8</div>
-              </li>
+            <ul className={styles.SavingThrows}>
+              {Attributes.map((attribute, idx) =>
+                idx !== 0 ? (
+                  <SavingThrowRow
+                    attributeName={attribute.name}
+                    modifier={"+3"}
+                    isProficient={false}
+                  ></SavingThrowRow>
+                ) : (
+                  ""
+                )
+              )}
             </ul>
           </div>
           <div>
-            <ul>
+            <ul className={styles.Passives}>
               <li>
                 Passive Perception: <div className={styles.Scorebox}>13</div>
               </li>
@@ -108,9 +103,18 @@ const MyCharSheets = () => {
         </div>
         <div className={styles.Centrepanel}>
           <ul>
-            {Skills.map((skill, idx)=> idx!==0?
-            <SkillRow skillName={skill.name} modifier={'+5'} proficiencyLevel={'Proficient'} isProfChecked={false}></SkillRow>:''
-              )}
+            {Skills.map((skill, idx) =>
+              idx !== 0 ? (
+                <SkillRow
+                  skillName={skill.name}
+                  modifier={"+5"}
+                  proficiencyLevel={"Proficient"}
+                  isProfChecked={false}
+                ></SkillRow>
+              ) : (
+                ""
+              )
+            )}
           </ul>
         </div>
         <div className={styles.Rightpanel}>
