@@ -2,10 +2,11 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./mycharsheets.module.css";
 import SkillRow from "../../components/skillrow/skillrow";
-import Character from "./mycharsheets.json";
+import Character from "./dax.json";
 import Skills from "./skills.json";
 import Attributes from "./attributes.json";
 import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
+import CharAttributes from "../../components/charattributes/charattributes";
 
 const MyCharSheets = () => {
   return (
@@ -38,7 +39,7 @@ const MyCharSheets = () => {
                   <SavingThrowRow
                     attributeName={attribute.name}
                     modifier={"+3"}
-                    isProficient={false}
+                    isProficient={Character.saving_throws.find(st=>st.attribute.name === attribute.name)!== undefined}
                   ></SavingThrowRow>
                 ) : (
                   ""
@@ -125,6 +126,13 @@ const MyCharSheets = () => {
           </div>
           <h3>This is a character box</h3>
           <div className={styles.Attributecircle}></div>
+          <div className={styles.Attributes}>
+            <ul>
+              {Character.attributes.map(a=>(
+                <CharAttributes attributeName={a.attribute.name} score={a.score}></CharAttributes>
+              ))}
+            </ul>
+          </div>
           <div>
             <ul className={styles.Selector}>
               <li>Actions</li>
