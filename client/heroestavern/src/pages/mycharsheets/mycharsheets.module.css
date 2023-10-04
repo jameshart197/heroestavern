@@ -1,4 +1,81 @@
-.Top {
+.Topbar {
     border: 1px solid black;
-    color: green;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.Topbar > div {
+    padding: 0 1em;
+    border: 1px solid blue
+}
+
+.Pagecontainer {
+    border: 1px solid red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+.Leftpanel {
+    border: 1px solid green;
+}
+
+.Leftpanel > div {
+    border: 1px solid black;
+    padding: 1em;
+}
+
+.Centrepanel {
+    border: 1px solid orange;
+    padding: 1em;
+}
+
+.Rightpanel {
+    border: 1px solid grey;
+    padding: 1em;
+}
+
+.Rightpanel > div {
+    border: 1px solid black;
+}
+
+.Scorebox {
+    border: 1px solid purple;
+    background-color: black;
+    color: white;
+    display: inline;
+}
+
+.Description {
+    padding: .2em;
+    list-style-type: none;
+}
+
+.Attributecircle {
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 30em;
+    height: 30em;
+    margin: 1em auto;
+}
+
+.Buttonpanel {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.Selector {
+    list-style-type: none;
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+}
+
+.Selector > li {
+    padding: 1em;
+    border: solid 1px black;
 }
