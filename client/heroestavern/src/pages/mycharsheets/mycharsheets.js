@@ -8,8 +8,10 @@ import Attributes from "./attributes.json";
 import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
 import CharAttributes from "../../components/charattributes/charattributes";
 import AttributeWheel from "../../components/attributewheel/attributewheel";
+import { proficiencyBonus, skillProfLevel } from "../../helpers/modifier";
 
 const MyCharSheets = () => {
+  const profBonus = proficiencyBonus(Character.levels.map(l=>l.level).reduce((a,b)=>a+b,0))
   return (
     <>
       <div className={styles.Topbar}>
@@ -40,6 +42,7 @@ const MyCharSheets = () => {
                   <SavingThrowRow
                     attribute={Character.attributes.find(a=>a.attribute.name === attribute.name)}
                     isProficient={Character.saving_throws.find(st=>st.attribute.name === attribute.name)!== undefined}
+                    proficiencyBonus={profBonus}
                   ></SavingThrowRow>
                 ) : (
                   ""
@@ -108,10 +111,12 @@ const MyCharSheets = () => {
             {Skills.map((skill, idx) =>
               idx !== 0 ? (
                 <SkillRow
-                  skillName={skill.name}
-                  modifier={"+5"}
-                  proficiencyLevel={"Proficient"}
-                  isProfChecked={false}
+                  skill={skill}
+                  attribute={Character.attributes.find(a=>a.attribute.name===skill.attribute)}
+                  proficiency={
+                    {level: skillProfLevel(skill, Character),
+                    bonus: profBonus}
+                  }
                 ></SkillRow>
               ) : (
                 ""

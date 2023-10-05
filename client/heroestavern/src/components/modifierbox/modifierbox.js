@@ -3,9 +3,14 @@ import styles from "../../pages/mycharsheets/mycharsheets.module.css";
 import { modifierCalculator } from "../../helpers/modifier";
 
 
-const ModifierBox = ({ attribute }) => {
+const ModifierBox = ({ attribute, proficiencyLevel, proficiencyBonus }) => {
+  const proflevel = 
+    proficiencyLevel===0?proficiencyBonus:
+    proficiencyLevel===1?proficiencyBonus*2:
+    proficiencyLevel===2?Math.floor(proficiencyBonus/2):
+    0;
   return (
-    <div className={styles.Scorebox}>{modifierCalculator(attribute, 0)}</div>
+    <div className={styles.Scorebox}>{modifierCalculator(attribute, proflevel)}</div>
   );
 };
 
