@@ -1,0 +1,75 @@
+.attributewheel {
+    box-sizing: border-box;
+    --size: 20rem;
+    --radius: calc(var(--size) / 2);
+    height: var(--size);
+    width: var(--size);
+    border: 1px solid black;
+    border-radius: 50%;
+    position: relative;
+    margin: 3rem;
+}
+
+.attributewheel ul {
+    margin: 0;
+    list-style: none;
+    --chip-size: 2.5rem;
+    --chip-angle-separation: 40deg;
+    --chip-angle-start: 130deg;
+}
+
+.attributewheel li {
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    padding: 1em;
+    border: 1px solid black;
+    width: var(--chip-size);
+    height: var(--chip-size);
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    --angle: calc(var(--chip-angle-separation) * var(--chip-index) + var(--chip-angle-start));
+    top: calc(var(--radius) * cos(var(--angle)));
+    left: calc(var(--radius) * sin(var(--angle)));
+    transform: translate(calc(var(--radius) - var(--chip-size)), calc(var(--radius) - var(--chip-size)));
+}
+
+.attributewheel li:nth-child(1) {
+    --chip-index: 0;
+}
+
+.attributewheel li:nth-child(2) {
+    --chip-index: 1;
+}
+
+.attributewheel li:nth-child(3) {
+    --chip-index: 2;
+}
+
+.attributewheel li:nth-child(4) {
+    --chip-index: 3;
+}
+
+.attributewheel li:nth-child(5) {
+    --chip-index: 4;
+}
+
+.attributewheel li:nth-child(6) {
+    --chip-index: 5;
+}
+
+.attributewheel li::before {
+    content: attr(data-score);
+}
+
+.attributewheel li::after {
+    content: attr(data-mod);
+    position: absolute;
+    bottom: -.5rem;
+    background: white;
+    padding: .2rem .4rem;
+    border: 1px solid black;
+    font-size: .7em;
+}

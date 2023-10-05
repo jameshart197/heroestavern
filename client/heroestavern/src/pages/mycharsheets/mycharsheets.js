@@ -7,6 +7,7 @@ import Skills from "./skills.json";
 import Attributes from "./attributes.json";
 import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
 import CharAttributes from "../../components/charattributes/charattributes";
+import AttributeWheel from "../../components/attributewheel/attributewheel";
 
 const MyCharSheets = () => {
   return (
@@ -124,15 +125,7 @@ const MyCharSheets = () => {
             <button>Initiative: +5</button>
             <button>Profiency Bonus: +3</button>
           </div>
-          <h3>This is a character box</h3>
-          <div className={styles.Attributecircle}></div>
-          <div className={styles.Attributes}>
-            <ul>
-              {Character.attributes.map(a=>(
-                <CharAttributes attributeName={a.attribute.name} score={a.score}></CharAttributes>
-              ))}
-            </ul>
-          </div>
+          <AttributeWheel attributes={Character.attributes}></AttributeWheel>
           <div>
             <ul className={styles.Selector}>
               <li>Actions</li>
