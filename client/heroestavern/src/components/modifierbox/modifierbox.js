@@ -1,12 +1,11 @@
 import React from "react";
 import styles from "../../pages/mycharsheets/mycharsheets.module.css";
+import { modifierCalculator } from "../../helpers/modifier";
 
-const ModifierCalculator = (attribute, profbonus) =>
-  Math.floor((attribute.score - 10) / 2) + profbonus;
 
 const ModifierBox = ({ attribute }) => {
   return (
-    <div className={styles.Scorebox}>{ModifierCalculator(attribute, 0)}</div>
+    <div className={styles.Scorebox}>{modifierCalculator(attribute, 0)}</div>
   );
 };
 
