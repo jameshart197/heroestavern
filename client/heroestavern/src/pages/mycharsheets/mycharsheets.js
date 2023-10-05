@@ -38,8 +38,7 @@ const MyCharSheets = () => {
               {Attributes.map((attribute, idx) =>
                 idx !== 0 ? (
                   <SavingThrowRow
-                    attributeName={attribute.name}
-                    modifier={"+3"}
+                    attribute={Character.attributes.find(a=>a.attribute.name === attribute.name)}
                     isProficient={Character.saving_throws.find(st=>st.attribute.name === attribute.name)!== undefined}
                   ></SavingThrowRow>
                 ) : (
