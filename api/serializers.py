@@ -143,7 +143,7 @@ class InstrumentSerializer(serializers.ModelSerializer):
 
 class CharacterAttributesSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of attributes per character
+    Serializer for list of attributes per character
     """
     attribute = serializers.ReadOnlyField(source='attribute.name')
     class Meta:
@@ -156,7 +156,7 @@ class CharacterAttributesSerializer(serializers.ModelSerializer):
 
 class CharacterLevelsSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of levels per character
+    Serializer for list of levels per character
     """
     char_class = serializers.ReadOnlyField(source='char_class.name')
     class Meta:
@@ -169,7 +169,7 @@ class CharacterLevelsSerializer(serializers.ModelSerializer):
 
 class CharacterSkillsSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of skill proficiencies per character
+    Serializer for list of skill proficiencies per character
     """
     skill = serializers.ReadOnlyField(source='skill.name')
     class Meta:
@@ -182,7 +182,7 @@ class CharacterSkillsSerializer(serializers.ModelSerializer):
 
 class CharacterSavingThrowsSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of saving throws per character
+    Serializer for list of saving throws per character
     """
     saving_throw = serializers.ReadOnlyField(source='attribute.name')
     class Meta:
@@ -194,7 +194,7 @@ class CharacterSavingThrowsSerializer(serializers.ModelSerializer):
 
 class CharacterSpellsSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of spells per character
+    Serializer for list of spells per character
     """
     spell = serializers.ReadOnlyField(source='spell.name')
     class Meta:
@@ -206,7 +206,7 @@ class CharacterSpellsSerializer(serializers.ModelSerializer):
 
 class CharacterLanguagesSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of languages per character
+    Serializer for list of languages per character
     """
     languages = serializers.ReadOnlyField(source='language_granted.name')
     class Meta:
@@ -218,7 +218,7 @@ class CharacterLanguagesSerializer(serializers.ModelSerializer):
 
 class CharacterSubclassSerializer(serializers.ModelSerializer):
     """
-    Seralizer for list of Subclass per character
+    Serializer for list of Subclass per character
     """
     Subclass = serializers.ReadOnlyField(source='subclass.name')
     class Meta:

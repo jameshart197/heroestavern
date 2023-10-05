@@ -127,7 +127,7 @@ const MyCharSheets = () => {
         <div className={styles.Rightpanel}>
           <div className={styles.Buttonpanel}>
             <button>Initiative: +5</button>
-            <button>Profiency Bonus: +3</button>
+            <button>Proficiency Bonus: +3</button>
           </div>
           <AttributeWheel attributes={Character.attributes}></AttributeWheel>
           <div>
