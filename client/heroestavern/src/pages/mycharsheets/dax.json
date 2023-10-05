@@ -426,47 +426,6 @@
     ],
     "levels": [
         {
-            "id": 2,
-            "level": 1,
-            "character": {
-                "id": 0,
-                "character_name": "Default Character",
-                "inspiration": false,
-                "faith": "No faith entered",
-                "age": "No age entered",
-                "height": "No height entered",
-                "weight": "No weight entered",
-                "notes": "No notes entered",
-                "backstory": "No backstory entered",
-                "allies": "No allies entered",
-                "enemies": "No enemies entered",
-                "factions_and_orgs": "No factions or organizations entered",
-                "hit_points": 12,
-                "armor_class": 10,
-                "user": 1,
-                "subrace": 0,
-                "alignment": 0,
-                "background": 0,
-                "attributes": [
-                    8
-                ],
-                "levels": [],
-                "skills": [],
-                "saving_throws": [],
-                "spells": [],
-                "languages": [],
-                "subclass": []
-            },
-            "char_class": {
-                "id": 0,
-                "name": "No Class Selected",
-                "full_description": "Please select a Class",
-                "features": "I am blank",
-                "saving_throw_1": 0,
-                "saving_throw_2": 0
-            }
-        },
-        {
             "id": 3,
             "level": 5,
             "character": {
