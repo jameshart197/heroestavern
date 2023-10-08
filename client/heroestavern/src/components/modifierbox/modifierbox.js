@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../pages/mycharsheets/mycharsheets.module.css";
+import styles from "./modifierbox.module.css";
 import { modifierCalculator } from "../../helpers/modifier";
 
 

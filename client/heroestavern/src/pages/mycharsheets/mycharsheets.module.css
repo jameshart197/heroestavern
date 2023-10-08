@@ -18,14 +18,15 @@
     grid-template-rows: auto;
 }
 
-.Leftpanel {
-    border: 1px solid green;
+.Leftpanel > div {
+    padding: .5em;
 }
 
-.Leftpanel > div {
-    border: 1px solid black;
-    padding: 1em;
+.Leftpanel hr {
+    color: black;
+    margin-top: 1em 0;
 }
+
 
 .Centrepanel {
     border: 1px solid orange;
@@ -34,9 +35,10 @@
 }
 
 .Centrepanel li {
+    
     display: grid;
-    grid-template-columns: 1fr .2fr 1fr ;
-    gap: .5em;
+    grid-template-columns: 1fr .2fr 1fr;
+    gap: 2em;
 }
 
 .Rightpanel {
@@ -47,21 +49,12 @@
     padding: 1em;
 }
 
-.Rightpanel > div {
-    border: 1px solid black;
-}
-
-.Scorebox {
-    border: 1px solid purple;
-    background-color: black;
-    color: white;
-    display: inline;
-    text-align: center;
-}
-
 .Description {
-    padding: .2em;
     list-style-type: none;
+}
+
+.Description li {
+    padding: 0.5em 0;
 }
 
 .Attributecircle {
@@ -72,12 +65,21 @@
     margin: 1em auto;
 }
 
-.Buttonpanel {
+.TRSection {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 1em;
     width: 100%;
+}
+
+.Scorename {
+    padding: .1em .4em;
+    font-size: 1.3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .3em;
 }
 
 .Selector {
@@ -100,6 +102,7 @@
     display: grid;
     grid-template-columns: 1.2fr .3fr .3fr 1fr;
     gap: 1em;
+    margin-block: .1em;
 }
 
 .Passives {
@@ -108,6 +111,35 @@
 
 .Passives li {
     display: grid;
-    grid-template-columns: 3fr .5fr;
+    grid-template-columns: 1.3fr .5fr;
+    align-items: center;
     justify-content: center;
+    margin-block: .7em;
+}
+
+.Scorecircle {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(107, 214, 103);
+    padding: .15em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 1.2em;
+    width: 1.2em;
+}
+
+.attributewheelcontainer {
+    background-image: url(../../assets/Gold-circle-frame-design-on-trsndparent-background-PNG.png);
+    background-size: 100%;
+}
+
+h4 {
+    margin: 1em 0;
+}
+
+h5 {
+    margin: .2em 0;
 }

@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(assets/light-grey-background.jpg);
+  background-size: cover;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 ul {

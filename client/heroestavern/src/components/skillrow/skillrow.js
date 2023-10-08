@@ -1,6 +1,7 @@
 import React from "react";
-import styles from "../../pages/mycharsheets/mycharsheets.module.css";
+import styles from "./skillrow.module.css";
 import ModifierBox from "../modifierbox/modifierbox";
+
 
 const SkillRow = ({ skill, attribute, proficiency }) => {
   const prof = 

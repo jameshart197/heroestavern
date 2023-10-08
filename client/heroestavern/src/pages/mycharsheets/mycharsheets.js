@@ -11,7 +11,9 @@ import AttributeWheel from "../../components/attributewheel/attributewheel";
 import { proficiencyBonus, skillProfLevel } from "../../helpers/modifier";
 
 const MyCharSheets = () => {
-  const profBonus = proficiencyBonus(Character.levels.map(l=>l.level).reduce((a,b)=>a+b,0))
+  const profBonus = proficiencyBonus(
+    Character.levels.map((l) => l.level).reduce((a, b) => a + b, 0)
+  );
   return (
     <>
       <div className={styles.Topbar}>
@@ -40,8 +42,14 @@ const MyCharSheets = () => {
               {Attributes.map((attribute, idx) =>
                 idx !== 0 ? (
                   <SavingThrowRow
-                    attribute={Character.attributes.find(a=>a.attribute.name === attribute.name)}
-                    isProficient={Character.saving_throws.find(st=>st.attribute.name === attribute.name)!== undefined}
+                    attribute={Character.attributes.find(
+                      (a) => a.attribute.name === attribute.name
+                    )}
+                    isProficient={
+                      Character.saving_throws.find(
+                        (st) => st.attribute.name === attribute.name
+                      ) !== undefined
+                    }
                     proficiencyBonus={profBonus}
                   ></SavingThrowRow>
                 ) : (
@@ -50,20 +58,40 @@ const MyCharSheets = () => {
               )}
             </ul>
           </div>
+          <hr></hr>
           <div>
             <ul className={styles.Passives}>
               <li>
-                Passive Perception: <div className={styles.Scorebox}>13</div>
+                Passive Perception: <div className={styles.Scorebox}><div className={styles.Scorecircle}>13</div></div>
               </li>
               <li>
-                Passive Investigation: <div className={styles.Scorebox}>14</div>
+                Passive Investigation: <div className={styles.Scorebox}><div className={styles.Scorecircle}>14</div></div>
               </li>
               <li>
-                Passive Insight: <div className={styles.Scorebox}>18</div>
+                Passive Insight: <div className={styles.Scorebox}><div className={styles.Scorecircle}>18</div></div>
               </li>
             </ul>
           </div>
+          <hr></hr>
           <div>
+            <ul className={styles.Description}>
+              <li>
+                <strong>Faith</strong> Cyrollallee
+              </li>
+              <li>
+                <strong>Age</strong> 32
+              </li>
+              <li>
+                <strong>Height</strong> 3'1
+              </li>
+              <li>
+                <strong>Weight</strong> 42 lbs
+              </li>
+              <li>
+                <strong>Alignment</strong> Chaotic Good
+              </li>
+            </ul>
+            <hr></hr>
             <h4>Background</h4>
             <h5>Storyteller</h5>
             <p>
@@ -87,23 +115,6 @@ const MyCharSheets = () => {
               unless you have shown yourself to be dangerous or a threat. They
               also will not sell you out unless heavily threatened.
             </p>
-            <ul className={styles.Description}>
-              <li>
-                <strong>Faith</strong> Cyrollallee
-              </li>
-              <li>
-                <strong>Age</strong> 32
-              </li>
-              <li>
-                <strong>Height</strong> 3'1
-              </li>
-              <li>
-                <strong>Weight</strong> 42 lbs
-              </li>
-              <li>
-                <strong>Alignment</strong> Chaotic Good
-              </li>
-            </ul>
           </div>
         </div>
         <div className={styles.Centrepanel}>
@@ -112,11 +123,13 @@ const MyCharSheets = () => {
               idx !== 0 ? (
                 <SkillRow
                   skill={skill}
-                  attribute={Character.attributes.find(a=>a.attribute.name===skill.attribute)}
-                  proficiency={
-                    {level: skillProfLevel(skill, Character),
-                    bonus: profBonus}
-                  }
+                  attribute={Character.attributes.find(
+                    (a) => a.attribute.name === skill.attribute
+                  )}
+                  proficiency={{
+                    level: skillProfLevel(skill, Character),
+                    bonus: profBonus,
+                  }}
                 ></SkillRow>
               ) : (
                 ""
@@ -125,11 +138,13 @@ const MyCharSheets = () => {
           </ul>
         </div>
         <div className={styles.Rightpanel}>
-          <div className={styles.Buttonpanel}>
-            <button>Initiative: +5</button>
-            <button>Proficiency Bonus: +3</button>
+          <div className={styles.TRSection}>
+            <div className={styles.Scorename}>Initiative:<div className={styles.Scorecircle}>+5</div></div>
+            <div className={styles.Scorename}>Proficiency Bonus:<div className={styles.Scorecircle}>+3</div></div>
           </div>
-          <AttributeWheel attributes={Character.attributes}></AttributeWheel>
+          <div className={styles.attributewheelcontainer}>
+            <AttributeWheel attributes={Character.attributes}></AttributeWheel>
+          </div>
           <div>
             <ul className={styles.Selector}>
               <li>Actions</li>

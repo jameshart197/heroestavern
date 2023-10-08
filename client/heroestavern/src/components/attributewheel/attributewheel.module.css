@@ -1,3 +1,5 @@
+
+
 .attributewheel {
     box-sizing: border-box;
     --chip-border-size: 2px;
@@ -9,6 +11,8 @@
     border-radius: 50%;
     position: relative;
     margin: 3rem;
+    background-image: url(../../assets/Clover.jpg);
+    background-size: cover;
 }
 
 .attributewheel ul {
@@ -36,6 +40,10 @@
     top: calc(var(--radius) * cos(var(--angle)));
     left: calc(var(--radius) * sin(var(--angle)));
     transform: translate(calc(var(--radius) - var(--chip-size)), calc(var(--radius) - var(--chip-size)));
+    background-image: url(../../assets/goldcircle.jpg);
+    background-size: 140%;
+    background-position: center;
+    background-color: rgb(170, 172, 173);
 }
 
 .attributewheel li:nth-child(1) {
@@ -75,4 +83,6 @@
     padding: .2rem .4rem;
     border: calc(var(--chip-border-size) / 2) solid black;
     font-size: .7em;
+    background-color: black;
+    color: white;
 }
