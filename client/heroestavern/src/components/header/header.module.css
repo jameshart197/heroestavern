@@ -1,29 +1,38 @@
-header nav {
+header {
+    background-image: url(../../assets/headerbackground.jpg);
+    background-size: cover;
     display: grid;
     grid-template-columns: 1fr 6fr 2fr;
     gap: 1em;
 }
 
+nav {
+    position: relative;
+}
+
 header ul {
+    width: 100%;
+    position: absolute;
+    bottom: 1em;
     display: flex;
     list-style-type: none;
-    border: 3px solid rgb(61, 60, 60);
+    color: rgb(202, 202, 202);
     align-items: center;
     justify-content: space-evenly;
 }
 
 header a {
     text-decoration: none;
-    color: rgb(61, 60, 60)
+    color: rgb(202, 202, 202);
 }
 
 header a:visited {
-    color: rgb(61, 60, 60)
+    color: rgb(202, 202, 202);
 }
 
 header a:hover {
-    color: rgb(4, 116, 116);
-}
+    color: rgb(34, 248, 248);
+}rgb(66, 250, 250)
 
 
 .createpost {
@@ -32,6 +41,8 @@ header a:hover {
 }
 
 .logo {
-    text-align: center;
-    border: 1px solid black;
+    background-image: url(../../assets/logo.png);
+    height: 100px;
+    width: 100px;
+    background-size: cover;
 }

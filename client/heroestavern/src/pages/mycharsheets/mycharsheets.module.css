@@ -1,5 +1,4 @@
 .Topbar {
-    border: 1px solid black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -8,30 +7,34 @@
 
 .Topbar > div {
     padding: 0 1em;
-    border: 1px solid blue
 }
 
 .Pagecontainer {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
+}
+
+hr {
+    border-color: black;
+    margin-top: 1em 0;
+}
+
+.Leftpanel {
+    border: 2px solid rgb(0, 0, 0);
 }
 
 .Leftpanel > div {
     padding: .5em;
 }
 
-.Leftpanel hr {
-    color: black;
-    margin-top: 1em 0;
-}
 
 
 .Centrepanel {
-    border: 1px solid orange;
     padding: 1em;
     margin: 0;
+    border-top: 2px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
 }
 
 .Centrepanel li {
@@ -45,7 +48,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid grey;
+    border: 2px solid rgb(0, 0, 0);
     padding: 1em;
 }
 
@@ -55,14 +58,6 @@
 
 .Description li {
     padding: 0.5em 0;
-}
-
-.Attributecircle {
-    border: 2px solid black;
-    border-radius: 50%;
-    width: 30em;
-    height: 30em;
-    margin: 1em auto;
 }
 
 .TRSection {
@@ -134,6 +129,7 @@
 .attributewheelcontainer {
     background-image: url(../../assets/Gold-circle-frame-design-on-trsndparent-background-PNG.png);
     background-size: 100%;
+    color: black;
 }
 
 h4 {
@@ -142,4 +138,10 @@ h4 {
 
 h5 {
     margin: .2em 0;
+}
+
+.hp {
+    display: flex;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
 }

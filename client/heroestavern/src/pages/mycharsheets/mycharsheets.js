@@ -33,6 +33,9 @@ const MyCharSheets = () => {
           <input type="checkbox" id="Inspiration" name="Inspiration" checked />
           <label for="Inspiration">Inspiration</label>
         </div>
+        <div>
+        <div className={styles.hp}><h3>HP: 15 / 15</h3></div>
+        </div>
       </div>
       <div className={styles.Pagecontainer}>
         <div className={styles.Leftpanel}>

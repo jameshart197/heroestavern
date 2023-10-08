@@ -5,19 +5,16 @@ import styles from "./header.module.css"
 const Header = () => {
     return (
         <header>
-            <nav>
                 <div className={styles.logo}>
-                    logo
                 </div>
                 <div></div>
-                <div>
+                <nav>
                     <ul>
                         <li><NavLink to={"/"}>Home</NavLink></li>
                         <li><NavLink to={"/characters"}>My Character Sheets</NavLink></li>
                         <li><NavLink>Sign Out</NavLink></li>
                     </ul>
-                </div>
-            </nav>
+                </nav>
         </header>
     )
 }
