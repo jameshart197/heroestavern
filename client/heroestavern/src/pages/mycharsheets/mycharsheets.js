@@ -17,7 +17,9 @@ const MyCharSheets = () => {
   );
   return (
     <>
-      <Infopanel></Infopanel>
+      <Infopanel
+      character={Character}
+      ></Infopanel>
       <div className={styles.Pagecontainer}>
         <div className={styles.Leftpanel}>
           <div>

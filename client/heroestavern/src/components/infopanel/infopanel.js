@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./infopanel.module.css";
 
-const Infopanel = () => {
+const Infopanel = ( {character} ) => {
   return (
     <div className={styles.Topbar}>
         <div>
@@ -22,35 +22,22 @@ const Infopanel = () => {
         <div>
             <div className={styles.Label}>HP</div>
         </div>
-        <div className={styles.Response}>Daxton 'Dax' Silvertongue</div>
-        <div className={styles.Response}>Lightfoot Halfling</div>
-        <div className={styles.Response}>Bard - College of Eloquence</div>
-        <div className={styles.Response}>5</div>
-        <div className={styles.Response}><input type="checkbox" id="Inspiration" name="Inspiration" checked />
-        <label for="Inspiration"></label></div>
-        <div className={styles.hp}>15 / 15</div>
-      {/* <div>
-        <h2>Daxton 'Dax' Silvertongue</h2>
-      </div>
-      <div>
-        <h3>Bard - College of Eloquence</h3>
-      </div>
-      <div>
-        <h3>Lightfoot Halfling</h3>
-      </div>
-      <div>
-        <h3>Level: 5</h3>
-      </div>
-      <div>
-        <input type="checkbox" id="Inspiration" name="Inspiration" checked />
-        <label for="Inspiration">Inspiration</label>
-      </div>
-      <div>
-        <div className={styles.hp}>
-          <h3>HP: 15 / 15</h3>
+        <div className={styles.Response}>{character.character_name}</div>
+        <div className={styles.Response}>{character.subrace.name}</div>
+        <div className={styles.Response}>
+          {character.levels.map(
+            (l, idx)=>l.char_class.name + " - " 
+              + character.subclass.find(sc=>sc.subclass.parent_class===l.char_class.id).subclass.name 
+                + ((idx+1) < character.levels.length?" / ":""))
+          }
         </div>
-      </div> */}
-    </div>
+        <div className={styles.Response}>
+          {character.levels.reduce((a,b)=>a+b.level, 0)}
+        </div>
+        <div className={styles.Response}><input type="checkbox" id="Inspiration" name="Inspiration" checked={character.inspiration} />
+        <label htmlFor="Inspiration"></label></div>
+        <div className={styles.hp}>{character.hit_points} / {character.hit_points}</div>
+      </div>
   );
 };
 
