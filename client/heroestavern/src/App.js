@@ -12,6 +12,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='characters/' element={<MyCharSheets/>}></Route>
+        <Route path='charcreate/' element={<CharacterCreation/>}></Route>
       </Routes>
     </>
   );

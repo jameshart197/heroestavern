@@ -23,8 +23,8 @@ const Infopanel = () => {
             <div className={styles.Label}>HP</div>
         </div>
         <div className={styles.Response}>Daxton 'Dax' Silvertongue</div>
-        <div className={styles.Response}>Bard - College of Eloquence</div>
         <div className={styles.Response}>Lightfoot Halfling</div>
+        <div className={styles.Response}>Bard - College of Eloquence</div>
         <div className={styles.Response}>5</div>
         <div className={styles.Response}><input type="checkbox" id="Inspiration" name="Inspiration" checked />
         <label for="Inspiration"></label></div>
