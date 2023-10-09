@@ -47,7 +47,10 @@ const MyCharSheets = () => {
             </ul>
           </div>
           <hr></hr>
-          <Passives></Passives>
+          <Passives
+            character={Character}
+            profBonus={profBonus}
+          ></Passives>
           <hr></hr>
           <Description character={Character}></Description>
         </div>
@@ -74,7 +77,7 @@ const MyCharSheets = () => {
         <div className={styles.Rightpanel}>
           <div className={styles.TRSection}>
             <Initiative
-              attribute={Character.attributes}
+              dex={Character.attributes.find(a=>a.attribute.id===2)}
               profBonus={profBonus}
             ></Initiative>
             <div className={styles.Scorename}>

@@ -3,17 +3,14 @@ import styles from "./initiative.module.css";
 import { modifierCalculator } from "../../helpers/modifier";
 import Scorebox from "../scorebox/scorebox";
 
-const Initiative = ({ attribute, profBonus }) => {
+const Initiative = ({ dex, profBonus }) => {
   return (
     <div className={styles.Scorename}>
       Initiative:
-      <Scorebox value={5}  addPlus={true}></Scorebox>
+      <Scorebox value={modifierCalculator(dex, 0)}  addPlus={false}></Scorebox>
     </div>
   );
 };
 
 export default Initiative;
 
-// attribute = dexterity. Dex=character.attributes.attribute.id[2]
-// score = character.attributes.attribute.score where ID=2
-// scorebox value should = {modifierCalculator(dex, 0) + profBonus}
