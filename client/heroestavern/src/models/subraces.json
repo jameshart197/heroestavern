@@ -1,0 +1,470 @@
+[
+    {
+        "race": "Race not set",
+        "name": "No Subrace Selected",
+        "full_description": "Please select a Subrace",
+        "features": "I am currently blank"
+    },
+    {
+        "race": "Elf",
+        "name": "Eladrin",
+        "full_description": "Eladrin are elves of the Feywild, a realm of perilous beauty and boundless magic. Using that magic, eladrin can step from one place to another in the blink of an eye, and each eladrin resonates with emotions captured in the Feywild in the form of seasons—affinities that affect the eladrin’s mood and appearance. An eladrin’s season can change, though some remain in one season forever. Choose your season or roll on the Eladrin Seasons table. Your Trance trait lets you change your season.  Like other elves, eladrin can live to be over 750 years old.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Dark Elf (Drow)",
+        "full_description": "As a drow, you are infused with the magic of the Underdark, an underground realm of wonders and horrors rarely seen on the surface above. You are at home in shadows and, thanks to your innate magic, learn to conjure forth both light and darkness. Your kin tend to have stark white hair and grayish skin of many hues.  The cult of the god Lolth, Queen of Spiders, has corrupted some of the oldest drow cities, especially in the worlds of Oerth and Toril. Eberron, Krynn, and other realms have escaped the cult’s influence—for now. Wherever the cult lurks, drow heroes stand on the front lines in the war against it, seeking to sunder Lolth’s web.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "High Elf",
+        "full_description": "As a high elf, you have a keen mind and a mastery of at least the basics of magic. In many of the worlds of D&D, there are two kinds of high elves. One type (which includes the gray elves and valley elves of Greyhawk, the Silvanesti of Dragonlance, and the sun elves of the Forgotten Realms) is haughty and reclusive, believing themselves to be superior to non-elves and even other elves. The other type (including the high elves of Greyhawk, the Qualinesti of Dragonlance, and the moon elves of the Forgotten Realms) are more common and more friendly, and often encountered among humans and other races.  The sun elves of Faerûn (also called gold elves or sunrise elves) have bronze skin and hair of copper, black, or golden blond. Their eyes are golden, silver, or black. Moon elves (also called silver elves or gray elves) are much paler, with alabaster skin sometimes tinged with blue. They often have hair of silver-white, black, or blue, but various shades of blond, brown, and red are not uncommon. Their eyes are blue or green and flecked with gold.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Wood Elf",
+        "full_description": "As a wood elf, you have keen senses and intuition, and your fleet feet carry you quickly and stealthily through your native forests. This category includes the wild elves (grugach) of Greyhawk and the Kagonesti of Dragonlance, as well as the races called wood elves in Greyhawk and the Forgotten Realms. In Faerûn, wood elves (also called wild elves, green elves, or forest elves) are reclusive and distrusting of non-elves.  Wood elves’ skin tends to be copperish in hue, sometimes with traces of green. Their hair tends toward browns and blacks, but it is occasionally blond or copper-colored. Their eyes are green, brown, or hazel.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Pallid Elf",
+        "full_description": "The pallid elves are a mystical and insightful people with skin as pale as the surface of Exandria’s largest moon. They emerged from the Pallid Grove this century and wander the world with childlike curiosity.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Sea Elf",
+        "full_description": "Sea elves fell in love with the wild beauty of the ocean in the earliest days of the multiverse. While other elves traveled from realm to realm, sea elves navigated the currents and explored the waters of many worlds. Today these elves can be found wherever oceans exist, as well as in the Elemental Plane of Water.  Like other elves, sea elves can live to be over 750 years old.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Shadar-Kai",
+        "full_description": "Shadar-kai are the elves of the Shadowfell, originally drawn to that dread realm by the Raven Queen. Over the centuries, some of them have continued to serve her, while others have ventured into the Material Plane to forge their own destinies.  Once shadar-kai were Fey like the rest of their elven kin; now they exist in a state between life and death, thanks to being transformed by the Shadowfell’s grim energy.  Shadar-kai have ashen skin tones, and while they’re in the Shadowfell, they also become wizened, reflecting the somber nature of that gloomy plane.  Like other elves, shadar-kai can live to be over 750 years old.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Elf",
+        "name": "Astral Elf",
+        "full_description": "Long ago, groups of elves ventured from the Feywild to the Astral Plane to be closer to their gods. Life in the Silver Void has imbued their souls with a spark of divine light. That light manifests as a starry gleam in an astral elf’s eyes.  Because nothing ages on the Astral Plane, astral elves who inhabit that plane can be very old, and their longevity gives them an unusual perspective on the passage of time. Some are prone to melancholy, while others might display an absence of feeling. Many look for creative ways to occupy themselves. Whether they choose to live in quiet contemplation or strike out to explore the reaches of the multiverse, astral elves tend to see things through the lens of time as having little or no meaning to them. Astral elves who don’t dwell on the Astral Plane can live to be more than 750 years old.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dwarf",
+        "name": "Hill Dwarf",
+        "full_description": "As a hill dwarf, you have keen senses, deep intuition, and remarkable resilience. The gold dwarves of Faerûn in their mighty southern kingdom are hill dwarves, as are the exiled Neidar and the debased Klar of Krynn in the Dragonlance setting.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dwarf",
+        "name": "Mountain Dwarf",
+        "full_description": "As a mountain dwarf, you’re strong and hardy, accustomed to a difficult life in rugged terrain. You’re probably on the tall side (for a dwarf), and tend toward lighter coloration. The shield dwarves of northern Faerûn, as well as the ruling Hylar clan and the noble Daewar clan of Dragonlance, are mountain dwarves.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dwarf",
+        "name": "Duergar",
+        "full_description": "Duergar are dwarves whose ancestors were transformed by centuries living in the deepest places of the Underdark. That chthonic realm is saturated with strange magical energy, and over generations, early duergar absorbed traces of it. They were further altered when mind flayers and other Aberrations invaded and performed horrific experiments on them. Fueled by Underdark magic, those experiments left early duergar with psionic powers, which have been passed down to their descendants. In time, they liberated themselves from their aberrant tyrants and forged a new life for themselves in the Underdark and beyond.  Like other dwarves, duergar typically have a life span of 350 years.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dragonborn",
+        "name": "Chromatic Dragonborn",
+        "full_description": "Dragonborn with chromatic ancestry claim the raw elemental power of chromatic dragons. The vibrant colors of black, blue, green, red, and white dragons gleam in those dragonborn’s scaled skin and in the deadly energy of their breath weapons. Theirs is the raw elemental fury of the volcano, of biting arctic winds, and of raging lightning storms, as well as the subtle whisper of swamp and forest, toxic and corrosive.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dragonborn",
+        "name": "Gem Dragonborn",
+        "full_description": "Gem dragonborn partake of the heritage of gem dragons, who claim to be heirs of Sardior, the Ruby Dragon. The colors and mysterious powers of gem dragons—amethyst, crystal, emerald, sapphire, and topaz—gleam in these dragonborn’s scaled skin and course through their veins. Theirs are the wonders of the mind, the force of will, the brilliant light of insight, and the resounding echo of discovery—but also the desiccation of despair.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Dragonborn",
+        "name": "Metallic Dragonborn",
+        "full_description": "Dragonborn with metallic ancestry lay claim to the tenacity of metallic dragons—brass, bronze, copper, gold, and silver—whose hues glint in their scales. Theirs is the fire of hearth and forge, the cold of high mountain air, the spark of inspiration, and the scouring touch of acid that purifies.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Gnome",
+        "name": "Forest Gnome",
+        "full_description": "As a forest gnome, you have a natural knack for illusion and inherent quickness and stealth. In the worlds of D&D, forest gnomes are rare and secretive. They gather in hidden communities in sylvan forests, using illusions and trickery to conceal themselves from threats or to mask their escape should they be detected. Forest gnomes tend to be friendly with other good-spirited woodland folk, and they regard elves and good fey as their most important allies. These gnomes also befriend small forest animals and rely on them for information about threats that might prowl their lands.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Gnome",
+        "name": "Rock Gnome",
+        "full_description": "As a rock gnome, you have a natural inventiveness and hardiness beyond that of other gnomes. Most gnomes in the worlds of D&D are rock gnomes, including the tinker gnomes of the Dragonlance setting.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Gnome",
+        "name": "Deep Gnome (Svirfneblin)",
+        "full_description": "Deep gnomes, or svirfneblin, are natives of the Underdark and are suffused with that subterranean realm’s magic. They can supernaturally camouflage themselves, and their svirfneblin magic renders them difficult to locate. These abilities have enabled them to survive for generations among the perils of the Underdark.  Like other gnomes, deep gnomes can live for centuries, up to 500 years.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Half-Elf",
+        "name": "Aquatic Half-Elf",
+        "full_description": "Half Sea-Elf, A half-elf of aquatic heritage can forgo Skill Versatility and instead choose a swimming speed of 30 feet.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Half-Elf",
+        "name": "Drow Half-Elf",
+        "full_description": "A half-elf of drow descent can forgo Skill Versatility and instead choose the drow’s Drow Magic:  You know the dancing lights cantrip. When you reach 3rd level, you can cast the faerie fire spell once with this trait and regain the ability to do so when you finish a long rest. When you reach 5th level, you can cast the darkness spell once with this trait and regain the ability to do so when you finish a long rest. Charisma is your spellcasting ability for these spells.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Half-Elf",
+        "name": "Wood Half-Elf",
+        "full_description": "A half-elf of wood elf descent can forgo Skill Versatility and instead choose the wood elf’s Elf Weapon Training, Fleet of Foot, or Mask of the Wild.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Half-Elf",
+        "name": "High Half-Elf",
+        "full_description": "A half-elf of moon elf or sun elf descent can forego Skill Versatility and instead choose the high elf’s Elf Weapon Training or Cantrip.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Halfling",
+        "name": "Ghostwise Halfling",
+        "full_description": "Ghostwise halflings trace their ancestry back to a war among halfling tribes that sent their ancestors into flight from Luiren. Ghostwise halflings are the rarest of the hin, found only in the Chondalwood and a few other isolated forests, clustered in tight-knit clans.  Many ghostwise clans select a natural landmark as the center of their territory, and members carry a piece of that landmark with them at all times. Clan warriors known as nightgliders bond with and ride giant owls as mounts.  Because these folk are clannish and mistrustful of outsiders, ghostwise halfling adventurers are rare.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Halfling",
+        "name": "Lightfoot Halfling",
+        "full_description": "As a lightfoot halfling, you can easily hide from notice, even using other people as cover. You’re inclined to be affable and get along well with others. In the Forgotten Realms, lightfoot halflings have spread the farthest and thus are the most common variety.  Lightfoots are more prone to wanderlust than other halflings, and often dwell alongside other races or take up a nomadic life.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Halfling",
+        "name": "Stout Halfling",
+        "full_description": "As a stout halfling, you’re hardier than average and have some resistance to poison. Some say that stouts have dwarven blood. In the Forgotten Realms, these halflings are called stronghearts, and they’re most common in the south.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Halfling",
+        "name": "Lotusden Halfling",
+        "full_description": "Long tied to the natural heart of the Lotusden Greenwood, these halflings have adapted to live synergistically with the chaotic laws of the wilds.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Half-Orc",
+        "name": "Half-Orc",
+        "full_description": "Half-orcs exhibit a blend of orcish and human characteristics, and their appearance varies widely. Grayish skin tones and prominent teeth are the most common shared elements among these folk.  Orcs regard battle scars as tokens of pride and ornamental scars as things of beauty. Other scars, though, mark an orc or half-orc as a former prisoner or a disgraced exile. Any half-orc who has lived among or near orcs has scars, whether they are marks of humiliation or of pride, recounting their past exploits and injuries.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Human",
+        "name": "Human (Common)",
+        "full_description": "Humans are the most adaptable and ambitious people among the common races. They have widely varying tastes, morals, and customs in the many different lands where they have settled. When they settle, though, they stay: they build cities to last for the ages, and great kingdoms that can persist for long centuries. An individual human might have a relatively short life span, but a human nation or culture preserves traditions with origins far beyond the reach of any single human’s memory. They live fully in the present—making them well suited to the adventuring life—but also plan for the future, striving to leave a lasting legacy. Individually and as a group, humans are adaptable opportunists, and they stay alert to changing political and social dynamics.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Human",
+        "name": "Variant Human",
+        "full_description": "With their penchant for migration and conquest, humans are more physically diverse than other common races. There is no typical human. An individual can stand from 5 feet to a little over 6 feet tall and weigh from 125 to 250 pounds. Human skin shades range from nearly black to very pale, and hair colors from black to blond (curly, kinky, or straight); males might sport facial hair that is sparse or thick. A lot of humans have a dash of nonhuman blood, revealing hints of elf, orc, or other lineages. Humans reach adulthood in their late teens and rarely live even a single century.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Tiefling",
+        "name": "Variant Tiefling",
+        "full_description": "Choose between: Devil’s Tongue. You know the vicious mockery cantrip. When you reach 3rd level, you can cast the charm person spell as a 2nd-level spell once with this trait. When you reach 5th level, you can cast the enthrall spell once with this trait. You must finish a long rest to cast these spells once again with this trait. Charisma is your spellcasting ability for them. This trait replaces the Infernal Legacy trait.  Hellfire. Once you reach 3rd level, you can cast the burning hands spell once per day as a 2nd-level spell. This trait replaces the hellish rebuke spell of the Infernal Legacy trait.  Winged. Bat-like wings jut from your shoulder blades. You have a flying speed of 30 feet while you aren’t wearing heavy armor.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Tiefling",
+        "name": "Tiefling (Common)",
+        "full_description": "Tieflings are derived from human bloodlines, and in the broadest possible sense, they still look human. However, their infernal heritage has left a clear imprint on their appearance. Tieflings have large horns that take any of a variety of shapes: some have curling horns like a ram, others have straight and tall horns like a gazelle’s, and some spiral upward like an antelopes’ horns. They have thick tails, four to five feet long, which lash or coil around their legs when they get upset or nervous. Their canine teeth are sharply pointed, and their eyes are solid colors—black, red, white, silver, or gold—with no visible sclera or pupil. Their skin tones cover the full range of human coloration, but also include various shades of red. Their hair, cascading down from behind their horns, is usually dark, from black or brown to dark red, blue, or purple.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Tiefling",
+        "name": "Feral Tiefling",
+        "full_description": "To be greeted with stares and whispers, to suffer violence and insult on the street, to see mistrust and fear in every eye: this is the lot of the tiefling. And to twist the knife, tieflings know that this is because a pact struck generations ago infused the essence of Asmodeus—overlord of the Nine Hells—into their bloodline. Their appearance and their nature are not their fault but the result of an ancient sin, for which they and their children and their children’s children will always be held accountable.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Aarakocra",
+        "name": "Aarakocra",
+        "full_description": "A winged people who originated on the Elemental Plane of Air, aarakocra soar through the sky wherever they wander. The first aarakocra served the Wind Dukes of Aaqa—mighty beings of air—and were imbued with a measure of their masters power over winds. Their descendants still command echoes of that power.From below, aarakocra look like large birds and thus are sometimes called birdfolk. Only when they roost on a branch or walk across the ground is their Humanoid nature clear. Standing upright, aarakocra are typically about 5 feet tall, and they have long, narrow legs that taper to sharp talons. Feathers cover their bodies—usually red, orange, yellow, brown, or gray. Their heads are also avian, often resembling those of parrots or eagles.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Aasimar",
+        "name": "Aasimar (Standard)",
+        "full_description": "Aasimar are placed in the world to serve as guardians of law and good. Their patrons expect them to strike at evil, lead by example, and further the cause of justice.  From an early age, an aasimar receives visions and guidance from celestial entities via dreams. These dreams help shape an aasimar, granting a sense of destiny and a desire for righteousness.  Each aasimar can count a specific celestial agent of the gods as a guide. This entity is typically a deva, an angel who acts as a messenger to the mortal world.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Aasimar",
+        "name": "Aasimar (Variant)",
+        "full_description": "Whereas tieflings have fiendish blood in their veins, aasimar are the descendants of celestial beings. These folk generally appear as glorious humans with lustrous hair, flawless skin, and piercing eyes. Aasimar often attempt to pass as humans in order to right wrongs and defend goodness on the Material Plane without drawing undue attention to their celestial heritage. They strive to fit into society, although they usually rise to the top, becoming revered leaders and honorable heroes.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Genasi",
+        "name": "Air Genasi",
+        "full_description": "Air genasi are descended from djinn, the genies of the Elemental Plane of Air. Embodying many of the airy traits of their otherworldly ancestors, air genasi can draw upon their connection to the winds.  Air genasi’s skin tones include many shades of blue, along with the full range of human skin tones, with bluish or ashen casts. Sometimes their skin is marked by lines that seem like cracks with bluish-white energy spilling out. An air genasi’s hair might blow in a phantom wind or be made entirely of clouds or vapor.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Genasi",
+        "name": "Earth Genasi",
+        "full_description": "Tracing their ancestry to dao, the genies of the Elemental Plane of Earth, earth genasi inherit dao’s steadfast strength and control over earth.  An earth genasi’s skin can be the colors of stone and earth or a human skin tone with glittering sparkles like gem dust. Some earth genasi have lines marking their skin like cracks, either showing glimmering gemlike veins or a dim, yellowish glow. Earth genasi hair can appear carved of stone or crystal or resemble strands of spun metal.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Genasi",
+        "name": "Fire Genasi",
+        "full_description": "Fire Genasi Fire Genasi Race Details",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Genasi",
+        "name": "Water Genasi",
+        "full_description": "Water genasi descend from marids, aquatic genies from the Elemental Plane of Water. Water genasi are perfectly suited to life underwater and carry the power of the waves inside themselves.  Their skin is often shades of blue or green, sometimes a blend of the two. If they have a human skin tone, there is a glistening texture that catches the light, like water droplets or nearly invisible fish scales. Their hair can resemble seaweed, waving as if in a current, or it can even be like water itself.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Bugbear",
+        "name": "Bugbear",
+        "full_description": "Neither bugs nor bears, bugbears are the hulking cousins of goblins and hobgoblins. With roots in the Feywild, early bugbears resided in hidden places, in hard-to-reach and shadowed spaces. Long ago and from out of the corner of your eye, they came to the Material Plane, urged to spread throughout the multiverse by the conquering god Maglubiyet. Centuries later, they still bear a fey gift for lurking just out of sight, and many of them have sneaked away from that gods influence. They are long of limb and covered in coarse hair, with wedge-shaped ears and pointed teeth. Despite their formidable build, bugbears are quiet skulkers, thanks to a fey magic that allows them to hide in spaces seemingly too small for them.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Centaur",
+        "name": "Centaur",
+        "full_description": "Centaurs gallop throughout the multiverse and trace their origins to many different realms. The centaurs presented here hail from the Feywild and mystically resonate with the natural world. From the waist up, they resemble elves, displaying all the elf varieties of skin tone. From the waist down, they have the bodies of horses.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Changeling",
+        "name": "Changeling",
+        "full_description": "The first changelings in the multiverse appeared in the Feywild, and the wondrous, mutable essence of that plane lingers in changelings today—even in those changelings who have never set foot in the fey realm. Each changeling decides how to use their shape-shifting ability, channeling either the peril or the joy of the Feywild. Sometimes they adopt new forms for the sake of mischief or malice, and other times they don a new identity to right wrongs or delight the downtrodden.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Fairy",
+        "name": "Fairy",
+        "full_description": "Infused with the magic of the Feywild, most fairies look like Small elves with insectile wings, but each fairy has a special physical characteristic that sets the fairy apart. For your fairy, roll on the Fey Characteristics table or choose an option from it. You’re also free to come up with your own characteristic if none of the suggestions below fit your character.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Firbolg",
+        "name": "Firbolg",
+        "full_description": "Distant cousins of giants, the first firbolgs wandered the primeval forests of the multiverse, and the magic of those forests entwined itself with the firbolgs’ souls. Centuries later, that magic still thrums inside a firbolg, even one who has never lived under the boughs of a great forest.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Githyanki",
+        "name": "Githyanki",
+        "full_description": "Once members of a people who escaped servitude to mind flayers, githyanki split from their cousins, githzerai, and fled to the Astral Plane. In that timeless, silvery realm, githyanki honed their psionic powers and built a great city called Tu’narath. They have since spread throughout the multiverse, starting in outposts outside the Astral Plane, called creches, where time passes and their children can reach adulthood.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Githzerai",
+        "name": "Githzerai",
+        "full_description": "Githzerai migrated to the Everchanging Chaos of Limbo after the ancient schism that split their ancestors from their cousins, githyanki. Limbo is a roiling maelstrom of matter and energy, collapsing and reforming without purpose or direction, until a creature exerts deliberate will to stabilize it. Through their potent psionic power, githzerai carved a home for themselves amid the chaos. As the ages passed, githzerai explorers ranged out to other planes and worlds of the multiverse.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Goblin",
+        "name": "Goblin",
+        "full_description": "A subterranean folk, goblins can be found in every corner of the multiverse, often beside their bugbear and hobgoblin kin. Long before the god Maglubiyet conquered them, early goblins served in the court of the Queen of Air and Darkness, one of the Feywild’s archfey. Goblins thrived in her dangerous domain thanks to a special boon from her—a supernatural knack for finding the weak spots in foes larger than themselves and for getting out of trouble. Goblins brought this fey boon with them to worlds across the Material Plane, even if they don’t remember the fey realm they inhabited before Maglubiyet’s rise. Now many goblins pursue their own destinies, escaping the plots of both archfey and gods.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Goliath",
+        "name": "Goliath",
+        "full_description": "The first goliaths lived on the highest mountain peaks—far above the tree line, where the air is thin and frigid winds howl. Distantly related to giants and infused with the supernatural essence of their ancestors’ mountainous home, goliaths stand between 7 and 8 feet tall and have a wide array of skin tones resembling different types of stone.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Harengon",
+        "name": "Harengon",
+        "full_description": "Harengons are bipedal, with the characteristic long feet of the rabbits they resemble and fur in a variety of colors. They share the keen senses and powerful legs of leporine creatures and are full of energy, like a wound-up spring. Harengons are blessed with a little fey luck, and they often find themselves a few fortunate feet away from dangers during adventures.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Hobgoblin",
+        "name": "Hobgoblin",
+        "full_description": "Hobgoblins trace their origins to the ancient courts of the Feywild, where they first appeared with their goblin and bugbear kin. Many of them were driven from the Feywild by the conquering god Maglubiyet, who marshaled them as soldiers, but the fey realm left its mark; wherever they are in the multiverse, they continue to channel an aspect of the Feywild’s rule of reciprocity, which creates a mystical bond between the giver and the receiver of a gift.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Kenku",
+        "name": "Kenku",
+        "full_description": "Feathered folk who resemble ravens, kenku are blessed with keen observation and supernaturally accurate memories. None of them can remember the origin of the first kenku, however, and they often joke that there are as many kenku origin stories as there are kenku. Some of them paint their genesis as a curse, being a flightless bird people doomed to mimic other people’s creations. Other kenku recite cryptic but beautiful poems about their advent being a blessed event in which they were sent into the multiverse to observe and catalog its many wonders.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Kobold",
+        "name": "Kobold",
+        "full_description": "Some of the smallest draconic creatures in the multiverse, kobolds display their draconic ancestry in the glint of their scales and in their roars. Legends tell of the first kobolds emerging from the Underdark near the lairs of the earliest dragons. In some lands, kobolds serve chromatic or metallic dragons—even worshiping them as divine beings. In other places, kobolds know too well how dangerous those dragons can be and help others defend against draconic destruction.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Lizardfolk",
+        "name": "Lizardfolk",
+        "full_description": "The saurian lizardfolk are thought by some sages to be distant cousins of dragonborn and kobolds. Despite their resemblance to those other scaled folk, however, lizardfolk are their own people and have lived on the worlds of the Material Plane since the worlds’ creation. Gifted by the gods with remarkable physical defenses and a mystical connection to the natural world, lizardfolk can survive with just their wits in situations that would be deadly for other folk. Because of that fact, many lizardfolk myths state that their people were placed by the gods in the Material Plane to guard its natural wonders.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Minotaur",
+        "name": "Minotaur",
+        "full_description": "Minotaurs are barrel-chested humanoids with heads resembling those of bulls. Blessed with a supernaturally strong sense of direction, minotaurs make great navigators. Some sages believe minotaurs were first created by the Lady of Pain to patrol the magical mazes that she uses to trap her foes.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Orc",
+        "name": "Orc",
+        "full_description": "Orcs trace their creation to the one-eyed god Gruumsh, an unstoppable warrior and powerful leader. The divine qualities of Gruumsh resonate within orcs, granting them a reflection of his toughness and tenacity that can’t be matched, and the god equipped his children to be able to live above or below ground.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Satyr",
+        "name": "Satyr",
+        "full_description": "Originating in the Feywild—a realm of pure emotion— satyrs thrive on the energy of merriment. They resemble elves but have goatlike legs, cloven hooves, and ram or goat horns. The magic of the fey realm has given them an innate ability to perform, to delight, and to resist magical intrusion. While they’re usually found in the Feywild, satyrs do wander to other planes of existence, most often to the Material Plane. There they seek to bring a bit of their home plane’s splendor to other worlds.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Shifter",
+        "name": "Beasthide Shifter",
+        "full_description": "Shifting grants 1d6 additional temporary hit points. While shifted, you have a +1 bonus to your Armor Class.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Shifter",
+        "name": "Longtooth Shifter",
+        "full_description": "When you shift and as a bonus action on your other turns while shifted, you can use your elongated fangs to make an unarmed strike. If you hit with your fangs, you can deal piercing damage equal to 1d6 + your Strength modifier, instead of the bludgeoning damage normal for an unarmed strike.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Shifter",
+        "name": "Swiftstride",
+        "full_description": "While shifted, your walking speed increases by 10 feet. Additionally, you can move up to 10 feet as a reaction when a creature ends its turn within 5 feet of you. This reactive movement doesn’t provoke opportunity attacks.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Shifter",
+        "name": "Wildhunt Shifter",
+        "full_description": "While shifted, you have advantage on Wisdom checks, and no creature within 30 feet of you can make an attack roll with advantage against you unless you’re incapacitated.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Tabaxi",
+        "name": "Tabaxi",
+        "full_description": "Created by the Cat Lord—a divine being of the Upper Planes—to blend the qualities of humanoids and cats, tabaxi are a varied people in both attitude and appearance. In some lands, tabaxi live like the cats they resemble, naturally curious and at home in playful environments. In other places, tabaxi live as other folk do, not exhibiting the feline behavior the Cat Lord intended.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Tortle",
+        "name": "Tortle",
+        "full_description": "Tortles have a saying: “We wear our homes on our backs.” These turtle folk live on many worlds, most often journeying up and down coasts, along waterways, and across the sea. Tortles don’t have a unified story of how they were created, but they all have a sense of being mystically connected to the natural world. Carrying their shelter on their backs gives tortles a special feeling of security wherever they go, for even if they visit a far, unknown country, they have a place to lay their heads.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Triton",
+        "name": "Triton",
+        "full_description": "Originally from the Elemental Plane of Water, many tritons entered the Material Plane centuries ago in response to the growing threat of evil elementals. Those tritons spread across the worlds’ oceans, protecting the surface from terrors in the deep. Over time, triton have extended their stewardship over the sea floor to the ocean’s surface.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Yuan-ti",
+        "name": "Yuan-ti",
+        "full_description": "Blessed with resistance to magical and poisonous effects by the rituals that created them, each of these yuan-ti manifests their serpentine heritage in a variety of ways: a forked tongue, snake eyes, a snakelike nose, or some other ophidian characteristic. ",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Autognome",
+        "name": "Autognome",
+        "full_description": "An autognome bears a resemblance to its creator, and most autognomes are programmed to speak and understand Gnomish. The internal components used in an autognome’s manufacture can vary wildly; one autognome might have an actual beating heart in its chest cavity, while another might be powered by stardust or intricate clockwork gears.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Giff",
+        "name": "Giff",
+        "full_description": "Most giff believe they originated on one world, but their home world is now the stuff of legend, because no living giff has seen it or knows where it is. The divine beings who created giff have likewise been forgotten. Their titanic petrified bodies drift on the Astral Sea, isolated and unrecognizable in their current forms.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Hadozee",
+        "name": "Hadozee",
+        "full_description": "In addition to being natural climbers, hadozees have feet that are as dexterous as their hands, even to the extent of having opposable thumbs. Membranes of skin hang loosely from their arms and legs. When stretched taut, these membranes enable hadozees to glide. Hadozees wrap these wings around themselves to keep warm.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Plasmoid",
+        "name": "Plasmoid",
+        "full_description": "Plasmoids are amorphous beings with no typical shape. In the presence of other folk, they often adopt a similar shape, but there’s little chance of mistaking a plasmoid for anything else. They consume food by osmosis, the way an amoeba does, and excrete waste through tiny pores. They breathe by absorbing oxygen through another set of pores, and their limbs are strong and flexible enough to grasp and manipulate weapons and tools. Although most plasmoids are translucent gray, they can alter their color and translucence by absorbing dyes through their pores.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Thri-Kreen",
+        "name": "Thri-Kreen",
+        "full_description": "Thri-kreen have insectile features and two pairs of arms. Their bodies are encased in protective chitin. They can alter the coloration of this carapace to blend in with their natural surroundings. Although thri-kreen don’t sleep, they do require periods of inactivity to revitalize themselves. During these periods, they are fully aware of what’s happening around them.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Owlin",
+        "name": "Owlin",
+        "full_description": "Distant kin of giant owls from the Feywild, owlin come in many shapes and sizes, from petite and fluffy to wide-winged and majestic. Owlin have arms and legs like other Humanoids, as well as wings that extend from their back and shoulders.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Leonin",
+        "name": "Leonin",
+        "full_description": "The leonin guard the shining lands of Oreskos, a golden plain where even the gods rarely trespass. Prides of these nomadic, lion-like humanoids rarely interact with other peoples, having all they need in their shimmering homeland and knowing the treachery of strangers.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Kalashtar",
+        "name": "Kalashtar",
+        "full_description": "Every kalashtar has a connection to a spirit of light, a bond shared by other members of their bloodline. Kalashtar appear human, but their spiritual connection affects them in a variety of ways. Kalashtar have symmetrical, slightly angular features, and their eyes often glow when they are focused or expressing strong emotions.  Kalashtar can’t directly communicate with their quori spirits. Rather, they might experience this relationship as a sense of instinct and inspiration, drawing on the memories of the spirit when they dream. This connection grants kalashtar minor psionic abilities, as well as protection from psychic attacks. All of these quori dream-spirits are virtuous, but some are warriors and others are more contemplative. Work together with the DM to determine the nature of your linked spirit. Typically, a kalashtar knows the name and nature of their spirit, but some may know nothing of their spirit or the source of their psychic gifts, such as an orphan kalashtar raised among strangers.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Warforged",
+        "name": "Warforged",
+        "full_description": "Warforged are formed from a blend of organic and inorganic materials. Root-like cords infused with alchemical fluids serve as their muscles, wrapped around a framework of steel, darkwood, or stone. Armored plates form a protective outer shell and reinforce joints. Warforged share a common facial design, with a hinged jaw and crystal eyes embedded beneath a reinforced brow ridge. Beyond these common elements of warforged design, the precise materials and build of a warforged vary based on the purpose for which it was designed.  Although they were manufactured, warforged are living humanoids. Resting, healing magic, and the Medicine skill all provide the same benefits to warforged that they do to other humanoids.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Loxodon",
+        "name": "Loxodon",
+        "full_description": "Loxodons tower above most other humanoids, standing over 7 feet tall. They have the heads—trunks, tusks, ears, and faces—of elephants, and hulking bipedal bodies covered by thick, leathery skin. Each of their hands has four thick digits, and their feet are the flat-bottomed, oval-shaped feet of elephants.  Like that of an elephant, a loxodon’s trunk is a useful appendage. In addition to providing a keen sense of smell, the trunk can be used to lift and carry even heavy objects. The trunk can be used to carry both food and liquid to the mouth and can even act as a snorkel.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Simic Hybrid",
+        "name": "Simic Hybrid",
+        "full_description": "A hybrid’s biological enhancements can change its appearance drastically, though most hybrids retain their basic physical form. All are augmented with characteristics of animals, mostly aquatic, reptilian, or amphibian creatures. These include crab claws, squid tentacles, wings or fins like those of manta rays, translucent or camouflaged skin, or shark-like maws filled with sharp teeth.  Hybrids are the product of Simic magic. It’s not impossible for a hybrid to leave the Simic Combine and join another guild, but the Simic would consider the individual a deserter. And the new guild might never fully welcome a hybrid who could easily be a Simic spy.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Vedalken",
+        "name": "Vedalken",
+        "full_description": "Despite being talkative, vedalken keep their personal lives private, and they tend to engage more with ideas than with people. They form close friendships based on mutual interests or compelling disagreements, and their interactions dwell on their thoughts about those issues rather than their feelings about them.  To members of other races, vedalken often seem cold, even emotionless. That assessment isn’t fair—they feel emotion every bit as intensely as other folk do, but they are skilled at not displaying it. Cool rationality guides their actions, they make and follow careful plans, and they are patient enough to do nothing when the ideal outcome relies on such inaction.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Locathah",
+        "name": "Locathah",
+        "full_description": "These resilient and proud fish-folk have endured war, slavery, and mistreatment at the hands of other aquatic creatures. They dwell in submerged tribal communities along seacoasts, and hunt both above and below the water.",
+        "features": "Placeholder for features"
+    },
+    {
+        "race": "Grung",
+        "name": "Grung",
+        "full_description": "Grungs are aggressive froglike humanoids found in rain forests and tropical jungles. They are fiercely territorial and see themselves as superior to most other creatures.  Tree-Dwelling Amphibians. Grungs live in trees and prefer shade. A grung hatchery is maintained in well-guarded ground-level pools. About three months after hatching, a grung tadpole takes on the shape of an adult. It takes another six to nine months for a grung juvenile to reach maturity.  Castes and Colors. Grung society is a caste system. Each caste lays eggs in a separate hatching pool, and juvenile grungs join their caste upon emergence from the hatchery. All grungs are a dull greenish gray when they are born, but each individual takes on the color of its caste as it grows to adulthood.  Green grungs are the tribe’s warriors, hunters, and laborers, and blue grungs work as artisans and in other domestic roles. Supervising and guiding both groups are the purple grungs, which serve as administrators and commanders.  Red grungs are the tribe’s scholars and magic users. They are superior to purple, blue, and green grungs and given proper respect even by grungs of higher status.   Higher castes include orange grungs, which are elite warriors that have authority over all lesser grungs, and gold grungs, which hold the highest leadership positions. A tribe’s sovereign is always a gold grung.  A grung normally remains in its caste for life. On rare occasions, an individual that distinguishes itself with great deeds can earn an invitation to join a higher caste. Through a combination of herbal tonics and ritual magic, an elevated grung changes color and is inducted into its new caste in the same way that a juvenile of the caste would be. From then on, the grung and its progeny are members of the higher caste.",
+        "features": "Placeholder for features"
+    }
+]
