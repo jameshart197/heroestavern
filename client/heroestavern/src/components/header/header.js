@@ -7,7 +7,7 @@ const Header = () => {
         <header>
                 <div className={styles.logo}>
                 </div>
-                <div></div>
+                <div><NavLink to={"/charactercreation/"}>Create a new character!</NavLink></div>
                 <nav>
                     <ul>
                         <li><NavLink to={"/"}>Home</NavLink></li>

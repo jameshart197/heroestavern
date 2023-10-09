@@ -263,4 +263,4 @@ class CharacterSerializer(serializers.ModelSerializer):
             'languages',
             'subclass'
         ]
-        depth=2
+        # depth=2

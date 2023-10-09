@@ -159,7 +159,12 @@ class CharacterDetails(generics.RetrieveAPIView):
     """
     List all character details
     """
-    # def get(self, request, format=None, **kwargs):
-    #     CharacterDetails = 
     serializer_class = serializers.CharacterSerializer
     queryset = models.CharacterDetails.objects.all()
+
+
+class CharacterCreation1(generics.CreateAPIView):
+    """
+    Create required character field values
+    """
+    
