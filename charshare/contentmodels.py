@@ -126,6 +126,7 @@ class LanguageContentTable(models.Model):
 class BackgroundContentTable(models.Model):
     name = models.CharField(max_length=200)
     full_description = models.TextField()
+    feature_name = models.TextField()
     feature = models.TextField()
     skill_proficiency_1 = models.ForeignKey(SkillsContentTable, on_delete=models.SET_DEFAULT, default=0, related_name="BackgroundSkillGranted1")
     skill_proficiency_2 = models.ForeignKey(SkillsContentTable, on_delete=models.SET_DEFAULT, default=0, related_name="BackgroundSkillGranted2")

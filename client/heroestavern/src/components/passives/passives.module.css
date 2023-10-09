@@ -1,0 +1,26 @@
+.Passives {
+    width: 50%;
+}
+
+.Passives li {
+    display: grid;
+    grid-template-columns: 1.3fr .5fr;
+    align-items: center;
+    justify-content: center;
+    margin-block: .7em;
+}
+
+.Scorecircle {
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: rgb(107, 214, 103);
+    padding: .15em;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 1.2em;
+    width: 1.2em;
+    color: black;
+}

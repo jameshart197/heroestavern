@@ -10,6 +10,9 @@ import CharAttributes from "../../components/charattributes/charattributes";
 import AttributeWheel from "../../components/attributewheel/attributewheel";
 import { proficiencyBonus, skillProfLevel } from "../../helpers/modifier";
 import Infopanel from "../../components/infopanel/infopanel";
+import Passives from "../../components/passives/passives";
+import Description from "../../components/description/description";
+import Initiative from "../../components/initiative/initiative";
 
 const MyCharSheets = () => {
   const profBonus = proficiencyBonus(
@@ -17,9 +20,7 @@ const MyCharSheets = () => {
   );
   return (
     <>
-      <Infopanel
-      character={Character}
-      ></Infopanel>
+      <Infopanel character={Character}></Infopanel>
       <div className={styles.Pagecontainer}>
         <div className={styles.Leftpanel}>
           <div>
@@ -45,68 +46,9 @@ const MyCharSheets = () => {
             </ul>
           </div>
           <hr></hr>
-          <div>
-            <ul className={styles.Passives}>
-              <li>
-                Passive Perception: <div className={styles.Scorebox}><div className={styles.Scorecircle}>13</div></div>
-              </li>
-              <li>
-                Passive Investigation: <div className={styles.Scorebox}><div className={styles.Scorecircle}>14</div></div>
-              </li>
-              <li>
-                Passive Insight: <div className={styles.Scorebox}><div className={styles.Scorecircle}>18</div></div>
-              </li>
-            </ul>
-          </div>
+          <Passives></Passives>
           <hr></hr>
-          <div>
-            <ul className={styles.Description}>
-              <li>
-                <strong>Faith</strong>
-              </li>
-              <li>Cyrollallee</li>
-              <li>
-                <strong>Age</strong> 
-              </li>
-              <li>32</li>
-              <li>
-                <strong>Height</strong>
-              </li>
-              <li>3'1</li>
-              <li>
-                <strong>Weight</strong>
-              </li>
-              <li>42 lbs</li>
-              <li>
-                <strong>Alignment</strong>
-              </li>
-              <li>Chaotic Good</li>
-            </ul>
-            <hr></hr>
-            <h4>Background</h4>
-            <h5>Storyteller</h5>
-            <p>
-              From harsh deserts to frigid mountain peaks, you have traveled the
-              land in search of myths and fables. Maybe you have settled in a
-              bustling city, lingering in the taverns and collecting stories.
-              Perhaps you have recorded your fill of second-hand tales and want
-              to write your own. You value stories and the power they hold,
-              using them to sway your audience to tears or laughter.
-              Storytellers are nomadic in nature, moving from place to place to
-              gather information. They value preserving knowledge and passing it
-              on to those around them. Chronicler and performer all in one, they
-              have a knack for enthralling their audience and getting people to
-              talk to them.
-            </p>
-            <h5>Feature: A Friendly Face</h5>
-            <p>
-              Given your history of travel, you have an easy time of gaining
-              trust from others. You can find a place to stay for the night, a
-              group to keep watch with, or a traveling party without issue
-              unless you have shown yourself to be dangerous or a threat. They
-              also will not sell you out unless heavily threatened.
-            </p>
-          </div>
+          <Description character={Character}></Description>
         </div>
         <div className={styles.Centrepanel}>
           <ul>
@@ -130,7 +72,7 @@ const MyCharSheets = () => {
         </div>
         <div className={styles.Rightpanel}>
           <div className={styles.TRSection}>
-            <div className={styles.Scorename}>Initiative:<div className={styles.Scorecircle}>+5</div></div>
+            <Initiative attribute={Character.attributes} profBonus={profBonus}></Initiative>
             <div className={styles.Scorename}>Proficiency Bonus:<div className={styles.Scorecircle}>+3</div></div>
           </div>
           <div className={styles.attributewheelcontainer}>

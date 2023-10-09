@@ -41,15 +41,6 @@ hr {
     padding: 1em;
 }
 
-.Description {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: .7fr 1fr;
-}
-
-.Description li {
-    margin: .5em auto;
-}
 
 
 .TRSection {
@@ -90,18 +81,6 @@ hr {
     grid-template-columns: 1.2fr .3fr .3fr 1fr;
     gap: 1em;
     margin-block: .1em;
-}
-
-.Passives {
-    width: 50%;
-}
-
-.Passives li {
-    display: grid;
-    grid-template-columns: 1.3fr .5fr;
-    align-items: center;
-    justify-content: center;
-    margin-block: .7em;
 }
 
 .Scorecircle {
