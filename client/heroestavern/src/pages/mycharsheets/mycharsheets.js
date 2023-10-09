@@ -13,6 +13,7 @@ import Infopanel from "../../components/infopanel/infopanel";
 import Passives from "../../components/passives/passives";
 import Description from "../../components/description/description";
 import Initiative from "../../components/initiative/initiative";
+import Scorebox from "../../components/scorebox/scorebox";
 
 const MyCharSheets = () => {
   const profBonus = proficiencyBonus(
@@ -72,8 +73,14 @@ const MyCharSheets = () => {
         </div>
         <div className={styles.Rightpanel}>
           <div className={styles.TRSection}>
-            <Initiative attribute={Character.attributes} profBonus={profBonus}></Initiative>
-            <div className={styles.Scorename}>Proficiency Bonus:<div className={styles.Scorecircle}>+3</div></div>
+            <Initiative
+              attribute={Character.attributes}
+              profBonus={profBonus}
+            ></Initiative>
+            <div className={styles.Scorename}>
+              Proficiency Bonus:
+              <Scorebox value={profBonus} addPlus={true}></Scorebox>
+            </div>
           </div>
           <div className={styles.attributewheelcontainer}>
             <AttributeWheel attributes={Character.attributes}></AttributeWheel>
