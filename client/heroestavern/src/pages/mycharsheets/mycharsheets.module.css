@@ -1,14 +1,3 @@
-.Topbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1em;
-}
-
-.Topbar > div {
-    padding: 0 1em;
-}
-
 .Pagecontainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -54,11 +43,14 @@ hr {
 
 .Description {
     list-style-type: none;
+    display: grid;
+    grid-template-columns: .7fr 1fr;
 }
 
 .Description li {
-    padding: 0.5em 0;
+    margin: .5em auto;
 }
+
 
 .TRSection {
     display: flex;
@@ -124,6 +116,7 @@ hr {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     height: 1.2em;
     width: 1.2em;
+    color: black;
 }
 
 .attributewheelcontainer {
@@ -138,10 +131,4 @@ h4 {
 
 h5 {
     margin: .2em 0;
-}
-
-.hp {
-    display: flex;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
 }

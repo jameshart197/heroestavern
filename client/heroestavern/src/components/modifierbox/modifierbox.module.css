@@ -1,6 +1,7 @@
 .Scorebox {
-    background-color: black;
-    color: white;
+    border-style: outset;
+    border-color: slategray;
     display: inline;
     text-align: center;
+    font-weight: bold;
 }

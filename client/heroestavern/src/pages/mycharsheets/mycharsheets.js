@@ -9,6 +9,7 @@ import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
 import CharAttributes from "../../components/charattributes/charattributes";
 import AttributeWheel from "../../components/attributewheel/attributewheel";
 import { proficiencyBonus, skillProfLevel } from "../../helpers/modifier";
+import Infopanel from "../../components/infopanel/infopanel";
 
 const MyCharSheets = () => {
   const profBonus = proficiencyBonus(
@@ -16,27 +17,7 @@ const MyCharSheets = () => {
   );
   return (
     <>
-      <div className={styles.Topbar}>
-        <div>
-          <h2>Daxton 'Dax' Silvertongue</h2>
-        </div>
-        <div>
-          <h3>Bard - College of Eloquence</h3>
-        </div>
-        <div>
-          <h3>Lightfoot Halfling</h3>
-        </div>
-        <div>
-          <h3>Level: 5</h3>
-        </div>
-        <div>
-          <input type="checkbox" id="Inspiration" name="Inspiration" checked />
-          <label for="Inspiration">Inspiration</label>
-        </div>
-        <div>
-        <div className={styles.hp}><h3>HP: 15 / 15</h3></div>
-        </div>
-      </div>
+      <Infopanel></Infopanel>
       <div className={styles.Pagecontainer}>
         <div className={styles.Leftpanel}>
           <div>
@@ -79,20 +60,25 @@ const MyCharSheets = () => {
           <div>
             <ul className={styles.Description}>
               <li>
-                <strong>Faith</strong> Cyrollallee
+                <strong>Faith</strong>
               </li>
+              <li>Cyrollallee</li>
               <li>
-                <strong>Age</strong> 32
+                <strong>Age</strong> 
               </li>
+              <li>32</li>
               <li>
-                <strong>Height</strong> 3'1
+                <strong>Height</strong>
               </li>
+              <li>3'1</li>
               <li>
-                <strong>Weight</strong> 42 lbs
+                <strong>Weight</strong>
               </li>
+              <li>42 lbs</li>
               <li>
-                <strong>Alignment</strong> Chaotic Good
+                <strong>Alignment</strong>
               </li>
+              <li>Chaotic Good</li>
             </ul>
             <hr></hr>
             <h4>Background</h4>
