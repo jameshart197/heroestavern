@@ -20,7 +20,7 @@ main {
 .creationForm ul {
     position: absolute;
     background-color: slategray;
-    color: white;
+    color: black;
     list-style-type: none;
     right: 0;
     top: 1.5em;
@@ -38,8 +38,8 @@ main {
 }
 
 .creationForm li:hover {
-    background-color: white;
-    color: slategray;
+    background-color: rgb(226, 225, 225);
+    cursor: pointer;
 }
 
 /* .Dropdowns {
