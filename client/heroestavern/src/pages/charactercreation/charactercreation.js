@@ -8,7 +8,7 @@ import CreationForm4 from "./forms/creation4";
 const CharacterCreation = () => {
     return (
         <main>
-            <CreationForm1></CreationForm1>
+            <CreationForm4></CreationForm4>
         </main>
     )
 }

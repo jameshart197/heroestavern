@@ -52,7 +52,8 @@ header a:hover {
     background-color: initial;
     background-image: linear-gradient(rgba(132, 150, 201, 0.84), rgba(31, 47, 91, 0.84) 50%);
     border-radius: 42px;
-    border-width: 0;
+    border-width: 1px;
+    border-color: white;
     box-shadow: rgba(31, 37, 91, 0.24) 0 2px 2px,rgba(132, 137, 201, 0.4) 0 8px 12px;
     color: #FFFFFF;
     cursor: pointer;

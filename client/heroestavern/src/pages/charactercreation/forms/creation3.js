@@ -25,15 +25,15 @@ const CreationForm3 = () => {
         </Listbox>
       </div>
       <div>
-        <label for="charnameinput">Age (years):</label>
+        <label for="charnameinput">Age:</label>
         <input type="text" id="charnameinput" className={styles.Inputs}/>
       </div>
       <div>
-        <label for="charnameinput">Height (feet):</label>
+        <label for="charnameinput">Height:</label>
         <input type="text" id="charnameinput" className={styles.Inputs} />
       </div>
       <div>
-        <label for="charnameinput">Weight (lbs):</label>
+        <label for="charnameinput">Weight:</label>
         <input type="text" id="charnameinput" className={styles.Inputs} />
       </div>
       <div>

@@ -14,7 +14,11 @@ main {
     width: 30vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     position: relative;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
 }
 
 .creationForm ul {
@@ -57,6 +61,9 @@ main {
     border-color: slategray;
     background-color: slategray;
     text-align: center;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: black;
 }
 
 #LevelInput {
@@ -70,6 +77,7 @@ main {
     background-color: slategray;
     text-align: center;
     font-weight: bold;
+    font-size: 1.1em;
 }
 
 #SubmitInput {
@@ -78,7 +86,10 @@ main {
 
 input[type=number]::-webkit-inner-spin-button {
     opacity: 1;
-    height: 2.5em;
+}
+
+.AttributeInput input[type=number]::-webkit-inner-spin-button {
+    height: 1.2em;
     width: 1em;
 }
 
@@ -96,6 +107,7 @@ form .AttributeInput {
     background-color: slategray;
     text-align: center;
     font-weight: bold;
+    font-size: 1em;
 }
 
 .descriptionForm {
@@ -104,6 +116,9 @@ form .AttributeInput {
     justify-content: space-evenly;
     align-items: center;
     height: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: black;
 }
 
 .descriptionForm div {
