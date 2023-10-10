@@ -151,5 +151,6 @@ form .AttributeInput {
 }
 
 .submitButton:hover {
-  background-image: linear-gradient(#8ca5d3, #1f2f5b 50%);
-}
+    background-image: linear-gradient(#b8c8e7, #3753a0 50%);
+    color: aqua;
+  }
