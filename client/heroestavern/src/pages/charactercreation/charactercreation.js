@@ -1,9 +1,12 @@
 import React from "react";
 import CreationForm1 from "./forms/creation1";
+import styles from "./charactercreation.module.css"
 
 const CharacterCreation = () => {
     return (
-        <CreationForm1></CreationForm1>
+        <main>
+            <CreationForm1></CreationForm1>
+        </main>
     )
 }
 

@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(assets/grey-background-z9agfvuh29wchjmk.jpg);
-  background-size: cover;
+  background-size: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: whitesmoke;
 }
