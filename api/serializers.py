@@ -104,7 +104,7 @@ class BackgroundSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.BackgroundContentTable
         fields = [
-            'name', 'full_description', 'feature', 'skill_proficiency_1', 'skill_proficiency_2'
+            'id', 'name', 'full_description', 'feature', 'skill_proficiency_1', 'skill_proficiency_2'
         ]
 
 
@@ -115,7 +115,7 @@ class AlignmentSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.AlignmentContentTable
         fields = [
-            'name', 'full_description'
+            'id', 'name', 'full_description'
         ]
 
 

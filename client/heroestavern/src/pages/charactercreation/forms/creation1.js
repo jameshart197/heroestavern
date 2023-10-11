@@ -9,8 +9,8 @@ import styles from "../charactercreation.module.css";
 const CreationForm1 = ({ characterState, setCharacterState }) => {
   const [selectedRace, setSelectedRace] = useState(characterState.race || Races[0]);
   const [selectedClass, setSelectedClass] = useState(characterState.charclass || Classes[0]);
-  const [selectedSubrace, setSelectedSubrace] = useState(characterState.subrace?Subraces.find(sr=>sr.id===characterState.subrace):Subraces[0]);
-  const [selectedSubclass, setSelectedSubclass] = useState(characterState.subclass[0]?Subclasses.find(sc=>sc.id===characterState.subclass[0]):Subclasses[0]);
+  const [selectedSubrace, setSelectedSubrace] = useState(Subraces.find(sr=>sr.id===characterState.subrace) || Subraces[0]);
+  const [selectedSubclass, setSelectedSubclass] = useState(Subclasses.find(sc=>sc.id===characterState.subclass[0]) || Subclasses[0]);
   const handleCharacterNameChange = (e) => {
     setCharacterState({...characterState, character_name: e.currentTarget.value})
   }

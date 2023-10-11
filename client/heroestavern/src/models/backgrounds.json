@@ -1,6 +1,7 @@
 
 [
     {
+        "id": 0,
         "name": "No background Selected",
         "full_description": "Please select a background",
         "feature": "No Background Selected",
@@ -8,6 +9,7 @@
         "skill_proficiency_2": "No Skill Selected"
     },
     {
+        "id": 1,
         "name": "Acolyte",
         "full_description": "You have spent your life in the service of a temple to a specific god or pantheon of gods. You act as an intermediary between the realm of the holy and the mortal world, performing sacred rites and offering sacrifices in order to conduct worshipers into the presence of the divine. You are not necessarily a cleric—performing sacred rites is not the same thing as channeling divine power.",
         "feature": "Shelter of the Faithful:  As an acolyte, you command the respect of those who share your faith, and you can perform the religious ceremonies of your deity. You and your adventuring companions can expect to receive free healing and care at a temple, shrine, or other established presence of your faith, though you must provide any material components needed for spells. Those who share your religion will support you (but only you) at a modest lifestyle.",
@@ -15,6 +17,7 @@
         "skill_proficiency_2": "Religion"
     },
     {
+        "id": 2,
         "name": "Anthropologist",
         "full_description": "You have always been fascinated by other cultures, from the most ancient and primeval lost lands to the most modern civilizations. By studying other cultures’ customs, philosophies, laws, rituals, religious beliefs, languages, and art, you have learned how tribes, empires, and all forms of society in between craft their own destinies and doom. This knowledge came to you not only through books and scrolls, but also through first-hand observation—by visiting far-flung settlements and exploring local histories and customs.",
         "feature": "Adept Linguist You can communicate with humanoids who don’t speak any language you know. You must observe the humanoids interacting with one another for at least 1 day, after which you learn a handful of important words, expressions, and gestures—enough to communicate on a rudimentary level.",
@@ -22,6 +25,7 @@
         "skill_proficiency_2": "Religion"
     },
     {
+        "id": 3,
         "name": "Archaeologist",
         "full_description": "An archaeologist learns about the long-lost and fallen cultures of the past by studying their remains — their bones, their ruins, their surviving masterworks, and their tombs. Those who practice archaeology travel to the far corners of the world to root through crumbled cities and lost dungeons, digging in search of artifacts that might tell the stories of monarchs and high priests, wars and cataclysms.",
         "feature": "Historical Knowledge When you enter a ruin or dungeon, you can correctly ascertain its original purpose and determine its builders, whether those were dwarves, elves, humans, yuan-ti, or some other known race. In addition, you can determine the monetary value of art objects more than a century old.",
@@ -29,6 +33,7 @@
         "skill_proficiency_2": "Survival"
     },
     {
+        "id": 4,
         "name": "Athlete",
         "full_description": "You strive to perfect yourself physically and in execution of everything you do. The thrill of competition lights fire in your blood, and the roar of the crowd drives you forward. Tales of your exploits precede you and might open doors or loosen tongues.  Whether in one of the poleis, between them, or among the nonhuman peoples of Theros, physical contests and those who pursue them command respect bordering on reverence. Athletes arise from all walks of life and all cultures and quite often cross paths with one another.",
         "feature": "Echoes of Victory You have attracted admiration among spectators, fellow athletes, and trainers in the region that hosted your past athletic victories. When visiting any settlement within 100 miles of where you grew up, there is a 50 percent chance you can find someone there who admires you and is willing to provide information or temporary shelter.",
@@ -36,6 +41,7 @@
         "skill_proficiency_2": "Acrobatics"
     },
     {
+        "id": 5,
         "name": "Charlatan",
         "full_description": "You have always had a way with people. You know what makes them tick, you can tease out their hearts’ desires after a few minutes of conversation, and with a few leading questions you can read them like they were children’s books. It’s a useful talent, and one that you’re perfectly willing to use for your advantage.  You know what people want and you deliver, or rather, you promise to deliver. Common sense should steer people away from things that sound too good to be true, but common sense seems to be in short supply when you’re around. The bottle of pink-colored liquid will surely cure that unseemly rash, this ointment — nothing more than a bit of fat with a sprinkle of silver dust — can restore youth and vigor, and there’s a bridge in the city that just happens to be for sale. These marvels sound implausible, but you make them sound like the real deal.",
         "feature": "False Identity You have created a second identity that includes documentation, established acquaintances, and disguises that allow you to assume that persona. Additionally, you can forge documents including official papers and personal letters, as long as you have seen an example of the kind of document or the handwriting you are trying to copy.",
@@ -43,6 +49,7 @@
         "skill_proficiency_2": "Sleight of Hand"
     },
     {
+        "id": 6,
         "name": "City Watch / Investigator",
         "full_description": "You have served the community where you grew up, standing as its first line of defense against crime. You aren’t a soldier, directing your gaze outward at possible enemies. Instead, your service to your hometown was to help police its populace, protecting the citizenry from lawbreakers and malefactors of every stripe.  You might have been part of the City Watch of Waterdeep, the baton-wielding police force of the City of Splendors, protecting the common folk from thieves and rowdy nobility alike. Or you might have been one of the valiant defenders of Silverymoon, a member of the Silverwatch or even one of the magic-wielding Spellguard.  Perhaps you hail from Neverwinter and have served as one of its Wintershield watchmen, the newly founded branch of guards who vow to keep safe the City of Skilled Hands.  Even if you’re not city-born or city-bred, this background can describe your early years as a member of law enforcement. Most settlements of any size have their own constables and police forces, and even smaller communities have sheriffs and bailiffs who stand ready to protect their community.",
         "feature": "Watcher’s Eye Your experience in enforcing the law, and dealing with lawbreakers, gives you a feel for local laws and criminals. You can easily find the local outpost of the watch or a similar organization, and just as easily pick out the dens of criminal activity in a community, although you’re more likely to be welcome in the former locations rather than the latter.",
@@ -50,6 +57,7 @@
         "skill_proficiency_2": "Insight"
     },
     {
+        "id": 7,
         "name": "Courtier",
         "full_description": "In your earlier days, you were a personage of some significance in a noble court or a bureaucratic organization. You might or might not come from an upper-class family; your talents, rather than the circumstances of your birth, could have secured you this position.  You might have been one of the many functionaries, attendants, and other hangers-on in the Court of Silverymoon, or perhaps you traveled in Waterdeep’s baroque and sometimes cutthroat conglomeration of guilds, nobles, adventurers, and secret societies. You might have been one of the behind-the-scenes law-keepers or functionaries in Baldur’s Gate or Neverwinter, or you might have grown up in and around the castle of Daggerford.  Even if you are no longer a full-fledged member of the group that gave you your start in life, your relationships with your former fellows can be an advantage for you and your adventuring comrades. You might undertake missions with your new companions that further the interest of the organization that gave you your start in life. In any event, the abilities that you honed while serving as a courtier will stand you in good stead as an adventurer.",
         "feature": "Court Functionary Your knowledge of how bureaucracies function lets you gain access to the records and inner workings of any noble court or government you encounter. You know who the movers and shakers are, whom to go to for the favors you seek, and what the current intrigues of interest in the group are.",
@@ -57,6 +65,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 8,
         "name": "Criminal / Spy",
         "full_description": "You are an experienced criminal with a history of breaking the law. You have spent a lot of time among other criminals and still have contacts within the criminal underworld. You’re far closer than most people to the world of murder, theft, and violence that pervades the underbelly of civilization, and you have survived up to this point by flouting the rules and regulations of society.",
         "feature": "Criminal Contact You have a reliable and trustworthy contact who acts as your liaison to a network of other criminals. You know how to get messages to and from your contact, even over great distances; specifically, you know the local messengers, corrupt caravan masters, and seedy sailors who can deliver messages for you.",
@@ -64,6 +73,7 @@
         "skill_proficiency_2": "Stealth"
     },
     {
+        "id": 9,
         "name": "Entertainer",
         "full_description": "You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humor cuts to the quick. Whatever techniques you use, your art is your life.",
         "feature": "By Popular Demand You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
@@ -71,6 +81,7 @@
         "skill_proficiency_2": "Performance"
     },
     {
+        "id": 10,
         "name": "Faction Agent",
         "full_description": "Many organizations active in the North and across the face of Faerûn aren’t bound by strictures of geography. These factions pursue their agendas without regard for political boundaries, and their members operate anywhere the organization deems necessary. These groups employ listeners, rumormongers, smugglers, sellswords, cache-holders (people who guard caches of wealth or magic for use by the faction’s operatives), haven keepers, and message drop minders, to name a few. At the core of every faction are those who don’t merely fulfill a small function for that organization, but who serve as its hands, head, and heart.  As a prelude to your adventuring career (and in preparation for it), you served as an agent of a particular faction in Faerûn. You might have operated openly or secretly, depending on the faction and its goals, as well as how those goals mesh with your own. Becoming an adventurer doesn’t necessarily require you to relinquish membership in your faction (though you can choose to do so), and it might enhance your status in the faction.",
         "feature": "Safe Haven As a faction agent, you have access to a secret network of supporters and operatives who can provide assistance on your adventures. You know a set of secret signs and passwords you can use to identify such operatives, who can provide you with access to a hidden safe house, free room and board, or assistance in finding information. These agents never risk their lives for you or risk revealing their true identities.",
@@ -78,6 +89,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 11,
         "name": "Folk Hero",
         "full_description": "You come from a humble social rank, but you are destined for so much more. Already the people of your home village regard you as their champion, and your destiny calls you to stand against the tyrants and monsters that threaten the common folk everywhere.",
         "feature": "Rustic Hospitality Since you come from the ranks of the common folk, you fit in among them with ease. You can find a place to hide, rest, or recuperate among other commoners, unless you have shown yourself to be a danger to them. They will shield you from the law or anyone else searching for you, though they will not risk their lives for you.",
@@ -85,6 +97,7 @@
         "skill_proficiency_2": "Survival"
     },
     {
+        "id": 12,
         "name": "Fisher",
         "full_description": "You have spent your life aboard fishing vessels or combing the shallows for the bounty of the ocean. Perhaps you were born into a family of fisher folk, working with your kin to feed your village. Maybe the job was a means to an end — a way out of an undesirable circumstance that forced you to take up life aboard a ship. Regardless of how you began, you soon fell in love with the sea, the art of fishing, and the promise of the eternal horizon.",
         "feature": "Harvest the Water You gain advantage on ability checks made using fishing tackle. If you have access to a body of water that sustains marine life, you can maintain a moderate lifestyle while working as a fisher, and you can catch enough food to feed yourself and up to ten other people each day.",
@@ -92,6 +105,7 @@
         "skill_proficiency_2": "Survival"
     },
     {
+        "id": 13,
         "name": "Gambler",
         "full_description": "All you need to make a lot of gold is a little gold. Except at those times when all you need to have no gold at all is a little gold. Whether you’re a good gambler or a bad one rarely matters, because no one can divine the whims of Lady Luck. Sometimes you’re up, sometimes you’re down. But the thing about gambling is that someone is always willing to take a bet.",
         "feature": "Never Tell Me the Odds Odds and probability are your bread and butter. During downtime activities that involve games of chance or figuring odds on the best plan, you can get a solid sense of which choice is likely the best one and which opportunities seem too good to be true, at the DM’s determination.",
@@ -99,6 +113,7 @@
         "skill_proficiency_2": "Insight"
     },
     {
+        "id": 14,
         "name": "Gladiator",
         "full_description": "A gladiator is as much an entertainer as any minstrel or circus performer, trained to make the arts of combat into a spectacle the crowd can enjoy. This kind of flashy combat is your entertainer routine, though you might also have some skills as a tumbler or actor.",
         "feature": "By Popular Demand You can always find a place to perform in any place that features combat for entertainment — perhaps a gladiatorial arena or secret pit fighting club. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
@@ -106,6 +121,7 @@
         "skill_proficiency_2": "Performance"
     },
     {
+        "id": 15,
         "name": "Hermit",
         "full_description": "You lived in seclusion—either in a sheltered community such as a monastery, or entirely alone—for a formative part of your life. In your time apart from the clamor of society, you found quiet, solitude, and perhaps some of the answers you were looking for.",
         "feature": "Discovery The quiet seclusion of your extended hermitage gave you access to a unique and powerful discovery. The exact nature of this revelation depends on the nature of your seclusion. It might be a great truth about the cosmos, the deities, the powerful beings of the outer planes, or the forces of nature. It could be a site that no one else has ever seen. You might have uncovered a fact that has long been forgotten, or unearthed some relic of the past that could rewrite history. It might be information that would be damaging to the people who consigned you to exile, and hence the reason for your return to society.",
@@ -113,6 +129,7 @@
         "skill_proficiency_2": "Religion"
     },
     {
+        "id": 16,
         "name": "Guild Artisan / Guild Merchant",
         "full_description": "You are a member of an artisan’s guild, skilled in a particular field and closely associated with other artisans. You are a well-established part of the mercantile world, freed by talent and wealth from the constraints of a feudal social order. You learned your skills as an apprentice to a master artisan, under the sponsorship of your guild, until you became a master in your own right.",
         "feature": "Guild Membership As an established and respected member of a guild, you can rely on certain benefits that membership provides. Your fellow guild members will provide you with lodging and food if necessary, and pay for your funeral if needed. In some cities and towns, a guildhall offers a central place to meet other members of your profession, which can be a good place to meet potential patrons, allies, or hirelings.  Guilds often wield tremendous political power. If you are accused of a crime, your guild will support you if a good case can be made for your innocence or the crime is justifiable. You can also gain access to powerful political figures through the guild, if you are a member in good standing. Such connections might require the donation of money or magic items to the guild’s coffers.  You must pay dues of 5 gp per month to the guild. If you miss payments, you must make up back dues to remain in the guild’s good graces.",
@@ -120,6 +137,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 17,
         "name": "Investigator",
         "full_description": "You relentlessly seek the truth. Perhaps you’re motivated by belief in the law and a sense of universal justice, or maybe that very law has failed you and you seek to make things right. You could have witnessed something remarkable or terrible, and now you must know more about this hidden truth. Or maybe you’re a detective for hire, uncovering secrets for well-paying clients. Whether the mysteries you’re embroiled in are local crimes or realm-spanning conspiracies, you’re driven by a personal need to hunt down even the most elusive clues and reveal what others would keep hidden in the shadows.",
         "feature": "Official Inquiry You’re experienced at gaining access to people and places to get the information you need. Through a combination of fast-talking, determination, and official-looking documentation, you can gain access to a place or an individual related to a crime you’re investigating. Those who aren’t involved in your investigation avoid impeding you or pass along your requests. Additionally, local law enforcement has firm opinions about you, viewing you as either a nuisance or one of their own.",
@@ -127,6 +145,7 @@
         "skill_proficiency_2": "Perception"
     },
     {
+        "id": 18,
         "name": "Knight",
         "full_description": "You understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.  Work with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you.  Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them?  What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family?  Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family?  These details help establish your family and your title as features of the world of the campaign.  A knighthood is among the lowest noble titles in most societies, but it can be a path to higher status. If you wish to be a knight, choose the Retainers feature (see the sidebar) instead of the Position of Privilege feature. One of your commoner retainers is replaced by a noble who serves as your squire, aiding you in exchange for training on his or her own path to knighthood. Your two remaining retainers might include a groom to care for your horse and a servant who polishes your armor (and even helps you put it on).  As an emblem of chivalry and the ideals of courtly love, you might include among your equipment a banner or other token from a noble lord or lady to whom you have given your heart—in a chaste sort of devotion. (This person could be your bond.)",
         "feature": "Retainers You have the service of three retainers loyal to your family. These retainers can be attendants or messengers, and one might be a majordomo. Your retainers are commoners who can perform mundane tasks for you, but they do not fight for you, will not follow you into obviously dangerous areas (such as dungeons), and will leave if they are frequently endangered or abused.",
@@ -134,6 +153,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 19,
         "name": "Mercenary Veteran",
         "full_description": "As a sell-sword who fought battles for coin, you’re well acquainted with risking life and limb for a chance at a share of treasure. Now, you look forward to fighting foes and reaping even greater rewards as an adventurer. Your experience makes you familiar with the ins and outs of mercenary life, and you likely have harrowing stories of events on the battlefield. You might have served with a large outfit such as the Zhentarim or the soldiers of Mintarn, or a smaller band of sell-swords, maybe even more than one. (See the “Mercenaries of the North” sidebar for a collection of possibilities.)  Now you’re looking for something else, perhaps greater reward for the risks you take, or the freedom to choose your own activities. For whatever reason, you’re leaving behind the life of a soldier for hire, but your skills are undeniably suited for battle, so now you fight on in a different way.",
         "feature": "Mercenary Life You know the mercenary life as only someone who has experienced it can. You are able to identify mercenary companies by their emblems, and you know a little about any such company, including the names and reputations of its commanders and leaders, and who has hired them recently. You can find the taverns and festhalls where mercenaries abide in any area, as long as you speak the language. You can find mercenary work between adventures sufficient to maintain a comfortable lifestyle",
@@ -141,6 +161,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 20,
         "name": "Noble",
         "full_description": "ou understand wealth, power, and privilege. You carry a noble title, and your family owns land, collects taxes, and wields significant political influence. You might be a pampered aristocrat unfamiliar with work or discomfort, a former merchant just elevated to the nobility, or a disinherited scoundrel with a disproportionate sense of entitlement. Or you could be an honest, hard-working landowner who cares deeply about the people who live and work on your land, keenly aware of your responsibility to them.  Work with your DM to come up with an appropriate title and determine how much authority that title carries. A noble title doesn’t stand on its own—it’s connected to an entire family, and whatever title you hold, you will pass it down to your own children. Not only do you need to determine your noble title, but you should also work with the DM to describe your family and their influence on you.  Is your family old and established, or was your title only recently bestowed? How much influence do they wield, and over what area? What kind of reputation does your family have among the other aristocrats of the region? How do the common people regard them?  What’s your position in the family? Are you the heir to the head of the family? Have you already inherited the title? How do you feel about that responsibility? Or are you so far down the line of inheritance that no one cares what you do, as long as you don’t embarrass the family? How does the head of your family feel about your adventuring career? Are you in your family’s good graces, or shunned by the rest of your family?  Does your family have a coat of arms? An insignia you might wear on a signet ring? Particular colors you wear all the time? An animal you regard as a symbol of your line or even a spiritual member of the family?",
         "feature": "Position of Privilege Thanks to your noble birth, people are inclined to think the best of you. You are welcome in high society, and people assume you have the right to be wherever you are. The common folk make every effort to accommodate you and avoid your displeasure, and other people of high birth treat you as a member of the same social sphere. You can secure an audience with a local noble if you need to.",
@@ -148,6 +169,7 @@
         "skill_proficiency_2": "Persuasion"
     },
     {
+        "id": 21,
         "name": "Outlander",
         "full_description": "You grew up in the wilds, far from the comforts of town and technology. You’ve witnessed the migration of herds larger than forests, survived weather more extreme than any city-dweller could comprehend, and enjoyed the solitude of being the only thinking creature for miles in any direction. The wilds are in your blood, whether you were a nomad, an explorer, a recluse, a hunter-gatherer, or even a marauder. Even in places where you don’t know the specific features of the terrain, you know the ways of the wild.",
         "feature": "Wanderer You have an excellent memory for maps and geography, and you can always recall the general layout of terrain, settlements, and other features around you. In addition, you can find food and fresh water for yourself and up to five other people each day, provided that the land offers berries, small game, water, and so forth.",
@@ -155,6 +177,7 @@
         "skill_proficiency_2": "Survival"
     },
     {
+        "id": 22,
         "name": "Pirate",
         "full_description": "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new.  Discuss the nature of the ship you previously sailed with your Dungeon Master. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands?  What were your duties on board—boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?  You spent your youth under the sway of a dread pirate, a ruthless cutthroat who taught you how to survive in a world of sharks and lawlessness. You’ve indulged in larceny on the high seas and sent more than one deserving soul to a briny grave. Fear and bloodshed are no strangers to you, and you’ve garnered a somewhat unsavory reputation in many a port town.",
         "feature": "Bad Reputation No matter where you go, people are afraid of you due to your reputation. When you are in a settlement, you can get away with minor criminal offenses, such as refusing to pay for food at a tavern or breaking down doors at a local shop, since most people will not report your activity to the authorities.",
@@ -162,6 +185,7 @@
         "skill_proficiency_2": "Perception"
     },
     {
+        "id": 23,
         "name": "Sage",
         "full_description": "You spent years learning the lore of the multiverse. You scoured manuscripts, studied scrolls, and listened to the greatest experts on the subjects that interest you. Your efforts have made you a master in your fields of study.",
         "feature": "Researcher When you attempt to learn or recall a piece of lore, if you do not know that information, you often know where and from whom you can obtain it. Usually, this information comes from a library, scriptorium, university, or a sage or other learned person or creature. Your DM might rule that the knowledge you seek is secreted away in an almost inaccessible place, or that it simply cannot be found. Unearthing the deepest secrets of the multiverse can require an adventure or even a whole campaign.",
@@ -169,6 +193,7 @@
         "skill_proficiency_2": "History"
     },
     {
+        "id": 24,
         "name": "Sailor",
         "full_description": "You sailed on a seagoing vessel for years. In that time, you faced down mighty storms, monsters of the deep, and those who wanted to sink your craft to the bottomless depths. Your first love is the distant line of the horizon, but the time has come to try your hand at something new.  Discuss the nature of the ship you previously sailed with your Dungeon Master. Was it a merchant ship, a naval vessel, a ship of discovery, or a pirate ship? How famous (or infamous) is it? Is it widely traveled? Is it still sailing, or is it missing and presumed lost with all hands?  What were your duties on board—boatswain, captain, navigator, cook, or some other position? Who were the captain and first mate? Did you leave your ship on good terms with your fellows, or on the run?",
         "feature": "Ship’s Passage When you need to, you can secure free passage on a sailing ship for yourself and your adventuring companions. You might sail on the ship you served on, or another ship you have good relations with (perhaps one captained by a former crewmate). Because you’re calling in a favor, you can’t be certain of a schedule or route that will meet your every need. Your Dungeon Master will determine how long it takes to get where you need to go. In return for your free passage, you and your companions are expected to assist the crew during the voyage.",
@@ -176,6 +201,7 @@
         "skill_proficiency_2": "Perception"
     },
     {
+        "id": 25,
         "name": "Shipwright",
         "full_description": "You have sailed into war on the decks of great ships, patching their hulls with soup bowls and prayers. You once helped build a fishing vessel that single-handedly saved a town from starvation. You have seen a majestic prow in your dreams that you have not been able to replicate in wood. Since childhood, you have loved the water and have been captivated by the many vessels that travel on it.",
         "feature": "I’ll Patch It! Provided you have carpenter’s tools and wood, you can perform repairs on a water vehicle. When you use this ability, you restore a number of hit points to the hull of a water vehicle equal to 5 × your proficiency modifier. A vehicle cannot be patched by you in this way again until after it has been pulled ashore and fully repaired.",
@@ -183,6 +209,7 @@
         "skill_proficiency_2": "Perception"
     },
     {
+        "id": 26,
         "name": "Smuggler",
         "full_description": "On a rickety barge, you carried a hundred longswords in fish barrels right past the dock master’s oblivious lackeys. You have paddled a riverboat filled with stolen elven wine under the gaze of the moon and sold it for twice its value in the morning. In your more charitable times, you have transported innocents out of war zones or helped guide herd animals to safety on the banks of a burning river.",
         "feature": "Down Low You are acquainted with a network of smugglers who are willing to help you out of tight situations. While in a particular town, city, or other similarly sized community (DM’s discretion), you and your companions can stay for free in safe houses. Safe houses provide a poor lifestyle. While staying at a safe house, you can choose to keep your presence (and that of your companions) a secret.",
@@ -190,6 +217,7 @@
         "skill_proficiency_2": "Deception"
     },
     {
+        "id": 27,
         "name": "Soldier",
         "full_description": "War has been your life for as long as you care to remember. You trained as a youth, studied the use of weapons and armor, learned basic survival techniques, including how to stay alive on the battlefield. You might have been part of a standing national army or a mercenary company, or perhaps a member of a local militia who rose to prominence during a recent war.  When you choose this background, work with your DM to determine which military organization you were a part of, how far through its ranks you progressed, and what kind of experiences you had during your military career. Was it a standing army, a town guard, or a village militia? Or it might have been a noble’s or merchant’s private army, or a mercenary company.",
         "feature": "Military Rank You have a military rank from your career as a soldier. Soldiers loyal to your former military organization still recognize your authority and influence, and they defer to you if they are of a lower rank. You can invoke your rank to exert influence over other soldiers and requisition simple equipment or horses for temporary use. You can also usually gain access to friendly military encampments and fortresses where your rank is recognized.",
@@ -197,6 +225,7 @@
         "skill_proficiency_2": "Intimidation"
     },
     {
+        "id": 28,
         "name": "Urban Bounty Hunter",
         "full_description": "Before you became an adventurer, your life was already full of conflict and excitement, because you made a living tracking down people for pay. Unlike some people who collect bounties, though, you aren’t a savage who follows quarry into or through the wilderness. You’re involved in a lucrative trade, in the place where you live, that routinely tests your skills and survival instincts. What’s more, you aren’t alone, as a bounty hunter in the wild would be: you routinely interact with both the criminal subculture and other bounty hunters, maintaining contacts in both areas to help you succeed.  You might be a cunning thief-catcher, prowling the rooftops to catch one of the myriad burglars of the city. Perhaps you are someone who has your ear to the street, aware of the doings of thieves’ guilds and street gangs. You might be a “velvet mask” bounty hunter, one who blends in with high society and noble circles in order to catch the criminals that prey on the rich, whether pickpockets or con artists. The community where you plied your trade might have been one of Faerûn’s great metropolises, such as Waterdeep or Baldur’s Gate, or a less populous location, perhaps Luskan or Yartar — any place that’s large enough to have a steady supply of potential quarries.  As a member of an adventuring party, you might find it more difficult to pursue a personal agenda that doesn’t fit with the group’s objectives — but on the other hand, you can take down much more formidable targets with the help of your companions.",
         "feature": "Ear to the Ground You are in frequent contact with people in the segment of society that your chosen quarries move through. These people might be associated with the criminal underworld, the rough-and-tumble folk of the streets, or members of high society. This connection comes in the form of a contact in any city you visit, a person who provides information about the people and places of the local area.",
@@ -204,6 +233,7 @@
         "skill_proficiency_2": "Stealth"
     },
     {
+        "id": 29,
         "name": "Urchin",
         "full_description": "You grew up on the streets alone, orphaned, and poor. You had no one to watch over you or to provide for you, so you learned to provide for yourself. You fought fiercely over food and kept a constant watch out for other desperate souls who might steal from you. You slept on rooftops and in alleyways, exposed to the elements, and endured sickness without the advantage of medicine or a place to recuperate. You’ve survived despite all odds, and did so through cunning, strength, speed, or some combination of each.  You begin your adventuring career with enough money to live modestly but securely for at least ten days. How did you come by that money? What allowed you to break free of your desperate circumstances and embark on a better life?",
         "feature": "Feature: City Secrets You know the secret patterns and flow to cities and can find passages through the urban sprawl that others would miss. When you are not in combat, you (and companions you lead) can travel between any two locations in the city twice as fast as your speed would normally allow.",
@@ -211,6 +241,7 @@
         "skill_proficiency_2": "Stealth"
     },
     {
+        "id": 30,
         "name": "Storyteller",
         "full_description": "From harsh deserts to frigid mountain peaks, you have traveled the land in search of myths and fables. Maybe you have settled in a bustling city, lingering in the taverns and collecting stories. Perhaps you have recorded your fill of second-hand tales and want to write your own. You value stories and the power they hold, using them to sway your audience to tears or laughter. Storytellers are nomadic in nature, moving from place to place to gather information. They value preserving knowledge and passing it on to those around them. Chronicler and performer all in one, they have a knack for enthralling their audience and getting people to talk to them.",
         "feature": "Given your history of travel, you have an easy time of gaining trust from others. You can find a place to stay for the night, a group to keep watch with, or a traveling party without issue unless you have shown yourself to be dangerous or a threat. They also will not sell you out unless heavily threatened.",
