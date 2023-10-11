@@ -64,9 +64,9 @@ const CreationForm2 = () => {
           defaultValue={10}
         />
       </div>
-      <div id={styles.SubmitInput}>
+      {/* <div id={styles.SubmitInput}>
         <input type="submit" className={styles.submitButton} />
-      </div>
+      </div> */}
     </form>
   );
 };

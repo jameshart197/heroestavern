@@ -49,9 +49,9 @@ const CreationForm4 = () => {
           placeholder="Any other notes on your character such as likes, dislikes, habits and behavioural patterns"
         ></textarea>
       </div>
-      <div id={styles.SubmitInput}>
+      {/* <div id={styles.SubmitInput}>
         <input type="submit" className={styles.submitButton}/>
-      </div>
+      </div> */}
     </form>
   );
 };

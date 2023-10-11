@@ -2,6 +2,17 @@ main {
     height: 80vh;
 }
 
+main section:first-child {
+    height: 100%;
+}
+
+main section:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
 .creationForm {
     display: flex;
     flex-direction: column;
@@ -33,7 +44,7 @@ main {
     box-sizing: border-box;
     z-index: 1;
     max-height: 50vh;
-    overflow: scroll;
+    overflow: auto;
     overflow-x: hidden;
 }
 
@@ -94,7 +105,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 form .AttributeInput {
-    width: 20vw;
+    width: 40vw;
     justify-content: space-between;
     gap: 3em;
     font-size: 2em;
@@ -138,7 +149,7 @@ form .AttributeInput {
     background-color: rgb(209, 207, 207);
 }
 
-.submitButton {
+.pageButton {
   align-items: center;
   background-color: initial;
   background-image: linear-gradient(rgba(132, 150, 201, 0.84), rgba(31, 47, 91, 0.84) 50%);
@@ -163,9 +174,11 @@ form .AttributeInput {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: baseline;
+  min-width: 6rem;
+  
 }
 
-.submitButton:hover {
+.pageButton:hover {
     background-image: linear-gradient(#b8c8e7, #3753a0 50%);
     color: aqua;
   }

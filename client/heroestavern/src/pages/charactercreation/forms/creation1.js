@@ -81,9 +81,9 @@ const CreationForm1 = () => {
         <label for="charlevelinput">Level: </label>
         <input type="number" id="charlevelinput" min="1" max="20" defaultValue={1}/>
       </div>
-      <div id={styles.SubmitInput}>
+      {/* <div id={styles.SubmitInput}>
         <input type="submit"  className={styles.submitButton}/>
-      </div>
+      </div> */}
     </form>
   );
 };

@@ -55,9 +55,9 @@ const CreationForm3 = () => {
         <label for="charnameinput">Faith:</label>
         <input type="text" id="charnameinput" className={styles.Inputs} />
       </div>
-      <div id={styles.SubmitInput}>
+      {/* <div id={styles.SubmitInput}>
         <input type="submit" className={styles.submitButton} />
-      </div>
+      </div> */}
     </form>
   );
 };
