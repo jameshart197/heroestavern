@@ -1,7 +1,26 @@
 import React, { useState } from "react";
 import styles from "../charactercreation.module.css";
 
-const CreationForm2 = () => {
+const CreationForm2 = ({ characterState, setCharacterState }) => {
+  const handleStrengthChange = (e) => {
+    setCharacterState({...characterState, strength: e.currentTarget.value})
+  }
+  const handleDexterityChange = (e) => {
+    setCharacterState({...characterState, dexterity: e.currentTarget.value})
+  }
+  const handleConstitutionChange = (e) => {
+    setCharacterState({...characterState, constitution: e.currentTarget.value})
+  }
+  const handleIntelligenceChange = (e) => {
+    setCharacterState({...characterState, intelligence: e.currentTarget.value})
+  }
+  const handleWisdomChange = (e) => {
+    setCharacterState({...characterState, wisdom: e.currentTarget.value})
+  }
+  const handleCharismaChange = (e) => {
+    setCharacterState({...characterState, charisma: e.currentTarget.value})
+  }
+  
   return (
     <form action="post" className={styles.creationForm}>
       <div className={styles.AttributeInput}>
@@ -12,6 +31,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleStrengthChange}
+          value={characterState.strength}
         />
       </div>
       <div className={styles.AttributeInput}>
@@ -22,6 +43,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleDexterityChange}
+          value={characterState.dexterity}
         />
       </div>
       <div className={styles.AttributeInput}>
@@ -32,6 +55,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleConstitutionChange}
+          value={characterState.constitution}
         />
       </div>
       <div className={styles.AttributeInput}>
@@ -42,6 +67,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleIntelligenceChange}
+          value={characterState.intelligence}
         />
       </div>
       <div className={styles.AttributeInput}>
@@ -52,6 +79,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleWisdomChange}
+          value={characterState.wisdom}
         />
       </div>
       <div className={styles.AttributeInput}>
@@ -62,6 +91,8 @@ const CreationForm2 = () => {
           min="3"
           max="30"
           defaultValue={10}
+          onChange={handleCharismaChange}
+          value={characterState.charisma}
         />
       </div>
       {/* <div id={styles.SubmitInput}>

@@ -17,7 +17,7 @@ const CharacterCreation = () => {
             } else {
               alert("Please fill out all fields")
             }
-            
+        default: setCurrentPage(currentPage+1)            
     }
   }
   const handlePreviousClick = () => {
@@ -28,13 +28,13 @@ const CharacterCreation = () => {
       case 0:
         return <CreationForm1 characterState={characterState} setCharacterState={setCharacterState}></CreationForm1>;
       case 1:
-        return <CreationForm2></CreationForm2>;
+        return <CreationForm2 characterState={characterState} setCharacterState={setCharacterState}></CreationForm2>;
       case 2:
-        return <CreationForm3></CreationForm3>;
+        return <CreationForm3 characterState={characterState} setCharacterState={setCharacterState}></CreationForm3>;
       case 3:
-        return <CreationForm4></CreationForm4>;
+        return <CreationForm4 characterState={characterState} setCharacterState={setCharacterState}></CreationForm4>;
       default:
-        return <CreationForm1></CreationForm1>;
+        return <CreationForm1 characterState={characterState} setCharacterState={setCharacterState}></CreationForm1>;
     }
   };
   return (
