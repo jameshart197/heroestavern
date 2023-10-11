@@ -6,16 +6,19 @@ import Subclasses from "../../../models/subclasses.json";
 import { Listbox } from "@headlessui/react";
 import styles from "../charactercreation.module.css";
 
-const CreationForm1 = () => {
+const CreationForm1 = ({ characterState, setCharacterState }) => {
   const [selectedRace, setSelectedRace] = useState(Races[0]);
   const [selectedClass, setSelectedClass] = useState(Classes[0]);
   const [selectedSubrace, setSelectedSubrace] = useState(Subraces[0]);
   const [selectedSubclass, setSelectedSubclass] = useState(Subclasses[0]);
+  const handleCharacterNameChange = (e) => {
+    setCharacterState({...characterState, character_name: e.currentTarget.value})
+  }
   return (
     <form action="post" className={styles.creationForm}>
       <div>
         <label for="charnameinput">Character Name: </label>
-        <input type="text" id="charnameinput" className={styles.Inputs} />
+        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleCharacterNameChange}/>
       </div>
       <div>
         <label for="charraceinput">Race: </label>

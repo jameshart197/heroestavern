@@ -1,4 +1,4 @@
-const CharacterModel = {
+const CharModel = {
   user: "",
   character_name: "",
   subrace: 0,

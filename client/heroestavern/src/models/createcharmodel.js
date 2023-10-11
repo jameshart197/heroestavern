@@ -5,3 +5,5 @@ const CharacterModel = {
   subclass: [],
   levels: [],
 };
+
+export default CharacterModel
