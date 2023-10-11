@@ -238,6 +238,7 @@ class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CharacterDetails
         fields = [
+            'id',
             'user', 
             'character_name',
             'subrace',

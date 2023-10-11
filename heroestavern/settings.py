@@ -38,7 +38,12 @@ DEBUG = "DEVELOPMENT" in os.environ
 
 ALLOWED_HOSTS = [
     '8000-jameshart19-heroestaver-phaga8fole7.ws-eu104.gitpod.io',
-    '8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
+    '8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io',
+    '8080-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
+]
+
+CORS_ALLOWED_ORIGINS = [
+    'https://8080-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
 ]
 
 
@@ -52,6 +57,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'cloudinary_storage',
     'django.contrib.staticfiles',
+    'corsheaders',
     'cloudinary',
     'charshare',
     'api',
@@ -61,11 +67,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware'
 ]
 
 ROOT_URLCONF = 'heroestavern.urls'

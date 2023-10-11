@@ -9,7 +9,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
     setCharacterState({...characterState, enemies: e.currentTarget.value})
   }
   const handleFactionsChange = (e) => {
-    setCharacterState({...characterState, factions: e.currentTarget.value})
+    setCharacterState({...characterState, factions_and_orgs: e.currentTarget.value})
   }
   const handleBackstoryChange = (e) => {
     setCharacterState({...characterState, backstory: e.currentTarget.value})
@@ -46,7 +46,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
           cols="60"
           name="text"
           placeholder="Any organizations you may be affiliated with, such as a guild or political party"
-          onChange={handleFactionsChange} value={characterState.factions}
+          onChange={handleFactionsChange} value={characterState.factions_and_orgs}
         ></textarea>
       </div>
       <div>
