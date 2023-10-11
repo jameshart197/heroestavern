@@ -14,6 +14,14 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const handleCharacterNameChange = (e) => {
     setCharacterState({...characterState, character_name: e.currentTarget.value})
   }
+  const handleSubraceChange = (e) => {
+    setSelectedSubrace(e)
+    setCharacterState({...characterState, subrace: e.id})
+  }
+  const handleSubclassChange = (e) => {
+    setSelectedSubclass(e)
+    setCharacterState({...characterState, subclass: [e.id]})
+  }
   return (
     <form action="post" className={styles.creationForm}>
       <div>
@@ -37,7 +45,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charsubraceinput">Subrace: </label>
-        <Listbox value={selectedSubrace} onChange={setSelectedSubrace}>
+        <Listbox value={selectedSubrace} onChange={handleSubraceChange}>
           <Listbox.Button className={styles.Inputs}>{selectedSubrace.name}</Listbox.Button>
           <Listbox.Options>
             {Subraces.filter((sr) => sr.race === selectedRace.name).map(
@@ -67,7 +75,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charsubclassinput">Subclass: </label>
-        <Listbox value={selectedSubclass} onChange={setSelectedSubclass}>
+        <Listbox value={selectedSubclass} onChange={handleSubclassChange}>
           <Listbox.Button className={styles.Inputs}>{selectedSubclass.name}</Listbox.Button>
           <Listbox.Options>
             {Subclasses.filter((sc) => sc.parent_class === selectedClass.name).map(

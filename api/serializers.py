@@ -44,7 +44,7 @@ class SubRaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.SubRaceContentTable
         fields = [
-            'race', 'name', 'full_description', 'features'
+            'id', 'race', 'name', 'full_description', 'features'
         ]
 
 
@@ -80,7 +80,7 @@ class SubclassSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.SubClassContentTable
         fields = [
-            'parent_class', 'name', 'full_description', 'features'
+            'id', 'parent_class', 'name', 'full_description', 'features'
         ]
 
 
