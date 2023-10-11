@@ -12,9 +12,13 @@ const CharacterCreation = () => {
   const handleNextClick = () => {
     switch (currentPage) {
         case 0:
+            if (characterState.character_name && characterState.subrace && characterState.subclass[0]) {
+              setCurrentPage(currentPage+1)              
+            } else {
+              alert("Please fill out all fields")
+            }
             
     }
-    setCurrentPage(currentPage+1)
   }
   const handlePreviousClick = () => {
     setCurrentPage(currentPage-1)

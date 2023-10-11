@@ -7,30 +7,41 @@ import { Listbox } from "@headlessui/react";
 import styles from "../charactercreation.module.css";
 
 const CreationForm1 = ({ characterState, setCharacterState }) => {
-  const [selectedRace, setSelectedRace] = useState(Races[0]);
-  const [selectedClass, setSelectedClass] = useState(Classes[0]);
-  const [selectedSubrace, setSelectedSubrace] = useState(Subraces[0]);
-  const [selectedSubclass, setSelectedSubclass] = useState(Subclasses[0]);
+  const [selectedRace, setSelectedRace] = useState(characterState.race || Races[0]);
+  const [selectedClass, setSelectedClass] = useState(characterState.charclass || Classes[0]);
+  const [selectedSubrace, setSelectedSubrace] = useState(characterState.subrace?Subraces.find(sr=>sr.id===characterState.subrace):Subraces[0]);
+  const [selectedSubclass, setSelectedSubclass] = useState(characterState.subclass[0]?Subclasses.find(sc=>sc.id===characterState.subclass[0]):Subclasses[0]);
   const handleCharacterNameChange = (e) => {
     setCharacterState({...characterState, character_name: e.currentTarget.value})
+  }
+  const handleRaceChange = (e) => {
+    setSelectedRace(e)
+    setCharacterState({...characterState, race: e})
   }
   const handleSubraceChange = (e) => {
     setSelectedSubrace(e)
     setCharacterState({...characterState, subrace: e.id})
   }
+  const handleCharclassChange = (e) => {
+    setSelectedClass(e)
+    setCharacterState({...characterState, charclass: e})
+  }
   const handleSubclassChange = (e) => {
     setSelectedSubclass(e)
     setCharacterState({...characterState, subclass: [e.id]})
+  }
+  const handleLevelChange = (e) => {
+    setCharacterState({...characterState, charlevel: e.currentTarget.value})
   }
   return (
     <form action="post" className={styles.creationForm}>
       <div>
         <label for="charnameinput">Character Name: </label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleCharacterNameChange}/>
+        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
       </div>
       <div>
         <label for="charraceinput">Race: </label>
-        <Listbox value={selectedRace} onChange={setSelectedRace}>
+        <Listbox value={selectedRace} onChange={handleRaceChange}>
           <Listbox.Button className={styles.Inputs}>
             {selectedRace.name}
           </Listbox.Button>
@@ -60,7 +71,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charclassinput">Class: </label>
-        <Listbox value={selectedClass} onChange={setSelectedClass}>
+        <Listbox value={selectedClass} onChange={handleCharclassChange}>
           <Listbox.Button className={styles.Inputs}>
             {selectedClass.name}
           </Listbox.Button>
@@ -90,11 +101,8 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       </div>
       <div id={styles.LevelInput}>
         <label for="charlevelinput">Level: </label>
-        <input type="number" id="charlevelinput" min="1" max="20" defaultValue={1}/>
+        <input type="number" id="charlevelinput" min="1" max="20" defaultValue={1} onChange={handleLevelChange} value={characterState.charlevel}/>
       </div>
-      {/* <div id={styles.SubmitInput}>
-        <input type="submit"  className={styles.submitButton}/>
-      </div> */}
     </form>
   );
 };
