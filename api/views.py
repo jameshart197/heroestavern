@@ -163,8 +163,10 @@ class CharacterDetails(generics.RetrieveAPIView):
     queryset = models.CharacterDetails.objects.all()
 
 
-class CharacterCreation1(generics.CreateAPIView):
+class CharacterCreation(generics.CreateAPIView):
     """
     Create required character field values
     """
+    serializer_class = serializers.CharacterSerializer
+    queryset = models.CharacterDetails.objects.all()
     

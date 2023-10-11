@@ -5,11 +5,12 @@ import CreationForm2 from "./forms/creation2";
 import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel"
+import { postBaseCharacter } from "../../helpers/db";
 
 const CharacterCreation = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [characterState, setCharacterState] = useState(CharacterModel);
-  const handleNextClick = () => {
+  const handleNextClick =async () => {
     switch (currentPage) {
         case 0:
             if (characterState.character_name && characterState.subrace && characterState.subclass[0]) {
@@ -17,6 +18,17 @@ const CharacterCreation = () => {
             } else {
               alert("Please fill out all fields")
             }
+            break;
+        case 2:
+            if(characterState.background) {
+              setCurrentPage(currentPage+1)
+            } else {
+              alert("Please select a background")
+            }
+            break;              
+        case 3: 
+           postBaseCharacter(characterState)
+           break;
         default: setCurrentPage(currentPage+1)            
     }
   }
