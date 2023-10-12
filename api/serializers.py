@@ -224,7 +224,7 @@ class CharacterSubclassSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CharacterSubclass
         fields = [
-            'Subclass'
+            'id', 'Subclass'
         ]
 
 

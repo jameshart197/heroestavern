@@ -23,5 +23,6 @@ urlpatterns = [
     path('characterspells/', views.CharacterSpells.as_view()),
     path('characterlanguages/', views.CharacterLanguages.as_view()),
     path('charactersubclass/', views.CharacterSubclass.as_view()),
-    path('characters/', views.CharacterCreation.as_view())
+    path('characters/', views.CharacterCreation.as_view()),
+    path('addcharactersubclass/', views.CharacterSubclassAdd.as_view())
 ]
