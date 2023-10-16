@@ -14,6 +14,8 @@ const Header = () => {
                     <ul>
                         <li><NavLink to={"/"}>Home</NavLink></li>
                         <li><NavLink to={"/characters"}>My Character Sheets</NavLink></li>
+                        <li><NavLink to={"/signup"}>Sign Up</NavLink></li>
+                        <li><NavLink to={"/login"}>Login</NavLink></li>
                         <li><NavLink>Sign Out</NavLink></li>
                     </ul>
                 </nav>
