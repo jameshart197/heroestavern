@@ -41,7 +41,8 @@ ALLOWED_HOSTS = [
     '8000-jameshart19-heroestaver-phaga8fole7.ws-eu104.gitpod.io',
     '8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io',
     '8080-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io',
-    'heroestavern.herokuapp.com'
+    'heroestavern.herokuapp.com',
+    'heroestavern-d4f7b4a77ff6.herokuapp.com'
 ]
 
 CORS_ALLOWED_ORIGINS = [
