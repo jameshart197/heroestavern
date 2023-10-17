@@ -6,12 +6,20 @@ export const SetCurrentUserContext = createContext();
 export const useCurrentUser = () => useContext(CurrentUserContext);
 export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
 
+export const updateCurrentUserContext = async () => {
+  try {
+    const { data } = await getCurrentUser();
+    setCurrentUser(data);
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
-
   const handleMount = async () => {
-      try {
-        const { data } = await getCurrentUser();
+    try {
+      const { data } = await getCurrentUser();
       setCurrentUser(data);
     } catch (err) {
       console.log(err);

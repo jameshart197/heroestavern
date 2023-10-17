@@ -1,4 +1,5 @@
 import CharacterModel from "../models/createcharmodel";
+import { getRefreshToken, logoutUser } from "./currentuser.api";
 
 export const postBaseCharacter = async (basechar) => {
   const newChar = Object.keys(CharacterModel).reduce((a, b) => {
@@ -13,21 +14,26 @@ export const signUp = async (signUpData) => {
 };
 
 export const login = async (loginData) => {
-  const response = await postData("dj-rest-auth", "login", loginData);
-  localStorage.setItem("access_token", response.access_token);
-  localStorage.setItem("refresh_token", response.refresh_token);
-  return response;
+  return await postData("dj-rest-auth", "login", loginData);
 };
 
 export const currentUser = async (token) => {
-  return await postData("dj-rest-auth", "user", token);
+  return await getData("dj-rest-auth", "user", token);
 };
+
 
 // const postCompleteCharacter =async () => {
 
 // }
 
-async function getData(area = "", url = "", token = null, tokenExpiration = null) {
+
+export const refreshAccessToken = async () => {
+  const access_token =  await postData("dj-rest-auth", "token/refresh", getRefreshToken());
+  localStorage.setItem("access_token", access_token.access);
+  return access_token;
+}
+
+async function getData(area = "", url = "", token = null, retryCount = 0) {
   if (!url || !area) {
     console.error("url and area must be defined");
     return undefined;
@@ -51,18 +57,20 @@ async function getData(area = "", url = "", token = null, tokenExpiration = null
   } catch (err) {
     console.log(err);
   }
-  if (response.status === 401 && !tokenExpiration) {
-    const access_token = await postData("dj-rest-auth", "token/refresh", {refresh: localStorage.getItem("refresh_token")})
-    localStorage.setItem("access_token", access_token.access);
-    return await getData(area, url, access_token.access, access_token.access_token_expiration)
+  if (response.status === 401 && retryCount <= 2) {
+    const access_token = refreshAccessToken()
+    return await getData(area, url, access_token.access, retryCount++)
   } 
+  if (retryCount > 2) {
+    logoutUser();
+  }
   if (response.status >= 200 && response.status < 300) {
     return await response.json();
   }
   throw await response.json();
 }
 
-async function postData(area = "", url = "", data = {}, token = null, tokenExpiration = null) {
+async function postData(area = "", url = "", data = {}, token = null, retryCount = 0) {
   if (!url || !area) {
     console.error("url and area must be defined");
     return undefined;
@@ -88,11 +96,13 @@ async function postData(area = "", url = "", data = {}, token = null, tokenExpir
   } catch (err) {
     console.log(err);
   }
-  if (response.status === 401 && !tokenExpiration) {
-    const access_token = await postData("dj-rest-auth", "token/refresh", {refresh: localStorage.getItem("refresh_token")})
-    localStorage.setItem("access_token", access_token.access);
-    return await postData(area, url, data, access_token.access, access_token.access_token_expiration)    
+  if (response.status === 401 && retryCount <= 2) {
+    const access_token = refreshAccessToken()
+    return await postData(area, url, data, access_token.access, retryCount++)    
   } 
+  if (retryCount > 2) {
+    logoutUser();
+  }
   if (response.status >= 200 && response.status < 300) {
     return await response.json();
   }

@@ -1,6 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./header.module.css"
+import { logoutUser } from "../../helpers/currentuser.api";
 
 const Header = () => {
     return (
@@ -16,7 +17,7 @@ const Header = () => {
                         <li><NavLink to={"/characters"}>My Character Sheets</NavLink></li>
                         <li><NavLink to={"/signup"}>Sign Up</NavLink></li>
                         <li><NavLink to={"/login"}>Login</NavLink></li>
-                        <li><NavLink>Sign Out</NavLink></li>
+                        <li><NavLink onClick={logoutUser} to={"/"}>Log Out</NavLink></li>
                     </ul>
                 </nav>
         </header>

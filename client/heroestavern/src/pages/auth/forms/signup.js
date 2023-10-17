@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../auth.module.css";
 import ErrorMessage from "../../../components/errormessage/errormessage";
-import { signUp } from "../../../helpers/api";
+import { registerUser } from "../../../helpers/currentuser.api";
 
 const SignUpForm = () => {
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const SignUpForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await signUp(signUpData);
+      const response = await registerUser(signUpData);
       navigate("/", { replace: true });
     } catch (err) {
       setErrors(err);

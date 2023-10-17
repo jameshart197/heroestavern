@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import styles from "../auth.module.css";
 import ErrorMessage from "../../../components/errormessage/errormessage";
 import { useNavigate } from "react-router-dom";
-import { login } from "../../../helpers/api";
+import { loginUser } from "../../../helpers/currentuser.api";
+import { SetCurrentUserContext } from "../../../contexts/currentUserContext";
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ const LoginForm = () => {
   const { username, password } = loginData;
 
   const [errors, setErrors] = useState({});
-
+  
   const handleChange = (event) => {
     setLoginData({
       ...loginData,
@@ -25,7 +26,7 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await login(loginData);
+      await loginUser(loginData);
       navigate("/", { replace: true });
     } catch (err) {
       setErrors(err);

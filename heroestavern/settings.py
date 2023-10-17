@@ -46,7 +46,8 @@ ALLOWED_HOSTS = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    'https://8080-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
+    'https://8080-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io',
+    'https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io'
 ]
 
 
