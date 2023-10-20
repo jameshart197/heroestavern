@@ -1,3 +1,4 @@
+import { useUpdateCurrentUser } from "../contexts/currentUserContext";
 import { currentUser, login, signUp } from "./api";
 
 export const getCurrentUser = async () => {
@@ -6,7 +7,6 @@ export const getCurrentUser = async () => {
     return undefined
   }
   const response = await currentUser(token);
-
   return response;
 };
 

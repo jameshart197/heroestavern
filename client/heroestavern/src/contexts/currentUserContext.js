@@ -1,25 +1,21 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { getCurrentUser } from "../helpers/currentuser.api";
 
-export const CurrentUserContext = createContext();
-export const SetCurrentUserContext = createContext();
-export const useCurrentUser = () => useContext(CurrentUserContext);
-export const useSetCurrentUser = () => useContext(SetCurrentUserContext);
+const CurrentUserContext = createContext();
+export const useCurrentUserContext = () => useContext(CurrentUserContext);
 
-export const updateCurrentUserContext = async () => {
-  try {
-    const { data } = await getCurrentUser();
-    setCurrentUser(data);
-  } catch (err) {
-    console.log(err);
-  }
+export const useCurrentUser = () => {
+  const { currentUser } = useCurrentUserContext();
+  console.log("current user", currentUser);
+  return currentUser;
 };
+
 
 export const CurrentUserProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState(null);
   const handleMount = async () => {
     try {
-      const { data } = await getCurrentUser();
+      const data  = await getCurrentUser();
       setCurrentUser(data);
     } catch (err) {
       console.log(err);
@@ -31,10 +27,8 @@ export const CurrentUserProvider = ({ children }) => {
   }, []);
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
-      <SetCurrentUserContext.Provider value={setCurrentUser}>
-        {children}
-      </SetCurrentUserContext.Provider>
+    <CurrentUserContext.Provider value={{ currentUser, setCurrentUser }}>
+      {children}
     </CurrentUserContext.Provider>
   );
 };

@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "../auth.module.css";
 import ErrorMessage from "../../../components/errormessage/errormessage";
 import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../../helpers/currentuser.api";
-import { SetCurrentUserContext } from "../../../contexts/currentUserContext";
+import { useCurrentUserContext } from "../../../contexts/currentUserContext";
+
 
 const LoginForm = () => {
   const navigate = useNavigate();
@@ -13,9 +14,18 @@ const LoginForm = () => {
   });
 
   const { username, password } = loginData;
-
+  const [ userState, setUserState ] = useState(undefined);
   const [errors, setErrors] = useState({});
+
+  const { setCurrentUser } = useCurrentUserContext();
   
+  useEffect(()=>{
+    if (userState) {
+      setCurrentUser(userState);
+      navigate("/", { replace: true });
+    }
+  }, [userState])
+
   const handleChange = (event) => {
     setLoginData({
       ...loginData,
@@ -26,8 +36,9 @@ const LoginForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      await loginUser(loginData);
-      navigate("/", { replace: true });
+      const userResponse = await loginUser(loginData);
+      console.log("user successfully logged in?", userResponse);
+      setUserState(userResponse.user);
     } catch (err) {
       setErrors(err);
     }
