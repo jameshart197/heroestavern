@@ -13,16 +13,18 @@ function App() {
   return (
     <CurrentUserProvider>
       <Header></Header>
-      <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="characters/" element={<MyCharSheets />}></Route>
-        <Route
-          path="charactercreation/"
-          element={<CharacterCreation />}
-        ></Route>
-        <Route path="signup/" element={<SignUpForm />}></Route>
-        <Route path="login/" element={<LoginForm />}></Route>
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />}></Route>
+          <Route path="characters/" element={<MyCharSheets />}></Route>
+          <Route
+            path="charactercreation/"
+            element={<CharacterCreation />}
+          ></Route>
+          <Route path="signup/" element={<SignUpForm />}></Route>
+          <Route path="login/" element={<LoginForm />}></Route>
+        </Routes>
+      </main>
     </CurrentUserProvider>
   );
 }

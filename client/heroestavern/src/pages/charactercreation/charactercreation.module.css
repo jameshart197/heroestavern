@@ -2,11 +2,11 @@ main {
     height: 80vh;
 }
 
-main section:first-child {
+main > section:first-child {
     height: 100%;
 }
 
-main section:last-child {
+main > section:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
