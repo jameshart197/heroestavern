@@ -2,9 +2,9 @@ main {
     height: 80vh;
 }
 
-main > * {
+/* main > * {
     height: 100%;
-}
+} */
 
 .authForm {
     display: flex;

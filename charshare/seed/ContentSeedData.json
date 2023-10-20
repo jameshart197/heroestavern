@@ -40,7 +40,7 @@
         "pk": 0,
         "fields": {
             "name": "No Spell Selected",
-            "spell_level": "1",
+            "spell_level": 1,
             "full_description": "Please select a Spell",
             "spell_reqs": 0
         }
