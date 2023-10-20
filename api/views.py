@@ -177,3 +177,11 @@ class CharacterSubclassAdd(generics.CreateAPIView):
     """
     serializer_class = serializers.CharacterSubclassSerializer
     queryset = models.SubClassContentTable.objects.all()
+
+
+class CharacterLevelAdd(generics.CreateAPIView):
+    """
+    Add a Level to an existing character
+    """
+    serializer_class = serializers.CharacterLevelSerializer
+    queryset = models.CharacterLevels.objects.all()

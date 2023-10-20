@@ -1,16 +1,43 @@
-import React, { useState } from "react";
-import Races from "../../../models/races.json";
-import Classes from "../../../models/classes.json";
-import Subraces from "../../../models/subraces.json";
-import Subclasses from "../../../models/subclasses.json";
+import React, { useEffect, useState } from "react";
+import { getRaces, getCharclasses, getSubclasses, getSubraces } from "../../../helpers/api";
 import { Listbox } from "@headlessui/react";
 import styles from "../charactercreation.module.css";
 
+
+
+
 const CreationForm1 = ({ characterState, setCharacterState }) => {
-  const [selectedRace, setSelectedRace] = useState(characterState.race || Races[0]);
-  const [selectedClass, setSelectedClass] = useState(characterState.charclass || Classes[0]);
-  const [selectedSubrace, setSelectedSubrace] = useState(Subraces.find(sr=>sr.id===characterState.subrace) || Subraces[0]);
-  const [selectedSubclass, setSelectedSubclass] = useState(Subclasses.find(sc=>sc.id===characterState.subclass[0]) || Subclasses[0]);
+  const [raceList, setRaceList] = useState([])
+  const [subraceList, setSubraceList] = useState([])
+  const [charclassList, setCharclassList] = useState([])
+  const [subclassList, setSubclassList] = useState([])
+  const [selectedRace, setSelectedRace] = useState(characterState.race || {});
+  const [selectedClass, setSelectedClass] = useState(characterState.charclass || {});
+  const [selectedSubrace, setSelectedSubrace] = useState(subraceList.find(sr=>sr.id===characterState.subrace) || {});
+  const [selectedSubclass, setSelectedSubclass] = useState(subclassList.find(sc=>sc.id===characterState.subclass[0]) || {});
+
+
+  useEffect(
+    () => {
+      const fetchData = async () => {
+        const races = await getRaces();
+        const subraces = await getSubraces();
+        const charclasses = await getCharclasses();
+        const subclasses = await getSubclasses();
+        setRaceList(races);
+        setSubraceList(subraces);
+        setCharclassList(charclasses);
+        setSubclassList(subclasses);
+        setSelectedRace(races[0]);
+        setSelectedClass(charclasses[0]);
+        setSelectedSubrace(subraces[0]);
+        setSelectedSubclass(subclasses[0]);
+      }
+      fetchData().catch(console.error)
+    }, []
+  )
+
+
   const handleCharacterNameChange = (e) => {
     setCharacterState({...characterState, character_name: e.currentTarget.value})
   }
@@ -46,7 +73,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
             {selectedRace.name}
           </Listbox.Button>
           <Listbox.Options>
-            {Races.map((race) => (
+            {raceList.map((race) => (
               <Listbox.Option key={race.id} value={race}>
                 {race.name}
               </Listbox.Option>
@@ -59,7 +86,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         <Listbox value={selectedSubrace} onChange={handleSubraceChange}>
           <Listbox.Button className={styles.Inputs}>{selectedSubrace.name}</Listbox.Button>
           <Listbox.Options>
-            {Subraces.filter((sr) => sr.race === selectedRace.name).map(
+            {subraceList.filter((sr) => sr.race === selectedRace.name).map(
               (subrace) => (
                 <Listbox.Option key={subrace.id} value={subrace}>
                   {subrace.name}
@@ -76,7 +103,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
             {selectedClass.name}
           </Listbox.Button>
           <Listbox.Options>
-            {Classes.map((charClass) => (
+            {charclassList.map((charClass) => (
               <Listbox.Option key={charClass.id} value={charClass}>
                 {charClass.name}
               </Listbox.Option>
@@ -89,7 +116,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         <Listbox value={selectedSubclass} onChange={handleSubclassChange}>
           <Listbox.Button className={styles.Inputs}>{selectedSubclass.name}</Listbox.Button>
           <Listbox.Options>
-            {Subclasses.filter((sc) => sc.parent_class === selectedClass.name).map(
+            {subclassList.filter((sc) => sc.parent_class === selectedClass.name).map(
               (subclasses) => (
                 <Listbox.Option key={subclasses.id} value={subclasses}>
                   {subclasses.name}

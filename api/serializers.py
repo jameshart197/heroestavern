@@ -32,7 +32,7 @@ class RaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.RaceContentTable
         fields = [
-            'name', 'full_description', 'features'
+            'id', 'name', 'full_description', 'features'
         ]
 
 
@@ -68,7 +68,7 @@ class ClassSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.ClassContentTable
         fields = [
-            'name', 'full_description', 'features', 'saving_throw_1', 'saving_throw_2'
+            'id', 'name', 'full_description', 'features', 'saving_throw_1', 'saving_throw_2'
         ]
 
 
@@ -226,6 +226,16 @@ class CharacterSubclassSerializer(serializers.ModelSerializer):
             'id', 'subclass', 'character'
         ]
 
+
+class CharacterLevelSerializer(serializers.ModelSerializer):
+    """
+    Serializer for list of Levels per character
+    """
+    class Meta:
+        model = models.CharacterLevels
+        fields = [
+            'id', 'level', 'character'
+        ]
 
 
 class CharacterSerializer(serializers.ModelSerializer):

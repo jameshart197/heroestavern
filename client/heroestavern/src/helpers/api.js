@@ -1,6 +1,32 @@
 import CharacterModel from "../models/createcharmodel";
 import { getRefreshToken, logoutUser } from "./currentuser.api";
 
+// get content tables
+
+export const getRaces = async () => {
+  return (await getData("api", "races")).sort((a,b) => a.id-b.id);
+}
+
+export const getSubraces = async () => {
+  return (await getData("api", "subraces")).sort((a,b) => a.id-b.id);
+}
+
+export const getCharclasses = async () => {
+  return (await getData("api", "classes")).sort((a,b) => a.id-b.id);
+}
+
+export const getSubclasses = async () => {
+  return (await getData("api", "subclasses")).sort((a,b) => a.id-b.id);
+}
+
+export const getBackgrounds = async () => {
+  return (await getData("api", "backgrounds")).sort((a,b) => a.id-b.id);
+}
+
+export const getAlignments = async () => {
+  return (await getData("api", "alignments")).sort((a,b) => a.id-b.id);
+}
+
 export const postBaseCharacter = async (basechar) => {
   const newChar = Object.keys(CharacterModel).reduce((a, b) => {
     a[b] = basechar[b];
@@ -11,6 +37,10 @@ export const postBaseCharacter = async (basechar) => {
 
 export const postCharacterSubclass = async (subclass, character) => {
   return await postData("api", "addcharactersubclass", {subclass, character})
+}
+
+export const postCharacterLevel = async (level, character, char_class) => {
+  return postData("api", "addcharacterlevel", {level, character, char_class})
 }
 
 export const signUp = async (signUpData) => {
@@ -24,6 +54,7 @@ export const login = async (loginData) => {
 export const currentUser = async (token) => {
   return await getData("dj-rest-auth", "user", token);
 };
+
 
 
 // const postCompleteCharacter =async () => {
