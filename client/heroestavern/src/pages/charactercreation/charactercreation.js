@@ -6,7 +6,7 @@ import CreationForm2 from "./forms/creation2";
 import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel"
-import { postBaseCharacter } from "../../helpers/api";
+import { postBaseCharacter, postCharacterSubclass } from "../../helpers/api";
 
 const CharacterCreation = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -29,7 +29,9 @@ const CharacterCreation = () => {
             }
             break;              
         case 3: 
-           const baseCharacter = postBaseCharacter(characterState)
+           const baseCharacter = await postBaseCharacter(characterState)
+           console.log(baseCharacter)
+           await postCharacterSubclass(characterState.subclass[0], baseCharacter.id)
            navigate('/', {replace:true})
            break;
         default: setCurrentPage(currentPage+1)            
@@ -55,9 +57,9 @@ const CharacterCreation = () => {
   return (
     <>
       <section>{renderSwitch()}</section>
-      {/* <pre>
+      <pre>
         {JSON.stringify(characterState, null, 2)}
-      </pre> */}
+      </pre>
       <section>
         {currentPage?(<button className={styles.pageButton} onClick={handlePreviousClick}>Previous</button>):''}
         <button className={styles.pageButton} onClick={handleNextClick}>{currentPage===3?'Finish and Create Character':'Next'}</button>

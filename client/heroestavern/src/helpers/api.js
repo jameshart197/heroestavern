@@ -9,6 +9,10 @@ export const postBaseCharacter = async (basechar) => {
   return await postData("api", "characters", newChar);
 };
 
+export const postCharacterSubclass = async (subclass, character) => {
+  return await postData("api", "addcharactersubclass", {subclass, character})
+}
+
 export const signUp = async (signUpData) => {
   return await postData("dj-rest-auth", "registration", signUpData);
 };

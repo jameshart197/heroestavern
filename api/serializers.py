@@ -220,11 +220,10 @@ class CharacterSubclassSerializer(serializers.ModelSerializer):
     """
     Serializer for list of Subclass per character
     """
-    Subclass = serializers.ReadOnlyField(source='subclass.name')
     class Meta:
         model = models.CharacterSubclass
         fields = [
-            'id', 'Subclass'
+            'id', 'subclass', 'character'
         ]
 
 
