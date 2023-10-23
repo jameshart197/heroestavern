@@ -45,6 +45,9 @@ class CharacterDetails(models.Model):
     spells = models.ManyToManyField("CharacterSpells", blank=True)
     languages = models.ManyToManyField("CharacterLanguages", blank=True)
     subclass = models.ManyToManyField("CharacterSubclass", blank=True)
+    # character_art = Models.ImageField(
+    #     upload_to='images', default='https://res.cloudinary.com/dgyweielh/image/upload/v1698071582/stockchar_oquoft.jpg'
+    # )
 
     def __str__(self):
         return f"ID: {self.id} - {self.character_name}"

@@ -13,24 +13,22 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const [subclassList, setSubclassList] = useState([])
   const [selectedRace, setSelectedRace] = useState(characterState.race || {});
   const [selectedClass, setSelectedClass] = useState(characterState.charclass || {});
-  const [selectedSubrace, setSelectedSubrace] = useState(subraceList.find(sr=>sr.id===characterState.subrace) || {});
-  const [selectedSubclass, setSelectedSubclass] = useState(subclassList.find(sc=>sc.id===characterState.subclass[0]) || {});
+  const [selectedSubrace, setSelectedSubrace] = useState(characterState.subrace || {});
+  const [selectedSubclass, setSelectedSubclass] = useState(characterState.subclass[0] || {});
 
 
   useEffect(
     () => {
       const fetchData = async () => {
-        const races = await getRaces();
-        const subraces = await getSubraces();
-        const charclasses = await getCharclasses();
-        const subclasses = await getSubclasses();
+        const [races, subraces] = await Promise.all([getRaces(), getSubraces()]);
         setRaceList(races);
         setSubraceList(subraces);
+        setSelectedRace(races[0]);
+        setSelectedSubrace(subraces[0]);
+        const [charclasses, subclasses] = await Promise.all([getCharclasses(), getSubclasses()]);
         setCharclassList(charclasses);
         setSubclassList(subclasses);
-        setSelectedRace(races[0]);
         setSelectedClass(charclasses[0]);
-        setSelectedSubrace(subraces[0]);
         setSelectedSubclass(subclasses[0]);
       }
       fetchData().catch(console.error)
@@ -47,7 +45,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   }
   const handleSubraceChange = (e) => {
     setSelectedSubrace(e)
-    setCharacterState({...characterState, subrace: e.id})
+    setCharacterState({...characterState, subrace: e})
   }
   const handleCharclassChange = (e) => {
     setSelectedClass(e)
@@ -55,7 +53,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   }
   const handleSubclassChange = (e) => {
     setSelectedSubclass(e)
-    setCharacterState({...characterState, subclass: [e.id]})
+    setCharacterState({...characterState, subclass: [e]})
   }
   const handleLevelChange = (e) => {
     setCharacterState({...characterState, charlevel: e.currentTarget.value})
@@ -70,7 +68,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         <label for="charraceinput">Race: </label>
         <Listbox value={selectedRace} onChange={handleRaceChange}>
           <Listbox.Button className={styles.Inputs}>
-            {selectedRace.name}
+            {selectedRace?.name}
           </Listbox.Button>
           <Listbox.Options>
             {raceList.map((race) => (
@@ -84,7 +82,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charsubraceinput">Subrace: </label>
         <Listbox value={selectedSubrace} onChange={handleSubraceChange}>
-          <Listbox.Button className={styles.Inputs}>{selectedSubrace.name}</Listbox.Button>
+          <Listbox.Button className={styles.Inputs}>{selectedSubrace?.name}</Listbox.Button>
           <Listbox.Options>
             {subraceList.filter((sr) => sr.race === selectedRace.name).map(
               (subrace) => (
@@ -100,7 +98,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         <label for="charclassinput">Class: </label>
         <Listbox value={selectedClass} onChange={handleCharclassChange}>
           <Listbox.Button className={styles.Inputs}>
-            {selectedClass.name}
+            {selectedClass?.name}
           </Listbox.Button>
           <Listbox.Options>
             {charclassList.map((charClass) => (
@@ -114,7 +112,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charsubclassinput">Subclass: </label>
         <Listbox value={selectedSubclass} onChange={handleSubclassChange}>
-          <Listbox.Button className={styles.Inputs}>{selectedSubclass.name}</Listbox.Button>
+          <Listbox.Button className={styles.Inputs}>{selectedSubclass?.name}</Listbox.Button>
           <Listbox.Options>
             {subclassList.filter((sc) => sc.parent_class === selectedClass.name).map(
               (subclasses) => (

@@ -31,15 +31,15 @@ const CharacterCreation = () => {
         case 3: 
            const baseCharacter = await postBaseCharacter(characterState);
            console.log(baseCharacter);
-           await postCharacterSubclass(characterState.subclass[0], baseCharacter.id);
-           await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charClass.id);
+           await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
+           await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
            await postCharacterAttributes(
-            characterState.strength, 
-            characterState.dexterity,
-            characterState.constitution,
-            characterState.intelligence,
-            characterState.wisdom,
-            characterState.charisma,
+            {attribute:1, score:characterState.strength || 10}, 
+            {attribute:2, score:characterState.dexterity || 10},
+            {attribute:3, score:characterState.constitution || 10},
+            {attribute:4, score:characterState.intelligence || 10},
+            {attribute:5, score:characterState.wisdom || 10},
+            {attribute:6, score:characterState.charisma || 10},
             baseCharacter.id)
            navigate('/', {replace:true});
            break;

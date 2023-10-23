@@ -28,10 +28,11 @@ export const getAlignments = async () => {
 }
 
 export const postBaseCharacter = async (basechar) => {
-  const newChar = Object.keys(CharacterModel).reduce((a, b) => {
+  let newChar = Object.keys(CharacterModel).reduce((a, b) => {
     a[b] = basechar[b];
     return a;
   }, {});
+  newChar = {...newChar, subrace:newChar.subrace.id};
   return await postData("api", "characters", newChar);
 };
 
@@ -40,11 +41,12 @@ export const postCharacterSubclass = async (subclass, character) => {
 }
 
 export const postCharacterLevel = async (level, character, char_class) => {
-  return postData("api", "addcharacterlevel", {level, character, char_class})
+  return await postData("api", "addcharacterlevel", {level, character, char_class})
 }
 
 export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character) => {
-  return postData("api", "addcharacterattributes", {strength, dexterity, constitution, intelligence, wisdom, charisma, character})
+  const attributesArray = [strength, dexterity, constitution, intelligence, wisdom, charisma]
+  return attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character}))
 }
 
 export const signUp = async (signUpData) => {

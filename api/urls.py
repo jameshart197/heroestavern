@@ -25,5 +25,6 @@ urlpatterns = [
     path('charactersubclass/', views.CharacterSubclass.as_view()),
     path('characters/', views.CharacterCreation.as_view()),
     path('addcharactersubclass/', views.CharacterSubclassAdd.as_view()),
-    path('addcharacterlevel/', views.CharacterLevelAdd.as_view())
+    path('addcharacterlevel/', views.CharacterLevelAdd.as_view()),
+    path('addcharacterattributes/', views.CharacterAttributesAdd.as_view())
 ]
