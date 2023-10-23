@@ -15,6 +15,7 @@ urlpatterns = [
     path('alignments/', views.AlignmentList.as_view()),
     path('tools/', views.ToolList.as_view()),
     path('instruments/', views.InstrumentList.as_view()),
+    path('mycharacters/', views.MyCharacters.as_view()),
     path('characters/<int:pk>/', views.CharacterDetails.as_view()),
     path('characterattributes/', views.CharacterAttributes.as_view()),
     path('characterlevels/', views.CharacterLevels.as_view()),

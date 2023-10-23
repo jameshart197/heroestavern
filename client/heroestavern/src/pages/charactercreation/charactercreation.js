@@ -7,6 +7,7 @@ import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel"
 import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, postCharacterSubrace } from "../../helpers/api";
+import { getToken } from "../../helpers/currentuser.api";
 
 const CharacterCreation = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -29,10 +30,11 @@ const CharacterCreation = () => {
             }
             break;              
         case 3: 
-           const baseCharacter = await postBaseCharacter(characterState);
+           const token = getToken()
+           const baseCharacter = await postBaseCharacter(characterState, token);
            console.log(baseCharacter);
-           await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
-           await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
+           await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id, token);
+           await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id, token);
            await postCharacterAttributes(
             {attribute:1, score:characterState.strength || 10}, 
             {attribute:2, score:characterState.dexterity || 10},
@@ -40,7 +42,7 @@ const CharacterCreation = () => {
             {attribute:4, score:characterState.intelligence || 10},
             {attribute:5, score:characterState.wisdom || 10},
             {attribute:6, score:characterState.charisma || 10},
-            baseCharacter.id)
+            baseCharacter.id, token)
            navigate('/', {replace:true});
            break;
         default: setCurrentPage(currentPage+1)            

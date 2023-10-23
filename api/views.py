@@ -157,7 +157,15 @@ class CharacterSubclass(generics.ListAPIView):
 
 class CharacterDetails(generics.RetrieveAPIView):
     """
-    List all character details
+    Retrieve the character details
+    """
+    serializer_class = serializers.CharacterSerializer
+    queryset = models.CharacterDetails.objects.all()
+
+
+class MyCharacters(generics.ListAPIView):
+    """
+    List all characters per user
     """
     serializer_class = serializers.CharacterSerializer
     queryset = models.CharacterDetails.objects.all()

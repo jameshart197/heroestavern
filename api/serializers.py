@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from charshare import models
+from rest_framework.authtoken.models import Token
 
 
 class AttributeSerializer(serializers.ModelSerializer):
@@ -243,7 +244,11 @@ class CharacterSerializer(serializers.ModelSerializer):
     Serializer for CharacterDetails model for individual character view
     """
     # attributes = CharacterAttributesSerializer(read_only=False, many=True)
-    user = serializers.ReadOnlyField(source='user.username')
+    user = serializers.SerializerMethodField()
+    def get_user(self, obj):
+        request = self.context['request']
+        return request.user.id
+
     # character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
     # def validate_image(self, value):
     #     if value.size > 2 * 1024 * 1024:

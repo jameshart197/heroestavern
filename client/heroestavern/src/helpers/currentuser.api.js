@@ -1,4 +1,3 @@
-import { useUpdateCurrentUser } from "../contexts/currentUserContext";
 import { currentUser, login, signUp } from "./api";
 
 export const getCurrentUser = async () => {
@@ -9,6 +8,8 @@ export const getCurrentUser = async () => {
   const response = await currentUser(token);
   return response;
 };
+
+export const getToken = () => localStorage.getItem("access_token");
 
 export const getRefreshToken = () => ({refresh: localStorage.getItem("refresh_token")})
 
