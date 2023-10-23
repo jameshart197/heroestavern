@@ -86,12 +86,12 @@ export const refreshAccessToken = async () => {
   return access_token;
 }
 
-async function getData(area = "", url = "", token = null, retryCount = 0) {
-  if (!url || !area) {
+async function getData(area = "", path = "", token = null, retryCount = 0) {
+  if (!path || !area) {
     console.error("url and area must be defined");
     return undefined;
   }
-  url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${url}/`;
+  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
   let response;
   try {
     const headerattributes = {
@@ -112,7 +112,7 @@ async function getData(area = "", url = "", token = null, retryCount = 0) {
   }
   if (response.status === 401 && retryCount <= 2) {
     const access_token = refreshAccessToken()
-    return await getData(area, url, access_token.access, retryCount++)
+    return await getData(area, path, access_token.access, retryCount++)
   } 
   if (retryCount > 2) {
     logoutUser();
@@ -123,12 +123,12 @@ async function getData(area = "", url = "", token = null, retryCount = 0) {
   throw await response.json();
 }
 
-async function postData(area = "", url = "", data = {}, token = null, retryCount = 0) {
-  if (!url || !area) {
+async function postData(area = "", path = "", data = {}, token = null, retryCount = 0) {
+  if (!path || !area) {
     console.error("url and area must be defined");
     return undefined;
   }
-  url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${url}/`;
+  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
   let response;
   try {
     const headerattributes = {
@@ -151,7 +151,7 @@ async function postData(area = "", url = "", data = {}, token = null, retryCount
   }
   if (response.status === 401 && retryCount <= 2) {
     const access_token = refreshAccessToken()
-    return await postData(area, url, data, access_token.access, retryCount++)    
+    return await postData(area, path, data, access_token.access, retryCount++)    
   } 
   if (retryCount > 2) {
     logoutUser();
