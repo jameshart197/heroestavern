@@ -3,24 +3,30 @@ import styles from "../charactercreation.module.css";
 
 const CreationForm2 = ({ characterState, setCharacterState }) => {
   const handleStrengthChange = (e) => {
-    setCharacterState({...characterState, strength: e.currentTarget.value})
-  }
+    setCharacterState({ ...characterState, strength: e.currentTarget.value });
+  };
   const handleDexterityChange = (e) => {
-    setCharacterState({...characterState, dexterity: e.currentTarget.value})
-  }
+    setCharacterState({ ...characterState, dexterity: e.currentTarget.value });
+  };
   const handleConstitutionChange = (e) => {
-    setCharacterState({...characterState, constitution: e.currentTarget.value})
-  }
+    setCharacterState({
+      ...characterState,
+      constitution: e.currentTarget.value,
+    });
+  };
   const handleIntelligenceChange = (e) => {
-    setCharacterState({...characterState, intelligence: e.currentTarget.value})
-  }
+    setCharacterState({
+      ...characterState,
+      intelligence: e.currentTarget.value,
+    });
+  };
   const handleWisdomChange = (e) => {
-    setCharacterState({...characterState, wisdom: e.currentTarget.value})
-  }
+    setCharacterState({ ...characterState, wisdom: e.currentTarget.value });
+  };
   const handleCharismaChange = (e) => {
-    setCharacterState({...characterState, charisma: e.currentTarget.value})
-  }
-  
+    setCharacterState({ ...characterState, charisma: e.currentTarget.value });
+  };
+
   return (
     <form action="post" className={styles.creationForm}>
       <div className={styles.AttributeInput}>

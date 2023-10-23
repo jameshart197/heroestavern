@@ -6,7 +6,7 @@ import CreationForm2 from "./forms/creation2";
 import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel"
-import { postBaseCharacter, postCharacterLevel, postCharacterSubclass, postCharacterSubrace } from "../../helpers/api";
+import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, postCharacterSubrace } from "../../helpers/api";
 
 const CharacterCreation = () => {
   const [currentPage, setCurrentPage] = useState(0);
@@ -33,6 +33,14 @@ const CharacterCreation = () => {
            console.log(baseCharacter);
            await postCharacterSubclass(characterState.subclass[0], baseCharacter.id);
            await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charClass.id);
+           await postCharacterAttributes(
+            characterState.strength, 
+            characterState.dexterity,
+            characterState.constitution,
+            characterState.intelligence,
+            characterState.wisdom,
+            characterState.charisma,
+            baseCharacter.id)
            navigate('/', {replace:true});
            break;
         default: setCurrentPage(currentPage+1)            

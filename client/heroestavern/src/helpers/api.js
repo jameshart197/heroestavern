@@ -43,6 +43,10 @@ export const postCharacterLevel = async (level, character, char_class) => {
   return postData("api", "addcharacterlevel", {level, character, char_class})
 }
 
+export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character) => {
+  return postData("api", "addcharacterattributes", {strength, dexterity, constitution, intelligence, wisdom, charisma, character})
+}
+
 export const signUp = async (signUpData) => {
   return await postData("dj-rest-auth", "registration", signUpData);
 };
