@@ -1,8 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import styles from "./mycharsheets.module.css";
 import SkillRow from "../../components/skillrow/skillrow";
-import Character from "./dax.json";
 import Skills from "./skills.json";
 import Attributes from "./attributes.json";
 import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
@@ -16,6 +15,7 @@ import Initiative from "../../components/initiative/initiative";
 import Scorebox from "../../components/scorebox/scorebox";
 
 const MyCharSheets = () => {
+  const Character = (useLocation()).state
   const profBonus = proficiencyBonus(
     Character.levels.map((l) => l.level).reduce((a, b) => a + b, 0)
   );

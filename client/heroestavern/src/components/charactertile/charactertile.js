@@ -5,7 +5,7 @@ const CharacterTile = ({character}) => {
     const navigate = useNavigate();
     const handleClick = () => {
         console.log(character)
-        navigate(`/characters/${character.id}`, {replace:true})
+        navigate(`/characters/${character.id}`, {state:character})
     }
     return (
         <button onClick={handleClick}>

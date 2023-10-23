@@ -26,7 +26,7 @@ const SignUpForm = () => {
     event.preventDefault();
     try {
       const response = await registerUser(signUpData);
-      navigate("/", { replace: true });
+      navigate("/");
     } catch (err) {
       setErrors(err);
     }

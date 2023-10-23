@@ -22,7 +22,7 @@ const LoginForm = () => {
   useEffect(()=>{
     if (userState) {
       setCurrentUser(userState);
-      navigate("/", { replace: true });
+      navigate("/");
     }
   }, [userState])
 

@@ -45,7 +45,7 @@ const CharacterCreation = () => {
             {attribute:5, score:characterState.wisdom || 10},
             {attribute:6, score:characterState.charisma || 10},
             baseCharacter.id)
-           navigate('/', {replace:true});
+           navigate('/');
            break;
         default: setCurrentPage(currentPage+1)            
     }
