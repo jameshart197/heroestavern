@@ -36,17 +36,17 @@ export const postBaseCharacter = async (basechar, token) => {
   return await postData("api", "characters", newChar, token);
 };
 
-export const postCharacterSubclass = async (subclass, character, token) => {
-  return await postData("api", "addcharactersubclass", {subclass, character}, token)
+export const postCharacterSubclass = async (subclass, character) => {
+  return await postData("api", "addcharactersubclass", {subclass, character})
 }
 
-export const postCharacterLevel = async (level, character, char_class, token) => {
-  return await postData("api", "addcharacterlevel", {level, character, char_class}, token)
+export const postCharacterLevel = async (level, character, char_class) => {
+  return await postData("api", "addcharacterlevel", {level, character, char_class})
 }
 
-export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character, token) => {
+export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character) => {
   const attributesArray = [strength, dexterity, constitution, intelligence, wisdom, charisma]
-  return attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character}, token))
+  return attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character}))
 }
 
 export const signUp = async (signUpData) => {

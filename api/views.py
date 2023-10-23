@@ -177,7 +177,7 @@ class CharacterCreation(generics.CreateAPIView):
     """
     serializer_class = serializers.CharacterSerializer
     queryset = models.CharacterDetails.objects.all()
-    
+
 
 class CharacterSubclassAdd(generics.CreateAPIView):
     """

@@ -243,11 +243,6 @@ class CharacterSerializer(serializers.ModelSerializer):
     """
     Serializer for CharacterDetails model for individual character view
     """
-    # attributes = CharacterAttributesSerializer(read_only=False, many=True)
-    user = serializers.SerializerMethodField()
-    def get_user(self, obj):
-        request = self.context['request']
-        return request.user.id
 
     # character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
     # def validate_image(self, value):
@@ -291,4 +286,3 @@ class CharacterSerializer(serializers.ModelSerializer):
             'languages',
             'subclass'
         ]
-        # depth=2

@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class CharacterDetails(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
     subrace = models.ForeignKey(
         SubRaceContentTable,
         on_delete=models.SET_DEFAULT,
