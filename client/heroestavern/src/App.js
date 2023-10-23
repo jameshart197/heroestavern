@@ -8,6 +8,7 @@ import CharacterCreation from "./pages/charactercreation/charactercreation";
 import SignUpForm from "./pages/auth/forms/signup";
 import LoginForm from "./pages/auth/forms/login";
 import { CurrentUserProvider } from "./contexts/currentUserContext";
+import CharacterList from "./pages/characterlist/characterlist";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />}></Route>
+          <Route path="characters/" element={<CharacterList />}></Route>
           <Route path="characters/:id" element={<MyCharSheets />}></Route>
           <Route
             path="charactercreation/"

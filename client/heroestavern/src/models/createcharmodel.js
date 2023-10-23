@@ -4,7 +4,6 @@ const CharacterModel = {
   subrace: 0,
   background: 0,
   alignment: 0,
-  levels: [],
   faith: "",
   age: "",
   height: "",

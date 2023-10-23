@@ -27,6 +27,8 @@ export const getAlignments = async () => {
   return (await getData("api", "alignments")).sort((a,b) => a.id-b.id);
 }
 
+// post character creation
+
 export const postBaseCharacter = async (basechar, token) => {
   let newChar = Object.keys(CharacterModel).reduce((a, b) => {
     a[b] = basechar[b];
@@ -49,6 +51,20 @@ export const postCharacterAttributes = async (strength, dexterity, constitution,
   return attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character}))
 }
 
+
+// render character page
+
+export const getCharacterList = async (token) => {
+  const mycharacters = await getData("api", "mycharacters", token)
+  console.log(mycharacters)
+  return mycharacters.sort((a,b) => a.character_name-b.character_name)
+}
+
+
+
+// logins
+
+
 export const signUp = async (signUpData) => {
   return await postData("dj-rest-auth", "registration", signUpData);
 };
@@ -62,11 +78,7 @@ export const currentUser = async (token) => {
 };
 
 
-
-// const postCompleteCharacter =async () => {
-
-// }
-
+// access tokens
 
 export const refreshAccessToken = async () => {
   const access_token =  await postData("dj-rest-auth", "token/refresh", getRefreshToken());

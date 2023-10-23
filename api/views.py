@@ -169,13 +169,18 @@ class MyCharacters(generics.ListAPIView):
     """
     serializer_class = serializers.CharacterSerializer
     queryset = models.CharacterDetails.objects.all()
+    def get_queryset(self):
+        current_user = self.request.user.id
+        print(self.request.user.id, current_user)
+        return models.CharacterDetails.objects.filter(user=current_user)
+
 
 
 class CharacterCreation(generics.CreateAPIView):
     """
     Create required character field values
     """
-    serializer_class = serializers.CharacterSerializer
+    serializer_class = serializers.CharacterCreationSerializer
     queryset = models.CharacterDetails.objects.all()
 
 
