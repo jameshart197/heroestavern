@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import { loginUser } from "../../../helpers/currentuser.api";
 import { useCurrentUserContext } from "../../../contexts/currentUserContext";
 
-
 const LoginForm = () => {
   const navigate = useNavigate();
   const [loginData, setLoginData] = useState({
@@ -14,17 +13,17 @@ const LoginForm = () => {
   });
 
   const { username, password } = loginData;
-  const [ userState, setUserState ] = useState(undefined);
+  const [userState, setUserState] = useState(undefined);
   const [errors, setErrors] = useState({});
 
   const { setCurrentUser } = useCurrentUserContext();
-  
-  useEffect(()=>{
+
+  useEffect(() => {
     if (userState) {
       setCurrentUser(userState);
       navigate("/");
     }
-  }, [userState])
+  }, [userState]);
 
   const handleChange = (event) => {
     setLoginData({
@@ -46,31 +45,43 @@ const LoginForm = () => {
 
   return (
     <form action="POST" onSubmit={handleSubmit} className={styles.authForm}>
-      <input
-        type="text"
-        placeholder="username"
-        name="username"
-        value={username}
-        onChange={handleChange}
-      />
+      <div>
+        <label for="username">Username: </label>
+        <input
+          type="text"
+          placeholder="username"
+          name="username"
+          value={username}
+          onChange={handleChange}
+        />
+      </div>
       <ErrorMessage
         errors={errors}
         field="username"
         errorlevel="warning"
       ></ErrorMessage>
-      <input
-        type="password"
-        placeholder="Password"
-        name="password"
-        value={password}
-        onChange={handleChange}
-      />
+      <div>
+        <label for="password">Password: </label>
+        <input
+          type="password"
+          placeholder="Password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+      </div>
       <ErrorMessage
         errors={errors}
         field="password"
         errorlevel={"warning"}
       ></ErrorMessage>
-      <input type="submit" onChange={handleChange} />
+      <div>
+        <input
+          type="submit"
+          onChange={handleChange}
+          className={styles.submitButton}
+        />
+      </div>
       <ErrorMessage
         errors={errors}
         field="non_field_errors"

@@ -35,43 +35,54 @@ const SignUpForm = () => {
   return (
     <main>
       <form action="POST" onSubmit={handleSubmit} className={styles.authForm}>
-        <input
-          type="text"
-          placeholder="username"
-          name="username"
-          value={username}
-          onChange={handleChange}
-        />
+        <div>
+          <label for="username">Username: </label>
+          <input
+            type="text"
+            placeholder="username"
+            name="username"
+            value={username}
+            onChange={handleChange}
+          />
+        </div>
         <ErrorMessage
           errors={errors}
           field="username"
           errorlevel="warning"
         ></ErrorMessage>
-        <input
-          type="password"
-          placeholder="Password"
-          name="password1"
-          value={password1}
-          onChange={handleChange}
-        />
+        <div>
+          <label for="password1">Password: </label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password1"
+            value={password1}
+            onChange={handleChange}
+          />
+        </div>
         <ErrorMessage
           errors={errors}
           field="password1"
           errorlevel={"warning"}
         ></ErrorMessage>
-        <input
-          type="password"
-          placeholder="Password"
-          name="password2"
-          value={password2}
-          onChange={handleChange}
-        />
+        <div>
+          <label for="password2">Repeat Password: </label>
+          <input
+            type="password"
+            placeholder="Password"
+            name="password2"
+            value={password2}
+            onChange={handleChange}
+          />
+        </div>
         <ErrorMessage
           errors={errors}
           field="password2"
           errorlevel={"warning"}
         ></ErrorMessage>
-        <input type="submit" />
+        <div>
+          <input type="submit" className={styles.submitButton} />
+        </div>
         <ErrorMessage
           errors={errors}
           field="non_field_errors"
