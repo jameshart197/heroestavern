@@ -140,7 +140,7 @@ async function dataQuery(area = "", path = "", data = null, options={}, token = 
   } 
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {
     options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
-    return await dataQuery(area, path, access_token.access, options)
+    return await dataQuery(area, path, data, token, options)
   }
   if (options.retryCount > RETRY_MAX && response.status===401) {
     logoutUser();

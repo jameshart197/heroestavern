@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Listbox } from "@headlessui/react";
 import styles from "../charactercreation.module.css";
 import { getAlignments, getBackgrounds } from "../../../helpers/api";
@@ -8,6 +8,7 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
   const [alignmentList, setAlignmentList] = useState([])
   const [selectedBackground, setSelectedBackground] = useState(characterState.background || {});
   const [selectedAlignment, setSelectedAlignment] = useState(characterState.alignment || {});
+
   useEffect(
     () => {
       const fetchData = async () => {

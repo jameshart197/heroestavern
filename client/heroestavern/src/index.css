@@ -9,6 +9,7 @@ body {
   background-size: auto;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: whitesmoke;
+  height: 100vh;
 }
 
 ul {
