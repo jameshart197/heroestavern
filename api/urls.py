@@ -17,6 +17,8 @@ urlpatterns = [
     path('instruments/', views.InstrumentList.as_view()),
     path('mycharacters/', views.MyCharacters.as_view()),
     path('characters/<int:pk>/', views.CharacterDetails.as_view()),
+    path('characters/', views.CharacterCreation.as_view()),
+    path('characterupdate/<int:pk>/', views.CharacterUpdate.as_view()),
     path('characterattributes/', views.CharacterAttributes.as_view()),
     path('characterlevels/', views.CharacterLevels.as_view()),
     path('characterskills/', views.CharacterSkills.as_view()),
@@ -24,7 +26,6 @@ urlpatterns = [
     path('characterspells/', views.CharacterSpells.as_view()),
     path('characterlanguages/', views.CharacterLanguages.as_view()),
     path('charactersubclass/', views.CharacterSubclass.as_view()),
-    path('characters/', views.CharacterCreation.as_view()),
     path('addcharactersubclass/', views.CharacterSubclassAdd.as_view()),
     path('addcharacterlevel/', views.CharacterLevelAdd.as_view()),
     path('addcharacterattributes/', views.CharacterAttributesAdd.as_view())

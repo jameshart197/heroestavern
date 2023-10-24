@@ -43,6 +43,10 @@ export const postBaseCharacter = async (basechar, token) => {
   return await postData("api", "characters", newChar, token);
 };
 
+export const updateCharacter = async (pk, body) => {
+  return await null;
+}
+
 export const postCharacterSubclass = async (subclass, character) => {
   return await postData("api", "addcharactersubclass", {subclass, character})
 }
@@ -91,47 +95,16 @@ export const refreshAccessToken = async () => {
   return access_token;
 }
 
-async function getData(area = "", path = "", token = null, retryCount = 0) {
-  if (!path || !area) {
-    console.error("url and area must be defined");
-    return undefined;
-  }
-  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
-  let response;
-  try {
-    const headerattributes = {
-      "Content-Type": "application/json",
-    };
-    if (token) {
-      headerattributes.Authorization = `Bearer ${token}`;
-    }
-    response = await fetch(url, {
-      method: "GET",
-      mode: "cors",
-      headers: headerattributes,
-    }).catch((err) => {
-      console.log(err);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-  if (response.status === 401 && retryCount <= RETRY_MAX) {
-    const access_token = refreshAccessToken()
-    return await getData(area, path, access_token.access, retryCount++)
-  } 
-  if (response.status === 500 && retryCount <=RETRY_MAX) {
-    return await getData(area, path, access_token.access, retryCount++)
-  }
-  if (retryCount > RETRY_MAX && response.status===401) {
-    logoutUser();
-  }
-  if (response.status >= 200 && response.status < 300) {
-    return await response.json();
-  }
-  throw await response.json();
+async function postData(area, path, data, token, options){
+  return await dataQuery(area, path, data, {...options, method:"POST"}, token);
 }
-
-async function postData(area = "", path = "", data = {}, token = null, retryCount = 0) {
+async function getData(area, path, data, token, options){
+  return await dataQuery(area, path, data, {...options, method:"GET"}, token);
+}
+async function updateData(area, path, data, token, options){
+  return await dataQuery(area, path, data, {...options, method:"PATCH"}, token);
+}
+async function dataQuery(area = "", path = "", data = null, options={}, token = null) {
   if (!path || !area) {
     console.error("url and area must be defined");
     return undefined;
@@ -145,26 +118,31 @@ async function postData(area = "", path = "", data = {}, token = null, retryCoun
     if (token) {
       headerattributes.Authorization = `Bearer ${token}`;
     }
-    response = await fetch(url, {
-      method: "POST",
+    const request = {
+      method: options.method,
       mode: "cors",
       headers: headerattributes,
       redirect: "follow",
-      body: JSON.stringify(data),
-    }).catch((err) => {
+    };
+    if (data){
+      request.body =  JSON.stringify(data);
+    }
+    response = await fetch(url, request).catch((err) => {
       console.log(err);
     });
   } catch (err) {
     console.log(err);
   }
-  if (response.status === 401 && retryCount <= RETRY_MAX) {
+  if (response.status === 401 && options.retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
-    return await postData(area, path, data, access_token.access, retryCount++)    
+    options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
+    return await dataQuery(area, path, data, access_token.access, options)    
   } 
-  if (response.status === 500 && retryCount <=RETRY_MAX) {
-    return await getData(area, path, access_token.access, retryCount++)
+  if (response.status === 500 && options.retryCount <=RETRY_MAX) {
+    options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
+    return await dataQuery(area, path, access_token.access, options)
   }
-  if (retryCount > RETRY_MAX && response.status===401) {
+  if (options.retryCount > RETRY_MAX && response.status===401) {
     logoutUser();
   }
   if (response.status >= 200 && response.status < 300) {

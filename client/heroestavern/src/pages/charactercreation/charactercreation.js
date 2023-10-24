@@ -35,9 +35,9 @@ const CharacterCreation = () => {
            const token = getToken()
            const baseCharacter = await postBaseCharacter(characterState, token);
            console.log(baseCharacter);
-           await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
-           await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
-           await postCharacterAttributes(
+           const charSubclass = await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
+           const charLevel = await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
+           const charAttributes = await postCharacterAttributes(
             {attribute:1, score:characterState.strength || 10}, 
             {attribute:2, score:characterState.dexterity || 10},
             {attribute:3, score:characterState.constitution || 10},
@@ -45,6 +45,7 @@ const CharacterCreation = () => {
             {attribute:5, score:characterState.wisdom || 10},
             {attribute:6, score:characterState.charisma || 10},
             baseCharacter.id)
+            await updateCharacter(baseCharacter.id, {attributes: charAttributes.map(a=>a.id)})
            navigate('/');
            break;
         default: setCurrentPage(currentPage+1)            
