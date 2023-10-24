@@ -1,6 +1,11 @@
 import CharacterModel from "../models/createcharmodel";
 import { getRefreshToken, logoutUser } from "./currentuser.api";
 
+
+// internal variables
+
+const RETRY_MAX = 3;
+
 // get content tables
 
 export const getRaces = async () => {
@@ -110,11 +115,14 @@ async function getData(area = "", path = "", token = null, retryCount = 0) {
   } catch (err) {
     console.log(err);
   }
-  if (response.status === 401 && retryCount <= 2) {
+  if (response.status === 401 && retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
     return await getData(area, path, access_token.access, retryCount++)
   } 
-  if (retryCount > 2) {
+  if (response.status === 500 && retryCount <=RETRY_MAX) {
+    return await getData(area, path, access_token.access, retryCount++)
+  }
+  if (retryCount > RETRY_MAX && response.status===401) {
     logoutUser();
   }
   if (response.status >= 200 && response.status < 300) {
@@ -149,11 +157,14 @@ async function postData(area = "", path = "", data = {}, token = null, retryCoun
   } catch (err) {
     console.log(err);
   }
-  if (response.status === 401 && retryCount <= 2) {
+  if (response.status === 401 && retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
     return await postData(area, path, data, access_token.access, retryCount++)    
   } 
-  if (retryCount > 2) {
+  if (response.status === 500 && retryCount <=RETRY_MAX) {
+    return await getData(area, path, access_token.access, retryCount++)
+  }
+  if (retryCount > RETRY_MAX && response.status===401) {
     logoutUser();
   }
   if (response.status >= 200 && response.status < 300) {

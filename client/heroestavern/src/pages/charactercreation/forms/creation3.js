@@ -1,12 +1,25 @@
 import React, { useState } from "react";
 import { Listbox } from "@headlessui/react";
-import Backgrounds from "../../../models/backgrounds.json";
-import Alignments from "../../../models/alignments.json";
 import styles from "../charactercreation.module.css";
+import { getAlignments, getBackgrounds } from "../../../helpers/api";
 
 const CreationForm3 = ({ characterState, setCharacterState }) => {
-  const [selectedBackground, setSelectedBackground] = useState(Backgrounds.find(bg=>bg.id===characterState.background) || Backgrounds[0]);
-  const [selectedAlignment, setSelectedAlignment] = useState(Alignments.find(al=>al.id===characterState.alignment) || Alignments[0]);
+  const [backgroundList, setBackgroundList] = useState([])
+  const [alignmentList, setAlignmentList] = useState([])
+  const [selectedBackground, setSelectedBackground] = useState(characterState.background || {});
+  const [selectedAlignment, setSelectedAlignment] = useState(characterState.alignment || {});
+  useEffect(
+    () => {
+      const fetchData = async () => {
+        const [backgrounds, alignments] = await Promise.all([getBackgrounds(), getAlignments()]);
+        setBackgroundList(backgrounds);
+        setAlignmentList(alignments);
+        setSelectedAlignment(alignments[0])
+        setSelectedBackground(backgrounds[0])
+      }
+      fetchData().catch(console.error)
+    }, []
+  )
   const handleBackgroundChange = (e) => {
     setSelectedBackground(e)
     setCharacterState({...characterState, background: e.id})
@@ -36,7 +49,7 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
             {selectedBackground.name}
           </Listbox.Button>
           <Listbox.Options>
-            {Backgrounds.map((background) => (
+            {backgroundList.map((background) => (
               <Listbox.Option key={background.id} value={background}>
                 {background.name}
               </Listbox.Option>
@@ -63,7 +76,7 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
             {selectedAlignment.name}
           </Listbox.Button>
           <Listbox.Options>
-            {Alignments.map((alignment) => (
+            {alignmentList.map((alignment) => (
               <Listbox.Option key={alignment.id} value={alignment}>
                 {alignment.name}
               </Listbox.Option>
