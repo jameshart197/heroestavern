@@ -96,15 +96,55 @@ export const refreshAccessToken = async () => {
 }
 
 async function postData(area, path, data, token, options){
-  return await dataQuery(area, path, data, {...options, method:"POST"}, token);
+  const headerattributes = {
+    "Content-Type": "application/json",
+  };
+  if (token) {
+    headerattributes.Authorization = `Bearer ${token}`;
+  }
+  const request = {
+    method: "POST",
+    mode: "cors",
+    headers: headerattributes,
+    redirect: "follow",
+    body:JSON.stringify(data)
+  };
+  return await dataQuery(area, path, request, options);
 }
-async function getData(area, path, data, token, options){
-  return await dataQuery(area, path, data, {...options, method:"GET"}, token);
+
+async function getData(area, path, token, options){
+  const headerattributes = {
+    "Content-Type": "application/json",
+  };
+  if (token) {
+    headerattributes.Authorization = `Bearer ${token}`;
+  }
+  const request = {
+    method: "GET",
+    mode: "cors",
+    headers: headerattributes,
+    redirect: "follow",
+  };
+  return await dataQuery(area, path, request, options);
 }
+
 async function updateData(area, path, data, token, options){
-  return await dataQuery(area, path, data, {...options, method:"PATCH"}, token);
+  const headerattributes = {
+    "Content-Type": "application/json",
+  };
+  if (token) {
+    headerattributes.Authorization = `Bearer ${token}`;
+  }
+  const request = {
+    method: "PATCH",
+    mode: "cors",
+    headers: headerattributes,
+    redirect: "follow",
+    body:JSON.stringify(data)
+  };
+  return await dataQuery(area, path, request, options);
 }
-async function dataQuery(area = "", path = "", data = null, options={}, token = null) {
+async function dataQuery(area, path, request, options={}) {
   if (!path || !area) {
     console.error("url and area must be defined");
     return undefined;
@@ -112,21 +152,6 @@ async function dataQuery(area = "", path = "", data = null, options={}, token = 
   const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
   let response;
   try {
-    const headerattributes = {
-      "Content-Type": "application/json",
-    };
-    if (token) {
-      headerattributes.Authorization = `Bearer ${token}`;
-    }
-    const request = {
-      method: options.method,
-      mode: "cors",
-      headers: headerattributes,
-      redirect: "follow",
-    };
-    if (data){
-      request.body =  JSON.stringify(data);
-    }
     response = await fetch(url, request).catch((err) => {
       console.log(err);
     });
@@ -136,11 +161,12 @@ async function dataQuery(area = "", path = "", data = null, options={}, token = 
   if (response.status === 401 && options.retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
     options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
-    return await dataQuery(area, path, data, access_token.access, options)    
+    request.headerattributes.Authorization = `Bearer ${access_token}`;
+    return await dataQuery(area, path, request, options)    
   } 
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {
     options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
-    return await dataQuery(area, path, data, token, options)
+    return await dataQuery(area, path, request, options)
   }
   if (options.retryCount > RETRY_MAX && response.status===401) {
     logoutUser();
