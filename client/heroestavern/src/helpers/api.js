@@ -5,6 +5,7 @@ import { getRefreshToken, logoutUser } from "./currentuser.api";
 // internal variables
 
 const RETRY_MAX = 3;
+const CONTENT_TYPE = "application/json; charset=UTF-8"
 
 // get content tables
 
@@ -43,8 +44,8 @@ export const postBaseCharacter = async (basechar, token) => {
   return await postData("api", "characters", newChar, token);
 };
 
-export const updateCharacter = async (pk, body) => {
-  return await null;
+export const updateCharacter = async (pk, data, token) => {
+  return await updateData("api", `characterupdate/${pk}`, data, token);
 }
 
 export const postCharacterSubclass = async (subclass, character) => {
@@ -57,7 +58,8 @@ export const postCharacterLevel = async (level, character, char_class) => {
 
 export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character) => {
   const attributesArray = [strength, dexterity, constitution, intelligence, wisdom, charisma]
-  return attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character}))
+  const response = await Promise.all(attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character})));
+  return response
 }
 
 
@@ -97,7 +99,7 @@ export const refreshAccessToken = async () => {
 
 async function postData(area, path, data, token, options){
   const headerattributes = {
-    "Content-Type": "application/json",
+    "Content-Type": CONTENT_TYPE,
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
@@ -114,7 +116,7 @@ async function postData(area, path, data, token, options){
 
 async function getData(area, path, token, options){
   const headerattributes = {
-    "Content-Type": "application/json",
+    "Content-Type": CONTENT_TYPE,
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
@@ -130,13 +132,14 @@ async function getData(area, path, token, options){
 
 async function updateData(area, path, data, token, options){
   const headerattributes = {
-    "Content-Type": "application/json",
+    "Content-Type": CONTENT_TYPE,
+    "_method": "PUT"
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
   const request = {
-    method: "PATCH",
+    method: "PUT",
     mode: "cors",
     headers: headerattributes,
     redirect: "follow",
@@ -144,7 +147,7 @@ async function updateData(area, path, data, token, options){
   };
   return await dataQuery(area, path, request, options);
 }
-async function dataQuery(area, path, request, options={}) {
+async function dataQuery(area, path, request, options={retryCount:0}) {
   if (!path || !area) {
     console.error("url and area must be defined");
     return undefined;
@@ -160,12 +163,12 @@ async function dataQuery(area, path, request, options={}) {
   }
   if (response.status === 401 && options.retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
-    options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
-    request.headerattributes.Authorization = `Bearer ${access_token}`;
+    options.retryCount++;
+    request.headers.Authorization = `Bearer ${access_token}`;
     return await dataQuery(area, path, request, options)    
   } 
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {
-    options.retryCount = options.retryCount===undefined?1:options.retryCount+1;
+    options.retryCount++;
     return await dataQuery(area, path, request, options)
   }
   if (options.retryCount > RETRY_MAX && response.status===401) {

@@ -10,6 +10,9 @@ const CharacterTile = ({character}) => {
     return (
         <button onClick={handleClick}>
             {character.character_name}
+            {character.subclass.map(s=>s.subclass.name).join(" / ")}
+            {character.subrace.name}
+            {character.levels.map(l=>l.level).join("")}
         </button>
     )
 }

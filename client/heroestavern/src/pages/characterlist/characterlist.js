@@ -5,6 +5,7 @@ import CharacterTile from "../../components/charactertile/charactertile";
 import styles from "./characterlist.module.css"
 
 const CharacterList = () => {
+  const loginState = useCurrentUser();
   const [myCharacterList, setMyCharacterList] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -16,11 +17,17 @@ const CharacterList = () => {
 
   return (
     <main>
+      {loginState?(
       <container className={styles.charListContainer}>
         {myCharacterList.map((c) => (
           <CharacterTile key={c.id} character={c}></CharacterTile>
         ))}
       </container>
+      ):(
+        <container>
+          <LoginOrSignup></LoginOrSignup>
+        </container>
+      )}
     </main>
   );
 };

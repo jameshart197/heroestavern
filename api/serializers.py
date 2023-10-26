@@ -149,6 +149,7 @@ class CharacterAttributesSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CharacterAttributes
         fields = [
+            'id',
             'attribute',
             'score',
             'character'
@@ -162,6 +163,7 @@ class CharacterLevelsSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.CharacterLevels
         fields = [
+            'id',
             'char_class',
             'level',
             'character'
