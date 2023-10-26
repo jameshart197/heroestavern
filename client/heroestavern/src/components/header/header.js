@@ -24,9 +24,6 @@ const Header = () => {
           <li>
             <NavLink to={"/"}>Home</NavLink>
           </li>
-          <li>
-            <NavLink to={"/characters"}>My Character Sheets</NavLink>
-          </li>
           {loginState ? (
             <li>
               <NavLink onClick={handleLogoutClick} to={"/"}>

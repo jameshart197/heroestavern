@@ -16,8 +16,7 @@ function App() {
       <Header></Header>
       <main>
         <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="characters/" element={<CharacterList />}></Route>
+          <Route path="/" element={<CharacterList />}></Route>
           <Route path="characters/:id" element={<MyCharSheets />}></Route>
           <Route
             path="charactercreation/"

@@ -8,7 +8,7 @@ const Description = ({ character }) => {
         <li>
           <strong>Faith</strong>
         </li>
-        <li>{character.faith}</li>
+        <li>{character.faith || "-"}</li>
         <li>
           <strong>Age</strong>
         </li>
