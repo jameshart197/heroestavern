@@ -11,11 +11,11 @@ const CharacterTile = ({ character }) => {
     return (
         <button onClick={handleClick} className={styles.characterTile}>
             <h3>{character.character_name}</h3>
-            <div className={styles.statContainer}>
-                <div>{character.subrace.name}</div>
-                <div>{character.subclass.map((s) => s.subclass.name).join(" / ")}  {character.levels.map((c) => c.char_class.name).join(" / ")}</div>
+            <div className={styles.characterSubrace}>{character.subrace.name}</div>
+            <div className={styles.characterClass}>
+                {character.subclass.map((s) => s.subclass.name).join(" / ")} {character.levels.map((c) => c.char_class.name).join(" / ")}
             </div>
-                <div className={styles.level}>{character.levels.map((l) => l.level).join("")}</div>
+            <div className={styles.level}>{character.levels.map((l) => l.level).join("")}</div>
         </button>
     );
 };

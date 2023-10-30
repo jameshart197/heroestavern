@@ -5,6 +5,7 @@ import CharacterTile from "../../components/charactertile/charactertile";
 import styles from "./characterlist.module.css"
 import LoginOrSignup from "../../components/loginorsignup/loginorsignup";
 import { useCurrentUser } from "../../contexts/currentUserContext";
+import Loading from "../../components/loading/loading";
 
 const CharacterList = () => {
   const loginState = useCurrentUser();
@@ -21,9 +22,9 @@ const CharacterList = () => {
     <main>
       {loginState?(
       <container className={styles.charListContainer}>
-        {myCharacterList.map((c) => (
+        {myCharacterList.length?myCharacterList.map((c) => (
           <CharacterTile key={c.id} character={c}></CharacterTile>
-        ))}
+        )):<Loading></Loading>}
       </container>
       ):(
         <container>
