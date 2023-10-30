@@ -42,6 +42,9 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const handleGenderChange = (e) => {
     setCharacterState({...characterState, gender: e.currentTarget.value})
   }
+  const handleImageChange = (e) => {
+    setCharacterState({...characterState, character_art: e.target.files[0], character_art_name: e.target.files[0].name})
+  }
   const handleRaceChange = (e) => {
     setSelectedRace(e)
     setCharacterState({...characterState, race: e})
@@ -70,6 +73,10 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="chargenderinput">Gender:</label>
         <input type="text" id="chargenderinput" className={styles.Inputs} onChange={handleGenderChange} value={characterState.gender}/>
+      </div>
+      <div>
+        <label for="charimageinput">Character Art</label>
+        <input type="file" name="charimageinput" onChange={handleImageChange} className={styles.fileInput} />
       </div>
       <div>
         <label for="charraceinput">Race: </label>

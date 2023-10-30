@@ -1,7 +1,3 @@
-main > section:first-child {
-    min-height: 80vh;
-}
-
 main > section:last-child {
     display: flex;
     justify-content: center;
@@ -14,7 +10,7 @@ main > section:last-child {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    height: 80vh;
 }
 
 .creationForm div {
@@ -122,7 +118,7 @@ form .AttributeInput {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    height: 100%;
+    height: 80vh;
     font-size: 1.2em;
     font-weight: bold;
     color: black;
@@ -178,4 +174,14 @@ form .AttributeInput {
     background-image: linear-gradient(#b8c8e7, #3753a0 50%);
     color: aqua;
   }
+
+  .fileInput {
+    max-width: 180px;
+  }
   
+  pre {
+    position: absolute;
+    top: 20vh;
+    max-width: 4em;
+    overflow: hidden;
+  }
