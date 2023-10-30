@@ -2,10 +2,11 @@ import React from "react";
 import styles from "./attributewheel.module.css"
 import { modifierCalculator } from "../../helpers/modifier";
 
-const AttributeWheel = ({attributes}) => {
-    const attributesArray = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"]
+const AttributeWheel = ({ attributes, avatarUrl }) => {
+    const attributesArray = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"];
+    const avatar = {'--avatar-url':`url(${avatarUrl})`};
     return (
-        <section className={styles.attributewheel}>
+        <section className={styles.attributewheel} style={avatar}>
             <ul>
                 {attributesArray.map(aName=>{
                     const a = attributes.find(attr=>(attr.attribute.name.toLowerCase()===aName))

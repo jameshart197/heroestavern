@@ -26,6 +26,7 @@ class CharacterDetails(models.Model):
         related_name="CharacterBackground",
     )
     character_name = models.CharField(max_length=200)
+    gender = models.CharField(max_length=200, blank=True)
     inspiration = models.BooleanField(default=False)
     faith = models.TextField(blank=True)
     age = models.CharField(max_length=24, blank=True)
@@ -45,9 +46,9 @@ class CharacterDetails(models.Model):
     spells = models.ManyToManyField("CharacterSpells", blank=True)
     languages = models.ManyToManyField("CharacterLanguages", blank=True)
     subclass = models.ManyToManyField("CharacterSubclass", blank=True)
-    # character_art = Models.ImageField(
-    #     upload_to='images', default='https://res.cloudinary.com/dgyweielh/image/upload/v1698071582/stockchar_oquoft.jpg'
-    # )
+    character_art = models.ImageField(
+        upload_to='images', default='https://res.cloudinary.com/dgyweielh/image/upload/v1698071582/stockchar_oquoft.jpg'
+    )
 
     def __str__(self):
         return f"ID: {self.id} - {self.character_name}"

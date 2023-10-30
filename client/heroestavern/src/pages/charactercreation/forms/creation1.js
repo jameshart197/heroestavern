@@ -39,6 +39,9 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const handleCharacterNameChange = (e) => {
     setCharacterState({...characterState, character_name: e.currentTarget.value})
   }
+  const handleGenderChange = (e) => {
+    setCharacterState({...characterState, gender: e.currentTarget.value})
+  }
   const handleRaceChange = (e) => {
     setSelectedRace(e)
     setCharacterState({...characterState, race: e})
@@ -63,6 +66,10 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charnameinput">Character Name: </label>
         <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
+      </div>
+      <div>
+        <label for="chargenderinput">Gender:</label>
+        <input type="text" id="chargenderinput" className={styles.Inputs} onChange={handleGenderChange} value={characterState.gender}/>
       </div>
       <div>
         <label for="charraceinput">Race: </label>

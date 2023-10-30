@@ -94,7 +94,6 @@ const CharacterCreation = () => {
     return (
         <>
             <section>{renderSwitch()}</section>
-            <pre>{JSON.stringify(characterState, null, 2)}</pre>
             <section>
                 {currentPage ? (
                     <button className={styles.pageButton} onClick={handlePreviousClick}>

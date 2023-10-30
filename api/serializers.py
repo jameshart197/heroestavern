@@ -245,23 +245,25 @@ class CharacterCreationSerializer(serializers.ModelSerializer):
     """
     Serializer for creating a character
     """
-    # character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
-    # def validate_image(self, value):
-    #     if value.size > 2 * 1024 * 1024:
-    #         raise serializers.ValidationError('Image size larger than 2MB!')
-    #     if value.image.height > 4096:
-    #         raise serializers.ValidationError(
-    #             'Image height larger than 4096px!'
-    #         )
-    #     if value.image.width > 4096:
-    #         raise serializers.ValidationError(
-    #             'Image width larger than 4096px!'
-    #         )
-    #     return value
+    character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
+    def validate_image(self, value):
+        if value.size > 2 * 1024 * 1024:
+            raise serializers.ValidationError('Image size larger than 2MB!')
+        if value.image.height > 4096:
+            raise serializers.ValidationError(
+                'Image height larger than 4096px!'
+            )
+        if value.image.width > 4096:
+            raise serializers.ValidationError(
+                'Image width larger than 4096px!'
+            )
+        return value
     class Meta:
         model = models.CharacterDetails
         fields = [
             'id',
+            'gender',
+            'character_art',
             'user', 
             'character_name',
             'subrace',
@@ -313,6 +315,8 @@ class CharacterSerializer(serializers.ModelSerializer):
             'id',
             'user', 
             'character_name',
+            'gender',
+            'character_art',
             'subrace',
             'alignment',
             'background',

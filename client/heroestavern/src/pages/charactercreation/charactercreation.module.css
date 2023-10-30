@@ -1,9 +1,5 @@
-main {
-    height: 80vh;
-}
-
 main > section:first-child {
-    height: 100%;
+    min-height: 80vh;
 }
 
 main > section:last-child {

@@ -11,7 +11,7 @@
     border-radius: 50%;
     position: relative;
     margin: 3rem;
-    background-image: url(../../assets/Clover.jpg);
+    background-image: var(--avatar-url);
     background-size: cover;
 }
 

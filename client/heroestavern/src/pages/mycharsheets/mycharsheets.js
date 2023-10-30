@@ -87,7 +87,7 @@ const MyCharSheets = () => {
             </div>
           </div>
           <div className={styles.attributewheelcontainer}>
-            <AttributeWheel attributes={Character.attributes}></AttributeWheel>
+            <AttributeWheel attributes={Character.attributes} avatarUrl={Character.character_art}></AttributeWheel>
           </div>
             <Backstory character={Character}></Backstory>
         </div>

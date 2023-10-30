@@ -20,7 +20,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
   return (
     <form action="post" className={styles.descriptionForm}>
       <div>
-        <label for="charnameinput">Allies:</label>
+        <label for="charalliesinput">Allies:</label>
         <textarea  className={styles.Textbox}
           rows="4"
           cols="60"
@@ -30,7 +30,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
         ></textarea>
       </div>
       <div>
-        <label for="charnameinput">Enemies:</label>
+        <label for="charenemiesinput">Enemies:</label>
         <textarea  className={styles.Textbox}
           rows="4"
           cols="60"
@@ -40,7 +40,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
         ></textarea>
       </div>
       <div>
-        <label for="charnameinput">Factions and Organizations:</label>
+        <label for="charfactionsinput">Factions and Organizations:</label>
         <textarea  className={styles.Textbox}
           rows="4"
           cols="60"
@@ -50,7 +50,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
         ></textarea>
       </div>
       <div>
-        <label for="charnameinput">Backstory:</label>
+        <label for="charbackstoryinput">Backstory:</label>
         <textarea  className={styles.Textbox}
           rows="4"
           cols="60"
@@ -60,7 +60,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
         ></textarea>
       </div>
       <div>
-        <label for="charnameinput">Other Notes:</label>
+        <label for="charnotesinput">Other Notes:</label>
         <textarea  className={styles.Textbox}
           rows="4"
           cols="60"

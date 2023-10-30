@@ -6,10 +6,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(assets/grey-background-z9agfvuh29wchjmk.jpg);
-  background-size: auto;
+  background-size: cover;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: whitesmoke;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 ul {
