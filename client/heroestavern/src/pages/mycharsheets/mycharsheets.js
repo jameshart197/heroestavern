@@ -13,6 +13,7 @@ import Passives from "../../components/passives/passives";
 import Description from "../../components/description/description";
 import Initiative from "../../components/initiative/initiative";
 import Scorebox from "../../components/scorebox/scorebox";
+import Backstory from "../../components/backstory/backstory";
 
 const MyCharSheets = () => {
   const Character = (useLocation()).state
@@ -88,21 +89,7 @@ const MyCharSheets = () => {
           <div className={styles.attributewheelcontainer}>
             <AttributeWheel attributes={Character.attributes}></AttributeWheel>
           </div>
-          <div>
-            <ul className={styles.Selector}>
-              <li>Actions</li>
-              <li>Spells</li>
-              <li>Feats</li>
-              <li>Inventory</li>
-              <li>Notes</li>
-            </ul>
-            <div>
-              <p>
-                The information here is contextual based on what is chosen from
-                the tab selector above
-              </p>
-            </div>
-          </div>
+            <Backstory character={Character}></Backstory>
         </div>
       </div>
     </>

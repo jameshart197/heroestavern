@@ -9,6 +9,10 @@
     text-align: center;
 }
 
+.landingPage a {
+    text-decoration: none;
+}
+
 .landingPage button {
     align-items: center;
     background-color: initial;
