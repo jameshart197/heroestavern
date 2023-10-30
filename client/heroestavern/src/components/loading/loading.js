@@ -4,7 +4,7 @@ import styles from "./loading.module.css"
 const Loading = () => {
     return (
         <container className={styles.loadingContainer}>
-            <h3>Retrieving your characters from the Tavern...</h3>
+            <h2>Retrieving your characters from the Tavern...</h2>
         </container>
     )
 }
