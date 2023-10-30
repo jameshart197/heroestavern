@@ -2,6 +2,9 @@ from django.db import models
 
 
 class AttributeContentTable(models.Model):
+    """
+    A model that contains a list of attributes, including their name, short name and full description
+    """
     name = models.CharField(max_length=50)
     shortname = models.CharField(max_length=5)
     full_description = models.TextField()
@@ -14,6 +17,10 @@ class AttributeContentTable(models.Model):
 
 
 class SkillsContentTable(models.Model):
+    """
+    A model that contains a list of skills, including their name, short name and full description.
+    This model has a foreign key to the attributes content table, as each skill has a governing attribute.
+    """
     attribute = models.ForeignKey(AttributeContentTable, on_delete=models.SET_DEFAULT, default=0, related_name="SkillsGoverningAttribute")
     name = models.CharField(max_length=50)
     shortname = models.CharField(max_length=5)
@@ -27,6 +34,9 @@ class SkillsContentTable(models.Model):
 
 
 class RaceContentTable(models.Model):
+    """
+    A model that contains a list of races, including their name, full description and features
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
     features = models.TextField(default="No Features Entered")
@@ -39,6 +49,10 @@ class RaceContentTable(models.Model):
 
 
 class SubRaceContentTable(models.Model):
+    """
+    A model that contains a list of subraces, including their name, full description and features
+    This model has a foreign key to rathe race content table, as each subrace belongs to a parent race
+    """
     race = models.ForeignKey(RaceContentTable, on_delete=models.CASCADE, default=0, related_name="SubraceParentRace")
     name = models.CharField(max_length=200)
     full_description = models.TextField()
@@ -52,6 +66,10 @@ class SubRaceContentTable(models.Model):
 
 
 class SpellsContentTable(models.Model):
+    """
+    A model that contains a list of spells, including their name, full description and spell level
+    This model has a choices field for the spell requirements
+    """
     SPELL_REQUIREMENTS = (
         (0, ""),
         (1, "Verbal"),
@@ -87,6 +105,10 @@ class SpellsContentTable(models.Model):
 
 
 class ClassContentTable(models.Model):
+    """
+    A model that contains a list of classes, including their name, full description and features
+    This model has 2 foreign keys to the Attribute Content Table, each for a different saving throw proficiency
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
     features = models.TextField(default="No Features Entered")
@@ -100,6 +122,10 @@ class ClassContentTable(models.Model):
 
 
 class SubClassContentTable(models.Model):
+    """
+    A model that contains a list of subclasses, including their name, full description and features
+    This model has a foreign key to the Class Content Table as each subclass has a parent class
+    """
     parent_class = models.ForeignKey(ClassContentTable, on_delete=models.CASCADE, default=0, related_name="SubclassParentClass")
     name = models.CharField(max_length=200)
     full_description = models.TextField()
@@ -113,6 +139,9 @@ class SubClassContentTable(models.Model):
 
 
 class LanguageContentTable(models.Model):
+    """
+    A model that contains a list of languages, including their name and full description
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
 
@@ -124,6 +153,11 @@ class LanguageContentTable(models.Model):
 
 
 class BackgroundContentTable(models.Model):
+    """
+    A model that contains a list of backgrounds, including their name, feature name, full description and features
+    This model contains two foreign keys to the Skills Content Table as each background provides proficiencies in 
+    two skills.
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
     feature_name = models.TextField()
@@ -139,6 +173,9 @@ class BackgroundContentTable(models.Model):
 
 
 class AlignmentContentTable(models.Model):
+    """
+    A model that contains a list of alignments, including their name and full description
+    """
     name = models.CharField(max_length=100)
     full_description = models.TextField()
 
@@ -150,6 +187,9 @@ class AlignmentContentTable(models.Model):
 
 
 class ToolContentTable(models.Model):
+    """
+    A model that contains a list of tools, including their name and full description
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
 
@@ -161,6 +201,9 @@ class ToolContentTable(models.Model):
         
 
 class InstrumentContentTable(models.Model):
+    """
+    A model that contains a list of instruments, including their name and full description
+    """
     name = models.CharField(max_length=200)
     full_description = models.TextField()
 
