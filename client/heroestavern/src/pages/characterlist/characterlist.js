@@ -3,6 +3,8 @@ import { getCharacterList } from "../../helpers/api";
 import { getToken } from "../../helpers/currentuser.api";
 import CharacterTile from "../../components/charactertile/charactertile";
 import styles from "./characterlist.module.css"
+import LoginOrSignup from "../../components/loginorsignup/loginorsignup";
+import { useCurrentUser } from "../../contexts/currentUserContext";
 
 const CharacterList = () => {
   const loginState = useCurrentUser();
