@@ -1,4 +1,6 @@
 .charListContainer {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1em;
+    margin: 1em;
 }

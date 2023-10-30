@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.1d05d7f6.css",
-    "main.js": "/static/js/main.882343c9.js",
+    "main.css": "/static/css/main.5084cf81.css",
+    "main.js": "/static/js/main.0cb2d31d.js",
     "static/js/787.d40aeac7.chunk.js": "/static/js/787.d40aeac7.chunk.js",
     "static/media/Gold-circle-frame-design-on-trsndparent-background-PNG.png": "/static/media/Gold-circle-frame-design-on-trsndparent-background-PNG.4413186fffa39824e222.png",
     "static/media/logo.png": "/static/media/logo.d259f426f27aa9c5d538.png",
@@ -11,12 +11,12 @@
     "static/media/goldcircle.jpg": "/static/media/goldcircle.f9adf7870cd8a9daec5d.jpg",
     "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/index.html",
-    "main.1d05d7f6.css.map": "/static/css/main.1d05d7f6.css.map",
-    "main.882343c9.js.map": "/static/js/main.882343c9.js.map",
+    "main.5084cf81.css.map": "/static/css/main.5084cf81.css.map",
+    "main.0cb2d31d.js.map": "/static/js/main.0cb2d31d.js.map",
     "787.d40aeac7.chunk.js.map": "/static/js/787.d40aeac7.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.1d05d7f6.css",
-    "static/js/main.882343c9.js"
+    "static/css/main.5084cf81.css",
+    "static/js/main.0cb2d31d.js"
   ]
 }
