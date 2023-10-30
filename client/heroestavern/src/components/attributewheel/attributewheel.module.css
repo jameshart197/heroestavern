@@ -1,6 +1,6 @@
 
 
-.attributewheel {
+.attributeWheel {
     box-sizing: border-box;
     --chip-border-size: 2px;
     --size: 20rem;
@@ -15,7 +15,7 @@
     background-size: cover;
 }
 
-.attributewheel ul {
+.attributeWheel ul {
     margin: 0;
     list-style: none;
     --chip-size: 2.5rem;
@@ -23,7 +23,7 @@
     --chip-angle-start: 130deg;
 }
 
-.attributewheel li {
+.attributeWheel li {
     position: absolute;
     background: white;
     border-radius: 50%;
@@ -46,36 +46,36 @@
     background-color: rgb(170, 172, 173);
 }
 
-.attributewheel li:nth-child(1) {
+.attributeWheel li:nth-child(1) {
     --chip-index: 0;
 }
 
-.attributewheel li:nth-child(2) {
+.attributeWheel li:nth-child(2) {
     --chip-index: 1;
 }
 
-.attributewheel li:nth-child(3) {
+.attributeWheel li:nth-child(3) {
     --chip-index: 2;
 }
 
-.attributewheel li:nth-child(4) {
+.attributeWheel li:nth-child(4) {
     --chip-index: 3;
 }
 
-.attributewheel li:nth-child(5) {
+.attributeWheel li:nth-child(5) {
     --chip-index: 4;
 }
 
-.attributewheel li:nth-child(6) {
+.attributeWheel li:nth-child(6) {
     --chip-index: 5;
 }
 
-.attributewheel li::before {
+.attributeWheel li::before {
     content: attr(data-score);
     font-weight: normal;
 }
 
-.attributewheel li::after {
+.attributeWheel li::after {
     content: attr(data-mod);
     position: absolute;
     bottom: -.5rem;

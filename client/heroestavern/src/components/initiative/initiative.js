@@ -5,7 +5,7 @@ import Scorebox from "../scorebox/scorebox";
 
 const Initiative = ({ dex, profBonus }) => {
   return (
-    <div className={styles.Scorename}>
+    <div className={styles.scorename}>
       Initiative:
       <Scorebox value={modifierCalculator(dex, 0)}  addPlus={false}></Scorebox>
     </div>

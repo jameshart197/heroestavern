@@ -17,7 +17,7 @@ const Passives = ({ character, profBonus }) => {
   const insightMultiplier = insightLevel===0?1:insightLevel===1?2:insightLevel===2?0.5:0
   return (
     <div>
-      <ul className={styles.Passives}>
+      <ul className={styles.passives}>
         <li>
           Passive Perception:{" "}
           <div>

@@ -1,4 +1,4 @@
-.Pagecontainer {
+.pageContainer {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
@@ -9,31 +9,31 @@ hr {
     margin-top: 1em 0;
 }
 
-.Leftpanel {
+.leftPanel {
     border: 2px solid rgb(0, 0, 0);
 }
 
-.Leftpanel > div {
+.leftPanel > div {
     padding: .5em;
 }
 
 
 
-.Centrepanel {
+.centrePanel {
     padding: 1em;
     margin: 0;
     border-top: 2px solid rgb(0, 0, 0);
     border-bottom: 2px solid rgb(0, 0, 0);
 }
 
-.Centrepanel li {
+.centrePanel li {
     
     display: grid;
     grid-template-columns: 1fr .2fr 1fr;
     gap: 2em;
 }
 
-.Rightpanel {
+.rightPanel {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ hr {
 
 
 
-.TRSection {
+.trSection {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,7 +51,7 @@ hr {
     width: 100%;
 }
 
-.Scorename {
+.scorename {
     padding: .1em .4em;
     font-size: 1.3em;
     display: flex;
@@ -60,45 +60,19 @@ hr {
     gap: .3em;
 }
 
-.Selector {
-    list-style-type: none;
-    display: flex;
-    padding: 1em;
-    justify-content: center;
-}
-
-.Selector > li {
-    padding: 1em;
-    border: solid 1px black;
-}
-
-.SavingThrows {
+.savingThrows {
     width: 70%;
 }
 
-.SavingThrows li {
+.savingThrows li {
     display: grid;
     grid-template-columns: 1.2fr .3fr .3fr 1fr;
     gap: 1em;
     margin-block: .1em;
 }
 
-.Scorecircle {
-    border: 2px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: rgb(107, 214, 103);
-    padding: .15em;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    height: 1.2em;
-    width: 1.2em;
-    color: black;
-}
 
-.attributewheelcontainer {
+.attributewheelContainer {
     background-image: url(../../assets/Gold-circle-frame-design-on-trsndparent-background-PNG.png);
     background-size: 100%;
     color: black;

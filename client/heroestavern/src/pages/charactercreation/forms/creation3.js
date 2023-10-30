@@ -46,7 +46,7 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charbackgroundinput">Background: </label>
         <Listbox value={selectedBackground} onChange={handleBackgroundChange}>
-          <Listbox.Button className={styles.Inputs}>
+          <Listbox.Button className={styles.inputs}>
             {selectedBackground.name}
           </Listbox.Button>
           <Listbox.Options>
@@ -60,20 +60,20 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charnameinput">Age:</label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleAgeChange} value={characterState.age}/>
+        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleAgeChange} value={characterState.age}/>
       </div>
       <div>
         <label for="charnameinput">Height:</label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleHeightChange} value={characterState.height}/>
+        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleHeightChange} value={characterState.height}/>
       </div>
       <div>
         <label for="charnameinput">Weight:</label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleWeightChange} value={characterState.weight}/>
+        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleWeightChange} value={characterState.weight}/>
       </div>
       <div>
         <label for="charalignmentinput">Alignment: </label>
         <Listbox value={selectedAlignment} onChange={handleAlignmentChange}>
-          <Listbox.Button className={styles.Inputs}>
+          <Listbox.Button className={styles.inputs}>
             {selectedAlignment.name}
           </Listbox.Button>
           <Listbox.Options>
@@ -87,7 +87,7 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charnameinput">Faith:</label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleFaithChange} value={characterState.faith}/>
+        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleFaithChange} value={characterState.faith}/>
       </div>
     </form>
   );

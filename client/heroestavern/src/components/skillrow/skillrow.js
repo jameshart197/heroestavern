@@ -10,7 +10,7 @@ const SkillRow = ({ skill, attribute, proficiency }) => {
     "Proficient";
 
   return (
-    <li className={styles.Skills}>
+    <li className={styles.skills}>
       {skill.name}: 
       <ModifierBox attribute={attribute} proficiencyLevel={proficiency.level} proficiencyBonus={proficiency.bonus}></ModifierBox>
       <div>

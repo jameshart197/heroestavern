@@ -68,11 +68,11 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
     <form action="post" className={styles.creationForm}>
       <div>
         <label for="charnameinput">Character Name: </label>
-        <input type="text" id="charnameinput" className={styles.Inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
+        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
       </div>
       <div>
         <label for="chargenderinput">Gender:</label>
-        <input type="text" id="chargenderinput" className={styles.Inputs} onChange={handleGenderChange} value={characterState.gender}/>
+        <input type="text" id="chargenderinput" className={styles.inputs} onChange={handleGenderChange} value={characterState.gender}/>
       </div>
       <div>
         <label for="charimageinput">Character Art</label>
@@ -81,7 +81,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charraceinput">Race: </label>
         <Listbox value={selectedRace} onChange={handleRaceChange}>
-          <Listbox.Button className={styles.Inputs}>
+          <Listbox.Button className={styles.inputs}>
             {selectedRace?.name}
           </Listbox.Button>
           <Listbox.Options>
@@ -96,7 +96,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charsubraceinput">Subrace: </label>
         <Listbox value={selectedSubrace} onChange={handleSubraceChange}>
-          <Listbox.Button className={styles.Inputs}>{selectedSubrace?.name}</Listbox.Button>
+          <Listbox.Button className={styles.inputs}>{selectedSubrace?.name}</Listbox.Button>
           <Listbox.Options>
             {subraceList.filter((sr) => sr.race === selectedRace.name).map(
               (subrace) => (
@@ -111,7 +111,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charclassinput">Class: </label>
         <Listbox value={selectedClass} onChange={handleCharclassChange}>
-          <Listbox.Button className={styles.Inputs}>
+          <Listbox.Button className={styles.inputs}>
             {selectedClass?.name}
           </Listbox.Button>
           <Listbox.Options>
@@ -126,7 +126,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
       <div>
         <label for="charsubclassinput">Subclass: </label>
         <Listbox value={selectedSubclass} onChange={handleSubclassChange}>
-          <Listbox.Button className={styles.Inputs}>{selectedSubclass?.name}</Listbox.Button>
+          <Listbox.Button className={styles.inputs}>{selectedSubclass?.name}</Listbox.Button>
           <Listbox.Options>
             {subclassList.filter((sc) => sc.parent_class === selectedClass.name).map(
               (subclasses) => (
@@ -138,7 +138,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
           </Listbox.Options>
         </Listbox>
       </div>
-      <div id={styles.LevelInput}>
+      <div id={styles.levelInput}>
         <label for="charlevelinput">Level: </label>
         <input type="number" id="charlevelinput" min="1" max="20" defaultValue={1} onChange={handleLevelChange} value={characterState.charlevel}/>
       </div>

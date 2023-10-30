@@ -4,7 +4,7 @@ import styles from "./description.module.css";
 const Description = ({ character }) => {
   return (
     <div>
-      <ul className={styles.Description}>
+      <ul className={styles.description}>
         <li>
           <strong>Faith</strong>
         </li>

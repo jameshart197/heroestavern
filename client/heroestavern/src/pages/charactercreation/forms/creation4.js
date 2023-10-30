@@ -21,7 +21,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
     <form action="post" className={styles.descriptionForm}>
       <div>
         <label for="charalliesinput">Allies:</label>
-        <textarea  className={styles.Textbox}
+        <textarea  className={styles.textbox}
           rows="4"
           cols="60"
           name="text"
@@ -31,7 +31,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charenemiesinput">Enemies:</label>
-        <textarea  className={styles.Textbox}
+        <textarea  className={styles.textbox}
           rows="4"
           cols="60"
           name="text"
@@ -41,7 +41,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charfactionsinput">Factions and Organizations:</label>
-        <textarea  className={styles.Textbox}
+        <textarea  className={styles.textbox}
           rows="4"
           cols="60"
           name="text"
@@ -51,7 +51,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charbackstoryinput">Backstory:</label>
-        <textarea  className={styles.Textbox}
+        <textarea  className={styles.textbox}
           rows="4"
           cols="60"
           name="text"
@@ -61,7 +61,7 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
       </div>
       <div>
         <label for="charnotesinput">Other Notes:</label>
-        <textarea  className={styles.Textbox}
+        <textarea  className={styles.textbox}
           rows="4"
           cols="60"
           name="text"

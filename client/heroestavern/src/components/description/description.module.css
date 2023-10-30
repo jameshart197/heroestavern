@@ -1,9 +1,9 @@
-.Description {
+.description {
     list-style-type: none;
     display: grid;
     grid-template-columns: .7fr 1fr;
 }
 
-.Description li {
+.description li {
     margin: .5em auto;
 }

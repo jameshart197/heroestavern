@@ -1,4 +1,4 @@
-.Topbar {
+.topbar {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr .5fr .5fr .5fr;
     text-align: center;
@@ -13,13 +13,13 @@
     font-size: 1.5em;
 }
 
-.Label {
+.label {
     border: inset;
     border-color: slategray;
     width: 50%;
     margin: 0 auto;
 }
 
-.Response {
+.response {
     font-size: 1.5em;
 }

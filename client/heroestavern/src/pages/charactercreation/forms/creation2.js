@@ -29,7 +29,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
 
   return (
     <form action="post" className={styles.creationForm}>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="charstrengthinput">Strength: </label>
         <input
           type="number"
@@ -41,7 +41,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.strength}
         />
       </div>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="chardexterityinput">Dexterity: </label>
         <input
           type="number"
@@ -53,7 +53,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.dexterity}
         />
       </div>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="charconstitutioninput">Constitution: </label>
         <input
           type="number"
@@ -65,7 +65,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.constitution}
         />
       </div>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="charintelligenceinput">Intelligence: </label>
         <input
           type="number"
@@ -77,7 +77,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.intelligence}
         />
       </div>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="charwisdominput">Wisdom: </label>
         <input
           type="number"
@@ -89,7 +89,7 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.wisdom}
         />
       </div>
-      <div className={styles.AttributeInput}>
+      <div className={styles.attributeInput}>
         <label for="charcharismainput">Charisma: </label>
         <input
           type="number"
@@ -101,9 +101,6 @@ const CreationForm2 = ({ characterState, setCharacterState }) => {
           value={characterState.charisma}
         />
       </div>
-      {/* <div id={styles.SubmitInput}>
-        <input type="submit" className={styles.submitButton} />
-      </div> */}
     </form>
   );
 };

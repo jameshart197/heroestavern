@@ -6,7 +6,7 @@ const AttributeWheel = ({ attributes, avatarUrl }) => {
     const attributesArray = ["strength", "dexterity", "constitution", "intelligence", "wisdom", "charisma"];
     const avatar = {'--avatar-url':`url(${avatarUrl})`};
     return (
-        <section className={styles.attributewheel} style={avatar}>
+        <section className={styles.attributeWheel} style={avatar}>
             <ul>
                 {attributesArray.map(aName=>{
                     const a = attributes.find(attr=>(attr.attribute.name.toLowerCase()===aName))

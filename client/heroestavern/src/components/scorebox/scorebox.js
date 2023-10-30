@@ -3,7 +3,7 @@ import styles from "./scorebox.module.css";
 
 const Scorebox = ({value, addPlus}) => {
     return (
-      <div className={styles.Scorecircle}>{addPlus && (value>=0)?"+":""}{value}</div>
+      <div className={styles.scorecircle}>{addPlus && (value>=0)?"+":""}{value}</div>
     );
   }
 

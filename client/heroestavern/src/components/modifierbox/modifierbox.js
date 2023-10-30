@@ -10,7 +10,7 @@ const ModifierBox = ({ attribute, proficiencyLevel, proficiencyBonus }) => {
     proficiencyLevel===2?Math.floor(proficiencyBonus/2):
     0;
   return (
-    <div className={styles.Scorebox}>{modifierCalculator(attribute, proflevel)}</div>
+    <div className={styles.scorebox}>{modifierCalculator(attribute, proflevel)}</div>
   );
 };
 

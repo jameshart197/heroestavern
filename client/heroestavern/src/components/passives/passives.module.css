@@ -1,8 +1,8 @@
-.Passives {
+.passives {
     width: 50%;
 }
 
-.Passives li {
+.passives li {
     display: grid;
     grid-template-columns: 1.3fr .5fr;
     align-items: center;

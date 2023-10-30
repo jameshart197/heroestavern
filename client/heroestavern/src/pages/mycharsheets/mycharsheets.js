@@ -5,7 +5,6 @@ import SkillRow from "../../components/skillrow/skillrow";
 import Skills from "./skills.json";
 import Attributes from "./attributes.json";
 import SavingThrowRow from "../../components/savingthrowsrows/savingthrowsrows";
-import CharAttributes from "../../components/charattributes/charattributes";
 import AttributeWheel from "../../components/attributewheel/attributewheel";
 import { proficiencyBonus, skillProfLevel } from "../../helpers/modifier";
 import Infopanel from "../../components/infopanel/infopanel";
@@ -23,11 +22,11 @@ const MyCharSheets = () => {
   return (
     <>
       <Infopanel character={Character}></Infopanel>
-      <div className={styles.Pagecontainer}>
-        <div className={styles.Leftpanel}>
+      <div className={styles.pageContainer}>
+        <div className={styles.leftPanel}>
           <div>
             <h3>Saving Throws</h3>
-            <ul className={styles.SavingThrows}>
+            <ul className={styles.savingThrows}>
               {Attributes.map((attribute, idx) =>
                 idx !== 0 ? (
                   <SavingThrowRow
@@ -55,7 +54,7 @@ const MyCharSheets = () => {
           <hr></hr>
           <Description character={Character}></Description>
         </div>
-        <div className={styles.Centrepanel}>
+        <div className={styles.centrePanel}>
           <ul>
             {Skills.map((skill, idx) =>
               idx !== 0 ? (
@@ -75,18 +74,18 @@ const MyCharSheets = () => {
             )}
           </ul>
         </div>
-        <div className={styles.Rightpanel}>
-          <div className={styles.TRSection}>
+        <div className={styles.rightPanel}>
+          <div className={styles.trSection}>
             <Initiative
               dex={Character.attributes.find(a=>a.attribute.id===2)}
               profBonus={profBonus}
             ></Initiative>
-            <div className={styles.Scorename}>
+            <div className={styles.scorename}>
               Proficiency Bonus:
               <Scorebox value={profBonus} addPlus={true}></Scorebox>
             </div>
           </div>
-          <div className={styles.attributewheelcontainer}>
+          <div className={styles.attributewheelContainer}>
             <AttributeWheel attributes={Character.attributes} avatarUrl={Character.character_art}></AttributeWheel>
           </div>
             <Backstory character={Character}></Backstory>
