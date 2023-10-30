@@ -6,6 +6,16 @@ from django.contrib.auth.models import User
 
 
 class CharacterDetails(models.Model):
+    """
+    Full character model with foreign keys to User, Alignment and Background.
+    ManyToMany relations to Character Attributes, Levels, 
+    Skill Proficiencies, Saving Throws, Spells, Languages and Subclass
+    'owner' is the User that created this character.
+    'Alignment' is the alignment selected from the alignment content model'.
+    'Background' is the background selected from the background content model'.
+    The Many to Many fields allow multiple characters to have the same language, 
+    and one character to have multiple languages, for example.
+    """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     subrace = models.ForeignKey(
         SubRaceContentTable,
@@ -58,6 +68,11 @@ class CharacterDetails(models.Model):
 
 
 class CharacterSpells(models.Model):
+    """
+    Model for character spells, connecting 2 foreign keys to 
+    Character and Spells. This links a single character to various spells from
+    the spells content table. Many characters can have the same spells. 
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="SpellsCharacter"
     )
@@ -73,6 +88,10 @@ class CharacterSpells(models.Model):
 
 
 class CharacterLevels(models.Model):
+    """
+    Model for character levels, with a foreign key to character, and then a foreign key to char_class. 
+    For each selected class, a character may have a level (usually a number between 1 and 20)
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="LevelsCharacter"
     )
@@ -82,7 +101,7 @@ class CharacterLevels(models.Model):
         default=0,
         related_name="LevelsClass",
     )
-    level = models.IntegerField(default=1)  # range limit 1-20
+    level = models.IntegerField(default=1) 
 
     def __str__(self):
         return f"ID: {self.id} - {self.character.character_name} - {self.char_class.name} - {self.level}"
@@ -92,6 +111,11 @@ class CharacterLevels(models.Model):
 
 
 class CharacterSavingThrows(models.Model):
+    """
+    Model for Saving Throws with a foreign key to character and to attributes. Each character
+    will be usually be proficient in 2 saving throws, always of 2 different attributes. 
+    This model allows us to mark them as proficient in those. 
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="SavingThrowsCharacter"
     )
@@ -111,6 +135,10 @@ class CharacterSavingThrows(models.Model):
 
 
 class CharacterSkillProficiencies(models.Model):
+    """
+    Model for character skill proficiencies with a foreign key to character and skill, and a
+    choices field to define their level of proficiency. 
+    """
     PROFICIENCY_LEVEL = (
         (0, "Proficient"),
         (1, "Expertise"),
@@ -132,6 +160,10 @@ class CharacterSkillProficiencies(models.Model):
 
 
 class CharacterAttributes(models.Model):
+    """
+    Model for character attributes with a foreign key to character and to attributes. Characters will always
+    have 6 attributes, each with a different score. The range of these attributes is limited on the front-end. 
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="AttributesCharacter"
     )
@@ -150,6 +182,10 @@ class CharacterAttributes(models.Model):
 
 
 class CharacterLanguages(models.Model):
+    """
+    Model for character languages, with a foreign key to the language content table and to character.
+    Each character may speak multiple languages, and many characters will share the same languages. 
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="LanguagesCharacter"
     )
@@ -167,6 +203,10 @@ class CharacterLanguages(models.Model):
 
 
 class CharacterSubclass(models.Model):
+    """
+    Model for character subclasses, with a foreign key to character and to the subclass content table. A character
+    may have multiple subclasses if they have multiple levels in different classes as per the levels table. 
+    """
     character = models.ForeignKey(
         CharacterDetails, on_delete=models.CASCADE, related_name="SubclassCharacter"
     )
@@ -190,6 +230,10 @@ class CharacterSubclass(models.Model):
 
 
 class SubraceToSkillProficiencies(models.Model):
+    """
+    Model linking each subrace to certain skill proficiencies with a foreign key to subrace content table and skills
+    content table. Some subraces grant proficiencies in certain skills. 
+    """
     subrace = models.ForeignKey(
         SubRaceContentTable, on_delete=models.CASCADE, related_name="SkillprofsSubrace"
     )
@@ -205,6 +249,10 @@ class SubraceToSkillProficiencies(models.Model):
 
 
 class SubraceLanguages(models.Model):
+    """
+    Model linking each subrace to certain language proficiencies with a foreign key to subrace content table and languages
+    content table. Some subraces grant proficiencies in certain languages. 
+    """
     subrace = models.ForeignKey(
         SubRaceContentTable, on_delete=models.CASCADE, related_name="LanguagesSubrace"
     )
@@ -222,6 +270,10 @@ class SubraceLanguages(models.Model):
 
 
 class SubraceSpells(models.Model):
+    """
+    Model linking each subrace to certain spells with a foreign key to subrace content table and spells
+    content table. Some subraces grant certain spells. 
+    """
     subrace = models.ForeignKey(
         SubRaceContentTable, on_delete=models.CASCADE, related_name="SpellsSubrace"
     )
@@ -239,6 +291,10 @@ class SubraceSpells(models.Model):
 
 
 class SubraceTools(models.Model):
+    """
+    Model linking each subrace to certain tool proficiencies with a foreign key to subrace content table and tools
+    content table. Some subraces grant proficiencies in certain tools. 
+    """
     subrace = models.ForeignKey(
         SubRaceContentTable, on_delete=models.CASCADE, related_name="ToolsSubrace"
     )
@@ -259,6 +315,10 @@ class SubraceTools(models.Model):
 
 
 class ClassSkillProficiencies(models.Model):
+    """
+    Model linking each class to certain skill proficiencies with a foreign key to class content table and skills
+    content table. Some classes grant proficiencies in certain skills. 
+    """
     character_class = models.ForeignKey(
         ClassContentTable, on_delete=models.CASCADE, related_name="SkillProfsClass"
     )
@@ -274,6 +334,10 @@ class ClassSkillProficiencies(models.Model):
 
 
 class ClassLanguageProficiencies(models.Model):
+    """
+    Model linking each class to certain skill proficiencies with a foreign key to class content table and skills
+    content table. Some classes grant proficiencies in certain skills. 
+    """
     character_class = models.ForeignKey(
         ClassContentTable, on_delete=models.CASCADE, related_name="LanguagesClass"
     )
@@ -291,6 +355,10 @@ class ClassLanguageProficiencies(models.Model):
 
 
 class ClassSpellsGranted(models.Model):
+    """
+    Model linking each class to certain spells with a foreign key to class content table and spells
+    content table. Some classes grant certain spells. 
+    """
     character_class = models.ForeignKey(
         ClassContentTable, on_delete=models.CASCADE, related_name="SpellsClass"
     )
@@ -311,6 +379,10 @@ class ClassSpellsGranted(models.Model):
 
 
 class SubclassSkillProficiencies(models.Model):
+    """
+    Model linking each subclass to certain skill proficiencies with a foreign key to subclass content table and skills
+    content table. Some subclasses grant proficiencies in certain skills. 
+    """
     subclass = models.ForeignKey(
         SubClassContentTable,
         on_delete=models.CASCADE,
@@ -330,6 +402,10 @@ class SubclassSkillProficiencies(models.Model):
 
 
 class SubclassLanguageProficiencies(models.Model):
+    """
+    Model linking each subclass to certain language proficiencies with a foreign key to subclass content table and languages
+    content table. Some subclasss grant proficiencies in certain languages. 
+    """
     subclass = models.ForeignKey(
         SubClassContentTable, on_delete=models.CASCADE, related_name="LanguagesSubclass"
     )
@@ -347,6 +423,10 @@ class SubclassLanguageProficiencies(models.Model):
 
 
 class SubclassSpellsGranted(models.Model):
+    """
+    Model linking each subclass to certain spells with a foreign key to subclass content table and spells
+    content table. Some subclasss grant certain spells. 
+    """
     subclass = models.ForeignKey(
         SubClassContentTable, on_delete=models.CASCADE, related_name="SpellsSubclass"
     )
@@ -367,6 +447,10 @@ class SubclassSpellsGranted(models.Model):
 
 
 class BackgroundSkillProficiencies(models.Model):
+    """
+    Model linking each background to certain skill proficiencies with a foreign key to background content table and skills
+    content table. Some backgrounds grant proficiencies in certain skills. 
+    """
     background = models.ForeignKey(
         BackgroundContentTable,
         on_delete=models.CASCADE,
@@ -386,6 +470,10 @@ class BackgroundSkillProficiencies(models.Model):
 
 
 class BackgroundToolProficiencies(models.Model):
+    """
+    Model linking each background to certain tool proficiencies with a foreign key to background content table and tools
+    content table. Some backgrounds grant proficiencies in certain tools. 
+    """
     background = models.ForeignKey(
         BackgroundContentTable, on_delete=models.CASCADE, related_name="ToolsBackground"
     )
@@ -403,6 +491,10 @@ class BackgroundToolProficiencies(models.Model):
 
 
 class BackgroundLanguageProficiencies(models.Model):
+    """
+    Model linking each background to certain language proficiencies with a foreign key to background content table and languages
+    content table. Some backgrounds grant proficiencies in certain languages. 
+    """
     background = models.ForeignKey(
         BackgroundContentTable,
         on_delete=models.CASCADE,
