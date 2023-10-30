@@ -12,19 +12,19 @@ const Description = ({ character }) => {
         <li>
           <strong>Age</strong>
         </li>
-        <li>{character.age}</li>
+        <li>{character.age || "-"}</li>
         <li>
           <strong>Height</strong>
         </li>
-        <li>{character.height}</li>
+        <li>{character.height || "-"}</li>
         <li>
           <strong>Weight</strong>
         </li>
-        <li>{character.weight}</li>
+        <li>{character.weight || "-"}</li>
         <li>
           <strong>Alignment</strong>
         </li>
-        <li>{character.alignment.name}</li>
+        <li>{character.alignment.name || "-"}</li>
       </ul>
       <hr></hr>
       <h4>Background</h4>
