@@ -1,6 +1,7 @@
 const CharacterModel = {
   user: "",
   character_name: "",
+  gender: "",
   character_art: {},
   subrace: 0,
   background: 0,
