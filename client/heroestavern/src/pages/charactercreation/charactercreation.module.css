@@ -1,4 +1,4 @@
-main > section:last-child {
+main>section:last-child {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +24,12 @@ main > section:last-child {
     color: black;
 }
 
+@media screen and (max-width: 900px) {
+    .creationForm div {
+        width: 60vw;
+    }
+}
+
 .creationForm ul {
     position: absolute;
     background-color: slategray;
@@ -38,6 +44,12 @@ main > section:last-child {
     max-height: 50vh;
     overflow: auto;
     overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    .creationForm div {
+        width: 80%;
+    }
 }
 
 .creationForm li {
@@ -125,6 +137,12 @@ form .attributeInput {
     align-items: center;
 }
 
+@media screen and (max-width: 900px) {
+    .descriptionForm div {
+        width: 80vw;
+    }
+}
+
 .textbox {
     font-weight: bold;
     border: inset;
@@ -135,46 +153,46 @@ form .attributeInput {
 }
 
 .pageButton {
-  align-items: center;
-  background-color: initial;
-  background-image: linear-gradient(rgba(132, 150, 201, 0.84), rgba(31, 47, 91, 0.84) 50%);
-  border-radius: 42px;
-  border-width: 0;
-  box-shadow: rgba(31, 37, 91, 0.24) 0 2px 2px,rgba(132, 137, 201, 0.4) 0 8px 12px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: flex;
-  font-family: Quicksand,sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  justify-content: center;
-  letter-spacing: .04em;
-  line-height: 16px;
-  margin: 0;
-  padding: 18px 18px;
-  text-align: center;
-  text-decoration: none;
-  text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(31, 67, 91, 0.6) 1px 1px 4px,rgba(31, 52, 91, 0.32) 4px 4px 16px;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: baseline;
-  min-width: 6rem;
-  
+    align-items: center;
+    background-color: initial;
+    background-image: linear-gradient(rgba(132, 150, 201, 0.84), rgba(31, 47, 91, 0.84) 50%);
+    border-radius: 42px;
+    border-width: 0;
+    box-shadow: rgba(31, 37, 91, 0.24) 0 2px 2px, rgba(132, 137, 201, 0.4) 0 8px 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: flex;
+    font-family: Quicksand, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    justify-content: center;
+    letter-spacing: .04em;
+    line-height: 16px;
+    margin: 0;
+    padding: 18px 18px;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px, rgba(255, 255, 255, 0.2) 0 0 12px, rgba(31, 67, 91, 0.6) 1px 1px 4px, rgba(31, 52, 91, 0.32) 4px 4px 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    vertical-align: baseline;
+    min-width: 6rem;
 }
+
 
 .pageButton:hover {
     background-image: linear-gradient(#b8c8e7, #3753a0 50%);
     color: aqua;
-  }
+}
 
-  .fileInput {
+.fileInput {
     max-width: 180px;
-  }
-  
-  pre {
+}
+
+pre {
     position: absolute;
     top: 20vh;
     max-width: 4em;
     overflow: hidden;
-  }
+}

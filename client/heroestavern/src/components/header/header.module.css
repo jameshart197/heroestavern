@@ -78,6 +78,14 @@ header a:hover {
     right: 40%;
     left: 40%;
   }
+
+  @media screen and (max-width: 900px) {
+    .submitButton {
+        font-size: 12px;
+        border-radius: 21px;
+        padding: 12px 12px;
+    }
+}
   
   .submitButton:hover {
     background-image: linear-gradient(#b8c8e7, #3753a0 50%);

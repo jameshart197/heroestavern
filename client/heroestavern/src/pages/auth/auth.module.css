@@ -18,6 +18,12 @@
     gap: 2em;
 }
 
+@media screen and (max-width: 900px) {
+    .authForm div {
+        width: 80vw;
+    }
+}
+
 .submitButton {
     margin: 0 auto
 }
