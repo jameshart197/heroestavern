@@ -20,51 +20,51 @@ const CreationForm4 = ({ characterState, setCharacterState }) => {
   return (
     <form action="post" className={styles.descriptionForm}>
       <div>
-        <label for="charalliesinput">Allies:</label>
+        <label for="allies">Allies:</label>
         <textarea  className={styles.textbox}
           rows="4"
           cols="60"
-          name="text"
+          name="allies"
           placeholder="Any allies you might have, such as party members or friends"
           onChange={handleAlliesChange} value={characterState.allies}
         ></textarea>
       </div>
       <div>
-        <label for="charenemiesinput">Enemies:</label>
+        <label for="enemies">Enemies:</label>
         <textarea  className={styles.textbox}
           rows="4"
           cols="60"
-          name="text"
+          name="enemies"
           placeholder="Any enemies you might have, such as past encounters or leaders of enemy organizations"
           onChange={handleEnemiesChange} value={characterState.enemies}
         ></textarea>
       </div>
       <div>
-        <label for="charfactionsinput">Factions and Organizations:</label>
+        <label for="factions_and_orgs">Factions and Organizations:</label>
         <textarea  className={styles.textbox}
           rows="4"
           cols="60"
-          name="text"
+          name="factions_and_orgs"
           placeholder="Any organizations you may be affiliated with, such as a guild or political party"
           onChange={handleFactionsChange} value={characterState.factions_and_orgs}
         ></textarea>
       </div>
       <div>
-        <label for="charbackstoryinput">Backstory:</label>
+        <label for="backstory">Backstory:</label>
         <textarea  className={styles.textbox}
           rows="4"
           cols="60"
-          name="text"
+          name="backstory"
           placeholder="The story of how you came to be the way you are"
           onChange={handleBackstoryChange} value={characterState.backstory}
         ></textarea>
       </div>
       <div>
-        <label for="charnotesinput">Other Notes:</label>
+        <label for="notes">Other Notes:</label>
         <textarea  className={styles.textbox}
           rows="4"
           cols="60"
-          name="text"
+          name="notes"
           placeholder="Any other notes on your character such as likes, dislikes, habits and behavioural patterns"
           onChange={handleNotesChange} value={characterState.notes}
         ></textarea>

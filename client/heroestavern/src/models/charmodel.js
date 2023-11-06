@@ -1,6 +1,7 @@
 const CharModel = {
   user: "",
   character_name: "",
+  character_art: {},
   subrace: 0,
   alignment: 0,
   background: 0,
@@ -24,3 +25,5 @@ const CharModel = {
   languages: [],
   subclass: [],
 };
+
+export default CharModel;

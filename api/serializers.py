@@ -245,8 +245,7 @@ class CharacterCreationSerializer(serializers.ModelSerializer):
     """
     Serializer for creating a character
     """
-    character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
-    def validate_image(self, value):
+    def validate_character_art(self, value):
         if value.size > 2 * 1024 * 1024:
             raise serializers.ValidationError('Image size larger than 2MB!')
         if value.image.height > 4096:
@@ -342,3 +341,36 @@ class CharacterSerializer(serializers.ModelSerializer):
         ]
         depth=2
 
+
+class CharacterUpdateSerializer(serializers.ModelSerializer):
+    """
+    Serializer for creating a character
+    """
+    class Meta:
+        model = models.CharacterDetails
+        fields = [
+            'gender',
+            'character_name',
+            'subrace',
+            'alignment',
+            'background',
+            'inspiration',
+            'faith',
+            'age',
+            'height',
+            'weight',
+            'notes',
+            'backstory',
+            'allies',
+            'enemies',
+            'factions_and_orgs',
+            'hit_points',
+            'armor_class',
+            'attributes',
+            'levels',
+            'skills',
+            'saving_throws',
+            'spells',
+            'languages',
+            'subclass'
+        ]

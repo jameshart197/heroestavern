@@ -36,12 +36,7 @@ export const getAlignments = async () => {
 // post character creation
 
 export const postBaseCharacter = async (basechar, token) => {
-  let newChar = Object.keys(CharacterModel).reduce((a, b) => {
-    a[b] = basechar[b];
-    return a;
-  }, {});
-  newChar = {...newChar, subrace:newChar.subrace.id};
-  return await postData("api", "characters", newChar, token);
+  return await formDataQuery("api", "characters", basechar, token);
 };
 
 export const updateCharacter = async (pk, data, token) => {
@@ -170,6 +165,48 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {
     options.retryCount++;
     return await dataQuery(area, path, request, options)
+  }
+  if (options.retryCount > RETRY_MAX && response.status===401) {
+    logoutUser();
+  }
+  if (response.status >= 200 && response.status < 300) {
+    return await response.json();
+  }
+  throw await response.json();
+}
+
+async function formDataQuery(area, path, formdata, token, options={retryCount:0}) {
+  if (!path || !area) {
+    console.error("url and area must be defined");
+    return undefined;
+  }
+  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
+  const headerattributes = {
+    "Content-Type": "multipart/form-data",
+  };
+  if (token) {
+    headerattributes.Authorization = `Bearer ${token}`;
+  }
+  let response;
+  try {
+    response = await fetch(url, {
+      method: "POST",
+      header: headerattributes,
+      body: formdata
+    }).catch((err) => {
+      console.log(err);
+    });
+  } catch (err) {
+    console.log(err);
+  }
+  if (response.status === 401 && options.retryCount <= RETRY_MAX) {
+    const access_token = refreshAccessToken()
+    options.retryCount++;
+    return await formDataQuery(area, path, formdata, access_token, options)    
+  } 
+  if (response.status === 500 && options.retryCount <=RETRY_MAX) {
+    options.retryCount++;
+    return await formDataQuery(area, path, formdata, token, options)
   }
   if (options.retryCount > RETRY_MAX && response.status===401) {
     logoutUser();

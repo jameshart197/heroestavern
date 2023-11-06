@@ -188,7 +188,7 @@ class CharacterUpdate(generics.UpdateAPIView):
     """
     Update existing character
     """
-    serializer_class = serializers.CharacterCreationSerializer
+    serializer_class = serializers.CharacterUpdateSerializer
     queryset = models.CharacterDetails.objects.all()
 
 

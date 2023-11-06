@@ -15,19 +15,19 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
         const [backgrounds, alignments] = await Promise.all([getBackgrounds(), getAlignments()]);
         setBackgroundList(backgrounds);
         setAlignmentList(alignments);
-        setSelectedAlignment(alignments[0])
-        setSelectedBackground(backgrounds[0])
+        setSelectedAlignment(alignments[0].id)
+        setSelectedBackground(backgrounds[0].id)
       }
       fetchData().catch(console.error)
     }, []
   )
   const handleBackgroundChange = (e) => {
     setSelectedBackground(e)
-    setCharacterState({...characterState, background: e.id})
+    setCharacterState({...characterState, background: e, selectedBackground: backgroundList.find(b => b.id==e)})
   }
   const handleAlignmentChange = (e) => {
     setSelectedAlignment(e)
-    setCharacterState({...characterState, alignment: e.id})
+    setCharacterState({...characterState, alignment: e, selectedAlignment: alignmentList.find(a => a.id==e)})
   }
   const handleAgeChange = (e) => {
     setCharacterState({...characterState, age: e.currentTarget.value})
@@ -44,14 +44,14 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
   return (
     <form action="post" className={styles.creationForm}>
       <div>
-        <label for="charbackgroundinput">Background: </label>
-        <Listbox value={selectedBackground} onChange={handleBackgroundChange}>
+        <label for="background">Background: </label>
+        <Listbox value={selectedBackground} onChange={handleBackgroundChange} name="background">
           <Listbox.Button className={styles.inputs}>
-            {selectedBackground.name}
+            {backgroundList.find(b => b.id==selectedBackground)?.name}
           </Listbox.Button>
           <Listbox.Options>
             {backgroundList.map((background) => (
-              <Listbox.Option key={background.id} value={background}>
+              <Listbox.Option key={background.id} value={background.id}>
                 {background.name}
               </Listbox.Option>
             ))}
@@ -59,26 +59,26 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
         </Listbox>
       </div>
       <div>
-        <label for="charnameinput">Age:</label>
-        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleAgeChange} value={characterState.age}/>
+        <label for="age">Age:</label>
+        <input type="text" name="age" className={styles.inputs} onChange={handleAgeChange} value={characterState.age}/>
       </div>
       <div>
-        <label for="charnameinput">Height:</label>
-        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleHeightChange} value={characterState.height}/>
+        <label for="height">Height:</label>
+        <input type="text" name="height" className={styles.inputs} onChange={handleHeightChange} value={characterState.height}/>
       </div>
       <div>
-        <label for="charnameinput">Weight:</label>
-        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleWeightChange} value={characterState.weight}/>
+        <label for="weight">Weight:</label>
+        <input type="text" name="weight" className={styles.inputs} onChange={handleWeightChange} value={characterState.weight}/>
       </div>
       <div>
-        <label for="charalignmentinput">Alignment: </label>
-        <Listbox value={selectedAlignment} onChange={handleAlignmentChange}>
+        <label for="alignment">Alignment: </label>
+        <Listbox value={selectedAlignment} onChange={handleAlignmentChange} name="alignment">
           <Listbox.Button className={styles.inputs}>
-            {selectedAlignment.name}
+          {alignmentList.find(a => a.id==selectedAlignment)?.name}
           </Listbox.Button>
           <Listbox.Options>
             {alignmentList.map((alignment) => (
-              <Listbox.Option key={alignment.id} value={alignment}>
+              <Listbox.Option key={alignment.id} value={alignment.id}>
                 {alignment.name}
               </Listbox.Option>
             ))}
@@ -86,8 +86,8 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
         </Listbox>
       </div>
       <div>
-        <label for="charnameinput">Faith:</label>
-        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleFaithChange} value={characterState.faith}/>
+        <label for="faith">Faith:</label>
+        <input type="text" id="faith" className={styles.inputs} onChange={handleFaithChange} value={characterState.faith}/>
       </div>
     </form>
   );

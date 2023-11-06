@@ -6,21 +6,35 @@ import CreationForm2 from "./forms/creation2";
 import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel";
-import {
-    postBaseCharacter,
-    postCharacterAttributes,
-    postCharacterLevel,
-    postCharacterSubclass,
-    postCharacterSubrace,
-    updateCharacter
-} from "../../helpers/api";
+import CharModel from "../../models/charmodel";
+import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, updateCharacter } from "../../helpers/api";
 import { getToken } from "../../helpers/currentuser.api";
 import { useCurrentUser } from "../../contexts/currentUserContext";
 
 const CharacterCreation = () => {
     const user = useCurrentUser() || {};
     const [currentPage, setCurrentPage] = useState(0);
-    const [characterState, setCharacterState] = useState({ ...CharacterModel, subclass: [], user: user.pk });
+    const [characterState, setCharacterState] = useState({ ...CharModel, subclass: [], user: user.pk });
+    const updateBaseCharacter = () => {
+        const formdata = new FormData(document.getElementsByTagName("form")[0]);
+        console.log("before pruning:", Array.from(formdata.entries()));
+        for (const tuple of formdata.entries()) {
+            if (!Object.keys(CharacterModel).some((key) => key == tuple[0])) {
+                formdata.delete(tuple[0]);
+            }
+        }
+        console.log("after pruning:", Array.from(formdata.entries()))
+        if (characterState.baseCharacter) {
+            for (const tuple of characterState.baseCharacter.entries()) {
+                formdata.append(tuple[0], tuple[1]);
+            }
+            if (!characterState.baseCharacter.has("user")) {
+                formdata.append("user", user.pk);
+            }
+        }
+        console.log("after merging:", Array.from(formdata.entries()));
+        setCharacterState({ ...characterState, baseCharacter: formdata });
+    };
     const navigate = useNavigate();
     useEffect(() => {
         if (!user.pk) {
@@ -28,6 +42,7 @@ const CharacterCreation = () => {
         }
     }, []);
     const handleNextClick = async () => {
+        updateBaseCharacter();
         switch (currentPage) {
             case 0:
                 if (characterState.character_name && characterState.subrace && characterState.subclass[0]) {
@@ -45,7 +60,7 @@ const CharacterCreation = () => {
                 break;
             case 3:
                 const token = getToken();
-                const baseCharacter = await postBaseCharacter(characterState, token);
+                const baseCharacter = await postBaseCharacter(characterState.baseCharacter, token);
                 console.log(baseCharacter);
                 const charSubclass = await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
                 const charLevel = await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
@@ -58,13 +73,20 @@ const CharacterCreation = () => {
                     { attribute: 6, score: characterState.charisma || 10 },
                     baseCharacter.id
                 );
+                delete baseCharacter.character_art;
                 await updateCharacter(
                     baseCharacter.id,
                     {
                         ...baseCharacter,
                         subclass: [charSubclass.id],
                         levels: [charLevel.id],
-                        attributes: charAttributes.map((a) => a.id)
+                        attributes: charAttributes.map((a) => a.id),
+                        faith: characterState.faith,
+                        notes: characterState.notes,
+                        backstory: characterState.backstory,
+                        allies: characterState.allies,
+                        enemies: characterState.enemies,
+                        factions_and_orgs: characterState.factions_and_orgs
                     },
                     token
                 );

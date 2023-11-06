@@ -3,18 +3,12 @@ const CharacterModel = {
   character_name: "",
   gender: "",
   character_art: {},
-  subrace: 0,
+  subrace : 0,
   background: 0,
   alignment: 0,
-  faith: "",
   age: "",
   height: "",
-  weight: "",
-  notes: "",
-  backstory: "",
-  allies: "",
-  enemies: "",
-  factions_and_orgs: ""
+  weight: ""
 };
 
 export default CharacterModel

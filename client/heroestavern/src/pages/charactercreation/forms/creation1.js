@@ -24,7 +24,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         setRaceList(races);
         setSubraceList(subraces);
         setSelectedRace(races[0]);
-        setSelectedSubrace(subraces[0]);
+        setSelectedSubrace(subraces[0].id);
         const [charclasses, subclasses] = await Promise.all([getCharclasses(), getSubclasses()]);
         setCharclassList(charclasses);
         setSubclassList(subclasses);
@@ -43,7 +43,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
     setCharacterState({...characterState, gender: e.currentTarget.value})
   }
   const handleImageChange = (e) => {
-    setCharacterState({...characterState, character_art: e.target.files[0], character_art_name: e.target.files[0].name})
+    setCharacterState({...characterState, character_art: URL.createObjectURL(e.target.files[0]), character_art_name: e.target.files[0].name})
   }
   const handleRaceChange = (e) => {
     setSelectedRace(e)
@@ -51,7 +51,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   }
   const handleSubraceChange = (e) => {
     setSelectedSubrace(e)
-    setCharacterState({...characterState, subrace: e})
+    setCharacterState({...characterState, subrace: e, selectedSubrace: subraceList.find(sr => sr.id==e)})
   }
   const handleCharclassChange = (e) => {
     setSelectedClass(e)
@@ -65,18 +65,18 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
     setCharacterState({...characterState, charlevel: e.currentTarget.value})
   }
   return (
-    <form action="post" className={styles.creationForm}>
+    <form action="post" className={styles.creationForm} enctype='multipart/form-data'>
       <div>
-        <label for="charnameinput">Character Name: </label>
-        <input type="text" id="charnameinput" className={styles.inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
+        <label for="character_name">Character Name: </label>
+        <input type="text" name="character_name" className={styles.inputs} onChange={handleCharacterNameChange} value={characterState.character_name}/>
       </div>
       <div>
-        <label for="chargenderinput">Gender:</label>
-        <input type="text" id="chargenderinput" className={styles.inputs} onChange={handleGenderChange} value={characterState.gender}/>
+        <label for="gender">Gender:</label>
+        <input type="text" name="gender" className={styles.inputs} onChange={handleGenderChange} value={characterState.gender}/>
       </div>
       <div>
-        <label for="charimageinput">Character Art</label>
-        <input type="file" name="charimageinput" onChange={handleImageChange} className={styles.fileInput} />
+        <label for="character_art">Character Art</label>
+        <input type="file" name="character_art" onChange={handleImageChange} className={styles.fileInput}/>
       </div>
       <div>
         <label for="charraceinput">Race: </label>
@@ -94,13 +94,13 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         </Listbox>
       </div>
       <div>
-        <label for="charsubraceinput">Subrace: </label>
-        <Listbox value={selectedSubrace} onChange={handleSubraceChange}>
-          <Listbox.Button className={styles.inputs}>{selectedSubrace?.name}</Listbox.Button>
+        <label for="subrace">Subrace: </label>
+        <Listbox value={selectedSubrace} onChange={handleSubraceChange} name="subrace">
+          <Listbox.Button className={styles.inputs}>{subraceList.find(sr=>sr.id==selectedSubrace)?.name}</Listbox.Button>
           <Listbox.Options>
             {subraceList.filter((sr) => sr.race === selectedRace.name).map(
               (subrace) => (
-                <Listbox.Option key={subrace.id} value={subrace}>
+                <Listbox.Option key={subrace.id} value={subrace.id}>
                   {subrace.name}
                 </Listbox.Option>
               )
