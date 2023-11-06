@@ -10,6 +10,7 @@ import CharModel from "../../models/charmodel";
 import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, updateCharacter } from "../../helpers/api";
 import { getToken } from "../../helpers/currentuser.api";
 import { useCurrentUser } from "../../contexts/currentUserContext";
+import toast from "react-hot-toast";
 
 const CharacterCreation = () => {
     const user = useCurrentUser() || {};
@@ -39,6 +40,7 @@ const CharacterCreation = () => {
     useEffect(() => {
         if (!user.pk) {
             navigate("/login/");
+            toast.error("Oops! You aren't logged in. Please log in and try again.")
         }
     }, []);
     const handleNextClick = async () => {

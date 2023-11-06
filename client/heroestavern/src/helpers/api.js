@@ -1,11 +1,21 @@
 import CharacterModel from "../models/createcharmodel";
 import { getRefreshToken, logoutUser } from "./currentuser.api";
+import toast from 'react-hot-toast';
 
 
 // internal variables
 
 const RETRY_MAX = 3;
 const CONTENT_TYPE = "application/json; charset=UTF-8"
+const USER_MESSAGES = {
+  "api/characters" : "Character created successfully!",
+  "api/characterupdate" : "Character updated successfully!",
+  "api/addcharactersubclass" : "Subclass successfully added!",
+  "api/addcharacterlevel" : "Character level successfully added!",
+  "api/addcharacterattributes" : "Character attributes successfully added!",
+  "dj-rest-auth/registration" : "Registration successful!",
+  "dj-rest-auth/login" : "Login successful!"
+}
 
 // get content tables
 
@@ -88,6 +98,9 @@ export const currentUser = async (token) => {
 
 export const refreshAccessToken = async () => {
   const access_token =  await postData("dj-rest-auth", "token/refresh", getRefreshToken());
+  toast('Refreshing Access Token', {
+    icon: '⏳',
+  });
   localStorage.setItem("access_token", access_token.access);
   return access_token;
 }
@@ -145,6 +158,7 @@ async function updateData(area, path, data, token, options){
 async function dataQuery(area, path, request, options={retryCount:0}) {
   if (!path || !area) {
     console.error("url and area must be defined");
+    toast.error("Resource missing, please try again")
     return undefined;
   }
   const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
@@ -152,9 +166,11 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
   try {
     response = await fetch(url, request).catch((err) => {
       console.log(err);
+      toast.error(err.message || err)
     });
   } catch (err) {
     console.log(err);
+    toast.error(err.message || err)
   }
   if (response.status === 401 && options.retryCount <= RETRY_MAX) {
     const access_token = refreshAccessToken()
@@ -168,8 +184,10 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
   }
   if (options.retryCount > RETRY_MAX && response.status===401) {
     logoutUser();
+    toast.error("Unauthorized access, please log in and try again")
   }
   if (response.status >= 200 && response.status < 300) {
+    toastUser(area,path);
     return await response.json();
   }
   throw await response.json();
@@ -212,7 +230,15 @@ async function formDataQuery(area, path, formdata, token, options={retryCount:0}
     logoutUser();
   }
   if (response.status >= 200 && response.status < 300) {
+    toastUser(area,path);
     return await response.json();
   }
   throw await response.json();
+}
+
+const toastUser = (area, path) => {
+  const message = Object.keys(USER_MESSAGES).find(m=>`${area}/${path}`.startsWith(m));
+  if(message) {
+    toast.success(USER_MESSAGES[message]);
+  }
 }

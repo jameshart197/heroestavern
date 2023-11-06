@@ -8,6 +8,7 @@ import SignUpForm from "./pages/auth/forms/signup";
 import LoginForm from "./pages/auth/forms/login";
 import { CurrentUserProvider } from "./contexts/currentUserContext";
 import CharacterList from "./pages/characterlist/characterlist";
+import toast, { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="login/" element={<LoginForm />}></Route>
         </Routes>
       </main>
+      <Toaster position="bottom-right" reverseOrder={true}/>
     </CurrentUserProvider>
   );
 }
