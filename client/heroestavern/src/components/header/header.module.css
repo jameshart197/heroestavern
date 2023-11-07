@@ -54,11 +54,11 @@ header a:hover {
     border-radius: 42px;
     border-width: 1px;
     border-color: white;
-    box-shadow: rgba(31, 37, 91, 0.24) 0 2px 2px,rgba(132, 137, 201, 0.4) 0 8px 12px;
+    box-shadow: rgba(31, 37, 91, 0.24) 0 2px 2px, rgba(132, 137, 201, 0.4) 0 8px 12px;
     color: #FFFFFF;
     cursor: pointer;
     display: flex;
-    font-family: Quicksand,sans-serif;
+    font-family: Quicksand, sans-serif;
     font-size: 18px;
     font-weight: 700;
     justify-content: center;
@@ -68,7 +68,7 @@ header a:hover {
     padding: 18px 18px;
     text-align: center;
     text-decoration: none;
-    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(31, 67, 91, 0.6) 1px 1px 4px,rgba(31, 52, 91, 0.32) 4px 4px 16px;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px, rgba(255, 255, 255, 0.2) 0 0 12px, rgba(31, 67, 91, 0.6) 1px 1px 4px, rgba(31, 52, 91, 0.32) 4px 4px 16px;
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
@@ -77,17 +77,59 @@ header a:hover {
     top: 1em;
     right: 40%;
     left: 40%;
-  }
+}
 
-  @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
     .submitButton {
         font-size: 12px;
         border-radius: 21px;
         padding: 12px 12px;
     }
 }
-  
-  .submitButton:hover {
+
+.submitButton:hover {
     background-image: linear-gradient(#b8c8e7, #3753a0 50%);
     color: aqua;
-  }
+}
+
+/* responsive nav panel */
+
+.hamburgerButton {
+    display: none;
+    font-size: 250%;
+}
+
+@media screen and (max-width: 900px) {
+    nav {
+        display: none;
+    }
+    .hamburgerButton {
+        display: block;
+    }
+}
+
+.hamburgerMenu {
+    background-color: #010948;
+    position: absolute;
+    right: -50%;
+    top: 5em;
+    width: 8em;
+    transition: 300ms;
+}
+
+.hamburgerMenu > ul {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border: solid 1px white;
+    gap: 0;
+}
+
+.hamburgerMenu li {
+    border: solid 1px white;
+    width: 100%;
+    height: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
