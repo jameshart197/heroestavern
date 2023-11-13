@@ -97,16 +97,19 @@ header a:hover {
 .hamburgerButton {
     display: none;
     font-size: 250%;
+    background-color: transparent;
+    color: white;
 }
 
 @media screen and (max-width: 900px) {
     nav {
         display: none;
     }
-    .hamburgerButton {
+    .hamburgerButton, .hamburgerMenu {
         display: block;
     }
 }
+
 
 .hamburgerMenu {
     background-color: #010948;
@@ -115,6 +118,7 @@ header a:hover {
     top: 5em;
     width: 8em;
     transition: 300ms;
+    display: none;
 }
 
 .hamburgerMenu > ul {

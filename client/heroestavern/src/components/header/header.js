@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import styles from "./header.module.css";
 import { useCurrentUser, useCurrentUserContext } from "../../contexts/currentUserContext";
 import { logoutUser } from "../../helpers/currentuser.api";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
     const loginState = useCurrentUser();
@@ -13,7 +15,7 @@ const Header = () => {
     };
     const hamburgerMenu = document.getElementById("hamburger-menu");
     const handleHamburgerButtonClick = () => {
-        if (hamburgerMenu.style.right == "-50%") {
+        if (hamburgerMenu.style.right == "-50%" || hamburgerMenu.style.right == "") {
             hamburgerMenu.style.right = 0;
         } else {
             hamburgerMenu.style.right = "-50%";
@@ -52,7 +54,9 @@ const Header = () => {
                     )}
                 </ul>
             </nav>
-            <button className={styles.hamburgerButton} onClick={handleHamburgerButtonClick}>➕</button>
+            <button className={styles.hamburgerButton} onClick={handleHamburgerButtonClick}>
+                <FontAwesomeIcon icon={faBars} />
+            </button>
             <div id="hamburger-menu" className={styles.hamburgerMenu}>
                 <ul>
                     <li>
