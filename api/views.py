@@ -192,6 +192,12 @@ class CharacterUpdate(generics.UpdateAPIView):
     queryset = models.CharacterDetails.objects.all()
 
 
+class CharacterDelete(generics.DestroyAPIView):
+    """
+    Delete existing character
+    """
+    queryset = models.CharacterDetails.objects.all()
+
 
 class CharacterSubclassAdd(generics.CreateAPIView):
     """

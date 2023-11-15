@@ -76,7 +76,11 @@ export const getCharacterList = async (token) => {
   return mycharacters.sort((a,b) => a.character_name-b.character_name)
 }
 
+// delete character
 
+export const deleteCharacter = async (pk, token) => {
+  return await deleteData("api", `characterdelete/${pk}`, null, token);
+}
 
 // logins
 
@@ -155,13 +159,30 @@ async function updateData(area, path, data, token, options){
   };
   return await dataQuery(area, path, request, options);
 }
+
+async function deleteData(area, path, data, token, options){
+  const headerattributes = {
+    "Content-Type": CONTENT_TYPE,
+  };
+  if (token) {
+    headerattributes.Authorization = `Bearer ${token}`;
+  }
+  const request = {
+    method: "DELETE",
+    mode: "cors",
+    headers: headerattributes,
+    redirect: "follow"
+  };
+  return await dataQuery(area, path, request, options);
+}
+
 async function dataQuery(area, path, request, options={retryCount:0}) {
   if (!path || !area) {
     console.error("url and area must be defined");
     toast.error("Resource missing, please try again")
     return undefined;
   }
-  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
+  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu106.gitpod.io/${area}/${path}/`;
   let response;
   try {
     response = await fetch(url, request).catch((err) => {
@@ -198,7 +219,7 @@ async function formDataQuery(area, path, formdata, token, options={retryCount:0}
     console.error("url and area must be defined");
     return undefined;
   }
-  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu105.gitpod.io/${area}/${path}/`;
+  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu106.gitpod.io/${area}/${path}/`;
   const headerattributes = {
     "Content-Type": "multipart/form-data",
   };

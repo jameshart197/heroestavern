@@ -19,6 +19,7 @@ urlpatterns = [
     path('characters/<int:pk>/', views.CharacterDetails.as_view()),
     path('characters/', views.CharacterCreation.as_view()),
     path('characterupdate/<int:pk>/', views.CharacterUpdate.as_view()),
+    path('characterdelete/<int:pk>/', views.CharacterDelete.as_view()),
     path('characterattributes/', views.CharacterAttributes.as_view()),
     path('characterlevels/', views.CharacterLevels.as_view()),
     path('characterskills/', views.CharacterSkills.as_view()),

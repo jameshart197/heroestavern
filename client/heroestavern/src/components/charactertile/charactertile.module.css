@@ -3,11 +3,11 @@
     max-width: 350px;
     background-color: rgb(252, 236, 167);
     display: grid;
-    grid-template-columns: 1fr 2fr auto;
+    grid-template-columns: auto 1fr 2fr auto;
     grid-template-rows: 1.5fr 1fr;
     grid-template-areas: 
-        "name name level"
-        "subrace subclass level";
+        "menu name name level"
+        "subrace subrace subclass level";
     border-width: 4px;
     border-color: #2f2603;
 }
@@ -38,4 +38,30 @@
     grid-area: level;
     font-size: 250%;
     font-weight: 700;
+}
+
+.kebabIcon {
+    position: relative;
+    
+}
+
+.kebabIcon > div {
+    position: absolute;
+    right: 0.7em;
+    top: -0.2em;
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 0.5s ease-in-out;
+    overflow: hidden;
+    background-color: blue;
+    color: white;
+}
+
+.kebabIcon li {
+    border: 1px solid white;
+    box-sizing: border-box;
+}
+
+.kebabIcon > div.active {
+    grid-template-rows: 1fr;
 }
