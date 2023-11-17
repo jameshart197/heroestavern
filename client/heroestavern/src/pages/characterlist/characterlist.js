@@ -12,9 +12,11 @@ const CharacterList = () => {
   const [myCharacterList, setMyCharacterList] = useState(getCharList());
   useEffect(() => {
     const fetchData = async () => {
-      const charlist = await getCharacterList(getToken());
-      setCharList(charlist);
-      setMyCharacterList(charlist);
+      if(loginState) {
+        const charlist = await getCharacterList(getToken());
+        setCharList(charlist);
+        setMyCharacterList(charlist);
+      }
     };
     fetchData().catch(console.error);
   }, []);
