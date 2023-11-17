@@ -192,10 +192,11 @@ class CharacterUpdate(generics.UpdateAPIView):
     queryset = models.CharacterDetails.objects.all()
 
 
-class CharacterDelete(generics.DestroyAPIView):
+class CharacterDelete(generics.RetrieveDestroyAPIView):
     """
     Delete existing character
     """
+    serializer_class = serializers.CharacterUpdateSerializer
     queryset = models.CharacterDetails.objects.all()
 
 
@@ -221,3 +222,4 @@ class CharacterAttributesAdd(generics.CreateAPIView):
     """
     serializer_class = serializers.CharacterAttributesSerializer
     queryset = models.CharacterAttributes.objects.all()
+

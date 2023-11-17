@@ -24,7 +24,7 @@ const CharacterList = () => {
       {loginState?(
       <container className={styles.charListContainer}>
         {myCharacterList.length?myCharacterList.map((c) => (
-          <CharacterTile key={c.id} character={c}></CharacterTile>
+          <CharacterTile key={c.id} character={c} list={[myCharacterList, setMyCharacterList]}></CharacterTile>
         )):<Loading></Loading>}
       </container>
       ):(

@@ -1,6 +1,6 @@
 .characterTile {
-    min-height: 50px;
-    max-width: 350px;
+    min-height: 100px;
+    width: 300px;
     background-color: rgb(252, 236, 167);
     display: grid;
     grid-template-columns: auto 1fr 2fr auto;
@@ -17,13 +17,13 @@
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    height: 100%;
     padding: .2em;
 }
 
 .characterTile > h3 {
     grid-area: name;
     margin: 0;
+    height: 100%;
 }
 
 .characterSubrace {
@@ -38,30 +38,44 @@
     grid-area: level;
     font-size: 250%;
     font-weight: 700;
+    height: 100%;
 }
 
 .kebabIcon {
     position: relative;
-    
+    font-size: 20px;
+    padding: 0.1em;
 }
 
 .kebabIcon > div {
     position: absolute;
-    right: 0.7em;
-    top: -0.2em;
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s ease-in-out;
-    overflow: hidden;
     background-color: blue;
     color: white;
+    top: -0.2em;
 }
 
 .kebabIcon li {
     border: 1px solid white;
-    box-sizing: border-box;
+    padding: 0.3em;
+    font-size: 14px;
 }
 
 .kebabIcon > div.active {
     grid-template-rows: 1fr;
+}
+
+.kebabIcon > div.openLeft {
+    right: 0.7em;
+}
+
+.kebabIcon > div.openRight {
+    left: 0.7em;
+}
+
+.grid-inner {
+    overflow: hidden;
+    width: 6em;
 }

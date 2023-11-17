@@ -1,5 +1,5 @@
 import CharacterModel from "../models/createcharmodel";
-import { getRefreshToken, logoutUser } from "./currentuser.api";
+import { getRefreshToken, logoutUser } from "./caching.service.api";
 import toast from 'react-hot-toast';
 
 
@@ -209,6 +209,9 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
   }
   if (response.status >= 200 && response.status < 300) {
     toastUser(area,path);
+    if (response.status === 204) {
+      return true;
+    }
     return await response.json();
   }
   throw await response.json();

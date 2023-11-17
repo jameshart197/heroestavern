@@ -8,7 +8,7 @@ import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel";
 import CharModel from "../../models/charmodel";
 import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, updateCharacter } from "../../helpers/api";
-import { getToken } from "../../helpers/caching.service.api";
+import { getCharList, getToken, setCharList } from "../../helpers/caching.service.api";
 import { useCurrentUser } from "../../contexts/currentUserContext";
 import toast from "react-hot-toast";
 
@@ -92,6 +92,14 @@ const CharacterCreation = () => {
                     },
                     token
                 );
+                const myCharList = getCharList();
+                myCharList.push({
+                    character_name:characterState.character_name, 
+                    subrace: characterState.selectedSubrace, 
+                    cache_class: characterState.subclass[0].name + ' ' + characterState.charclass.name, 
+                    levels: [charLevel]
+                });
+                setCharList(myCharList);
                 navigate("/");
                 break;
             default:
