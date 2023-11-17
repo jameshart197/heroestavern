@@ -2,7 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styles from "./header.module.css";
 import { useCurrentUser, useCurrentUserContext } from "../../contexts/currentUserContext";
-import { logoutUser } from "../../helpers/currentuser.api";
+import { logoutUser } from "../../helpers/caching.service.api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 

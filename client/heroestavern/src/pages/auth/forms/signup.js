@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "../auth.module.css";
 import ErrorMessage from "../../../components/errormessage/errormessage";
-import { registerUser } from "../../../helpers/currentuser.api";
+import { registerUser } from "../../../helpers/caching.service.api";
 
 const SignUpForm = () => {
   const navigate = useNavigate();

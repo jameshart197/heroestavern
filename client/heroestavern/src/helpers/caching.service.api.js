@@ -1,3 +1,4 @@
+import { json } from "react-router-dom";
 import { currentUser, login, signUp } from "./api";
 
 export const getCurrentUser = async () => {
@@ -16,6 +17,7 @@ export const getRefreshToken = () => ({refresh: localStorage.getItem("refresh_to
 export const logoutUser = () => {
   localStorage.removeItem("access_token")
   localStorage.removeItem("refresh_token")
+  localStorage.removeItem("CharList")
 }
 
 export const registerUser = async (signUpData) => {
@@ -32,4 +34,12 @@ export const loginUser =  async  (loginData) => {
   localStorage.setItem("refresh_token", response.refresh_token);
   
   return response;
+}
+
+export const setCharList = (charlist) => {
+  localStorage.setItem("CharList", JSON.stringify(charlist));
+}
+
+export const getCharList = () => {
+  return JSON.parse(localStorage.getItem("CharList")) || [];
 }

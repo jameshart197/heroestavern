@@ -1,5 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
-import { getCurrentUser } from "../helpers/currentuser.api";
+import { getCurrentUser } from "../helpers/caching.service.api";
 
 const CurrentUserContext = createContext();
 export const useCurrentUserContext = () => useContext(CurrentUserContext);

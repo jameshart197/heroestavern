@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "../auth.module.css";
 import ErrorMessage from "../../../components/errormessage/errormessage";
 import { useNavigate } from "react-router-dom";
-import { loginUser } from "../../../helpers/currentuser.api";
+import { loginUser } from "../../../helpers/caching.service.api";
 import { useCurrentUserContext } from "../../../contexts/currentUserContext";
 
 const LoginForm = () => {

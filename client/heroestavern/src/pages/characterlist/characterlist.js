@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCharacterList } from "../../helpers/api";
-import { getToken } from "../../helpers/currentuser.api";
+import { getCharList, getToken, setCharList } from "../../helpers/caching.service.api";
 import CharacterTile from "../../components/charactertile/charactertile";
 import styles from "./characterlist.module.css"
 import LoginOrSignup from "../../components/loginorsignup/loginorsignup";
@@ -9,10 +9,11 @@ import Loading from "../../components/loading/loading";
 
 const CharacterList = () => {
   const loginState = useCurrentUser();
-  const [myCharacterList, setMyCharacterList] = useState([]);
+  const [myCharacterList, setMyCharacterList] = useState(getCharList());
   useEffect(() => {
     const fetchData = async () => {
       const charlist = await getCharacterList(getToken());
+      setCharList(charlist);
       setMyCharacterList(charlist);
     };
     fetchData().catch(console.error);
