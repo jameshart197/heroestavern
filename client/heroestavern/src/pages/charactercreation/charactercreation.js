@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import CreationForm1 from "./forms/creation1";
 import styles from "./charactercreation.module.css";
 import CreationForm2 from "./forms/creation2";
@@ -7,15 +7,21 @@ import CreationForm3 from "./forms/creation3";
 import CreationForm4 from "./forms/creation4";
 import CharacterModel from "../../models/createcharmodel";
 import CharModel from "../../models/charmodel";
-import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, updateCharacter } from "../../helpers/api";
+import { postBaseCharacter, postCharacterAttributes, postCharacterLevel, postCharacterSubclass, putBaseCharacter, updateCharacter } from "../../helpers/api";
 import { getCharList, getToken, setCharList } from "../../helpers/caching.service.api";
 import { useCurrentUser } from "../../contexts/currentUserContext";
 import toast from "react-hot-toast";
+import { getCharacterInfo } from "../../helpers/dto";
 
 const CharacterCreation = () => {
     const user = useCurrentUser() || {};
+    const Character = (useLocation()).state
     const [currentPage, setCurrentPage] = useState(0);
     const [characterState, setCharacterState] = useState({ ...CharModel, subclass: [], user: user.pk });
+    if(Character) {
+        const existingCharacter = getCharacterInfo(Character);
+        setCharacterState(existingCharacter);
+    }
     const updateBaseCharacter = () => {
         const formdata = new FormData(document.getElementsByTagName("form")[0]);
         console.log("before pruning:", Array.from(formdata.entries()));
@@ -62,7 +68,9 @@ const CharacterCreation = () => {
                 break;
             case 3:
                 const token = getToken();
-                const baseCharacter = await postBaseCharacter(characterState.baseCharacter, token);
+                const baseCharacter = Character?
+                    await putBaseCharacter(Character.id, characterState.baseCharacter, token):
+                    await postBaseCharacter(characterState.baseCharacter, token);
                 console.log(baseCharacter);
                 const charSubclass = await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
                 const charLevel = await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);

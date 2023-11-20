@@ -184,6 +184,14 @@ class CharacterCreation(generics.CreateAPIView):
     queryset = models.CharacterDetails.objects.all()
 
 
+class CharacterBaseUpdate(generics.UpdateAPIView):
+    """
+    Update required character field values
+    """
+    serializer_class = serializers.CharacterCreationSerializer
+    queryset = models.CharacterDetails.objects.all()
+
+
 class CharacterUpdate(generics.UpdateAPIView):
     """
     Update existing character

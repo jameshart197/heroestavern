@@ -18,6 +18,7 @@ urlpatterns = [
     path('mycharacters/', views.MyCharacters.as_view()),
     path('characters/<int:pk>/', views.CharacterDetails.as_view()),
     path('characters/', views.CharacterCreation.as_view()),
+    path('updatebasechar/<int:pk>/', views.CharacterBaseUpdate.as_view()),
     path('characterupdate/<int:pk>/', views.CharacterUpdate.as_view()),
     path('characterdelete/<int:pk>/', views.CharacterDelete.as_view()),
     path('characterattributes/', views.CharacterAttributes.as_view()),

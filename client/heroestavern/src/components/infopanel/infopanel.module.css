@@ -5,6 +5,7 @@
     align-items: center;
     padding: 1em 0;
     gap: 1em 0;
+    position: relative;
 }
 
 .hp {
@@ -22,4 +23,11 @@
 
 .response {
     font-size: 1.5em;
+}
+
+.editCharButton {
+    position: absolute;
+    left: 0.8em;
+    top: 0.2em;
+    background-color: yellow;
 }

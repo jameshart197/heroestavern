@@ -295,19 +295,6 @@ class CharacterSerializer(serializers.ModelSerializer):
     Serializer for viewing a character
     """
     user = serializers.ReadOnlyField(source='user.username')
-    # character_art = serializers.ReadOnlyField(source = 'character.character_art.url')
-    # def validate_image(self, value):
-    #     if value.size > 2 * 1024 * 1024:
-    #         raise serializers.ValidationError('Image size larger than 2MB!')
-    #     if value.image.height > 4096:
-    #         raise serializers.ValidationError(
-    #             'Image height larger than 4096px!'
-    #         )
-    #     if value.image.width > 4096:
-    #         raise serializers.ValidationError(
-    #             'Image width larger than 4096px!'
-    #         )
-    #     return value
     class Meta:
         model = models.CharacterDetails
         fields = [

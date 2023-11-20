@@ -6,7 +6,6 @@ import toast from 'react-hot-toast';
 // internal variables
 
 const RETRY_MAX = 3;
-const CONTENT_TYPE = "application/json; charset=UTF-8"
 const USER_MESSAGES = {
   "api/characters" : "Character created successfully!",
   "api/characterupdate" : "Character updated successfully!",
@@ -15,6 +14,22 @@ const USER_MESSAGES = {
   "api/addcharacterattributes" : "Character attributes successfully added!",
   "dj-rest-auth/registration" : "Registration successful!",
   "dj-rest-auth/login" : "Login successful!"
+}
+
+// internal functions 
+
+const getContentType = (data) => {
+  if (data instanceof FormData) {
+    return "multipart/form-data";
+  }
+  else return "application/json; charset=UTF-8";
+}
+
+const toastUser = (area, path) => {
+  const message = Object.keys(USER_MESSAGES).find(m=>`${area}/${path}`.startsWith(m));
+  if(message) {
+    toast.success(USER_MESSAGES[message]);
+  }
 }
 
 // get content tables
@@ -46,25 +61,34 @@ export const getAlignments = async () => {
 // post character creation
 
 export const postBaseCharacter = async (basechar, token) => {
-  return await formDataQuery("api", "characters", basechar, token);
+  return await postData("api", "characters", basechar, token);
 };
 
-export const updateCharacter = async (pk, data, token) => {
-  return await updateData("api", `characterupdate/${pk}`, data, token);
+export const putBaseCharacter = async (pk, basechar, token) => {
+  return await updateData("api", `updatebasechar/${pk}/`, basechar, token);
 }
 
 export const postCharacterSubclass = async (subclass, character) => {
-  return await postData("api", "addcharactersubclass", {subclass, character})
+  const data = JSON.stringify({subclass, character});
+  return await postData("api", "addcharactersubclass", data)
 }
 
 export const postCharacterLevel = async (level, character, char_class) => {
-  return await postData("api", "addcharacterlevel", {level, character, char_class})
+  const data = JSON.stringify({level, character, char_class});
+  return await postData("api", "addcharacterlevel", data)
 }
 
 export const postCharacterAttributes = async (strength, dexterity, constitution, intelligence, wisdom, charisma, character) => {
   const attributesArray = [strength, dexterity, constitution, intelligence, wisdom, charisma]
-  const response = await Promise.all(attributesArray.map(async a=>await postData("api", "addcharacterattributes", {...a, character:character})));
+  const response = await Promise.all(attributesArray.map(async a=> {
+    const data = JSON.stringify({...a, character:character});
+    await postData("api", "addcharacterattributes", data);
+  }));
   return response
+}
+
+export const updateCharacter = async (pk, data, token) => {
+  return await updateData("api", `characterupdate/${pk}`, JSON.stringify(data), token);
 }
 
 
@@ -84,13 +108,12 @@ export const deleteCharacter = async (pk, token) => {
 
 // logins
 
-
 export const signUp = async (signUpData) => {
-  return await postData("dj-rest-auth", "registration", signUpData);
+  return await postData("dj-rest-auth", "registration", JSON.stringify(signUpData));
 };
 
 export const login = async (loginData) => {
-  return await postData("dj-rest-auth", "login", loginData);
+  return await postData("dj-rest-auth", "login", JSON.stringify(loginData));
 };
 
 export const currentUser = async (token) => {
@@ -101,7 +124,8 @@ export const currentUser = async (token) => {
 // access tokens
 
 export const refreshAccessToken = async (count) => {
-  const access_token =  await postData("dj-rest-auth", "token/refresh", getRefreshToken());
+  const data = JSON.stringify(getRefreshToken())
+  const access_token =  await postData("dj-rest-auth", "token/refresh", data);
   if(!count) {
     toast('Refreshing Access Token', {
       icon: '⏳',
@@ -111,69 +135,62 @@ export const refreshAccessToken = async (count) => {
   return access_token;
 }
 
+// CRUD functions
+
 async function postData(area, path, data, token, options){
   const headerattributes = {
-    "Content-Type": CONTENT_TYPE,
+    "Content-Type": getContentType(data)
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
   const request = {
     method: "POST",
-    mode: "cors",
     headers: headerattributes,
-    redirect: "follow",
-    body:JSON.stringify(data)
+    body: data
   };
   return await dataQuery(area, path, request, options);
 }
 
 async function getData(area, path, token, options){
   const headerattributes = {
-    "Content-Type": CONTENT_TYPE,
+    "Content-Type": getContentType(null)
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
   const request = {
     method: "GET",
-    mode: "cors",
     headers: headerattributes,
-    redirect: "follow",
   };
   return await dataQuery(area, path, request, options);
 }
 
 async function updateData(area, path, data, token, options){
   const headerattributes = {
-    "Content-Type": CONTENT_TYPE,
-    "_method": "PUT"
+    "Content-Type": getContentType(data)
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
   const request = {
     method: "PUT",
-    mode: "cors",
     headers: headerattributes,
-    redirect: "follow",
-    body:JSON.stringify(data)
+    body: data
   };
   return await dataQuery(area, path, request, options);
 }
 
 async function deleteData(area, path, data, token, options){
   const headerattributes = {
-    "Content-Type": CONTENT_TYPE,
+    "Content-Type": getContentType(data),
   };
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
   const request = {
     method: "DELETE",
-    mode: "cors",
     headers: headerattributes,
-    redirect: "follow"
   };
   return await dataQuery(area, path, request, options);
 }
@@ -217,54 +234,4 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
     return await response.json();
   }
   throw await response.json();
-}
-
-async function formDataQuery(area, path, formdata, token, options={retryCount:0}) {
-  if (!path || !area) {
-    console.error("url and area must be defined");
-    return undefined;
-  }
-  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu106.gitpod.io/${area}/${path}/`;
-  const headerattributes = {
-    "Content-Type": "multipart/form-data",
-  };
-  if (token) {
-    headerattributes.Authorization = `Bearer ${token}`;
-  }
-  let response;
-  try {
-    response = await fetch(url, {
-      method: "POST",
-      header: headerattributes,
-      body: formdata
-    }).catch((err) => {
-      console.log(err);
-    });
-  } catch (err) {
-    console.log(err);
-  }
-  if (response.status === 401 && options.retryCount <= RETRY_MAX) {
-    const access_token = refreshAccessToken(options.retryCount)
-    options.retryCount++;
-    return await formDataQuery(area, path, formdata, access_token, options)    
-  } 
-  if (response.status === 500 && options.retryCount <=RETRY_MAX) {
-    options.retryCount++;
-    return await formDataQuery(area, path, formdata, token, options)
-  }
-  if (options.retryCount > RETRY_MAX && response.status===401) {
-    logoutUser();
-  }
-  if (response.status >= 200 && response.status < 300) {
-    toastUser(area,path);
-    return await response.json();
-  }
-  throw await response.json();
-}
-
-const toastUser = (area, path) => {
-  const message = Object.keys(USER_MESSAGES).find(m=>`${area}/${path}`.startsWith(m));
-  if(message) {
-    toast.success(USER_MESSAGES[message]);
-  }
 }

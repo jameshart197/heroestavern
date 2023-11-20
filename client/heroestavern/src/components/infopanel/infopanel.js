@@ -4,6 +4,7 @@ import styles from "./infopanel.module.css";
 const Infopanel = ( {character} ) => {
   return (
     <div className={styles.topbar}>
+        <button className={styles.editCharButton}>Edit</button>
         <div>
             <div className={styles.label}>Name</div>
         </div>
