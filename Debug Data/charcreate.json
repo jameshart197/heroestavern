@@ -1,0 +1,79 @@
+{
+    "user": 1,
+    "character_name": "Markus",
+    "character_art": "blob:https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu106.gitpod.io/265f82d4-fa8b-41ef-a030-47fbb80dd9a8",
+    "subrace": 36,
+    "alignment": 6,
+    "background": 9,
+    "inspiration": false,
+    "faith": "Cyrollallee",
+    "age": "2051",
+    "height": "6'2",
+    "weight": "120",
+    "notes": "ice cream",
+    "backstory": "backstory is here in full formatitg",
+    "allies": "friends",
+    "enemies": "enemies",
+    "factions_and_orgs": "dfcctionsa",
+    "hit_points": 12,
+    "armor_class": 10,
+    "attributes": [],
+    "levels": [],
+    "skills": [],
+    "saving_throws": [],
+    "spells": [],
+    "languages": [],
+    "subclass": [
+      {
+        "id": 12,
+        "parent_class": "Bard",
+        "name": "College of Glamour",
+        "full_description": "The College of Glamour is the home of bards who mastered their craft in the vibrant realm of the Feywild or under the tutelage of someone who dwelled there. Tutored by satyrs, eladrin, and other fey, these bards learn to use their magic to delight and captivate others.  The bards of this college are regarded with a mixture of awe and fear. Their performances are the stuff of legend. These bards are so eloquent that a speech or song that one of them performs can cause captors to release the bard unharmed and can lull a furious dragon into complacency. The same magic that allows them to quell beasts can also bend minds. Villainous bards of this college can leech off a community for weeks, misusing their magic to turn their hosts into thralls. Heroic bards of this college instead use this power to gladden the downtrodden and undermine oppressors.",
+        "features": "I am blank right now"
+      }
+    ],
+    "gender": "Male",
+    "character_art_name": "Icy Castle Entrance.jpg",
+    "race": {
+      "id": 12,
+      "name": "Genasi",
+      "full_description": "Tracing their ancestry to the genies of the Elemental Planes, each genasi can tap into the power of one of the elements. Air, earth, fire, and water—these are the four pillars of the Material Plane and the four types of genasi. Some genasi are direct descendants of a genie, while others were born to non-genasi parents who lived near a place suffused by a genie’s magic.  A typical genasi has a life span of 120 years.",
+      "features": "Placeholder for features"
+    },
+    "selectedSubrace": {
+      "id": 36,
+      "race": "Genasi",
+      "name": "Earth Genasi",
+      "full_description": "Tracing their ancestry to dao, the genies of the Elemental Plane of Earth, earth genasi inherit dao’s steadfast strength and control over earth.  An earth genasi’s skin can be the colors of stone and earth or a human skin tone with glittering sparkles like gem dust. Some earth genasi have lines marking their skin like cracks, either showing glimmering gemlike veins or a dim, yellowish glow. Earth genasi hair can appear carved of stone or crystal or resemble strands of spun metal.",
+      "features": "Placeholder for features"
+    },
+    "charclass": {
+      "id": 2,
+      "name": "Bard",
+      "full_description": "Humming as she traces her fingers over an ancient monument in a long-forgotten ruin, a half-elf in rugged leathers finds knowledge springing into her mind, conjured forth by the magic of her song—knowledge of the people who constructed the monument and the mythic saga it depicts.  A stern human warrior bangs his sword rhythmically against his scale mail, setting the tempo for his war chant and exhorting his companions to bravery and heroism. The magic of his song fortifies and emboldens them.  Laughing as she tunes her cittern, a gnome weaves her subtle magic over the assembled nobles, ensuring that her companions’ words will be well received.  Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize foes, manipulate minds, create illusions, and even heal wounds.",
+      "features": "I am blank",
+      "saving_throw_1": "Dexterity",
+      "saving_throw_2": "Charisma"
+    },
+    "charlevel": "3",
+    "baseCharacter": {},
+    "dexterity": "12",
+    "constitution": "8",
+    "intelligence": "13",
+    "wisdom": "17",
+    "charisma": "8",
+    "strength": "12",
+    "selectedBackground": {
+      "id": 9,
+      "name": "Entertainer",
+      "full_description": "You thrive in front of an audience. You know how to entrance them, entertain them, and even inspire them. Your poetics can stir the hearts of those who hear you, awakening grief or joy, laughter or anger. Your music raises their spirits or captures their sorrow. Your dance steps captivate, your humor cuts to the quick. Whatever techniques you use, your art is your life.",
+      "feature": "By Popular Demand You can always find a place to perform, usually in an inn or tavern but possibly with a circus, at a theater, or even in a noble’s court. At such a place, you receive free lodging and food of a modest or comfortable standard (depending on the quality of the establishment), as long as you perform each night. In addition, your performance makes you something of a local figure. When strangers recognize you in a town where you have performed, they typically take a liking to you.",
+      "skill_proficiency_1": "Acrobatics",
+      "skill_proficiency_2": "Performance"
+    },
+    "selectedAlignment": {
+      "id": 6,
+      "name": "Chaotic Neutral",
+      "full_description": "A chaotic neutral character is an individualist who follows their own heart and generally shirks rules and traditions. Although chaotic neutral characters promote the ideals of freedom, it is their own freedom that comes first; good and evil come second to their need to be free."
+    }
+  }

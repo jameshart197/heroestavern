@@ -15,13 +15,11 @@ import { getCharacterInfo } from "../../helpers/dto";
 
 const CharacterCreation = () => {
     const user = useCurrentUser() || {};
-    const Character = (useLocation()).state
+    const location = useLocation();
+    console.log(location, location.state)
+    const Character = location.state
     const [currentPage, setCurrentPage] = useState(0);
     const [characterState, setCharacterState] = useState({ ...CharModel, subclass: [], user: user.pk });
-    if(Character) {
-        const existingCharacter = getCharacterInfo(Character);
-        setCharacterState(existingCharacter);
-    }
     const updateBaseCharacter = () => {
         const formdata = new FormData(document.getElementsByTagName("form")[0]);
         console.log("before pruning:", Array.from(formdata.entries()));
@@ -47,6 +45,10 @@ const CharacterCreation = () => {
         if (!user.pk) {
             navigate("/login/");
             toast.error("Oops! You aren't logged in. Please log in and try again.")
+        }
+        if(Character) {
+            const existingCharacter = getCharacterInfo(Character, user.id);
+            setCharacterState(existingCharacter);
         }
     }, []);
     const handleNextClick = async () => {

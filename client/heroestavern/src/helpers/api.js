@@ -20,9 +20,10 @@ const USER_MESSAGES = {
 
 const getContentType = (data) => {
   if (data instanceof FormData) {
-    return "multipart/form-data";
+    // return {"Content-Type": "multipart/form-data"};
+    return {};
   }
-  else return "application/json; charset=UTF-8";
+  else return {"Content-Type": "application/json; charset=UTF-8"};
 }
 
 const toastUser = (area, path) => {
@@ -138,9 +139,7 @@ export const refreshAccessToken = async (count) => {
 // CRUD functions
 
 async function postData(area, path, data, token, options){
-  const headerattributes = {
-    "Content-Type": getContentType(data)
-  };
+  const headerattributes = getContentType(data);
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
@@ -153,9 +152,7 @@ async function postData(area, path, data, token, options){
 }
 
 async function getData(area, path, token, options){
-  const headerattributes = {
-    "Content-Type": getContentType(null)
-  };
+  const headerattributes = getContentType(null);
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
@@ -167,9 +164,7 @@ async function getData(area, path, token, options){
 }
 
 async function updateData(area, path, data, token, options){
-  const headerattributes = {
-    "Content-Type": getContentType(data)
-  };
+  const headerattributes = getContentType(data);
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }
@@ -182,9 +177,7 @@ async function updateData(area, path, data, token, options){
 }
 
 async function deleteData(area, path, data, token, options){
-  const headerattributes = {
-    "Content-Type": getContentType(data),
-  };
+  const headerattributes = getContentType(data);
   if (token) {
     headerattributes.Authorization = `Bearer ${token}`;
   }

@@ -11,10 +11,10 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const [subraceList, setSubraceList] = useState([])
   const [charclassList, setCharclassList] = useState([])
   const [subclassList, setSubclassList] = useState([])
-  const [selectedRace, setSelectedRace] = useState(characterState.race || {});
-  const [selectedClass, setSelectedClass] = useState(characterState.charclass || {});
-  const [selectedSubrace, setSelectedSubrace] = useState(characterState.subrace || {});
-  const [selectedSubclass, setSelectedSubclass] = useState(characterState.subclass[0] || {});
+  const [selectedRace, setSelectedRace] = useState(characterState?.race || {});
+  const [selectedClass, setSelectedClass] = useState(characterState?.charclass || {});
+  const [selectedSubrace, setSelectedSubrace] = useState(characterState?.subrace || {});
+  const [selectedSubclass, setSelectedSubclass] = useState(characterState?.subclass[0] || {});
 
 
   useEffect(
@@ -64,7 +64,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
   const handleLevelChange = (e) => {
     setCharacterState({...characterState, charlevel: e.currentTarget.value})
   }
-  return (
+  return characterState?(
     <form action="post" className={styles.creationForm} enctype='multipart/form-data'>
       <div>
         <label for="character_name">Character Name: </label>
@@ -143,7 +143,7 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
         <input type="number" id="charlevelinput" min="1" max="20" defaultValue={1} onChange={handleLevelChange} value={characterState.charlevel}/>
       </div>
     </form>
-  );
+  ):'';
 };
 
 export default CreationForm1;
