@@ -1,5 +1,6 @@
 .backstoryContainer {
     padding: 0.1em;
+    width: 90%;
 }
 
 .backstoryContainer h4 {
@@ -7,9 +8,8 @@
 }
 
 .backstoryContainer p {
-    overflow-y: scroll;
     height: 25vh;
     padding: 1em;
     font-size: 90%;
-    text-align: justify;
+    text-align: justify;;
 }
