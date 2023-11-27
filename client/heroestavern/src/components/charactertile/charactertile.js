@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import styles from "./charactertile.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEllipsisVertical } from "@fortawesome/free-solid-svg-icons";
@@ -41,7 +41,7 @@ const CharacterTile = ({ character, list }) => {
                 <FontAwesomeIcon icon={faEllipsisVertical} />
                 <div className={menuClass}>
                     <ul className={styles['grid-inner']}>
-                        <li>Edit Character</li>
+                        <li><NavLink to="/charactercreation" state={character}>Edit Character</NavLink></li>
                         <li onClick={handleDeleteCharacterClick}>Delete Character</li>
                     </ul>
                 </div>

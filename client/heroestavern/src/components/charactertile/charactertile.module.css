@@ -61,6 +61,17 @@
     border: 1px solid white;
     padding: 0.3em;
     font-size: 14px;
+    cursor: pointer;
+}
+
+.kebabIcon li:hover {
+    color: rgb(28, 202, 245);
+}
+
+.kebabIcon a {
+    text-decoration: none;
+    color: inherit;
+    cursor: inherit;
 }
 
 .kebabIcon > div.active {
