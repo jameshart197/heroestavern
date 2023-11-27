@@ -41,7 +41,7 @@ export const getCharacterInfo = (Character, Userid) => {
     // map
 
     character.subclass = Character.subclass.map(sc=>sc.subclass)
-    character.charlevel = Character.levels.map(l=>l.level).reduce((a,b)=>{b+=a}, 0);
+    character.charlevel = Character.levels.map((l) => l.level);
     
     // find
 

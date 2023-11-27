@@ -83,7 +83,7 @@ export const postCharacterAttributes = async (strength, dexterity, constitution,
   const attributesArray = [strength, dexterity, constitution, intelligence, wisdom, charisma]
   const response = await Promise.all(attributesArray.map(async a=> {
     const data = JSON.stringify({...a, character:character});
-    await postData("api", "addcharacterattributes", data);
+    return await postData("api", "addcharacterattributes", data);
   }));
   return response
 }

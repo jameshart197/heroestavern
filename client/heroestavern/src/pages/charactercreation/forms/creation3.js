@@ -6,8 +6,8 @@ import { getAlignments, getBackgrounds } from "../../../helpers/api";
 const CreationForm3 = ({ characterState, setCharacterState }) => {
   const [backgroundList, setBackgroundList] = useState([])
   const [alignmentList, setAlignmentList] = useState([])
-  const [selectedBackground, setSelectedBackground] = useState(characterState.background || {});
-  const [selectedAlignment, setSelectedAlignment] = useState(characterState.alignment || {});
+  const [selectedBackground, setSelectedBackground] = useState(characterState?.background || {});
+  const [selectedAlignment, setSelectedAlignment] = useState(characterState?.alignment || {});
 
   useEffect(
     () => {
@@ -15,8 +15,8 @@ const CreationForm3 = ({ characterState, setCharacterState }) => {
         const [backgrounds, alignments] = await Promise.all([getBackgrounds(), getAlignments()]);
         setBackgroundList(backgrounds);
         setAlignmentList(alignments);
-        setSelectedAlignment(alignments[0].id)
-        setSelectedBackground(backgrounds[0].id)
+        setSelectedAlignment(characterState?.alignment || alignments[0].id)
+        setSelectedBackground(characterState?.background || backgrounds[0].id)
       }
       fetchData().catch(console.error)
     }, []
