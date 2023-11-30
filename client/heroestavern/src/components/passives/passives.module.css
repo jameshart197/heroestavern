@@ -1,11 +1,14 @@
 .passives {
-    width: 50%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: flex-start;
+    margin-inline: 1em;
+    gap: 0.3em 2em;
 }
 
-.passives li {
-    display: grid;
-    grid-template-columns: 1.3fr .5fr;
-    align-items: center;
-    justify-content: center;
-    margin-block: .7em;
-}
+/* @media only screen and (max-width: 900px) {
+    .passives {
+        width: 100%;
+    }
+} */

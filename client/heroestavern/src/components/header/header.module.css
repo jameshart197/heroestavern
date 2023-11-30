@@ -111,6 +111,7 @@ header a:hover {
     width: 8em;
     transition: 300ms;
     display: none;
+    z-index: 10;
 }
 
 .hamburgerMenu > ul {
