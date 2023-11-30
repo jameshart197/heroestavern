@@ -22,7 +22,7 @@ const CharacterList = () => {
             }
         };
         fetchData().catch(console.error);
-    }, []);
+    }, [loginState]);
 
     return (
         <main>

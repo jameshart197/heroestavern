@@ -127,13 +127,13 @@ export const currentUser = async (token) => {
 export const refreshAccessToken = async (count) => {
   const data = JSON.stringify(getRefreshToken())
   const access_token =  await postData("dj-rest-auth", "token/refresh", data);
-  if(!count) {
+  if(count==1) {
     toast('Refreshing Access Token', {
       icon: '⏳',
     });
   }
   localStorage.setItem("access_token", access_token.access);
-  return access_token;
+  return access_token.access;
 }
 
 // CRUD functions
@@ -206,9 +206,10 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
     toast.error(err.message || err)
   }
   if (response.status === 401 && options.retryCount <= RETRY_MAX) {
-    const access_token = refreshAccessToken(options.retryCount)
+    const access_token = await refreshAccessToken(options.retryCount)
     options.retryCount++;
     request.headers.Authorization = `Bearer ${access_token}`;
+    console.log("options", options, "request", request)
     return await dataQuery(area, path, request, options)    
   } 
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {
