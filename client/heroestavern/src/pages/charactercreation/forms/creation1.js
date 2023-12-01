@@ -25,6 +25,9 @@ const CreationForm1 = ({ characterState, setCharacterState }) => {
             const [charclasses, subclasses] = await Promise.all([getCharclasses(), getSubclasses()]);
             setCharclassList(charclasses);
             setSubclassList(subclasses);
+            if(characterState.subclass && !characterState.charclass) {
+                characterState.charclass = charclassList.find((cl) => cl.id === characterState?.subclass[0].parent_class);
+            }
         };
         fetchData().catch(console.error);
     }, []);

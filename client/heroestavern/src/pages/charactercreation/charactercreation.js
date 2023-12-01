@@ -22,13 +22,11 @@ const CharacterCreation = () => {
     const [characterState, setCharacterState] = useState({ ...CharModel, subclass: [], user: user.pk });
     const updateBaseCharacter = () => {
         const formdata = new FormData(document.getElementsByTagName("form")[0]);
-        console.log("before pruning:", Array.from(formdata.entries()));
         for (const tuple of formdata.entries()) {
             if (!Object.keys(CharacterModel).some((key) => key == tuple[0])) {
                 formdata.delete(tuple[0]);
             }
         }
-        console.log("after pruning:", Array.from(formdata.entries()))
         if (characterState.baseCharacter) {
             for (const tuple of characterState.baseCharacter.entries()) {
                 formdata.append(tuple[0], tuple[1]);
@@ -37,7 +35,6 @@ const CharacterCreation = () => {
                 formdata.append("user", user.pk);
             }
         }
-        console.log("after merging:", Array.from(formdata.entries()));
         setCharacterState({ ...characterState, baseCharacter: formdata });
     };
     const navigate = useNavigate();
