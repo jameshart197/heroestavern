@@ -109,15 +109,15 @@ export const deleteCharacter = async (pk, token) => {
 // logins
 
 export const signUp = async (signUpData) => {
-  return await postData("dj-rest-auth", "registration", JSON.stringify(signUpData));
+  return await postData("api/dj-rest-auth", "registration", JSON.stringify(signUpData));
 };
 
 export const login = async (loginData) => {
-  return await postData("dj-rest-auth", "login", JSON.stringify(loginData));
+  return await postData("api/dj-rest-auth", "login", JSON.stringify(loginData));
 };
 
 export const currentUser = async (token) => {
-  return await getData("dj-rest-auth", "user", token);
+  return await getData("api/dj-rest-auth", "user", token);
 };
 
 
@@ -125,7 +125,7 @@ export const currentUser = async (token) => {
 
 export const refreshAccessToken = async (count) => {
   const data = JSON.stringify(getRefreshToken())
-  const access_token =  await postData("dj-rest-auth", "token/refresh", data);
+  const access_token =  await postData("api/dj-rest-auth", "token/refresh", data);
   if(count==1) {
     toast('Refreshing Access Token', {
       icon: '⏳',
