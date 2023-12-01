@@ -100,7 +100,7 @@ const CharacterCreation = () => {
                         enemies: characterState.enemies,
                         factions_and_orgs: characterState.factions_and_orgs,
                         hit_points: characterState.hit_points,
-                        hit_points: characterState.armor_class
+                        armor_class: characterState.armor_class
                     },
                     token
                 );
