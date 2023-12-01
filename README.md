@@ -155,6 +155,10 @@ From the admin panel, the admin user is able to create, update and delete...This
 3. __Stretch Three__. This is a description of a stretch goal that provides a new feature
 
 
+# Reusable React Components
+
+Reusable React Components
+
 # Design
 
 The concept for ApplicationName was a site for... As such, the aim of the design ...

@@ -12,7 +12,6 @@ const CharacterTile = ({ character, list }) => {
     const navigate = useNavigate();
     const menuClass = [showMenu?styles.active:'', openRight?styles.openRight:styles.openLeft].filter(m=>m).join(' ');
     const handleClick = () => {
-        console.log(character);
         navigate(`/characters/${character.id}`, { state: character });
     };
     const handleKebabClick = (e) => {

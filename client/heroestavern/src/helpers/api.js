@@ -96,7 +96,6 @@ export const updateCharacter = async (pk, data, token) => {
 
 export const getCharacterList = async (token) => {
   const mycharacters = await getData("api", "mycharacters", token)
-  console.log(mycharacters)
   return mycharacters.sort((a,b) => a.character_name-b.character_name)
 }
 
@@ -197,18 +196,15 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
   let response;
   try {
     response = await fetch(url, request).catch((err) => {
-      console.log(err);
       toast.error(err.message || err)
     });
   } catch (err) {
-    console.log(err);
     toast.error(err.message || err)
   }
   if (response.status === 401 && options.retryCount <= RETRY_MAX) {
     const access_token = await refreshAccessToken(options.retryCount)
     options.retryCount++;
     request.headers.Authorization = `Bearer ${access_token}`;
-    console.log("options", options, "request", request)
     return await dataQuery(area, path, request, options)    
   } 
   if (response.status === 500 && options.retryCount <=RETRY_MAX) {

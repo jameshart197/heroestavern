@@ -36,7 +36,6 @@ const LoginForm = () => {
     event.preventDefault();
     try {
       const userResponse = await loginUser(loginData);
-      console.log("user successfully logged in?", userResponse);
       setUserState(userResponse.user);
     } catch (err) {
       setErrors(err);

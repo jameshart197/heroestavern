@@ -16,7 +16,6 @@ import { getCharacterInfo } from "../../helpers/dto";
 const CharacterCreation = () => {
     const user = useCurrentUser() || {};
     const location = useLocation();
-    console.log(location, location.state)
     const Character = location.state
     const [currentPage, setCurrentPage] = useState(0);
     const [characterState, setCharacterState] = useState({ ...CharModel, subclass: [], user: user.pk });
@@ -70,7 +69,6 @@ const CharacterCreation = () => {
                 const baseCharacter = Character?
                     await putBaseCharacter(Character.id, characterState.baseCharacter, token):
                     await postBaseCharacter(characterState.baseCharacter, token);
-                console.log(baseCharacter);
                 const charSubclass = await postCharacterSubclass(characterState.subclass[0].id, baseCharacter.id);
                 const charLevel = await postCharacterLevel(characterState.charlevel, baseCharacter.id, characterState.charclass.id);
                 const charAttributes = await postCharacterAttributes(

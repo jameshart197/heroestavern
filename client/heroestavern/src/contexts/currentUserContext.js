@@ -6,7 +6,6 @@ export const useCurrentUserContext = () => useContext(CurrentUserContext);
 
 export const useCurrentUser = () => {
   const { currentUser } = useCurrentUserContext();
-  console.log("current user", currentUser);
   return currentUser;
 };
 
@@ -18,7 +17,6 @@ export const CurrentUserProvider = ({ children }) => {
       const data  = await getCurrentUser();
       setCurrentUser(data);
     } catch (err) {
-      console.log(err);
     }
   };
 

@@ -3,7 +3,7 @@ import styles from "./initiative.module.css";
 import { modifierCalculator } from "../../helpers/modifier";
 import Scorebox from "../scorebox/scorebox";
 
-const Initiative = ({ dex, profBonus }) => {
+const Initiative = ({ dex }) => {
   return (
     <div className={styles.scorename}>
       Initiative:
