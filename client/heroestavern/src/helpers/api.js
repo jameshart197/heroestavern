@@ -186,9 +186,16 @@ async function deleteData(area, path, data, token, options){
   return await dataQuery(area, path, request, options);
 }
 
+/**
+ * This is a dataQuery function that can adjust based on area, path, method, headerattributes and body. 
+ * @param {string} area 
+ * @param {string} path 
+ * @param {string} request 
+ * @param {string} options 
+ * @returns response.json() if successful (200)
+ */
 async function dataQuery(area, path, request, options={retryCount:0}) {
   if (!path || !area) {
-    console.error("url and area must be defined");
     toast.error("Resource missing, please try again")
     return undefined;
   }
