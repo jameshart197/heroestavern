@@ -65,7 +65,7 @@ export const postBaseCharacter = async (basechar, token) => {
 };
 
 export const putBaseCharacter = async (pk, basechar, token) => {
-  return await updateData("api", `updatebasechar/${pk}/`, basechar, token);
+  return await updateData("api", `updatebasechar/${pk}`, basechar, token);
 }
 
 export const postCharacterSubclass = async (subclass, character) => {
