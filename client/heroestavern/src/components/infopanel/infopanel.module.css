@@ -24,7 +24,7 @@
 .label {
     border: inset;
     border-color: slategray;
-    width: 50%;
+    padding: 0 0.5em;
     margin: 0 auto;
 }
 
@@ -58,9 +58,5 @@
 @media only screen and (max-width: 900px) {
     .topbar {
         grid-template-columns: 1fr 1fr 1fr;
-    }
-    .label {
-        width: unset;
-        padding: 0 0.5em;
     }
 }
