@@ -193,7 +193,7 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
     toast.error("Resource missing, please try again")
     return undefined;
   }
-  const url = `https://heroestavern-d4f7b4a77ff6.herokuapp.com//${area}/${path}/`;
+  const url = `https://heroestavern-d4f7b4a77ff6.herokuapp.com/${area}/${path}/`;
   let response;
   try {
     response = await fetch(url, request).catch((err) => {
