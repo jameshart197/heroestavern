@@ -109,15 +109,15 @@ export const deleteCharacter = async (pk, token) => {
 // logins
 
 export const signUp = async (signUpData) => {
-  return await postData("api/dj-rest-auth", "registration", JSON.stringify(signUpData));
+  return await postData("dj-rest-auth", "registration", JSON.stringify(signUpData));
 };
 
 export const login = async (loginData) => {
-  return await postData("api/dj-rest-auth", "login", JSON.stringify(loginData));
+  return await postData("dj-rest-auth", "login", JSON.stringify(loginData));
 };
 
 export const currentUser = async (token) => {
-  return await getData("api/dj-rest-auth", "user", token);
+  return await getData("dj-rest-auth", "user", token);
 };
 
 
@@ -125,7 +125,7 @@ export const currentUser = async (token) => {
 
 export const refreshAccessToken = async (count) => {
   const data = JSON.stringify(getRefreshToken())
-  const access_token =  await postData("api/dj-rest-auth", "token/refresh", data);
+  const access_token =  await postData("dj-rest-auth", "token/refresh", data);
   if(count==1) {
     toast('Refreshing Access Token', {
       icon: '⏳',
@@ -193,7 +193,7 @@ async function dataQuery(area, path, request, options={retryCount:0}) {
     toast.error("Resource missing, please try again")
     return undefined;
   }
-  const url = `https://8000-jameshart19-heroestaver-phaga8fole7.ws-eu106.gitpod.io/${area}/${path}/`;
+  const url = `https://heroestavern-d4f7b4a77ff6.herokuapp.com//${area}/${path}/`;
   let response;
   try {
     response = await fetch(url, request).catch((err) => {
