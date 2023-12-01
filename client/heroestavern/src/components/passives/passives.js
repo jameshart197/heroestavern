@@ -16,26 +16,6 @@ const Passives = ({ character, profBonus }) => {
     const investigationMultiplier = investigationLevel === 0 ? 1 : investigationLevel === 1 ? 2 : investigationLevel === 2 ? 0.5 : 0;
     const insightMultiplier = insightLevel === 0 ? 1 : insightLevel === 1 ? 2 : insightLevel === 2 ? 0.5 : 0;
     return (
-        // <div>
-        //   <ul className={styles.passives}>
-        //     <li>
-        //       Passive Perception:{" "}
-        //       <div>
-        //         <Scorebox value={(+modifierCalculator(wisdom, profBonus*perceptionMultiplier)+10)}></Scorebox>
-        //       </div>
-        //     </li>
-        //     <li>
-        //       Passive Investigation:{" "}
-        //       <div>
-        //         <Scorebox value={(+modifierCalculator(intelligence, profBonus*investigationMultiplier)+10)}></Scorebox>
-        //       </div>
-        //     </li>
-        //     <li>
-        //       Passive Insight:{" "}
-        //       <div>
-        //         <Scorebox value={(+modifierCalculator(wisdom, profBonus*insightMultiplier)+10)}></Scorebox>
-        //       </div>
-
         <div className={styles.passives}>
             Passive Perception:{" "}
             <div>
@@ -49,15 +29,8 @@ const Passives = ({ character, profBonus }) => {
             <div>
                 <Scorebox value={+modifierCalculator(wisdom, profBonus * insightMultiplier) + 10}></Scorebox>
             </div>
-            {/* </div> */}
-            {/* </li>
-      </ul> */}
         </div>
     );
 };
 
 export default Passives;
-
-// scorebox values should =  10 + modifiercalculator(attribute, proflevel)
-// where attribute= wisdom, intelligence, wisdom and
-// proflevel = character.skills.proficiencylevel in correlating skills (find skill.name === character.skills.name?)

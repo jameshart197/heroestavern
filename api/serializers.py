@@ -331,7 +331,7 @@ class CharacterSerializer(serializers.ModelSerializer):
 
 class CharacterUpdateSerializer(serializers.ModelSerializer):
     """
-    Serializer for creating a character
+    Serializer for updating a character
     """
     class Meta:
         model = models.CharacterDetails

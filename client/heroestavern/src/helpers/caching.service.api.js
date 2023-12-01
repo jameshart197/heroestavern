@@ -1,4 +1,3 @@
-import { json } from "react-router-dom";
 import { currentUser, login, signUp } from "./api";
 
 export const getCurrentUser = async () => {

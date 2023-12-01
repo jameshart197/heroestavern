@@ -135,24 +135,6 @@ const CharacterCreation = () => {
                 return <CreationForm1 characterState={characterState} setCharacterState={setCharacterState}></CreationForm1>;
         }
     };
-    return (
-        <>
-            <section>{renderSwitch()}</section>
-            <pre>{JSON.stringify(characterState, null, 2)}</pre>
-            <section>
-                {currentPage ? (
-                    <button className={styles.pageButton} onClick={handlePreviousClick}>
-                        Previous
-                    </button>
-                ) : (
-                    ""
-                )}
-                <button className={styles.pageButton} onClick={handleNextClick}>
-                    {currentPage === 3 ? "Finish and Create Character" : "Next"}
-                </button>
-            </section>
-        </>
-    );
 };
 
 export default CharacterCreation;

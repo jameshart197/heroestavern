@@ -40,7 +40,7 @@
     top: calc(var(--radius) * cos(var(--angle)));
     left: calc(var(--radius) * sin(var(--angle)));
     transform: translate(calc(var(--radius) - var(--chip-size)), calc(var(--radius) - var(--chip-size)));
-    background-image: url(../../assets/goldcircle.jpg);
+    background-image: url(https://res.cloudinary.com/dgyweielh/image/upload/v1701445859/goldcircle_r1eydy.jpg);
     background-size: 140%;
     background-position: center;
     background-color: rgb(170, 172, 173);

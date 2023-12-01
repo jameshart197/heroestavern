@@ -24,12 +24,6 @@ main>section:last-child {
     color: black;
 }
 
-@media screen and (max-width: 900px) {
-    .creationForm div {
-        width: 60vw;
-    }
-}
-
 .creationForm ul {
     position: absolute;
     background-color: slategray;
@@ -44,12 +38,6 @@ main>section:last-child {
     max-height: 50vh;
     overflow: auto;
     overflow-x: hidden;
-}
-
-@media screen and (max-width: 900px) {
-    .creationForm div {
-        width: 80%;
-    }
 }
 
 .creationForm li {
@@ -137,12 +125,6 @@ form .attributeInput {
     align-items: center;
 }
 
-@media screen and (max-width: 900px) {
-    .descriptionForm div {
-        width: 80vw;
-    }
-}
-
 .textbox {
     font-weight: bold;
     border: inset;
@@ -190,9 +172,20 @@ form .attributeInput {
     max-width: 180px;
 }
 
-pre {
-    position: absolute;
-    top: 20vh;
-    max-width: 20em;
-    overflow: hidden;
+@media screen and (max-width: 900px) {
+    .descriptionForm div {
+        width: 80vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .creationForm div {
+        width: 60vw;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .creationForm div {
+        width: 80%;
+    }
 }

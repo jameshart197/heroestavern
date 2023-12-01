@@ -37,6 +37,22 @@
     left: 0.8em;
     top: 0.2em;
     background-color: yellow;
+    color: black;
+}
+
+.editCharButton a {
+    text-decoration: none;
+    color: inherit;
+    padding: 0.3em;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.editCharButton:hover {
+    color: yellow;
+    background-color: black;
+    font-style: italic;
 }
 
 @media only screen and (max-width: 900px) {

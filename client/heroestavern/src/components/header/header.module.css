@@ -1,5 +1,5 @@
 header {
-    background-image: url(../../assets/headerbackground.jpg);
+    background-image: url(https://res.cloudinary.com/dgyweielh/image/upload/v1701445957/headerbackground_j15vbo.jpg);
     background-size: cover;
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@ header a:hover {
 }
 
 .logo {
-    background-image: url(../../assets/logo.png);
+    background-image: url(https://res.cloudinary.com/dgyweielh/image/upload/v1701445967/logo_rn2hsh.png);
     height: 100px;
     width: 100px;
     background-size: cover;
@@ -100,8 +100,6 @@ header a:hover {
     background-color: transparent;
     color: white;
 }
-
-
 
 .hamburgerMenu {
     background-color: #010948;

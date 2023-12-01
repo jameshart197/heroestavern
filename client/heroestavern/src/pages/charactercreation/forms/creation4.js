@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "../charactercreation.module.css";
 
 const CreationForm4 = ({ characterState, setCharacterState }) => {

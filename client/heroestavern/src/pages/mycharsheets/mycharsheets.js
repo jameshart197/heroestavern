@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./mycharsheets.module.css";
 import SkillRow from "../../components/skillrow/skillrow";
 import Skills from "./skills.json";

@@ -20,7 +20,6 @@ const USER_MESSAGES = {
 
 const getContentType = (data) => {
   if (data instanceof FormData) {
-    // return {"Content-Type": "multipart/form-data"};
     return {};
   }
   else return {"Content-Type": "application/json; charset=UTF-8"};
