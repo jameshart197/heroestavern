@@ -220,14 +220,6 @@ The below Entity Relationship Diagram was created on [diagrams.net](https://www.
 ![ERD](https://res.cloudinary.com/dgyweielh/image/upload/v1702919148/heroestavern-ERD_dtphm9.png)
 </details>
 
-## Known Bugs
-
-When testing the site using web developer tools (such as Chrome Dev Tools) and changing the home page from a desktop view to mobile view, the menu begins opened and displays a gap on the right hand side of the screen. This is immediately fixed by pressing the menu button twice. As this bug was not replicable using an actual mobile to access the site, I decided this bug was unique to testing and did not spend any more time fixing it. 
-
-When using postman, characters can be edited without a full security check. If the site was going to production this would need to be fixed, but as you need a current access token, a character ID and a username to make such an edit, I decided the site was secure enough for the purposes of the project. 
-
-If no information is entered in the fourth character creation page, it appears that the tabs at the bottom right of the character sheet do not work. This is not the case, but as each tab is empty, there is no indication switching between them is working. The user should recieve a visual notification of switching between tabs, but unfortunately styling this area was beyond the timeframe of the project. This should be fixed in a later iteration. 
-
 # Technologies Used
 
 - [HTML5](https://en.wikipedia.org/wiki/HTML5): mark-up language.
@@ -247,12 +239,13 @@ If no information is entered in the fourth character creation page, it appears t
 - [Balsamiq](https://balsamiq.com/): to create wireframes.
 - [Diagrams.net](https://www.diagrams.net/): for Entity Relationship Diagram.
 
-# Testing
+## Known Bugs
 
-Testing for the site can be found at the below link:
+When testing the site using web developer tools (such as Chrome Dev Tools) and changing the home page from a desktop view to mobile view, the menu begins opened and displays a gap on the right hand side of the screen. This is immediately fixed by pressing the menu button twice. As this bug was not replicable using an actual mobile to access the site, I decided this bug was unique to testing and did not spend any more time fixing it. 
 
-[Link to TESTING.md](TESTING.md)
+When using postman, characters can be edited without a full security check. If the site was going to production this would need to be fixed, but as you need a current access token, a character ID and a username to make such an edit, I decided the site was secure enough for the purposes of the project. 
 
+If no information is entered in the fourth character creation page, it appears that the tabs at the bottom right of the character sheet do not work. This is not the case, but as each tab is empty, there is no indication switching between them is working. The user should recieve a visual notification of switching between tabs, but unfortunately styling this area was beyond the timeframe of the project. This should be fixed in a later iteration. 
 
 # Deployment
 ## Steps to deploy site using Heroku:
