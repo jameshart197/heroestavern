@@ -1,7 +1,7 @@
 .characterTile {
     min-height: 100px;
     width: 300px;
-    background-color: rgb(252, 236, 167);
+    background-color: #fceca7;
     display: grid;
     grid-template-columns: auto 1fr 2fr auto;
     grid-template-rows: 1.5fr 1fr;
@@ -52,7 +52,7 @@
     display: grid;
     grid-template-rows: 0fr;
     transition: grid-template-rows 0.5s ease-in-out;
-    background-color: blue;
+    background-color: #0000ff;
     color: white;
     top: -0.2em;
 }

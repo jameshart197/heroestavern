@@ -55,7 +55,7 @@ main>section:last-child {
     border: inset;
     box-sizing: border-box;
     border-color: slategray;
-    background-color: slategray;
+    background-color: #708090;
     text-align: center;
     font-size: 1.1em;
     font-weight: bold;
